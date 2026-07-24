@@ -1,350 +1,1795 @@
 {
-    "content": [
-        {
-            "id": "content_b2997df73854",
-            "url": "https:\/\/www.ahaber.com.tr\/magazin\/2026\/04\/10\/bebekteki-eglence-kabusa-dondu-is-insanina-torbaci-tuzagi",
-            "title": "Bebek'teki eğlence kabusa döndü: İş insanına \"torbacı\" tuzağı",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755899+00:00",
-            "published_at": "2026-04-10T05:49:44+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Bebek'teki eğlence kabusa döndü: İş insanına \" src=\"https:\/\/iaahbr.tmgrup.com.tr\/c6704b\/1200\/1200\/140\/0\/625\/486?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/bebekteki-eglence-kabusa-dondu-is-ins"
-            }
-        },
-        {
-            "id": "content_3c14a09de3bc",
-            "url": "https:\/\/www.ahaber.com.tr\/gundem\/2026\/04\/10\/chp-mersin-yenisehir-belediyesine-operasyon",
-            "title": "CHP Mersin Yenişehir Belediyesi'ne operasyon",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755918+00:00",
-            "published_at": "2026-04-10T05:49:14+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"CHP Mersin Yenişehir Belediyesi'ne operasyon\" src=\"https:\/\/iahbr.tmgrup.com.tr\/Defaults\/Upload\/ahbr-default-1754911102530.png\" \/><br \/>CHP'li Mersin Yenişehir Belediyesi'ne yönelik ihaleye f"
-            }
-        },
-        {
-            "id": "content_b1776556a7c3",
-            "url": "https:\/\/www.ahaber.com.tr\/gundem\/2026\/04\/10\/bu-firavunu-bmden-atin-katil-netanyahuya-tepki-cig-gibi",
-            "title": "\"Bu firavunu BM’den atın!\" Katil Netanyahu’ya tepki çığ gibi",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755926+00:00",
-            "published_at": "2026-04-10T05:47:27+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/c4f009\/1200\/1200\/207\/0\/692\/486?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/bu-firavunu-bmden-atin-katil-netanyahuya-tepki-cig-gibi-1775800020829.jpeg\" \/><br "
-            }
-        },
-        {
-            "id": "content_41bd1cc5a27d",
-            "url": "https:\/\/www.ahaber.com.tr\/gundem\/2026\/04\/10\/uskudarda-usulsuzluk-operasyonu-21-supheli-adliyeye-sevk-edildi",
-            "title": "Üsküdar'da usulsüzlük operasyonu: 21 şüpheli adliyeye sevk edildi",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755932+00:00",
-            "published_at": "2026-04-10T05:34:46+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Üsküdar'da usulsüzlük operasyonu: 21 şüpheli adliyeye sevk edildi\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/c8f229\/1200\/1200\/250\/0\/970\/720?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/uskudarda-usulsuz"
-            }
-        },
-        {
-            "id": "content_79c2ef9e1302",
-            "url": "https:\/\/www.ahaber.com.tr\/video\/gundem-videolari\/turkiyeye-soguk-ve-yagisli-hava-uyarisi-zirai-don-tehlikesine-dikkat",
-            "title": "Türkiye’ye soğuk ve yağışlı hava uyarısı: Zirai don tehlikesine dikkat!",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755938+00:00",
-            "published_at": "2026-04-10T05:33:39+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Türkiye’ye soğuk ve yağışlı hava uyarısı: Zirai don tehlikesine dikkat!\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/3fda54\/1200\/1200\/32\/0\/349\/317?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/turkiyeye-so"
-            }
-        },
-        {
-            "id": "content_58a4cc422526",
-            "url": "https:\/\/www.ahaber.com.tr\/yasam\/2026\/04\/10\/kadikoye-dev-muhur-rihtim-camii-icin-tarihi-adim-iste-o-muazzam-proje",
-            "title": "Kadıköy’e dev mühür! Rıhtım Camii için tarihi adım: İşte o muazzam proje",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755943+00:00",
-            "published_at": "2026-04-10T04:58:31+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Kadıköy’e dev mühür! Rıhtım Camii için tarihi adım: İşte o muazzam proje\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/63e7b9\/0\/0\/0\/0\/1920\/1080?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/kadikoye-dev-muh"
-            }
-        },
-        {
-            "id": "content_3365cd4dfeaa",
-            "url": "https:\/\/www.ahaber.com.tr\/gundem\/2026\/04\/10\/500-transferlik-ihanet-hatti-belediye-kasasindan-koruma-hesabina-akan-milyonlar",
-            "title": "500 transferlik ihanet hattı! Belediye kasasından koruma hesabına akan milyonlar",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755948+00:00",
-            "published_at": "2026-04-10T04:19:59+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"500 transferlik ihanet hattı! Belediye kasasından koruma hesabına akan milyonlar\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/acc03f\/1200\/1200\/180\/0\/1091\/911?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/1"
-            }
-        },
-        {
-            "id": "content_0d9734425af6",
-            "url": "https:\/\/www.ahaber.com.tr\/yazarlar\/melih-altinok\/2026\/04\/10\/korfezde-hicbir-sey-eskisi-gibi-olmayacak",
-            "title": "Körfez’de hiçbir şey eskisi gibi olmayacak",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755952+00:00",
-            "published_at": "2026-04-10T04:06:08+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Körfez’de hiçbir şey eskisi gibi olmayacak\" src=\"https:\/\/www.ahaber.com.tr\/rss\/news.xml\" \/><br \/>Netanyahu'nun arkasına takılıp ABD'yi ve siyasi kariyerini uçuruma sürükleyen Başkan Trump, b"
-            }
-        },
-        {
-            "id": "content_1ac4d0c7041e",
-            "url": "https:\/\/www.ahaber.com.tr\/yazarlar\/hilal-kaplan\/2026\/04\/10\/erdoganin-sessiz-mimarligi",
-            "title": "Erdoğan’ın sessiz mimarlığı",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755959+00:00",
-            "published_at": "2026-04-10T04:05:51+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Erdoğan’ın sessiz mimarlığı\" src=\"https:\/\/www.ahaber.com.tr\/rss\/news.xml\" \/><br \/>Ortadoğu'da güç dengeleri uzun yıllar boyunca dış müdahalelerle şekillendi. Ancak son dönemde Türkiye, Mısır"
-            }
-        },
-        {
-            "id": "content_48c6ae2503f2",
-            "url": "https:\/\/www.ahaber.com.tr\/yazarlar\/mahmut-ovur\/2026\/04\/10\/kuresel-turbulansin-panzehri",
-            "title": "‘Küresel türbülansın panzehri’",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755963+00:00",
-            "published_at": "2026-04-10T04:05:35+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"‘Küresel türbülansın panzehri’\" src=\"https:\/\/www.ahaber.com.tr\/rss\/news.xml\" \/><br \/>Savaşın giderek sarpa sardığı belliydi. Ama yine de dünya 24 saat nefesini tuttu ve bir çılgınlık olmaz u"
-            }
-        },
-        {
-            "id": "content_14597579496c",
-            "url": "https:\/\/www.ahaber.com.tr\/yazarlar\/kerem-alkin\/2026\/04\/10\/kuresel-sisteme-erdogan-diplomasisi-damgasi",
-            "title": "Küresel Sisteme ‘Erdoğan Diplomasisi’ Damgası",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755968+00:00",
-            "published_at": "2026-04-10T04:05:15+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Küresel Sisteme ‘Erdoğan Diplomasisi’ Damgası\" src=\"https:\/\/www.ahaber.com.tr\/rss\/news.xml\" \/><br \/>Küresel siyaset bugün tarihinin en gürültülü, en dağınık ve en yönsüz dönemlerinden birini"
-            }
-        },
-        {
-            "id": "content_3afb84261858",
-            "url": "https:\/\/www.ahaber.com.tr\/yazarlar\/bekir-hazar\/2026\/04\/10\/kaybeden-ve-kazanan",
-            "title": "Kaybeden ve kazanan",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755973+00:00",
-            "published_at": "2026-04-10T04:03:33+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Kaybeden ve kazanan\" src=\"https:\/\/www.ahaber.com.tr\/rss\/news.xml\" \/><br \/>Soykırımcı çocuk katili Siyonist İsrail'in Gazze katliamlarında tasmalı köpeğine dönmek ve hemen ardından İran savaş"
-            }
-        },
-        {
-            "id": "content_dbacef89b9f2",
-            "url": "https:\/\/www.ahaber.com.tr\/yazarlar\/nihat-hatipoglu\/2026\/04\/10\/namaz-suuruna-varmak",
-            "title": "Namaz şuuruna varmak",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755978+00:00",
-            "published_at": "2026-04-10T04:02:42+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Namaz şuuruna varmak\" src=\"https:\/\/www.ahaber.com.tr\/rss\/news.xml\" \/><br \/>HZ. Peygamber (SAV) bir güz mevsiminde dışarı çıkmıştı. Ağaçlardan yapraklar dökülüyordu.\nPeygamberimiz yanındaki a"
-            }
-        },
-        {
-            "id": "content_736e95d8faee",
-            "url": "https:\/\/www.ahaber.com.tr\/dunya\/canli\/canli-trumptan-tahrana-hurmuz-uyarisi-anlasmayi-ihlal-ediyorsunuz",
-            "title": "Canlı | Gözler Orta Doğu'da: İslamabad diplomasisi başlamadan çıkmaza mı girdi?",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755983+00:00",
-            "published_at": "2026-04-10T03:58:11+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Canlı | Gözler Orta Doğu'da: İslamabad diplomasisi başlamadan çıkmaza mı girdi?\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/3e0a41\/0\/0\/0\/0\/1300\/800?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/1775793214"
-            }
-        },
-        {
-            "id": "content_abb731bfdfd7",
-            "url": "https:\/\/www.ahaber.com.tr\/dunya\/canli\/canli-trumptan-netanyahuya-lubnan-freni-saldirilarin-dozunu-dusur",
-            "title": "CANLI | Trump'tan Netanyahu’ya Lübnan freni: \"Saldırıların dozunu düşür\"",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755988+00:00",
-            "published_at": "2026-04-10T03:41:00+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"CANLI | Trump'tan Netanyahu’ya Lübnan freni: \" src=\"https:\/\/iaahbr.tmgrup.com.tr\/ba2c92\/0\/0\/0\/0\/2048\/1366?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/canli-trumptan-netanyahuya-lubnan-freni-sal"
-            }
-        },
-        {
-            "id": "content_cc41d122b652",
-            "url": "https:\/\/www.ahaber.com.tr\/yasam\/2026\/04\/10\/bursada-kavga-ihbarina-giden-polislere-surpriz-kutlama",
-            "title": "Bursa'da kavga ihbarına giden polislere sürpriz kutlama",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755993+00:00",
-            "published_at": "2026-04-10T03:19:10+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Bursa'da kavga ihbarına giden polislere sürpriz kutlama\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/d96404\/1200\/1200\/0\/0\/719\/720?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/bursada-kavga-ihbarina-giden-"
-            }
-        },
-        {
-            "id": "content_6e6ea1816fa1",
-            "url": "https:\/\/www.ahaber.com.tr\/yasam\/2026\/04\/10\/kagithanede-alkollu-surucunun-kullandigi-otomobilin-carptigi-cip-devrildi-1-yarali",
-            "title": "Kağıthane'de alkollü sürücünün kullandığı otomobilin çarptığı cip devrildi: 1 yaralı",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.755999+00:00",
-            "published_at": "2026-04-10T02:58:20+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Kağıthane'de alkollü sürücünün kullandığı otomobilin çarptığı cip devrildi: 1 yaralı\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/a437d6\/0\/0\/0\/0\/1600\/900?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/kagit"
-            }
-        },
-        {
-            "id": "content_08170cff6f5f",
-            "url": "https:\/\/www.ahaber.com.tr\/yasam\/2026\/04\/10\/kucukcekmecede-otelde-yangin-2-kisi-dumandan-etkilendi",
-            "title": "Küçükçekmece'de otelde yangın! 2 kişi dumandan etkilendi",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.756004+00:00",
-            "published_at": "2026-04-10T02:50:26+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Küçükçekmece'de otelde yangın! 2 kişi dumandan etkilendi\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/8509f1\/1200\/1200\/100\/0\/868\/768?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/kucukcekmecede-otelde-yang"
-            }
-        },
-        {
-            "id": "content_a468650d4964",
-            "url": "https:\/\/www.ahaber.com.tr\/video\/ozel-haber\/abdnin-hedefi-irandaki-uranyum-mu",
-            "title": "ABD'nin hedefi İran'daki uranyum mu?",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.756009+00:00",
-            "published_at": "2026-04-10T02:39:57+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"ABD'nin hedefi İran'daki uranyum mu?\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/945253\/1200\/1200\/210\/0\/696\/486?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/abdnin-hedefi-irandaki-uranyum-mu-177578878894"
-            }
-        },
-        {
-            "id": "content_d9ba8b21bd3e",
-            "url": "https:\/\/www.ahaber.com.tr\/video\/ozel-haber\/lubnanda-kiyamet-gunu-24-saatte-yuzlerce-sivil-katledildi",
-            "title": "Lübnan'da kıyamet günü: 24 saatte yüzlerce sivil katledildi",
-            "source": "Ahaber",
-            "source_id": "source_f7c48b28ee91",
-            "source_type": "rss",
-            "discovered_at": "2026-04-10T05:54:57.756013+00:00",
-            "published_at": "2026-04-10T02:20:34+00:00",
-            "status": "pending",
-            "processed_job_id": null,
-            "metadata": {
-                "keywords": [],
-                "category": "genel",
-                "description": "<img alt=\"Lübnan'da kıyamet günü: 24 saatte yüzlerce sivil katledildi\" src=\"https:\/\/iaahbr.tmgrup.com.tr\/59bfc5\/1200\/1200\/368\/0\/1732\/1365?u=https:\/\/iahbr.tmgrup.com.tr\/2026\/04\/10\/lubnanda-kiyamet-gunu"
-            }
-        }
-    ],
-    "metadata": {
-        "created_at": "2026-04-10T05:54:51Z",
-        "last_updated": "2026-04-10T21:07:22Z",
-        "total_items": 20,
-        "version": "1.0"
+  "content": [
+    {
+      "id": "content_b2997df73854",
+      "url": "https://www.ahaber.com.tr/magazin/2026/04/10/bebekteki-eglence-kabusa-dondu-is-insanina-torbaci-tuzagi",
+      "title": "Bebek'teki eğlence kabusa döndü: İş insanına \"torbacı\" tuzağı",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755899+00:00",
+      "published_at": "2026-04-10T05:49:44+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Bebek'teki eğlence kabusa döndü: İş insanına \" src=\"https://iaahbr.tmgrup.com.tr/c6704b/1200/1200/140/0/625/486?u=https://iahbr.tmgrup.com.tr/2026/04/10/bebekteki-eglence-kabusa-dondu-is-ins"
+      }
+    },
+    {
+      "id": "content_3c14a09de3bc",
+      "url": "https://www.ahaber.com.tr/gundem/2026/04/10/chp-mersin-yenisehir-belediyesine-operasyon",
+      "title": "CHP Mersin Yenişehir Belediyesi'ne operasyon",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755918+00:00",
+      "published_at": "2026-04-10T05:49:14+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"CHP Mersin Yenişehir Belediyesi'ne operasyon\" src=\"https://iahbr.tmgrup.com.tr/Defaults/Upload/ahbr-default-1754911102530.png\" /><br />CHP'li Mersin Yenişehir Belediyesi'ne yönelik ihaleye f"
+      }
+    },
+    {
+      "id": "content_b1776556a7c3",
+      "url": "https://www.ahaber.com.tr/gundem/2026/04/10/bu-firavunu-bmden-atin-katil-netanyahuya-tepki-cig-gibi",
+      "title": "\"Bu firavunu BM’den atın!\" Katil Netanyahu’ya tepki çığ gibi",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755926+00:00",
+      "published_at": "2026-04-10T05:47:27+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"\" src=\"https://iaahbr.tmgrup.com.tr/c4f009/1200/1200/207/0/692/486?u=https://iahbr.tmgrup.com.tr/2026/04/10/bu-firavunu-bmden-atin-katil-netanyahuya-tepki-cig-gibi-1775800020829.jpeg\" /><br "
+      }
+    },
+    {
+      "id": "content_41bd1cc5a27d",
+      "url": "https://www.ahaber.com.tr/gundem/2026/04/10/uskudarda-usulsuzluk-operasyonu-21-supheli-adliyeye-sevk-edildi",
+      "title": "Üsküdar'da usulsüzlük operasyonu: 21 şüpheli adliyeye sevk edildi",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755932+00:00",
+      "published_at": "2026-04-10T05:34:46+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Üsküdar'da usulsüzlük operasyonu: 21 şüpheli adliyeye sevk edildi\" src=\"https://iaahbr.tmgrup.com.tr/c8f229/1200/1200/250/0/970/720?u=https://iahbr.tmgrup.com.tr/2026/04/10/uskudarda-usulsuz"
+      }
+    },
+    {
+      "id": "content_79c2ef9e1302",
+      "url": "https://www.ahaber.com.tr/video/gundem-videolari/turkiyeye-soguk-ve-yagisli-hava-uyarisi-zirai-don-tehlikesine-dikkat",
+      "title": "Türkiye’ye soğuk ve yağışlı hava uyarısı: Zirai don tehlikesine dikkat!",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755938+00:00",
+      "published_at": "2026-04-10T05:33:39+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Türkiye’ye soğuk ve yağışlı hava uyarısı: Zirai don tehlikesine dikkat!\" src=\"https://iaahbr.tmgrup.com.tr/3fda54/1200/1200/32/0/349/317?u=https://iahbr.tmgrup.com.tr/2026/04/10/turkiyeye-so"
+      }
+    },
+    {
+      "id": "content_58a4cc422526",
+      "url": "https://www.ahaber.com.tr/yasam/2026/04/10/kadikoye-dev-muhur-rihtim-camii-icin-tarihi-adim-iste-o-muazzam-proje",
+      "title": "Kadıköy’e dev mühür! Rıhtım Camii için tarihi adım: İşte o muazzam proje",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755943+00:00",
+      "published_at": "2026-04-10T04:58:31+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Kadıköy’e dev mühür! Rıhtım Camii için tarihi adım: İşte o muazzam proje\" src=\"https://iaahbr.tmgrup.com.tr/63e7b9/0/0/0/0/1920/1080?u=https://iahbr.tmgrup.com.tr/2026/04/10/kadikoye-dev-muh"
+      }
+    },
+    {
+      "id": "content_3365cd4dfeaa",
+      "url": "https://www.ahaber.com.tr/gundem/2026/04/10/500-transferlik-ihanet-hatti-belediye-kasasindan-koruma-hesabina-akan-milyonlar",
+      "title": "500 transferlik ihanet hattı! Belediye kasasından koruma hesabına akan milyonlar",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755948+00:00",
+      "published_at": "2026-04-10T04:19:59+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"500 transferlik ihanet hattı! Belediye kasasından koruma hesabına akan milyonlar\" src=\"https://iaahbr.tmgrup.com.tr/acc03f/1200/1200/180/0/1091/911?u=https://iahbr.tmgrup.com.tr/2026/04/10/1"
+      }
+    },
+    {
+      "id": "content_0d9734425af6",
+      "url": "https://www.ahaber.com.tr/yazarlar/melih-altinok/2026/04/10/korfezde-hicbir-sey-eskisi-gibi-olmayacak",
+      "title": "Körfez’de hiçbir şey eskisi gibi olmayacak",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755952+00:00",
+      "published_at": "2026-04-10T04:06:08+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Körfez’de hiçbir şey eskisi gibi olmayacak\" src=\"https://www.ahaber.com.tr/rss/news.xml\" /><br />Netanyahu'nun arkasına takılıp ABD'yi ve siyasi kariyerini uçuruma sürükleyen Başkan Trump, b"
+      }
+    },
+    {
+      "id": "content_1ac4d0c7041e",
+      "url": "https://www.ahaber.com.tr/yazarlar/hilal-kaplan/2026/04/10/erdoganin-sessiz-mimarligi",
+      "title": "Erdoğan’ın sessiz mimarlığı",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755959+00:00",
+      "published_at": "2026-04-10T04:05:51+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Erdoğan’ın sessiz mimarlığı\" src=\"https://www.ahaber.com.tr/rss/news.xml\" /><br />Ortadoğu'da güç dengeleri uzun yıllar boyunca dış müdahalelerle şekillendi. Ancak son dönemde Türkiye, Mısır"
+      }
+    },
+    {
+      "id": "content_48c6ae2503f2",
+      "url": "https://www.ahaber.com.tr/yazarlar/mahmut-ovur/2026/04/10/kuresel-turbulansin-panzehri",
+      "title": "‘Küresel türbülansın panzehri’",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755963+00:00",
+      "published_at": "2026-04-10T04:05:35+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"‘Küresel türbülansın panzehri’\" src=\"https://www.ahaber.com.tr/rss/news.xml\" /><br />Savaşın giderek sarpa sardığı belliydi. Ama yine de dünya 24 saat nefesini tuttu ve bir çılgınlık olmaz u"
+      }
+    },
+    {
+      "id": "content_14597579496c",
+      "url": "https://www.ahaber.com.tr/yazarlar/kerem-alkin/2026/04/10/kuresel-sisteme-erdogan-diplomasisi-damgasi",
+      "title": "Küresel Sisteme ‘Erdoğan Diplomasisi’ Damgası",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755968+00:00",
+      "published_at": "2026-04-10T04:05:15+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Küresel Sisteme ‘Erdoğan Diplomasisi’ Damgası\" src=\"https://www.ahaber.com.tr/rss/news.xml\" /><br />Küresel siyaset bugün tarihinin en gürültülü, en dağınık ve en yönsüz dönemlerinden birini"
+      }
+    },
+    {
+      "id": "content_3afb84261858",
+      "url": "https://www.ahaber.com.tr/yazarlar/bekir-hazar/2026/04/10/kaybeden-ve-kazanan",
+      "title": "Kaybeden ve kazanan",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755973+00:00",
+      "published_at": "2026-04-10T04:03:33+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Kaybeden ve kazanan\" src=\"https://www.ahaber.com.tr/rss/news.xml\" /><br />Soykırımcı çocuk katili Siyonist İsrail'in Gazze katliamlarında tasmalı köpeğine dönmek ve hemen ardından İran savaş"
+      }
+    },
+    {
+      "id": "content_dbacef89b9f2",
+      "url": "https://www.ahaber.com.tr/yazarlar/nihat-hatipoglu/2026/04/10/namaz-suuruna-varmak",
+      "title": "Namaz şuuruna varmak",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755978+00:00",
+      "published_at": "2026-04-10T04:02:42+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Namaz şuuruna varmak\" src=\"https://www.ahaber.com.tr/rss/news.xml\" /><br />HZ. Peygamber (SAV) bir güz mevsiminde dışarı çıkmıştı. Ağaçlardan yapraklar dökülüyordu.\nPeygamberimiz yanındaki a"
+      }
+    },
+    {
+      "id": "content_736e95d8faee",
+      "url": "https://www.ahaber.com.tr/dunya/canli/canli-trumptan-tahrana-hurmuz-uyarisi-anlasmayi-ihlal-ediyorsunuz",
+      "title": "Canlı | Gözler Orta Doğu'da: İslamabad diplomasisi başlamadan çıkmaza mı girdi?",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755983+00:00",
+      "published_at": "2026-04-10T03:58:11+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Canlı | Gözler Orta Doğu'da: İslamabad diplomasisi başlamadan çıkmaza mı girdi?\" src=\"https://iaahbr.tmgrup.com.tr/3e0a41/0/0/0/0/1300/800?u=https://iahbr.tmgrup.com.tr/2026/04/10/1775793214"
+      }
+    },
+    {
+      "id": "content_abb731bfdfd7",
+      "url": "https://www.ahaber.com.tr/dunya/canli/canli-trumptan-netanyahuya-lubnan-freni-saldirilarin-dozunu-dusur",
+      "title": "CANLI | Trump'tan Netanyahu’ya Lübnan freni: \"Saldırıların dozunu düşür\"",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755988+00:00",
+      "published_at": "2026-04-10T03:41:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"CANLI | Trump'tan Netanyahu’ya Lübnan freni: \" src=\"https://iaahbr.tmgrup.com.tr/ba2c92/0/0/0/0/2048/1366?u=https://iahbr.tmgrup.com.tr/2026/04/10/canli-trumptan-netanyahuya-lubnan-freni-sal"
+      }
+    },
+    {
+      "id": "content_cc41d122b652",
+      "url": "https://www.ahaber.com.tr/yasam/2026/04/10/bursada-kavga-ihbarina-giden-polislere-surpriz-kutlama",
+      "title": "Bursa'da kavga ihbarına giden polislere sürpriz kutlama",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755993+00:00",
+      "published_at": "2026-04-10T03:19:10+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Bursa'da kavga ihbarına giden polislere sürpriz kutlama\" src=\"https://iaahbr.tmgrup.com.tr/d96404/1200/1200/0/0/719/720?u=https://iahbr.tmgrup.com.tr/2026/04/10/bursada-kavga-ihbarina-giden-"
+      }
+    },
+    {
+      "id": "content_6e6ea1816fa1",
+      "url": "https://www.ahaber.com.tr/yasam/2026/04/10/kagithanede-alkollu-surucunun-kullandigi-otomobilin-carptigi-cip-devrildi-1-yarali",
+      "title": "Kağıthane'de alkollü sürücünün kullandığı otomobilin çarptığı cip devrildi: 1 yaralı",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.755999+00:00",
+      "published_at": "2026-04-10T02:58:20+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Kağıthane'de alkollü sürücünün kullandığı otomobilin çarptığı cip devrildi: 1 yaralı\" src=\"https://iaahbr.tmgrup.com.tr/a437d6/0/0/0/0/1600/900?u=https://iahbr.tmgrup.com.tr/2026/04/10/kagit"
+      }
+    },
+    {
+      "id": "content_08170cff6f5f",
+      "url": "https://www.ahaber.com.tr/yasam/2026/04/10/kucukcekmecede-otelde-yangin-2-kisi-dumandan-etkilendi",
+      "title": "Küçükçekmece'de otelde yangın! 2 kişi dumandan etkilendi",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.756004+00:00",
+      "published_at": "2026-04-10T02:50:26+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Küçükçekmece'de otelde yangın! 2 kişi dumandan etkilendi\" src=\"https://iaahbr.tmgrup.com.tr/8509f1/1200/1200/100/0/868/768?u=https://iahbr.tmgrup.com.tr/2026/04/10/kucukcekmecede-otelde-yang"
+      }
+    },
+    {
+      "id": "content_a468650d4964",
+      "url": "https://www.ahaber.com.tr/video/ozel-haber/abdnin-hedefi-irandaki-uranyum-mu",
+      "title": "ABD'nin hedefi İran'daki uranyum mu?",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.756009+00:00",
+      "published_at": "2026-04-10T02:39:57+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"ABD'nin hedefi İran'daki uranyum mu?\" src=\"https://iaahbr.tmgrup.com.tr/945253/1200/1200/210/0/696/486?u=https://iahbr.tmgrup.com.tr/2026/04/10/abdnin-hedefi-irandaki-uranyum-mu-177578878894"
+      }
+    },
+    {
+      "id": "content_d9ba8b21bd3e",
+      "url": "https://www.ahaber.com.tr/video/ozel-haber/lubnanda-kiyamet-gunu-24-saatte-yuzlerce-sivil-katledildi",
+      "title": "Lübnan'da kıyamet günü: 24 saatte yüzlerce sivil katledildi",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-04-10T05:54:57.756013+00:00",
+      "published_at": "2026-04-10T02:20:34+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Lübnan'da kıyamet günü: 24 saatte yüzlerce sivil katledildi\" src=\"https://iaahbr.tmgrup.com.tr/59bfc5/1200/1200/368/0/1732/1365?u=https://iahbr.tmgrup.com.tr/2026/04/10/lubnanda-kiyamet-gunu"
+      }
+    },
+    {
+      "id": "content_a2aa37d524e5",
+      "url": "https://onedio.com/haber/apple-dan-ezber-bozan-sistem-iphone-da-satin-alma-devri-bitiyor-kira-devri-basliyor-1371486",
+      "title": "Apple&apos;dan Ezber Bozan Sistem: iPhone&apos;da Satın Alma Devri Bitiyor, Kira Devri Başlıyor!",
+      "source": "onedio-teknolji",
+      "source_id": "source_bfce7b29fbfc",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:16:59.327512+00:00",
+      "published_at": "2026-07-22T12:54:45+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "Apple, artan ürün fiyatlarının ardından yeni bir uygulamayı hayata geçireceğini duyurdu. Apple Upgrade programı ile iPhone, iPad ve Mac cihazları satın alınmadan &apos;kiralanarak&apos; kullanılabilec"
+      }
+    },
+    {
+      "id": "content_c1d0f6a1ecb3",
+      "url": "https://onedio.com/haber/10-soruda-kuantum-bilgisayarlar-sifreleri-kirabilir-mi-1371342",
+      "title": "10 Soruda Kuantum Bilgisayarlar Şifreleri Kırabilir mi?",
+      "source": "onedio-teknolji",
+      "source_id": "source_bfce7b29fbfc",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:16:59.327535+00:00",
+      "published_at": "2026-07-21T07:48:08+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "Dijital dünyada yaptığımız hemen her işlem şifreleme teknolojileriyle korunuyor. Banka hesaplarımız, e-postalarımız, kripto varlıklarımız ve devlet sistemleri bu görünmez güvenlik katmanlarına güveniy"
+      }
+    },
+    {
+      "id": "content_33bffa38288d",
+      "url": "https://onedio.com/haber/arabasini-ve-bahcesini-gozu-gibi-sevenlerin-yeni-favorisi-bosch-yuksek-basincli-yikama-makinesi-indirimde-1370932",
+      "title": "Arabasını ve Bahçesini Gözü Gibi Sevenlerin Yeni Favorisi: Bosch Yüksek Basınçlı Yıkama Makinesi İndirimde!",
+      "source": "onedio-teknolji",
+      "source_id": "source_bfce7b29fbfc",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:16:59.327544+00:00",
+      "published_at": "2026-07-17T14:03:47+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "Hafta sonu geldiğinde arabasını kendi yıkamaktan keyif alanlar, bahçesindeki taşların, terasın veya balkonun ilk günkü gibi parlamasını isteyenler buraya! Dışarıda araç yıkatmanın maliyeti her geçen g"
+      }
+    },
+    {
+      "id": "content_d0a2c726e049",
+      "url": "https://onedio.com/haber/uzay-icin-dort-kollu-robot-gelistirdiler-iki-eliyle-tutunup-digerleriyle-calisiyor-1370975",
+      "title": "Uzay İçin Dört Kollu Robot Geliştirdiler: İki Eliyle Tutunup Diğerleriyle Çalışıyor",
+      "source": "onedio-teknolji",
+      "source_id": "source_bfce7b29fbfc",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:16:59.327551+00:00",
+      "published_at": "2026-07-17T20:52:21+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "İnsansı robot denildiğinde akla genellikle iki kolu ve iki bacağı olan makineler geliyor. Ancak yer çekiminin bulunmadığı bir uzay istasyonunda yürümek için tasarlanan bacaklar pek işe yaramıyor. HELI"
+      }
+    },
+    {
+      "id": "content_eaea6669e6df",
+      "url": "https://onedio.com/haber/yapay-zeka-kaplica-uydurdu-turistler-buz-gibi-nehirle-karsilasti-1370967",
+      "title": "Yapay Zeka Kaplıca Uydurdu, Turistler Buz Gibi Nehirle Karşılaştı!",
+      "source": "onedio-teknolji",
+      "source_id": "source_bfce7b29fbfc",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:16:59.327576+00:00",
+      "published_at": "2026-07-17T19:19:24+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "Seyahat planı hazırlarken yapay zekadan yardım alanların başına gelebilecek en tuhaf olaylardan biri Tazmanya’da yaşandı. Yapay zeka yalnızca olmayan bir kaplıcayı önermekle kalmadı, burası için gerçe"
+      }
+    },
+    {
+      "id": "content_dee4a69b60d7",
+      "url": "https://www.ahaber.com.tr/galeri/magazin/mister-turkiye-2026-birincisi-dogukan-navdar-kimdir",
+      "title": "Mister Türkiye 2026 birincisi Doğukan Navdar kimdir?",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917311+00:00",
+      "published_at": "2026-07-24T13:08:24+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Mister Türkiye 2026 birincisi Doğukan Navdar kimdir?\" src=\"https://iaahbr.tmgrup.com.tr/1bc628/1200/1200/53/0/578/526?u=https://iahbr.tmgrup.com.tr/album/2026/07/24/mister-turkiye-2026nin-ka"
+      }
+    },
+    {
+      "id": "content_d43b903a9d52",
+      "url": "https://www.ahaber.com.tr/video/ozel-haber/anaokulu-egitimi-cocuklarin-gelisimine-nasil-katki-sagliyor",
+      "title": "EĞİTİM DÜNYASI | Uzmanlar anlattı: Anaokulu eğitimi neden önemli?",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917344+00:00",
+      "published_at": "2026-07-24T13:05:09+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"EĞİTİM DÜNYASI | Uzmanlar anlattı: Anaokulu eğitimi neden önemli?\" src=\"https://iaahbr.tmgrup.com.tr/0ca8cd/1200/1200/235/0/787/552?u=https://iahbr.tmgrup.com.tr/2026/07/24/egitim-dunyasi-uz"
+      }
+    },
+    {
+      "id": "content_ea4c710d5aa6",
+      "url": "https://www.ahaber.com.tr/gundem/2026/07/24/fatih-altaylinin-ahbap-ifadesine-ahabercomtr-ulasti",
+      "title": "Fatih Altaylı’nın Ahbap ifadesine ahaber.com.tr ulaştı: Hak etmediği desteği vermişim",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917355+00:00",
+      "published_at": "2026-07-24T12:58:01+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Fatih Altaylı’nın Ahbap ifadesine ahaber.com.tr ulaştı: Hak etmediği desteği vermişim\" src=\"https://iaahbr.tmgrup.com.tr/5813d2/1200/1200/138/0/497/360?u=https://iahbr.tmgrup.com.tr/2026/07/"
+      }
+    },
+    {
+      "id": "content_64e1e9a11630",
+      "url": "https://www.ahaber.com.tr/video/gundem-videolari/bakan-kurum-basari-hikayelerini-yazmayi-surdurecegiz",
+      "title": "Murat Kurum'dan açılış töreninde dikkat çeken mesajlar",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917371+00:00",
+      "published_at": "2026-07-24T12:50:17+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Murat Kurum'dan açılış töreninde dikkat çeken mesajlar\" src=\"https://iaahbr.tmgrup.com.tr/02d897/1200/1200/294/0/846/552?u=https://iahbr.tmgrup.com.tr/2026/07/24/murat-kurumdan-acilis-toreni"
+      }
+    },
+    {
+      "id": "content_043573ed7cb5",
+      "url": "https://www.ahaber.com.tr/gundem/2026/07/24/tahsildaroglu-peynirinde-mikrobiyolojik-uygunsuzluk-tespit-edildi",
+      "title": "Tahsildaroğlu peynirinde mikrobiyolojik uygunsuzluk: O ürünler raftan toplatıldı",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917378+00:00",
+      "published_at": "2026-07-24T12:47:46+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Tahsildaroğlu peynirinde mikrobiyolojik uygunsuzluk: O ürünler raftan toplatıldı\" src=\"https://iaahbr.tmgrup.com.tr/6f943f/0/0/0/0/1600/900?u=https://iahbr.tmgrup.com.tr/2026/07/24/tahsildar"
+      }
+    },
+    {
+      "id": "content_f6d57139111b",
+      "url": "https://www.ahaber.com.tr/video/gundem-videolari/erdogan-natodan-geri-donusler-olumlu-oldu",
+      "title": "Başkan Erdoğan'dan Ayasofya ve NATO Zirvesi mesajı",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917384+00:00",
+      "published_at": "2026-07-24T12:39:28+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Başkan Erdoğan'dan Ayasofya ve NATO Zirvesi mesajı\" src=\"https://iaahbr.tmgrup.com.tr/dae86c/1200/1200/148/0/701/552?u=https://iahbr.tmgrup.com.tr/2026/07/24/baskan-erdogandan-ayasofya-ve-na"
+      }
+    },
+    {
+      "id": "content_83c2ce8d0dd4",
+      "url": "https://www.ahaber.com.tr/galeri/magazin/fenerbahceye-benziyorlar-tolga-saritasin-baba-ogul-pozuna-gulduren-yorum",
+      "title": "\"Fenerbahçe'ye benziyorlar\" Tolga Sarıtaş'ın baba-oğul pozuna güldüren yorum",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917393+00:00",
+      "published_at": "2026-07-24T12:34:45+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"\" src=\"https://iaahbr.tmgrup.com.tr/e32bf9/1200/1200/54/0/574/519?u=https://iahbr.tmgrup.com.tr/album/2026/07/24/fenerbahceye-benziyorlar-tolga-saritasin-baba-ogul-pozuna-gulduren-yorum-1784"
+      }
+    },
+    {
+      "id": "content_bfcdb367775b",
+      "url": "https://www.ahaber.com.tr/galeri/dunya/fransa-yanginlarla-bas-edemedi-macron-abden-yardim-istedi",
+      "title": "Fransa yangınlarla baş edemedi: Macron AB'den yardım istedi",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917399+00:00",
+      "published_at": "2026-07-24T12:22:56+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Fransa yangınlarla baş edemedi: Macron AB'den yardım istedi\" src=\"https://iaahbr.tmgrup.com.tr/286637/1200/1200/684/0/2048/1365?u=https://iahbr.tmgrup.com.tr/album/2026/07/24/fransa-yanginla"
+      }
+    },
+    {
+      "id": "content_1cefe8c288b1",
+      "url": "https://www.ahaber.com.tr/galeri/magazin/ahu-yagtu-12-yas-kucuk-sevgilisi-bora-cengizle-misir-tatilinde",
+      "title": "Ahu Yağtu 12 yaş küçük sevgilisi Bora Cengiz'le Mısır tatilinde",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917404+00:00",
+      "published_at": "2026-07-24T12:10:29+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Ahu Yağtu 12 yaş küçük sevgilisi Bora Cengiz'le Mısır tatilinde\" src=\"https://iaahbr.tmgrup.com.tr/da2fe0/1200/1200/83/0/586/503?u=https://iahbr.tmgrup.com.tr/album/2026/07/24/ahu-yagtu-12-y"
+      }
+    },
+    {
+      "id": "content_13596b7acb4a",
+      "url": "https://www.ahaber.com.tr/gundem/2026/07/24/baskan-erdogan-ayasofyayi-acmak-bize-nasip-oldu",
+      "title": "Başkan Erdoğan'dan net mesaj: Hamdolsun Ayasofya'yı İslam alemine kavuşturduk",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917410+00:00",
+      "published_at": "2026-07-24T11:59:01+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Başkan Erdoğan'dan net mesaj: Hamdolsun Ayasofya'yı İslam alemine kavuşturduk\" src=\"https://iaahbr.tmgrup.com.tr/0d9bf1/1200/1200/235/0/800/565?u=https://iahbr.tmgrup.com.tr/2026/07/24/baska"
+      }
+    },
+    {
+      "id": "content_f7393af6ebdd",
+      "url": "https://www.ahaber.com.tr/video/gundem-videolari/ayasofyanin-ibadete-acilisinin-6-yili-kutlaniyor",
+      "title": "Başkan Erdoğan'dan Ayasofya'nın 6. yılına özel mesaj",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917416+00:00",
+      "published_at": "2026-07-24T11:27:28+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Başkan Erdoğan'dan Ayasofya'nın 6. yılına özel mesaj\" src=\"https://iaahbr.tmgrup.com.tr/df3692/1200/1200/254/0/807/552?u=https://iahbr.tmgrup.com.tr/2026/07/24/baskan-erdogandan-ayasofyanin-"
+      }
+    },
+    {
+      "id": "content_e444d9f095cf",
+      "url": "https://www.ahaber.com.tr/viral/galeri/tikla/dalindan-biber-kumesten-yumurta-asena-bahcesinde-uretip-sofrasina-tasiyor",
+      "title": "Dalından biber, kümesten yumurta! Asena bahçesinde üretip sofrasına taşıyor",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917422+00:00",
+      "published_at": "2026-07-24T11:20:51+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Dalından biber, kümesten yumurta! Asena bahçesinde üretip sofrasına taşıyor\" src=\"https://iaahbr.tmgrup.com.tr/0b6ea5/1200/1200/191/0/1277/1086?u=https://iahbr.tmgrup.com.tr/album/2026/07/24"
+      }
+    },
+    {
+      "id": "content_2f6fa5ed48f4",
+      "url": "https://www.ahaber.com.tr/gundem/2026/07/24/hazal-kaya-ve-ozlem-gursesin-ifadesi-ortaya-cikti",
+      "title": "Hazal Kaya ve Özlem Gürses'in ifadesi ortaya çıktı! Ahbap soruşturmasında yeni perde",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917428+00:00",
+      "published_at": "2026-07-24T11:18:26+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Hazal Kaya ve Özlem Gürses'in ifadesi ortaya çıktı! Ahbap soruşturmasında yeni perde\" src=\"https://iaahbr.tmgrup.com.tr/743e64/0/0/0/0/2048/1152?u=https://iahbr.tmgrup.com.tr/2026/07/24/haza"
+      }
+    },
+    {
+      "id": "content_c4ff8d4906b5",
+      "url": "https://www.ahaber.com.tr/video/yasam-videolari/aksaray-mutfaginin-cografi-isaretli-lezzetleri-tanitildi",
+      "title": "Testi kebabından şerbetli pideye Aksaray lezzetleri",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917435+00:00",
+      "published_at": "2026-07-24T11:15:35+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Testi kebabından şerbetli pideye Aksaray lezzetleri\" src=\"https://iaahbr.tmgrup.com.tr/ee3d38/1200/1200/125/0/678/552?u=https://iahbr.tmgrup.com.tr/2026/07/24/testi-kebabindan-serbetli-pidey"
+      }
+    },
+    {
+      "id": "content_ec24b55e1ec4",
+      "url": "https://www.ahaber.com.tr/gundem/2026/07/24/baskan-erdogandan-ayasofya-paylasimi",
+      "title": "Başkan Erdoğan'dan Ayasofya paylaşımı: 86 yıllık hicran bitti ebediyete kadar ezan sesleriyle süslenecek",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917440+00:00",
+      "published_at": "2026-07-24T09:59:41+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Başkan Erdoğan'dan Ayasofya paylaşımı: 86 yıllık hicran bitti ebediyete kadar ezan sesleriyle süslenecek\" src=\"https://iaahbr.tmgrup.com.tr/f01716/0/0/0/0/1638/2048?u=https://iahbr.tmgrup.co"
+      }
+    },
+    {
+      "id": "content_66e7a8f317a9",
+      "url": "https://www.ahaber.com.tr/video/gundem-videolari/chp-mecliste-5-siraya-geriledi-dengeler-degisti",
+      "title": "TBMM'de yeni tablo: CHP 5. sıraya geriledi",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917446+00:00",
+      "published_at": "2026-07-24T09:50:56+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"TBMM'de yeni tablo: CHP 5. sıraya geriledi\" src=\"https://iaahbr.tmgrup.com.tr/1ee438/1200/1200/0/0/552/552?u=https://iahbr.tmgrup.com.tr/2026/07/24/tbmmde-yeni-tablo-chp-5-siraya-geriledi-17"
+      }
+    },
+    {
+      "id": "content_9789e1fae08f",
+      "url": "https://www.ahaber.com.tr/egitim/osym-duyurdu-kpss-2026-1-tercih-sonuclari-aciklandi-6478700",
+      "title": "KPSS-2026/1 yerleştirme sonuçları açıklandı: Kamu kadrolarına başvuran adaylar ÖSYM sonuç ekranından sorgulama yapabiliyor",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917454+00:00",
+      "published_at": "2026-07-24T09:50:24+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"KPSS-2026/1 yerleştirme sonuçları açıklandı: Kamu kadrolarına başvuran adaylar ÖSYM sonuç ekranından sorgulama yapabiliyor\" src=\"https://iaahbr.tmgrup.com.tr/09db92/0/0/0/0/1536/1024?u=https"
+      }
+    },
+    {
+      "id": "content_9b6b80f9fd34",
+      "url": "https://www.ahaber.com.tr/dunya/2026/07/24/israilde-turkiye-endisesi-suudi-nukleer-anlasmasi",
+      "title": "Washington Post'tan çarpıcı Türkiye detayı: Suudi Arabistan'ın nükleer anlaşması sonrası İsrail'de Türkiye endişesi büyüdü",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917460+00:00",
+      "published_at": "2026-07-24T09:41:48+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"Washington Post'tan çarpıcı Türkiye detayı: Suudi Arabistan'ın nükleer anlaşması sonrası İsrail'de Türkiye endişesi büyüdü\" src=\"https://iaahbr.tmgrup.com.tr/2dfe0a/0/0/0/0/2048/1536?u=https"
+      }
+    },
+    {
+      "id": "content_79b825902548",
+      "url": "https://www.ahaber.com.tr/galeri/magazin/7-operasyonu-geciren-danla-bilicten-isyan-delirecegim-az-kaldi",
+      "title": "7. operasyonu geçiren Danla Bilic'ten isyan: \"Delireceğim az kaldı\"",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917465+00:00",
+      "published_at": "2026-07-24T09:28:35+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"7. operasyonu geçiren Danla Bilic'ten isyan: \" src=\"https://iaahbr.tmgrup.com.tr/996578/1200/1200/129/0/789/660?u=https://iahbr.tmgrup.com.tr/album/2026/07/24/7-operasyonu-geciren-danla-bili"
+      }
+    },
+    {
+      "id": "content_6ce432b30367",
+      "url": "https://www.ahaber.com.tr/ekonomi/2026/07/24/toki-malatya-konut-belirleme-kurasi-teslim-ve-odeme-takvimi",
+      "title": "TOKİ Malatya konut belirleme kurası başladı: 8 bin 448 hak sahibinin daireleri belirleniyor",
+      "source": "Ahaber",
+      "source_id": "source_f7c48b28ee91",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:01.917471+00:00",
+      "published_at": "2026-07-24T09:11:02+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img alt=\"TOKİ Malatya konut belirleme kurası başladı: 8 bin 448 hak sahibinin daireleri belirleniyor\" src=\"https://iaahbr.tmgrup.com.tr/52d134/0/0/0/0/2048/1536?u=https://iahbr.tmgrup.com.tr/2026/07/"
+      }
+    },
+    {
+      "id": "content_1add9dcc632f",
+      "url": "https://www.trthaber.com/haber/gundem/erdogan-ayasofyayi-yeniden-ibadete-acmak-bize-nasip-oldu-952113.html",
+      "title": "Erdoğan: Ayasofya'yı yeniden ibadete açmak bize nasip oldu",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107485+00:00",
+      "published_at": "2026-07-24T10:52:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2478000/recep-tayyip-erdogan-2478085.jpg\" />Cumhurbşakanı Recep Tayyip Erdoğan, \"6'ncı seneyi devriyesiyle müşerref olduğumuz Ayasofya Camii"
+      }
+    },
+    {
+      "id": "content_360b62aeb0a3",
+      "url": "https://www.trthaber.com/haber/turk-dunyasi/yunanistanin-turk-hazimsizligi-bati-trakya-turklerinin-haklari-gasbediliyor-951998.html",
+      "title": "Yunanistan'ın 'Türk' hazımsızlığı: Batı Trakya Türklerinin hakları gasbediliyor",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107505+00:00",
+      "published_at": "2026-07-24T12:43:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/bati-trakya-turkleri-yunanistan-mucadele-2477864.jpg\" />Yunanistan, \"Batı Trakya'da Türk yoktur\" diyerek dernek ve vakıflarda ''Türk"
+      }
+    },
+    {
+      "id": "content_5676e7856d09",
+      "url": "https://www.trthaber.com/haber/gundem/ozgur-ozel-ve-90-vekil-chpden-istifa-etti-952094.html",
+      "title": "Özgür Özel ve 90 vekil CHP'den istifa etti",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107512+00:00",
+      "published_at": "2026-07-24T07:48:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2478000/ozgur-ozel-2478077.jpg\" />Özgür Özel, Yeni Parti’nin kuruluş evraklarını imzalayarak Cumhuriyet Halk Partisi’nden istifa etti. Özel "
+      }
+    },
+    {
+      "id": "content_1490c556d3a8",
+      "url": "https://www.trthaber.com/haber/turkiye/gulistan-doku-sorusturmasinda-3-supheli-adliyeye-sevk-edildi-952093.html",
+      "title": "Gülistan Doku soruşturmasında 3 şüpheli adliyeye sevk edildi",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107519+00:00",
+      "published_at": "2026-07-24T07:41:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2454000/gulistan-2455362.jpg\" />Tunceli'de 5 Ocak 2020'den itibaren kendisinden haber alınamayan üniversite öğrencisi Gülistan Doku ile ilgi"
+      }
+    },
+    {
+      "id": "content_dffe99048ef9",
+      "url": "https://www.trthaber.com/haber/ekonomi/ciftci-ve-esnafa-629-milyar-lira-finansman-destegi-verildi-952111.html",
+      "title": "Çiftçi ve esnafa 629 milyar lira finansman desteği verildi",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107525+00:00",
+      "published_at": "2026-07-24T08:52:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1512000/para-aa-1513096.jpg\" />Hazinenin faiz/kar payı destekli kredi ve finansman uygulaması kapsamında çiftçilere 449 milyar lira, esnaf v"
+      }
+    },
+    {
+      "id": "content_2b7ee592620e",
+      "url": "https://www.trthaber.com/haber/ekonomi/merkez-bankasi-faiz-kararini-acikladi-952007.html",
+      "title": "Merkez Bankası faiz kararını açıkladı",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107535+00:00",
+      "published_at": "2026-07-23T10:55:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1698000/merkez-bankasi-faiz-ekonomi-1699988.jpg\" />Türkiye Cumhuriyet Merkez Bankası (TCMB) Para Politikası Kurulu (PPK), politika faizi ola"
+      }
+    },
+    {
+      "id": "content_260695f94925",
+      "url": "https://www.trthaber.com/haber/gundem/turkiyeden-israilli-bakanin-mescid-i-aksa-baskinina-tepki-952038.html",
+      "title": "Türkiye'den İsrailli bakanın Mescidi Aksa baskınına tepki",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107542+00:00",
+      "published_at": "2026-07-23T15:37:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1760000/disisleri-bakanligi-depo-1761807.jpg\" />Dışişleri Bakanlığı, İsrailli bir bakanın, beraberindeki aşırılık yanlısı grupla, İsrail güv"
+      }
+    },
+    {
+      "id": "content_c9a6c6df9e54",
+      "url": "https://www.trthaber.com/haber/kultur-sanat/ayasofyayi-30-milyondan-fazla-kisi-ziyaret-etti-952105.html",
+      "title": "Ayasofya'yı 30 milyondan fazla kişi ziyaret etti",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107557+00:00",
+      "published_at": "2026-07-24T08:49:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2244000/ayasofya-bayram-aa-2244711.jpg\" />Yerli ve yabancı ziyaretçilerin İstanbul'daki önemli duraklarından biri olan Ayasofya-i Kebir Cami"
+      }
+    },
+    {
+      "id": "content_38059cd2f89c",
+      "url": "https://www.trthaber.com/haber/gundem/cumhurbaskani-erdogan-ayasofyanin-dirilisi-mubarek-olsun-952112.html",
+      "title": "Cumhurbaşkanı Erdoğan: Ayasofyanın dirilişi mübarek olsun",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107566+00:00",
+      "published_at": "2026-07-24T10:15:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2478000/erdogan-ayasofya-aa-2478082.jpg\" />Cumhurbaşkanı Recep Tayyip Erdoğan, Ayasofya-i Kebir Cami-i Şerifi'nin yeniden ibadete açılışının"
+      }
+    },
+    {
+      "id": "content_28c444ff1137",
+      "url": "https://www.trthaber.com/haber/dunya/abddeki-secimde-yazilim-hatasi-abd-vatandasi-olmayan-yuzlerce-kisi-oy-kullandi-952077.html",
+      "title": "ABD'deki seçimde yazılım hatası: ABD vatandaşı olmayan yüzlerce kişi oy kullandı",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107574+00:00",
+      "published_at": "2026-07-24T04:36:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1944000/abd-secim-reu-1945214.jpg\" />ABD'nin New Jersey eyaletinde meydana gelen bir yazılım hatası, ABD vatandaşı olmayan binlerce kişinin "
+      }
+    },
+    {
+      "id": "content_7d83616e3c4a",
+      "url": "https://www.trthaber.com/haber/dunya/avrupada-asiri-sicaklar-ve-orman-yanginlari-binlerce-kisi-tahliye-edildi-952072.html",
+      "title": "Avrupa'da aşırı sıcaklar ve orman yangınları: Binlerce kişi tahliye edildi",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107581+00:00",
+      "published_at": "2026-07-24T03:33:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2432000/sili-orman-yangini-aa-2433112.jpg\" />Güney Avrupa genelinde etkisini sürdüren ve hava sıcaklıklarının 44 dereceyi aştığı sıcak dalga"
+      }
+    },
+    {
+      "id": "content_bfa2eb294722",
+      "url": "https://www.trthaber.com/haber/gundem/msb-turk-personel-eurofighter-egitimi-icin-agustosta-ingiltereye-gidecek-951999.html",
+      "title": "MSB: Türk personel Eurofighter eğitimi için ağustosta İngiltereye gidecek",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107588+00:00",
+      "published_at": "2026-07-23T10:00:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2448000/eurofighter-typhoon-aa-2448627.jpg\" />Milli Savunma Bakanlığı, Eurofighter (EF) tedariki kapsamında Türk uçucu personelin 2026 yılı "
+      }
+    },
+    {
+      "id": "content_c72f568fc260",
+      "url": "https://www.trthaber.com/haber/gundem/ahbap-dernegi-sorusturmasinda-6-isim-daha-ifadeye-cagirildi-952021.html",
+      "title": "Ahbap Derneği soruşturmasında 6 isim daha ifadeye çağırıldı",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107594+00:00",
+      "published_at": "2026-07-23T12:37:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/ahbap-haluk-levent-2475644.jpg\" />İstanbul Cumhuriyet Başsavcılığı Ahbap Derneği soruşturması kapsamında 6 ismin daha ifadesine başv"
+      }
+    },
+    {
+      "id": "content_088a33f41ca0",
+      "url": "https://www.trthaber.com/haber/gundem/besiktas-avrupa-liginde-tek-golle-tur-avantajini-kapti-952054.html",
+      "title": "Beşiktaş, Avrupa Ligi'nde tek golle tur avantajını kaptı",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107600+00:00",
+      "published_at": "2026-07-23T19:56:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2478000/besiktas-uefa-avrupa-ligi-aa-2478066.jpg\" />UEFA Avrupa Ligi 2. eleme turunda Danimarka'nın Midtjylland takımını konuk eden Beşiktaş"
+      }
+    },
+    {
+      "id": "content_db63494125ef",
+      "url": "https://www.trthaber.com/haber/gundem/norvec-vazgecti-malezya-rotayi-turkiyeye-cevirebilir-951972.html",
+      "title": "Norveç vazgeçti: Malezya rotayı Türkiyeye çevirebilir",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107606+00:00",
+      "published_at": "2026-07-23T08:00:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2092000/atmaca-fuzesi-2093116.jpg\" />Norveç, Malezya’ya satacağı gemisavar füzeleri için son anda geri adım attı ve süreci iptal etti. Gemil"
+      }
+    },
+    {
+      "id": "content_a0dc0c40599e",
+      "url": "https://www.trthaber.com/haber/turkiye/fethiyedeki-orman-yangini-kontrol-altinda-952011.html",
+      "title": "Fethiye'deki orman yangını kontrol altında",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107613+00:00",
+      "published_at": "2026-07-23T11:18:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/orman-yangini-aa-2477907.jpg\" />Muğla'nın Fethiye ilçesinde Gökçeovacık Mahallesi'nde başlayarak İnlice Mahallesi'ne ulaşan orman ya"
+      }
+    },
+    {
+      "id": "content_34ddb7b9e650",
+      "url": "https://www.trthaber.com/haber/spor/filenin-sultanlari-yari-finalde-952001.html",
+      "title": "Filenin Sultanları yarı finalde",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107619+00:00",
+      "published_at": "2026-07-23T09:58:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/turkiye-kanada-2477863.jpg\" />A Milli Kadın Voleybol Takımı, 2026 VNL çeyrek final maçında Kanada'yı 3-1 mağlup ederek adını son 4'e"
+      }
+    },
+    {
+      "id": "content_eaef11c7b254",
+      "url": "https://www.trthaber.com/haber/turkiye/sicak-havaya-yagis-molasi-20-derecelere-dusecek-951967.html",
+      "title": "Sıcak havaya yağış molası: 20 derecelere düşecek",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107625+00:00",
+      "published_at": "2026-07-23T07:10:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2270000/saganak-aa-2271858.jpg\" />Meteoroloji, hafta sonu yurdun büyük bölümünde yağışlı havanın etkili olacağını duyurdu. \nÖzellikle Marmar"
+      }
+    },
+    {
+      "id": "content_c7ac1b416299",
+      "url": "https://www.trthaber.com/haber/turkiye/izmit-belediyesine-yonelik-yolsuzluk-operasyonu-951952.html",
+      "title": "İzmit Belediyesine yönelik 'yolsuzluk' operasyonu",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107631+00:00",
+      "published_at": "2026-07-23T05:04:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/izmit-belediyesi-yolsuzluk-sorusturmasiaa-2477688.jpg\" />İzmit Belediyesine yönelik yolsuzluk soruşturması kapsamında düzenlenen ope"
+      }
+    },
+    {
+      "id": "content_05c6181f2964",
+      "url": "https://www.trthaber.com/haber/ekonomi/merkez-bankasi-faiz-kararini-aciklayacak-951924.html",
+      "title": "Merkez Bankası faiz kararını açıklayacak",
+      "source": "TRT-MANŞET",
+      "source_id": "source_bac725dfeef5",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:09.107637+00:00",
+      "published_at": "2026-07-22T21:27:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2372000/tcmb-merkez-bankasi-faiz-2372055.jpg\" />Piyasalarda gözler bu hafta Merkez Bankası'nın faiz kararına çevrildi. Para Politikası Kurul"
+      }
+    },
+    {
+      "id": "content_e047c48b87e8",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/turkiye-temiz-teknoloji-projelerine-odaklandi-952104.html",
+      "title": "Türkiye temiz teknoloji projelerine odaklandı",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683645+00:00",
+      "published_at": "2026-07-24T08:45:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1488000/teknoloji-sosyal-medya-sirket-getty-1488564.jpg\" />Türkiye Bilimsel ve Teknolojik Araştırma Kurumu (TÜBİTAK), kasımda Antalya'da düz"
+      }
+    },
+    {
+      "id": "content_29b4259f5d32",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/gokyuzunden-denizlerin-derinligine-teknofest-yeniden-mavi-vatanda-952026.html",
+      "title": "Gökyüzünden denizlerin derinliğine: TEKNOFEST yeniden Mavi Vatan'da",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683665+00:00",
+      "published_at": "2026-07-23T12:48:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/teknofest-mavi-vatan-2477976.jpg\" />Milli Teknoloji Hamlesi vizyonunun denizlerdeki yansıması \"Mavi Vatan\" temasıyla tekrar hayat bu"
+      }
+    },
+    {
+      "id": "content_99e6ad5cbb32",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/golbasi-veri-merkezi-turkiyenin-yapay-zeka-ussu-olacak-951995.html",
+      "title": "Gölbaşı Veri Merkezi, Türkiye'nin yapay zeka üssü olacak",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683672+00:00",
+      "published_at": "2026-07-23T09:38:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/golbasi-veri-merkezi-2477860.jpg\" />TÜRKSAT tarafından hayata geçirilecek Gölbaşı Veri Merkezi (GVM), kamu verilerinin en yüksek güv"
+      }
+    },
+    {
+      "id": "content_3b103bb0a194",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/havelsanin-yerli-deniz-gozetleme-sistemi-kktcde-devrede-951790.html",
+      "title": "HAVELSAN'ın yerli deniz gözetleme sistemi KKTC'de devrede",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683679+00:00",
+      "published_at": "2026-07-21T11:31:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/havelsan-2477154.jpg\" />HAVELSAN Genel Müdürü Mehmet Akif Nacar, Kuzey Kıbrıs Türk Cumhuriyeti'ne (KKTC) kurulan yapay zeka destekli"
+      }
+    },
+    {
+      "id": "content_4ae1f79b66e6",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/internet-tarayicilarina-kaydedilen-parolalar-siber-saldirilarda-risk-olusturuyor-951788.html",
+      "title": "İnternet tarayıcılarına kaydedilen parolalar siber saldırılarda risk oluşturuyor",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683685+00:00",
+      "published_at": "2026-07-21T10:52:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1812000/internet-1812915.jpg\" />İnternet tarayıcılarına kaydedilen parolalar ile çerezler siber saldırılarda kullanıcı hesaplarına erişim am"
+      }
+    },
+    {
+      "id": "content_6a3676dc5ea8",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/teknofest-savasan-iha-yarismasi-siirtte-duzenlenecek-951676.html",
+      "title": "TEKNOFEST Savaşan İHA Yarışması Siirt'te düzenlenecek",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683704+00:00",
+      "published_at": "2026-07-20T08:25:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/teknofest-savasan-iha-yarismasi-2476784.jpg\" />TEKNOFEST kapsamında düzenlenen Savaşan İnsansız Hava Araçları (İHA) Yarışması Siirt'"
+      }
+    },
+    {
+      "id": "content_6ff85056d607",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/itunun-otonom-kara-araci-ayaz-dunya-ikincisi-oldu-951674.html",
+      "title": "İTÜ'nün otonom kara aracı Ayaz dünya ikincisi oldu",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683710+00:00",
+      "published_at": "2026-07-20T08:08:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/ayaz-aa-2476801.jpg\" />İstanbul Teknik Üniversitesi (İTÜ) öğrencilerinden oluşan RAKE (Robotik Arama Kurturma Ekibi) Takımı, gelişti"
+      }
+    },
+    {
+      "id": "content_ac8d8c0de234",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/turkiyenin-dijital-kalesi-icin-ilk-adim-22-temmuzda-atiliyor-951611.html",
+      "title": "Türkiye'nin dijital kalesi için ilk adım 22 Temmuz'da atılıyor",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683716+00:00",
+      "published_at": "2026-07-19T10:26:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/turksat-veri-merkezi-dha-2476688.jpg\" />35 bin 300 metrekarelik alanıyla Türkiye'nin en büyük veri merkezlerinden biri olacak TÜRKSA"
+      }
+    },
+    {
+      "id": "content_3538cda1b400",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/antalyada-uzay-zirvesi-kayit-basvurularinda-dunya-rekoru-kirildi-951531.html",
+      "title": "Antalya'da uzay zirvesi: Kayıt başvurularında dünya rekoru kırıldı",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683721+00:00",
+      "published_at": "2026-07-18T07:20:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/uzay-kongresi-2476521.jpg\" />Türkiye'nin ev sahipliğinde ekim ayı başında düzenlenecek 77. Uluslararası Uzay Kongresi (IAC) için 83 "
+      }
+    },
+    {
+      "id": "content_ec2f9f00854a",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/turkiyenin-yerli-atomik-saati-uzaya-firlatildi-951485.html",
+      "title": "Türkiye'nin yerli atomik saati uzaya fırlatıldı",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683727+00:00",
+      "published_at": "2026-07-17T12:41:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2314000/atomik-saat-2314631.jpg\" />Milli Uzay Programı'nın stratejik hedefleri arasında yer alan Bölgesel Konumlama ve Zamanlama Sistemi içi"
+      }
+    },
+    {
+      "id": "content_c38dec58957c",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/makinistler-yerli-simulasyon-sistemiyle-egitilecek-951465.html",
+      "title": "Makinistler yerli simülasyon sistemiyle eğitilecek",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683733+00:00",
+      "published_at": "2026-07-17T08:52:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2028000/hizli-tren-2029894.jpg\" />Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, SİMURAY-KBÜ Projesi ile tren makinisti eğitimlerinde kull"
+      }
+    },
+    {
+      "id": "content_ca6b11d22bce",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/t3-vakfi-afrikadaki-ilk-bilim-merkezini-moritanyada-acti-951393.html",
+      "title": "T3 Vakfı, Afrika'daki ilk bilim merkezini Moritanya'da açtı",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683738+00:00",
+      "published_at": "2026-07-16T15:02:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/t3-vakfi-moritanya-merkez-aa-2476235.jpg\" />Türkiye Teknoloji Takımı Vakfı (T3 Vakfı) tarafından Moritanya'nın başkenti Nuakşot'ta k"
+      }
+    },
+    {
+      "id": "content_e93044645c5b",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/gokbilimciler-en-sonuk-gezegeni-tesadufen-fotografladi-951303.html",
+      "title": "Gökbilimciler en sönük gezegeni tesadüfen fotoğrafladı",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683744+00:00",
+      "published_at": "2026-07-15T13:30:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2476000/otegezegen-sciencealert-2476104.jpg\" />Avrupa Güney Rasathanesi’nin Çok Büyük Teleskop’u ve James Webb Uzay Teleskobu verilerini inc"
+      }
+    },
+    {
+      "id": "content_4cd2b03a7c5d",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/samanyolunun-kalbinden-tatli-kesif-ahududu-kokulu-galaksiye-ilk-seker-eklendi-951144.html",
+      "title": "Samanyolunun kalbinden tatlı keşif: Ahududu kokulu galaksiye ilk şeker eklendi",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683750+00:00",
+      "published_at": "2026-07-14T06:48:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2418000/samanyolu-2418467.jpg\" />Galaksinin merkezinde ahududu aromalı bileşiklerin ardından ilk kez gerçek şeker molekülü de keşfedildi. Bu"
+      }
+    },
+    {
+      "id": "content_b9c5b435b3c7",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/dogu-karadeniz-sicak-havuz-oldu-sel-riski-katlanarak-artiyor-951063.html",
+      "title": "Doğu Karadeniz sıcak havuz oldu: Sel riski katlanarak artıyor",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683756+00:00",
+      "published_at": "2026-07-13T08:37:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2090000/karadeniz-aa-2091388.jpg\" />Karadeniz'de deniz suyu sıcaklığı kritik eşik olan 26 dereceye ulaştı. Isınan denizin atmosferdeki nemi "
+      }
+    },
+    {
+      "id": "content_93d7151b927f",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/turk-arastirmacinin-yer-aldigi-calismayla-ter-ve-nemden-enerji-uretebilen-batarya-gelistirildi-950963.html",
+      "title": "Türk araştırmacının yer aldığı çalışmayla ter ve nemden enerji üretebilen batarya geliştirildi",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683768+00:00",
+      "published_at": "2026-07-11T15:58:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/ter-ve-nemden-enerji-uretebilen-batarya-aa-2475183.jpg\" />Necmettin Erbakan Üniversitesi Mühendislik Fakültesi Öğretim Üyesi Prof. D"
+      }
+    },
+    {
+      "id": "content_4825af4b2d55",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/james-webb-uzay-teleskobu-yaklasik-5-yildir-erken-evrene-iliskin-onemli-bulgular-sunuyor-950934.html",
+      "title": "James Webb Uzay Teleskobu, yaklaşık 5 yıldır erken evrene ilişkin önemli bulgular sunuyor",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683775+00:00",
+      "published_at": "2026-07-11T09:17:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/1876000/nasa-evren-nasa-1876517.jpg\" />ABD Havacılık ve Uzay Ajansı (NASA), Avrupa Uzay Ajansı (ESA) ve Kanada Uzay Ajansı (CSA) işbirliğiyl"
+      }
+    },
+    {
+      "id": "content_b16230919131",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/uzay-yolculuklari-astronotlarin-beynini-yeniden-sekillendiriyor-950786.html",
+      "title": "Uzay yolculukları astronotların beynini yeniden şekillendiriyor",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683781+00:00",
+      "published_at": "2026-07-09T14:12:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2290000/artemis-astronot-2291297.jpg\" />İnsan bedeninin yerçekimsiz ortama uyum sağlama yeteneği bilinse de, yeni araştırmalar mikroçekimin "
+      }
+    },
+    {
+      "id": "content_1899e7147224",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/bakan-uraloglu-turksat-6a-uzerinden-69-televizyon-kanalina-hizmet-sunuyoruz-950756.html",
+      "title": "Bakan Uraloğlu: Türksat 6A üzerinden 69 televizyon kanalına hizmet sunuyoruz",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683793+00:00",
+      "published_at": "2026-07-09T08:49:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2474000/turksat-6a-dha-2474922.jpg\" />Ulaştırma ve Altyapı Bakanı Abdulkadir Uraloğlu, \"Türksat 6A ile ülkemizi haberleşme uydusu tasarlayıp"
+      }
+    },
+    {
+      "id": "content_17c61507a685",
+      "url": "https://www.trthaber.com/haber/bilim-teknoloji/imece-natonun-uzaydaki-yeni-gozu-olacak-950753.html",
+      "title": "İMECE, NATO'nun uzaydaki yeni gözü olacak",
+      "source": "TRT-BİLİM TEKNOLOJİ",
+      "source_id": "source_a4f4a1ef75d1",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:11.683800+00:00",
+      "published_at": "2026-07-09T08:31:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "teknoloji",
+        "description": "<img src=\"https://trthaberstatic.cdn.wp.trt.com.tr/resimler/2350000/imece-2351280.jpg\" />Türkiye'nin 7-8 Temmuz'da ev sahipliği yaptığı NATO Ankara Zirvesi'nde uzayla ilgili projeler de masaya yatırıl"
+      }
+    },
+    {
+      "id": "content_b9f9b5d9ea92",
+      "url": "https://onedio.com/haber/fatih-altayli-nin-haluk-levent-hakkinda-verdigi-ifade-ortaya-cikti-1371804",
+      "title": "Fatih Altaylı&apos;nın Haluk Levent Hakkında Verdiği İfade Ortaya Çıktı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988672+00:00",
+      "published_at": "2026-07-24T13:03:36+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Ahbap soruşturması kapsamında gazeteci Fatih Altaylı ifade verdi. Altaylı ifadesinde &apos;Hakkındaki kumar ve dolandırıcılık iddiaları nedeniyle bende olumsuz bir izlenim vardı. Açıkçası kendisine gü"
+      }
+    },
+    {
+      "id": "content_131a3423844a",
+      "url": "https://onedio.com/haber/tarim-bakanligi-listeria-tespit-edilen-peynirle-ilgili-aciklama-yayinladi-1371799",
+      "title": "Tarım Bakanlığı Listeria Tespit Edilen Peynirle İlgili Açıklama Yayınladı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988691+00:00",
+      "published_at": "2026-07-24T12:48:47+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Türkiye&apos;nin ünlü süt ürünleri markalarından Tahsildaroğlu&apos;nun zincir marketlerde satışa sunulan bir ürününde, insanlarda hayati sonuçlara yol açabilecek &apos;listeria bakterisi&apos; tespit"
+      }
+    },
+    {
+      "id": "content_1533e1e9e2fd",
+      "url": "https://onedio.com/haber/meteoroloji-ve-akom-alarm-verdi-istanbul-un-7-ilcesi-icin-uyari-yapildi-1371794",
+      "title": "Meteoroloji ve AKOM Alarm Verdi: İstanbul&apos;un 7 İlçesi İçin Uyarı Yapıldı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988697+00:00",
+      "published_at": "2026-07-24T11:58:57+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Günlerdir beklenen yağışlı hava dalgası bu gece itibarıyla Marmara Bölgesi&apos;ne giriş yapıyor. Hem Meteoroloji Genel Müdürlüğü hem de İBB Afet Koordinasyon Merkezi (AKOM), cumartesi sabah saatlerin"
+      }
+    },
+    {
+      "id": "content_05d3c64f9995",
+      "url": "https://onedio.com/haber/chp-den-istifa-etmeyerek-kemal-kilicdaroglu-ile-birlikte-kalan-isimler-belli-oldu-1371788",
+      "title": "CHP’den İstifa Etmeyerek Kemal Kılıçdaroğlu ile Birlikte Kalan İsimler Belli Oldu",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988703+00:00",
+      "published_at": "2026-07-24T11:08:47+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Özgür Özel’in de aralarında olduğu 91 kişinin CHP’den istifa ederek Yeni Parti’yi kurmasının ardından CHP ana muhalefeti kaybetti. 91 kişinin CHP’den ayrılmasından sonra geride 44 kişi kaldı. Peki CHP"
+      }
+    },
+    {
+      "id": "content_ed27f72a1eb5",
+      "url": "https://onedio.com/haber/kemal-kilicdaroglu-nun-videosundaki-bir-detay-akillara-imamoglu-nu-getirdi-1371784",
+      "title": "Kemal Kılıçdaroğlu&apos;nun Videosundaki Bir Detay Akıllara İmamoğlu&apos;nu Getirdi",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988709+00:00",
+      "published_at": "2026-07-24T10:50:13+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Özgür Özel CHP’den istifa ederek YENİ Parti’yi kurduğunu açıkladığı anlarda Kemal Kılıçdaroğlu’ndan dikkat çeken paylaşım geldi. Kılıçdaroğlu’nun paylaştığı videodaki bir detay ise akıllara Ekrem İmam"
+      }
+    },
+    {
+      "id": "content_231473babf54",
+      "url": "https://onedio.com/haber/ozgur-ozel-in-kurdugu-yeni-parti-nin-logosu-gundem-oldu-1371781",
+      "title": "Özgür Özel&apos;in Kurduğu Yeni Parti&apos;nin Logosu Gündem Oldu",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988717+00:00",
+      "published_at": "2026-07-24T10:18:28+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "CHP&apos;den istifa eden Özgür Özel, YENİ Parti&apos;yi kurdu. 91 milletvekilinin yer aldığı YENİ Parti&apos;nin logosu ve renkleri belli oldu. Partinin logosu sosyal medyada gündem oldu. Kullanıcılar"
+      }
+    },
+    {
+      "id": "content_0d22aab8fa0a",
+      "url": "https://onedio.com/haber/yeni-parti-ye-gecen-91-kisi-kim-chp-den-istifa-edip-yeni-parti-ye-gecen-isimler-belli-oldu-1371778",
+      "title": "Yeni Parti’ye Geçen 91 Kişi Kim? CHP’den İstifa Edip Yeni Parti’ye Geçen İsimler Belli Oldu",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988724+00:00",
+      "published_at": "2026-07-24T09:55:31+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Cumhuriyet Halk Partisi&apos;nde 21 Mayıs&apos;ta patlak veren kriz, siyasi tarihimizin en büyük istifa dalgalarından biriyle sonuçlandı. Özgür Özel öncülüğündeki 90 milletvekili partisinden ayrılarak"
+      }
+    },
+    {
+      "id": "content_e6fc716bbce7",
+      "url": "https://onedio.com/haber/91-isimle-kurulan-yeni-parti-meclis-te-ikinci-siraya-yerlesti-meclis-teki-yeni-sandalye-sayisi-belli-oldu-1371774",
+      "title": "91 İsimle Kurulan &apos;Yeni Parti&apos; Meclis&apos;te İkinci Sıraya Yerleşti: Meclis’teki Yeni Sandalye Sayısı Belli Oldu",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988729+00:00",
+      "published_at": "2026-07-24T09:02:14+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Cumhuriyet Halk Partisi&apos;nde yaşanan yönetim krizi, beklenen büyük kopuşla sonuçlandı. Özgür Özel ve beraberindeki 90 milletvekili partiden istifa ederek &apos;Yeni Parti&apos;nin kuruluş sürecini"
+      }
+    },
+    {
+      "id": "content_9aa611dc9c0c",
+      "url": "https://onedio.com/haber/ozgur-ozel-in-yeni-partisinin-logosu-ve-amblemi-belli-oldu-1371763",
+      "title": "Özgür Özel&apos;in Yeni Partisinin Logosu ve Amblemi Belli Oldu",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988735+00:00",
+      "published_at": "2026-07-24T08:21:46+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Eski CHP Genel Başkanı Özgür Özel, 24 Temmuz 2026 Cuma günü CHP&apos;den istifa etti. Özgür Özel ile birlikte 91 milletvekili de partiden istifa ettiğini duyurdu. Özgür Özel&apos;in yeni partisinin lo"
+      }
+    },
+    {
+      "id": "content_451074feb7cc",
+      "url": "https://onedio.com/haber/ozgur-ozel-chp-den-istifa-etti-1371761",
+      "title": "Özgür Özel CHP&apos;den İstifa Etti: İstifa Ettiği Anlar Böyle Kaydedildi",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988740+00:00",
+      "published_at": "2026-07-24T07:50:22+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Özgür Özel, CHP&apos;den istifa etti. Özgür Özel ile birlikte toplam 91 milletvekili CHP&apos;den istifa ederek Yeni Parti Kurucular Kurulu’na katıldı.Özgür Özel&apos;in istifa ettiği anlar kameralar "
+      }
+    },
+    {
+      "id": "content_c4dbb5be22ce",
+      "url": "https://onedio.com/haber/yargitay-dan-horlayan-erkekler-icin-emsal-karar-1371760",
+      "title": "Yargıtay&apos;dan Horlayan Erkekler İçin Emsal Karar",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988745+00:00",
+      "published_at": "2026-07-24T07:38:14+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Yargıtay, Türkiye&apos;de milyonlarca çifti ilgilendiren emsal bir karara imza attı. Boşanma davasında Yüksek Mahkeme; eşine yönelik fiziksel ve psikolojik şiddet uygulayan kocanın, aynı zamanda gecel"
+      }
+    },
+    {
+      "id": "content_7cdf73b95329",
+      "url": "https://onedio.com/haber/tarimi-bekleyen-yeni-tehlike-vampir-ve-kokarcadan-sonra-amerikan-beyaz-kelebegi-alarmi-1371755",
+      "title": "Tarımı Bekleyen Yeni Tehlike: Vampir ve Kokarcadan Sonra Amerikan Beyaz Kelebeği Alarmı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988750+00:00",
+      "published_at": "2026-07-24T07:07:00+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Doğu Karadeniz Bölgesi&apos;nde tarım alanlarını tehdit eden zararlı böceklere her geçen gün bir yenisi ekleniyor. Uzmanlar, vampir kelebek ve kahverengi kokarcanın ardından sayıları hızla artan Ameri"
+      }
+    },
+    {
+      "id": "content_a4d01b2fe315",
+      "url": "https://onedio.com/haber/tarim-bakanligi-dogruladi-marketlerde-satilan-unlu-peynir-markasi-icin-toplatma-ve-imha-karari-verildi-1371749",
+      "title": "Tarım Bakanlığı Doğruladı: Marketlerde Satılan Ünlü Peynir Markası İçin Toplatma ve İmha Kararı Verildi",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988755+00:00",
+      "published_at": "2026-07-24T05:47:10+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Türkiye&apos;nin önde gelen süt ürünleri markalarından birine ait klasik kırık beyaz peynirlerde, tehlikeli sonuçlar doğurabilen listeria bakterisi tespit edildi. Tarım ve Orman Bakanlığı, kanser hast"
+      }
+    },
+    {
+      "id": "content_ce1894fb54c4",
+      "url": "https://onedio.com/haber/istanbul-a-tarihi-uyari-sicakliklar-10-derece-birden-dusecek-cumartesi-gunu-son-21-yilin-rekoru-kirilacak-1371745",
+      "title": "İstanbul&apos;a Tarihi Uyarı: Sıcaklıklar 10 Derece Birden Düşecek, Cumartesi Günü Son 21 Yılın Rekoru Kırılacak",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988760+00:00",
+      "published_at": "2026-07-24T05:20:43+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Bugün İstanbul başta olmak üzere yurdun geniş bir kesiminde başlayacak olan yağışlar, hafta sonu etkisini daha da artıracak. Balkanlar üzerinden giriş yapan yeni hava dalgasıyla birlikte termometreler"
+      }
+    },
+    {
+      "id": "content_7c4f4bbfa754",
+      "url": "https://onedio.com/haber/tip-dunyasinda-cigir-acan-mucize-ankara-da-gerceklesti-anne-karnindaki-bebegi-ameliyat-ettiler-1371743",
+      "title": "Tıp Dünyasında Çığır Açan Mucize Ankara’da Gerçekleşti: Anne Karnındaki Bebeği Ameliyat Ettiler",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988765+00:00",
+      "published_at": "2026-07-24T04:16:46+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Ankara’da 26 haftalık hamile Sebiha Çakmak’ın (32) bebeğine anne karnında &apos;nöral tüp defekti&apos; (beyin ve omurilik gelişimini etkileyen doğumsal anomali) tanısı konuldu. Hacettepe Üniversitesi"
+      }
+    },
+    {
+      "id": "content_e21f841ebcfe",
+      "url": "https://onedio.com/haber/fatih-altayli-ozel-okullarin-tip-fakultesi-ucretlerine-isyan-etti-1371736",
+      "title": "Fatih Altaylı Özel Okulların Tıp Fakültesi Ücretlerine İsyan Etti",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988773+00:00",
+      "published_at": "2026-07-23T21:15:03+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Fatih Altaylı, üniversitelerin açıkladığı yeni eğitim ücretlerine sert tepki gösterdi. Aylık 300 bin TL&apos;ye ulaşan tıp fakültesi ücretlerini eleştiren Altaylı, bu rakamları karşılayabilecek aile s"
+      }
+    },
+    {
+      "id": "content_3476e056f03d",
+      "url": "https://onedio.com/haber/motorinde-son-aylarin-en-buyuk-zammi-geliyor-artik-otv-tamponu-da-kalmadi-1371735",
+      "title": "Motorinde Son Ayların En Büyük Zammı Geliyor: Artık ÖTV Tamponu da Kalmadı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988778+00:00",
+      "published_at": "2026-07-23T21:00:07+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "ABD-İran savaşı nedeniyle petrol piyasalarında artan arz endişeleri ve Rusya&apos;nın dizel ihracatını durdurma kararı, akaryakıt fiyatlarına yeni bir zam olarak yansımaya hazırlanıyor. Sektör kaynakl"
+      }
+    },
+    {
+      "id": "content_d6d37d2ebc68",
+      "url": "https://onedio.com/haber/tutuklanan-sosyal-medya-fenomeni-fatma-soydas-in-ifadesi-ortaya-cikti-1371728",
+      "title": "Tutuklanan Sosyal Medya Fenomeni Fatma Soydaş&apos;ın İfadesi Ortaya Çıktı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988783+00:00",
+      "published_at": "2026-07-23T19:02:36+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Ankara Cumhuriyet Başsavcılığı tarafından sosyal medya paylaşımları nedeniyle hakkında soruşturma başlatılan Fatma Soydaş, &apos;müstehcen yayınların yayımlanmasına aracılık etmek&apos; suçlamasıyla t"
+      }
+    },
+    {
+      "id": "content_8f1534cb6df6",
+      "url": "https://onedio.com/haber/nba-efsanelerinden-shaquille-o-neal-dan-ilginc-aciklama-bana-unlu-demeyin-1371724",
+      "title": "NBA Efsanelerinden Shaquille O&apos;Neal&apos;dan İlginç Açıklama: &quot;Bana Ünlü Demeyin&quot;",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988788+00:00",
+      "published_at": "2026-07-23T17:13:59+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "NBA efsanesi Shaquille O&apos;Neal, katıldığı bir röportajda kendisine &apos;ünlü&apos; denilmesini istemediğini belirterek, kendisini sıradan bir insan olarak gördüğünü söyledi.54 yaşındaki eski bask"
+      }
+    },
+    {
+      "id": "content_4e9e2acd5030",
+      "url": "https://onedio.com/haber/gozaltina-alinan-sosyal-medya-fenomeni-fatma-soydas-tutuklandi-1371721",
+      "title": "Gözaltına Alınan Sosyal Medya Fenomeni Fatma Soydaş Tutuklandı",
+      "source": "Onedio - Gündem",
+      "source_id": "source_101caa24f33f",
+      "source_type": "rss",
+      "discovered_at": "2026-07-24T13:17:13.988793+00:00",
+      "published_at": "2026-07-23T16:26:20+00:00",
+      "status": "pending",
+      "processed_job_id": null,
+      "metadata": {
+        "keywords": [],
+        "category": "genel",
+        "description": "Ankara Cumhuriyet Başsavcılığı tarafından sosyal medya paylaşımları nedeniyle hakkında soruşturma başlatılan Fatma Soydaş, tutuklanması talebiyle nöbetçi sulh ceza hakimliğine sevk edildi. Soydaş, çık"
+      }
     }
+  ],
+  "metadata": {
+    "created_at": "2026-04-10T05:54:51Z",
+    "last_updated": "2026-07-24T13:17:15.989310+00:00",
+    "total_items": 105,
+    "version": "1.0"
+  }
 }

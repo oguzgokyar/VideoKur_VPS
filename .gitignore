@@ -48,7 +48,7 @@ wheels/
 venv/
 env/
 .env
-
+!.env.example
 # ===== IDE & EDITOR =====
 .vscode/
 .idea/
@@ -76,3 +76,5 @@ Thumbs.db
 seison.md
 data/youtube_credentials/*.json
 sesion.md
+
+

@@ -1,0 +1,17 @@
+[Unit]
+Description=VideoKur Content Scheduler
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory=/var/www/videokur
+Environment=PYTHONUNBUFFERED=1
+Environment=PYTHONIOENCODING=utf-8
+ExecStart=/var/www/videokur/.venv/bin/python python/content/scheduler.py
+Restart=always
+RestartSec=5
+User=www-data
+Group=www-data
+
+[Install]
+WantedBy=multi-user.target

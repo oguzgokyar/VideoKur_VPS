@@ -1,0 +1,17 @@
+.git
+.env
+__pycache__/
+*.pyc
+*.log
+*.tmp
+output/
+logs/
+data/config.json
+data/jobs/*.json
+data/social_credentials/
+data/youtube_credentials/
+yedek/
+venv/
+env/
+.vscode/
+.idea/
