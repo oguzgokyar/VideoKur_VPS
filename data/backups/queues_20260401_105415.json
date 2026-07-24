@@ -1,0 +1,78 @@
+{
+  "queues": [
+    {
+      "id": "test-a71b1d",
+      "name": "Test",
+      "platforms": [
+        "youtube"
+      ],
+      "schedule": {
+        "timezone": "Europe/Istanbul"
+      },
+      "video_settings": {
+        "dimensionPreset": "vertical",
+        "videoWidth": 1080,
+        "videoHeight": 1920,
+        "subtitleMode": "config",
+        "subtitlePreset": "classic",
+        "customSubtitle": null,
+        "configSubtitle": {
+          "FontName": "Arial",
+          "FontSize": 16,
+          "PrimaryColour": "#FFFF00",
+          "OutlineColour": "#000000",
+          "BorderStyle": 1,
+          "Outline": 2,
+          "Shadow": 1,
+          "MarginV": 80,
+          "Alignment": 2,
+          "Bold": 1
+        }
+      },
+      "videos": [],
+      "created_at": "2026-04-01T07:53:14+02:00",
+      "last_publish": null,
+      "is_active": true,
+      "strict_mode": false,
+      "fail_threshold": 3,
+      "consecutive_fails": 0
+    },
+    {
+      "id": "test-2-0056b3",
+      "name": "test 2",
+      "platforms": [
+        "youtube"
+      ],
+      "schedule": {
+        "timezone": "Europe/Istanbul"
+      },
+      "video_settings": {
+        "dimensionPreset": "vertical",
+        "videoWidth": 1080,
+        "videoHeight": 1920,
+        "subtitleMode": "config",
+        "subtitlePreset": "classic",
+        "customSubtitle": null,
+        "configSubtitle": {
+          "FontName": "Arial",
+          "FontSize": 16,
+          "PrimaryColour": "#FFFF00",
+          "OutlineColour": "#000000",
+          "BorderStyle": 1,
+          "Outline": 2,
+          "Shadow": 1,
+          "MarginV": 80,
+          "Alignment": 2,
+          "Bold": 1
+        }
+      },
+      "videos": [],
+      "created_at": "2026-04-01T07:57:36+02:00",
+      "last_publish": null,
+      "is_active": true,
+      "strict_mode": false,
+      "fail_threshold": 3,
+      "consecutive_fails": 0
+    }
+  ]
+}

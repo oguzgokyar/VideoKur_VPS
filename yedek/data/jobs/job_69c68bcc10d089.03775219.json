@@ -1,0 +1,38 @@
+{
+    "id": "job_69c68bcc10d089.03775219",
+    "url": "https:\/\/www.ahaber.com.tr\/viral\/galeri\/liste\/tasacak-bu-denizin-elenisi-paylasti-hepinize-soylemek-isterdim",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-27 14:53:16",
+    "previewUrl": "\/output\/job_69c68bcc10d089.03775219\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,580\nTaşacak Bu Deniz'in Eleni'sinden şok\n\n2\n00:00:02,580 --> 00:00:05,160\nitiraf! Duygusal anlar yaşandı!\n\n3\n00:00:05,160 --> 00:00:07,326\n'Hepinize ayrı ayrı söylemek isterdim.\n\n4\n00:00:07,326 --> 00:00:09,493\nBen sizi daha çok seviyorum'\n\n5\n00:00:09,493 --> 00:00:11,659\ndiyerek kalpleri fethetti.\n\n6\n00:00:11,659 --> 00:00:13,996\nBu içten açıklama, Eleni'nin hayranlarıyla\n\n7\n00:00:13,996 --> 00:00:16,333\narasındaki güçlü bağı bir kez\n\n8\n00:00:16,333 --> 00:00:18,669\ndaha gösterdi.\n\n9\n00:00:18,669 --> 00:00:21,179\nDaha fazla magazin haberi için\n\n10\n00:00:21,179 --> 00:00:23,689\ntakipte kalın, yorumlarınızı bekliyoruz!\n",
+    "error": "",
+    "title": "Taşacak Bu Deniz'in Eleni'sinden duygusal itiraf: \"Hepinize söylemek isterdim\"",
+    "content_id": "content_57ea02b400a5",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c68bcc10d089.03775219",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:27.770926+00:00"
+    }
+}

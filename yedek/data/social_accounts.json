@@ -1,0 +1,16 @@
+{
+    "instagram": [
+        {
+            "account_id": "instagram_ab0437788b1e857e6afd944e2c9558aa",
+            "username": "dijital.dahi1",
+            "platform": "instagram",
+            "is_default": true,
+            "is_active": true,
+            "connected_at": "2026-03-20T20:45:18Z",
+            "followers_count": null,
+            "media_count": null,
+            "account_type": "personal"
+        }
+    ],
+    "tiktok": []
+}

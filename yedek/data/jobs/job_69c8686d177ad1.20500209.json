@@ -1,0 +1,38 @@
+{
+    "id": "job_69c8686d177ad1.20500209",
+    "url": "https:\/\/www.ahaber.com.tr\/viral\/galeri\/liste\/ghosting-nedir-modern-iliskilerde-gorunmez-ayrilik",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-29 00:46:53",
+    "previewUrl": "\/output\/job_69c8686d177ad1.20500209\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,223\nGhosting mi, reddedilmek mi daha\n\n2\n00:00:02,223 --> 00:00:04,446\nkötü? Bilim şaşırtıcı sonuçları açıkladı!\n\n3\n00:00:04,446 --> 00:00:06,669\nHazır olun.\n\n4\n00:00:06,669 --> 00:00:09,476\nDijital çağın yeni kabusu: Ghosting!\n\n5\n00:00:09,476 --> 00:00:12,283\nAçıklama yapmadan yok olmak, özellikle\n\n6\n00:00:12,283 --> 00:00:15,089\nflört uygulamalarında çok yaygın.\n\n7\n00:00:15,089 --> 00:00:17,329\nAma yeni bir araştırma gösteriyor\n\n8\n00:00:17,329 --> 00:00:19,569\nki, ghosting doğrudan reddedilmekten daha\n\n9\n00:00:19,569 --> 00:00:21,809\nfazla iz bırakıyor.\n\n10\n00:00:21,809 --> 00:00:26,044\nUzmanlara göre, belirsizlik duygusu iyileşmeyi\n\n11\n00:00:26,044 --> 00:00:30,279\nzorlaştırıyor. Neden olduğu bilinmemek yıpratıcı.\n\n12\n00:00:30,279 --> 00:00:34,469\nBu çarpıcı sonuçlar İtalya'daki Milano-Bicocca\n\n13\n00:00:34,469 --> 00:00:38,659\nÜniversitesi'nin psikologları tarafından ortaya kondu.\n\n14\n00:00:38,659 --> 00:00:40,946\nSizce hangisi daha zor? Yorumlarda\n\n15\n00:00:40,946 --> 00:00:43,233\ndüşüncelerinizi paylaşın ve bizi takip\n\n16\n00:00:43,233 --> 00:00:45,519\netmeyi unutmayın!\n",
+    "error": "",
+    "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+    "content_id": "content_d13147f8c589",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c8686d177ad1.20500209",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:19.253483+00:00"
+    }
+}

@@ -1,0 +1,280 @@
+{
+    "queues": [
+        {
+            "id": "youtube-testr-8737ec",
+            "name": "Youtube",
+            "platforms": [
+                "youtube"
+            ],
+            "is_active": true,
+            "schedule": {
+                "type": "now",
+                "interval_hours": "1",
+                "interval_minutes": 60,
+                "start_time": "",
+                "daily_limit": 0,
+                "specific_times": [
+                    "09:00",
+                    "15:00",
+                    "21:00"
+                ],
+                "timezone": "Europe\/Istanbul"
+            },
+            "video_settings": {
+                "dimensionPreset": "vertical",
+                "videoWidth": 1080,
+                "videoHeight": 1920,
+                "subtitleMode": "config",
+                "subtitlePreset": "classic",
+                "customSubtitle": null
+            },
+            "videos": [
+                {
+                    "job_id": "job_69bf559b9f1cf9.75694972",
+                    "added_at": "2026-03-22T05:36:11+03:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 1
+                },
+                {
+                    "job_id": "job_69bf559baf60e0.79441025",
+                    "added_at": "2026-03-22T05:36:11+03:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 2
+                },
+                {
+                    "job_id": "job_69bf559bb644d4.08751328",
+                    "added_at": "2026-03-22T05:36:11+03:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 3
+                },
+                {
+                    "job_id": "job_69bf559bbcaf18.32103193",
+                    "added_at": "2026-03-22T05:36:11+03:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 4
+                },
+                {
+                    "job_id": "job_69bf559bc3fb72.29701872",
+                    "added_at": "2026-03-22T05:36:11+03:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 5
+                },
+                {
+                    "job_id": "job_69c6797568d862.71592272",
+                    "added_at": "2026-03-27T13:35:01+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 6
+                },
+                {
+                    "job_id": "job_69c67988ca6459.95124265",
+                    "added_at": "2026-03-27T13:35:20+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 7
+                },
+                {
+                    "job_id": "job_69c67996208a30.04757623",
+                    "added_at": "2026-03-27T13:35:34+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 8
+                },
+                {
+                    "job_id": "job_69c68bbc222bd9.95732745",
+                    "added_at": "2026-03-27T14:53:00+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 9
+                },
+                {
+                    "job_id": "job_69c68bc62b84b7.58298274",
+                    "added_at": "2026-03-27T14:53:10+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 10
+                },
+                {
+                    "job_id": "job_69c68bcc10d089.03775219",
+                    "added_at": "2026-03-27T14:53:16+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 11
+                },
+                {
+                    "job_id": "job_69c81dcf4ce8f5.25609454",
+                    "added_at": "2026-03-28T19:28:31+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 12
+                },
+                {
+                    "job_id": "job_69c81dcf55df29.94857989",
+                    "added_at": "2026-03-28T19:28:31+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 13
+                },
+                {
+                    "job_id": "job_69c81dcf5fb6a4.36778662",
+                    "added_at": "2026-03-28T19:28:31+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 14
+                },
+                {
+                    "job_id": "job_69c81dcf693e08.90458734",
+                    "added_at": "2026-03-28T19:28:31+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 15
+                },
+                {
+                    "job_id": "job_69c8196f6952b9.70877187",
+                    "added_at": "2026-03-28T21:51:25+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 16
+                },
+                {
+                    "job_id": "job_69c8686d177ad1.20500209",
+                    "added_at": "2026-03-29T00:46:53+01:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 17
+                },
+                {
+                    "job_id": "job_69c92ad036c451.92790437",
+                    "added_at": "2026-03-29T15:36:16+02:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 18
+                },
+                {
+                    "job_id": "job_69c92ad043be40.49632990",
+                    "added_at": "2026-03-29T15:36:16+02:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 19
+                },
+                {
+                    "job_id": "job_69c92ad0516724.05474687",
+                    "added_at": "2026-03-29T15:36:16+02:00",
+                    "status": "queued",
+                    "platform_status": {
+                        "youtube": "pending"
+                    },
+                    "position": 20
+                }
+            ],
+            "created_at": "2026-03-21T01:10:00+03:00",
+            "last_publish": null,
+            "resumed_at": "2026-03-29T21:21:01+02:00",
+            "strict_mode": false,
+            "fail_threshold": 3,
+            "consecutive_fails": 0,
+            "platform_settings": {
+                "youtube": {
+                    "enabled": true,
+                    "scheduleType": "interval",
+                    "intervalHours": "1",
+                    "specificTimes": [
+                        "09:00",
+                        "15:00",
+                        "21:00"
+                    ],
+                    "playlistId": "PL3GZ1PxCkH8aHkhCSebQk_7IRRXNBi1Au",
+                    "categoryId": "22",
+                    "privacy": "private",
+                    "titleTemplate": "{title}",
+                    "descriptionTemplate": "{description}\n\n#shorts",
+                    "tagsTemplate": "shorts,haber",
+                    "startTime": "22:10",
+                    "intervalMinutes": "30",
+                    "dailyLimit": "2"
+                },
+                "instagram": {
+                    "enabled": false,
+                    "scheduleType": "specific",
+                    "intervalHours": 3,
+                    "specificTimes": [
+                        "10:00",
+                        "16:00",
+                        "20:00"
+                    ],
+                    "hashtagStrategy": "auto",
+                    "hashtags": "#reels,#haber",
+                    "captionTemplate": "{title}\n\n{description}",
+                    "allowComments": true
+                },
+                "tiktok": {
+                    "enabled": false,
+                    "scheduleType": "interval",
+                    "intervalHours": 4,
+                    "specificTimes": [
+                        "12:00",
+                        "18:00"
+                    ],
+                    "privacy": "public_to_everyone",
+                    "allowDuet": true,
+                    "allowStitch": true,
+                    "captionTemplate": "{title} #fyp"
+                },
+                "facebook": {
+                    "enabled": false,
+                    "scheduleType": "now",
+                    "intervalHours": 6,
+                    "specificTimes": [
+                        "11:00",
+                        "17:00"
+                    ],
+                    "pageId": "",
+                    "privacy": "EVERYONE"
+                }
+            }
+        }
+    ]
+}

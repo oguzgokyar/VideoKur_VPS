@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf42e8a24c38.70475922",
+  "url": "https://onedio.com/haber/isler-tersine-dondu-yapay-zeka-artik-insanlara-para-karsiligi-is-yaptiracak-1349012",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 02:16:24",
+  "previewUrl": "/output/job_69bf42e8a24c38.70475922/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,720\nYapay zeka artık sadece işimizi\n\n2\n00:00:01,720 --> 00:00:03,439\nelimizden almıyor; artık bizim patronumuz\n\n3\n00:00:03,439 --> 00:00:05,160\noluyor!\n\n4\n00:00:05,160 --> 00:00:07,833\nFreelance dünyasında roller tamamen değişti.\n\n5\n00:00:07,833 --> 00:00:10,506\nArtık yapay zeka ajanları işveren\n\n6\n00:00:10,506 --> 00:00:13,180\nkoltuğuna oturdu.\n\n7\n00:00:13,180 --> 00:00:15,733\nSistem basit; siz yeteneklerinizi ve\n\n8\n00:00:15,733 --> 00:00:18,286\nsaatlik ücretinizi sisteme giriyorsunuz, gerisini\n\n9\n00:00:18,286 --> 00:00:20,840\nyapay zeka hallediyor.\n\n10\n00:00:20,840 --> 00:00:23,200\nOtonom yapay zeka ajanları hedeflerine\n\n11\n00:00:23,200 --> 00:00:25,560\nuygun kişiyi seçiyor, anlaşıyor ve\n\n12\n00:00:25,560 --> 00:00:27,920\nödemeyi otomatik yapıyor.\n\n13\n00:00:27,920 --> 00:00:30,463\nLojistikten veri toplamaya kadar her\n\n14\n00:00:30,463 --> 00:00:33,006\nalanda, yapay zeka artık insan\n\n15\n00:00:33,006 --> 00:00:35,550\ngücünü 'outsource' etmeye başladı.\n\n16\n00:00:35,550 --> 00:00:37,863\nPeki siz bir yapay zekanın\n\n17\n00:00:37,863 --> 00:00:40,176\nemrinde çalışır mıydınız? Yorumlarda buluşalım,\n\n18\n00:00:40,176 --> 00:00:42,490\nabone olmayı unutmayın!\n",
+  "error": "",
+  "title": "İşler Tersine Döndü: Yapay Zeka, Artık İnsanlara Para Karşılığı İş Yaptıracak!",
+  "content_id": "content_670380b8a40d",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T02:16:24+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_364c243d8b344e3e",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "lPVXo3K8ZBY",
+        "post_url": "https://youtube.com/shorts/lPVXo3K8ZBY",
+        "error": null,
+        "uploaded_at": "2026-03-22T01:33:04.476591+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T01:33:04.510179+00:00"
+  }
+}

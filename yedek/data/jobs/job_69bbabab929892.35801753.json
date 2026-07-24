@@ -1,0 +1,44 @@
+{
+    "id": "job_69bbabab929892.35801753",
+    "url": "https:\/\/www.hayatakarken.com\/iki-kardes-hikayesi",
+    "template": "short_haber",
+    "scriptId": "default_haber",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "label": "Klasik",
+        "FontSize": 24,
+        "PrimaryColour": "#FFFFFF",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "MarginV": 60,
+        "Bold": 1,
+        "preset": "classic"
+    },
+    "status": "done",
+    "created_at": "2026-03-19 08:54:19",
+    "previewUrl": "\/output\/job_69bbabab929892.35801753\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:03,154\nDünyanın en duygusal kardeşlik hikayesiyle\n\n2\n00:00:03,154 --> 00:00:06,309\ntanışın, sonunu tahmin bile edemeyeceksiniz!\n\n3\n00:00:06,309 --> 00:00:09,126\nİki kardeş, babalarından kalan çiftlikte\n\n4\n00:00:09,126 --> 00:00:11,943\nher şeyi adilce paylaşıyordu. Ama\n\n5\n00:00:11,943 --> 00:00:14,759\niçlerinde büyük bir sır vardı.\n\n6\n00:00:14,759 --> 00:00:16,679\nBekar olan kardeş, 'Abimin beş\n\n7\n00:00:16,679 --> 00:00:18,600\nçocuğu var, yardıma ihtiyacı olur'\n\n8\n00:00:18,600 --> 00:00:20,520\ndiyerek her gece gizlice ona\n\n9\n00:00:20,520 --> 00:00:22,440\ntahıl taşıdı.\n\n10\n00:00:22,440 --> 00:00:24,475\nEvli olan kardeş ise, 'Yaşlandığında\n\n11\n00:00:24,475 --> 00:00:26,510\nona bakacak kimse yok, geleceği\n\n12\n00:00:26,510 --> 00:00:28,545\niçin daha fazlasına ihtiyacı var'\n\n13\n00:00:28,545 --> 00:00:30,580\ndiye düşündü.\n\n14\n00:00:30,580 --> 00:00:33,260\nO da her gece kardeşinin\n\n15\n00:00:33,260 --> 00:00:35,940\ndeposuna gizlice tahıl taşımaya başladı.\n\n16\n00:00:35,940 --> 00:00:38,620\nYıllarca tahılları hiç eksilmedi.\n\n17\n00:00:38,620 --> 00:00:41,500\nBir gece, iki kardeş çuvallarıyla\n\n18\n00:00:41,500 --> 00:00:44,380\nyolda karşılaştılar. O an, birbirlerini\n\n19\n00:00:44,380 --> 00:00:47,260\nneden bu kadar sevdiklerini anladılar.\n\n20\n00:00:47,260 --> 00:00:50,020\nKardeşlik sadece paylaşmak değil, başkasını\n\n21\n00:00:50,020 --> 00:00:52,780\nkendinden daha çok düşünmektir. Sen\n\n22\n00:00:52,780 --> 00:00:55,540\nolsan ne yapardın?\n\n23\n00:00:55,540 --> 00:00:58,000\nBu hikayeyi sevdiysen beğenmeyi ve\n\n24\n00:00:58,000 --> 00:01:00,460\nkardeşinle paylaşmayı unutma!\n",
+    "error": "",
+    "title": "Iki-kardes-hikayesi",
+    "ttsProvider": "elevenlabs",
+    "youtube_upload": {
+        "status": "uploaded",
+        "video_id": "gjE8lh3qQ8Q",
+        "video_url": "https:\/\/youtube.com\/shorts\/gjE8lh3qQ8Q",
+        "thumbnail_uploaded": false,
+        "uploaded_at": "2026-03-19T08:08:12Z",
+        "metadata": {
+            "title": "Kardeşlik Ve İyilik Ile Ilgili Hikaye Oku #Shorts",
+            "description": "Kardeşlik ve İyilik ile ilgili Hikaye Oku\n\n🔔 Abone olmayı unutmayın!\n💬 Yorumlarınızı bekliyoruz!\n\n#Shorts #Haber #Teknoloji #Türkçe",
+            "tags": [
+                "Shorts",
+                "haber",
+                "teknoloji",
+                "türkçe"
+            ],
+            "category_id": "28",
+            "privacy_status": "public"
+        }
+    }
+}

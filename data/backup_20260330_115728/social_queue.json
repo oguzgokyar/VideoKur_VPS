@@ -1,0 +1,66 @@
+{
+  "queue": [
+    {
+      "queue_id": "social_c70a107377127679",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "pending",
+          "post_id": null,
+          "post_url": null,
+          "error": null,
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T22:10:00+03:00",
+      "status": "pending",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-30T09:06:09+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec"
+    },
+    {
+      "queue_id": "social_4f784ad825647f5b",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "pending",
+          "post_id": null,
+          "post_url": null,
+          "error": null,
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T22:10:00+03:00",
+      "status": "pending",
+      "priority": 0,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-30T09:06:13+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec"
+    }
+  ]
+}

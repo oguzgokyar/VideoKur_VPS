@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b2ed134.65560868",
+  "url": "https://www.ahaber.com.tr/video/ozel-haber/dimona-ve-arada-kritik-saldiri-dokunulamaz-denen-bolgedeler-vuruldu",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b2ed134.65560868/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,725\nDokunulamaz denilen yerler vuruldu! Orta\n\n2\n00:00:02,725 --> 00:00:05,450\nDoğu'da dengeler tamamen değişti.\n\n3\n00:00:05,450 --> 00:00:08,066\nHayfa, Dimona ve Eilat hattı!\n\n4\n00:00:08,066 --> 00:00:10,683\nİran'ın hedefindeki bu kritik üçgen\n\n5\n00:00:10,683 --> 00:00:13,300\nartık çok daha savunmasız.\n\n6\n00:00:13,300 --> 00:00:15,442\nİsrail'in nükleer tesisleri açık hedef\n\n7\n00:00:15,442 --> 00:00:17,585\nhaline geldi. Bölgede büyük bir\n\n8\n00:00:17,585 --> 00:00:19,727\nyıkım ve yoğun güvenlik alarmı\n\n9\n00:00:19,727 --> 00:00:21,869\nvar.\n\n10\n00:00:21,869 --> 00:00:24,966\nWashington ve Tel Aviv bekledikleri\n\n11\n00:00:24,966 --> 00:00:28,063\nzaferi bulamadı. İran'ın beklenmedik direnci\n\n12\n00:00:28,063 --> 00:00:31,160\nsavaşın gidişatını tamamen değiştirdi.\n\n13\n00:00:31,160 --> 00:00:33,615\nAskeri Stratejist Doç. Dr. Kemal\n\n14\n00:00:33,615 --> 00:00:36,070\nOlçar ve Prof. Dr. Muharrem\n\n15\n00:00:36,070 --> 00:00:38,524\nEkşi, bu saldırıların stratejik önemini\n\n16\n00:00:38,524 --> 00:00:40,979\nA Haber ekranlarında vurguladı.\n\n17\n00:00:40,979 --> 00:00:42,819\nArad ve Dimona'ya yapılan saldırılar,\n\n18\n00:00:42,819 --> 00:00:44,659\nsavunma sistemlerinin artık sorgulanmasına neden\n\n19\n00:00:44,659 --> 00:00:46,500\noluyor.\n\n20\n00:00:46,500 --> 00:00:48,829\nGelişmeleri kaçırmamak için abone olmayı\n\n21\n00:00:48,829 --> 00:00:51,159\nve bildirimleri açmayı unutmayın!\n",
+  "error": "",
+  "title": "Dimona ve Arad’a kritik saldırı: Dokunulamaz denen bölgedeler vuruldu",
+  "content_id": "content_49e40e7d3fd7",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_418a79fc6371411d",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "pnjezZC8I7w",
+        "post_url": "https://youtube.com/shorts/pnjezZC8I7w",
+        "error": null,
+        "uploaded_at": "2026-03-22T03:15:26.776179+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T03:15:26.811528+00:00"
+  }
+}

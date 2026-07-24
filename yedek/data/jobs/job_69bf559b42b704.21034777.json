@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b42b704.21034777",
+  "url": "https://www.ahaber.com.tr/video/programlar/satir-arasi-videolari/iranin-yeni-fuzeleri-demir-kubbeyi-nasil-asiyor",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b42b704.21034777/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,839\nGüllü cinayetinin ardındaki karanlık gerçek!\n\n2\n00:00:01,839 --> 00:00:03,679\nO gece tam olarak ne\n\n3\n00:00:03,679 --> 00:00:05,519\nyaşandı?\n\n4\n00:00:05,519 --> 00:00:08,216\n14 Aralık 2025 gecesi, Türkiye'yi\n\n5\n00:00:08,216 --> 00:00:10,913\nsarsan Güllü cinayetiyle ilgili yeni\n\n6\n00:00:10,913 --> 00:00:13,610\ndetaylar ortaya çıkıyor.\n\n7\n00:00:13,610 --> 00:00:15,850\nSoruşturma dosyasına giren belgelere göre,\n\n8\n00:00:15,850 --> 00:00:18,089\nsaldırganın olay yerine yaklaşımı oldukça\n\n9\n00:00:18,089 --> 00:00:20,329\nplanlıydı.\n\n10\n00:00:20,329 --> 00:00:23,294\nGörgü tanıklarının ifadeleri, o gece\n\n11\n00:00:23,294 --> 00:00:26,259\nsokak lambalarının aniden söndüğünü doğruluyor.\n\n12\n00:00:26,259 --> 00:00:28,603\nEmniyet güçleri, cinayetin arka planındaki\n\n13\n00:00:28,603 --> 00:00:30,946\ngizli bağlantıları çözmek için dijital\n\n14\n00:00:30,946 --> 00:00:33,289\nizleri sürüyor.\n\n15\n00:00:33,289 --> 00:00:35,593\nPeki Güllü cinayeti bir hesaplaşma\n\n16\n00:00:35,593 --> 00:00:37,896\nmıydı? Adli tıp raporları cevabı\n\n17\n00:00:37,896 --> 00:00:40,200\ndeğiştirebilir.\n\n18\n00:00:40,200 --> 00:00:43,105\nGelişmeleri kaçırmamak için kanala abone\n\n19\n00:00:43,105 --> 00:00:46,010\nolmayı unutmayın, yorumlarda düşüncelerinizi paylaşın.\n",
+  "error": "",
+  "title": "İran'ın yeni füzeleri Demir Kubbe'yi nasıl aşıyor?",
+  "content_id": "content_628707e7e2b2",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d55f",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "pReoewht6vw",
+        "post_url": "https://youtube.com/shorts/pReoewht6vw",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:27:21.943125+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:27:22.001907+00:00"
+  }
+}

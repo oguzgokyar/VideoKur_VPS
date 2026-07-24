@@ -1,0 +1,15 @@
+newspaper3k
+beautifulsoup4
+lxml
+requests
+google-genai
+elevenlabs
+edge-tts
+moviepy
+Pillow
+pysrt
+fal-client
+
+# YouTube API Integration
+google-auth-oauthlib
+google-api-python-client

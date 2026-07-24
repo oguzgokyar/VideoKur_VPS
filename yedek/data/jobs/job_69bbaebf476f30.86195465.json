@@ -1,0 +1,44 @@
+{
+    "id": "job_69bbaebf476f30.86195465",
+    "url": "https:\/\/www.hayatakarken.com\/karinca-ve-hz-ibrahim#comment-4312",
+    "template": "short_haber",
+    "scriptId": "default_haber",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "label": "Haber",
+        "FontSize": 24,
+        "PrimaryColour": "#FFFFFF",
+        "OutlineColour": "#CC0000",
+        "Outline": 2,
+        "MarginV": 55,
+        "Bold": 1,
+        "preset": "news"
+    },
+    "status": "done",
+    "created_at": "2026-03-19 09:07:27",
+    "previewUrl": "\/output\/job_69bbaebf476f30.86195465\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,297\nDünyayı yakan o devasa ateşe,\n\n2\n00:00:02,297 --> 00:00:04,594\nbir karınca neden bir damla\n\n3\n00:00:04,594 --> 00:00:06,892\nsu taşıyordu? İşte Hz. İbrahim'in\n\n4\n00:00:06,892 --> 00:00:09,189\no meşhur kıssası.\n\n5\n00:00:09,189 --> 00:00:12,116\nNemrut, Hz. İbrahim'i ateşte yakmak\n\n6\n00:00:12,116 --> 00:00:15,043\niçin devasa bir meydan hazırlatmıştı.\n\n7\n00:00:15,043 --> 00:00:17,969\nAlevler bulutlara kadar yükseliyordu.\n\n8\n00:00:17,969 --> 00:00:20,666\nBütün hayvanlar korkudan kaçarken, minik\n\n9\n00:00:20,666 --> 00:00:23,363\nbir karınca ağzında bir damla\n\n10\n00:00:23,363 --> 00:00:26,059\nsuyla ateşe doğru koşuyordu.\n\n11\n00:00:26,059 --> 00:00:28,053\nDiğerleri ona güldü: 'Bu kadar\n\n12\n00:00:28,053 --> 00:00:30,046\nbüyük ateşi bir damla suyla\n\n13\n00:00:30,046 --> 00:00:32,039\nmı söndüreceksin?' dediler.\n\n14\n00:00:32,039 --> 00:00:33,953\nKarınca cevap verdi: 'Olsun, hiç\n\n15\n00:00:33,953 --> 00:00:35,866\nolmazsa hangi taraftan olduğum belli\n\n16\n00:00:35,866 --> 00:00:37,779\nolur.'\n\n17\n00:00:37,779 --> 00:00:40,443\nZalimler her devirde olsa da,\n\n18\n00:00:40,443 --> 00:00:43,106\nönemli olan senin hangi tarafta\n\n19\n00:00:43,106 --> 00:00:45,769\ndurduğundur. Tarafını belli et.\n\n20\n00:00:45,769 --> 00:00:48,249\nPeki sizce tarafınızı belli etmek\n\n21\n00:00:48,249 --> 00:00:50,729\nneden bu kadar önemli? Yorumlarda\n\n22\n00:00:50,729 --> 00:00:53,209\nbuluşalım, takipte kalın.\n",
+    "error": "",
+    "title": "Karinca-ve-hz-ibrahim",
+    "ttsProvider": "elevenlabs",
+    "youtube_upload": {
+        "status": "uploaded",
+        "video_id": "sUtGIoXF6no",
+        "video_url": "https:\/\/youtube.com\/shorts\/sUtGIoXF6no",
+        "thumbnail_uploaded": false,
+        "uploaded_at": "2026-03-19T08:14:37Z",
+        "metadata": {
+            "title": "Karınca Ve Hz İbrahim Peygamberin Hikayesi Ve Kıssası #Shorts",
+            "description": "Karınca ve Hz İbrahim Peygamberin Hikayesi ve Kıssası\n\n🔔 Abone olmayı unutmayın!\n💬 Yorumlarınızı bekliyoruz!\n\n#Shorts #Haber #Teknoloji #Türkçe",
+            "tags": [
+                "Shorts",
+                "haber",
+                "teknoloji",
+                "türkçe"
+            ],
+            "category_id": "28",
+            "privacy_status": "public"
+        }
+    }
+}

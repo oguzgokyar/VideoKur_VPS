@@ -1,0 +1,12 @@
+{
+    "short_haber": {
+        "resolution": "1080x1920",
+        "fps": 30,
+        "duration_max": 60,
+        "font": "Arial-Bold",
+        "subtitle_style": "bottom_animated",
+        "bg_style": "gradient",
+        "intro_sec": 2,
+        "outro_sec": 3
+    }
+}

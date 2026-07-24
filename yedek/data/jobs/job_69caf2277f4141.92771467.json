@@ -1,0 +1,44 @@
+{
+    "id": "job_69caf2277f4141.92771467",
+    "url": "https:\/\/www.trthaber.com\/haber\/gundem\/aselsanin-luna-2-uydusu-basariyla-firlatildi-939694.html",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-30 23:59:03",
+    "previewUrl": "\/output\/job_69caf2277f4141.92771467\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,960\nTürkiye'den uzaya tarihi bir adım!\n\n2\n00:00:01,960 --> 00:00:03,919\nASELSAN'ın yeni uydusu LUNA-2 başarıyla\n\n3\n00:00:03,919 --> 00:00:05,879\nfırlatıldı!\n\n4\n00:00:05,879 --> 00:00:08,063\nASELSAN, milli mühendislik gücüyle uzay\n\n5\n00:00:08,063 --> 00:00:10,246\nekosistemine yüksek katma değer sunmaya\n\n6\n00:00:10,246 --> 00:00:12,429\ndevam ediyor.\n\n7\n00:00:12,429 --> 00:00:15,103\nKüçük boyutuna rağmen LUNA-2, dünyanın\n\n8\n00:00:15,103 --> 00:00:17,776\nen ücra köşelerine bile kesintisiz\n\n9\n00:00:17,776 --> 00:00:20,449\nve güvenli sensör verileri sağlayacak.\n\n10\n00:00:20,449 --> 00:00:23,233\nTasarımından yazılımına, tüm geliştirme, üretim\n\n11\n00:00:23,233 --> 00:00:26,016\nve entegrasyon ASELSAN mühendislerinin eseri.\n\n12\n00:00:26,016 --> 00:00:28,799\nTamamen yerli ve milli!\n\n13\n00:00:28,799 --> 00:00:31,092\nBu başarı, Türkiye'nin bağımsız uzay\n\n14\n00:00:31,092 --> 00:00:33,384\nteknolojileri vizyonuna önemli bir katkı.\n\n15\n00:00:33,384 --> 00:00:35,677\nSerinin ilk uydusu LUNA-1 de\n\n16\n00:00:35,677 --> 00:00:37,969\nuzayda!\n\n17\n00:00:37,969 --> 00:00:40,193\nASELSAN'ı tebrik ediyoruz! Daha fazla\n\n18\n00:00:40,193 --> 00:00:42,416\nçığır açan teknoloji haberi için\n\n19\n00:00:42,416 --> 00:00:44,640\nbizi takipte kalın!\n",
+    "error": "",
+    "title": "ASELSAN'ın LUNA2 uydusu başarıyla fırlatıldı",
+    "content_id": "content_a08bed806669",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "social_7c38bfcdf8528972",
+        "status": "pending",
+        "platforms": {
+            "youtube": {
+                "status": "pending",
+                "post_id": null,
+                "post_url": null,
+                "error": null,
+                "uploaded_at": null
+            }
+        },
+        "requeued_at": "2026-03-31T10:05:57+02:00"
+    }
+}

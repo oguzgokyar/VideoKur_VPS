@@ -1,0 +1,136 @@
+{
+  "errors": [
+    {
+      "id": "error_1775926344_89892",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T16:52:24.898936+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912863+00:00"
+    },
+    {
+      "id": "error_1775926475_554948",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T16:54:35.554965+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912875+00:00"
+    },
+    {
+      "id": "error_1775926611_932736",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T16:56:51.932744+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912877+00:00"
+    },
+    {
+      "id": "error_1775926744_481797",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T16:59:04.481805+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912879+00:00"
+    },
+    {
+      "id": "error_1775926876_396775",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:01:16.396796+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912880+00:00"
+    },
+    {
+      "id": "error_1775927002_161163",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:03:22.161175+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912881+00:00"
+    },
+    {
+      "id": "error_1775927137_045286",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:05:37.045296+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912883+00:00"
+    },
+    {
+      "id": "error_1775927263_227021",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:07:43.227029+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912884+00:00"
+    },
+    {
+      "id": "error_1775927395_660615",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:09:55.660625+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912885+00:00"
+    },
+    {
+      "id": "error_1775927526_343798",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:12:06.343816+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912886+00:00"
+    },
+    {
+      "id": "error_1775927659_227215",
+      "job_id": "job_69d999dcdeffe6.06585138",
+      "platform": "youtube",
+      "queue_id": "y1-b82b67",
+      "error_type": "upload_failed",
+      "error_message": "Upload failed",
+      "retry_count": 0,
+      "timestamp": "2026-04-11T17:14:19.227223+00:00",
+      "resolved": true,
+      "resolved_at": "2026-04-11T17:16:03.912887+00:00"
+    }
+  ]
+}

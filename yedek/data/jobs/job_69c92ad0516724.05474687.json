@@ -1,0 +1,38 @@
+{
+    "id": "job_69c92ad0516724.05474687",
+    "url": "https:\/\/www.ahaber.com.tr\/yasam\/2026\/03\/29\/kumlucada-hortum-seralari-vurdu-10-donum-alan-zarar-gordu",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-29 15:36:16",
+    "previewUrl": "\/output\/job_69c92ad0516724.05474687\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,589\nAntalya'da korkunç gece! Kumluca'yı vuran\n\n2\n00:00:02,589 --> 00:00:05,179\nhortum bakın ne hale getirdi!\n\n3\n00:00:05,179 --> 00:00:07,619\nAntalya'nın Kumluca ilçesi Sarıkavak Mahallesi'nde\n\n4\n00:00:07,619 --> 00:00:10,059\ngece saatlerinde büyük bir hortum\n\n5\n00:00:10,059 --> 00:00:12,499\nfelaketi yaşandı.\n\n6\n00:00:12,499 --> 00:00:15,186\nFelaket, yaklaşık 10 dönüm sera\n\n7\n00:00:15,186 --> 00:00:17,873\nalanını yerle bir etti. İçindeki\n\n8\n00:00:17,873 --> 00:00:20,559\nbiberlerin tamamı telef oldu!\n\n9\n00:00:20,559 --> 00:00:23,136\nÇiftçiler o anları anlattı: Can\n\n10\n00:00:23,136 --> 00:00:25,713\ngüvenliğimiz için dışarı çıkamadık, sadece\n\n11\n00:00:25,713 --> 00:00:28,290\nkorkunç bir gürültü duyduk.\n\n12\n00:00:28,290 --> 00:00:31,003\nSabah seralarına gittiklerinde karşılaştıkları manzara\n\n13\n00:00:31,003 --> 00:00:33,716\nise yürek burkucuydu. Emekleri bir\n\n14\n00:00:33,716 --> 00:00:36,429\nanda yok oldu.\n\n15\n00:00:36,429 --> 00:00:38,716\nDoğal afetlere karşı dikkatli olalım.\n\n16\n00:00:38,716 --> 00:00:41,003\nDaha fazla güncel haber için\n\n17\n00:00:41,003 --> 00:00:43,290\nbizi takip etmeyi unutmayın!\n",
+    "error": "",
+    "title": "Kumluca'da hortum seraları vurdu, 10 dönüm alan zarar gördü",
+    "content_id": "content_51ee3580748a",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c92ad0516724.05474687",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:14.438090+00:00"
+    }
+}

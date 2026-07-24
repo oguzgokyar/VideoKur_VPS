@@ -1,0 +1,30 @@
+{
+    "id": "job_69b9e56b244608.61484112",
+    "url": "https:\/\/www.webtekno.com\/yapay-zeka-is-yukunu-azaltacagina-artirdi-mi-h213722.html",
+    "template": "short_haber",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "label": "Neon",
+        "FontSize": 26,
+        "PrimaryColour": "#00FF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "MarginV": 60,
+        "Bold": 1,
+        "preset": "neon"
+    },
+    "status": "done",
+    "created_at": "2026-03-18 00:36:11",
+    "previewUrl": "\/output\/job_69b9e56b244608.61484112\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,933\nYapay zeka iş yükünüzü azaltacağını\n\n2\n00:00:01,933 --> 00:00:03,866\nmı sanıyordunuz? Amazon çalışanları yanıldığımızı\n\n3\n00:00:03,866 --> 00:00:05,799\nsöylüyor!\n\n4\n00:00:05,799 --> 00:00:07,696\nTeknoloji dünyasının büyük vaadi şuydu:\n\n5\n00:00:07,696 --> 00:00:09,593\nAI işleri hızlandıracak ve bizi\n\n6\n00:00:09,593 --> 00:00:11,490\nrahatlatacak.\n\n7\n00:00:11,490 --> 00:00:13,919\nAncak Amazon çalışanlarından gelen raporlar\n\n8\n00:00:13,919 --> 00:00:16,350\ndurumun tam tersini işaret ediyor.\n\n9\n00:00:16,350 --> 00:00:18,030\nYapay zeka hatalarını düzeltmek, işi\n\n10\n00:00:18,030 --> 00:00:19,710\nen baştan yapmaktan daha çok\n\n11\n00:00:19,710 --> 00:00:21,390\nzaman alabiliyor.\n\n12\n00:00:21,390 --> 00:00:23,443\nYeni araştırmalar doğruluyor: Şirketler süreç\n\n13\n00:00:23,443 --> 00:00:25,496\nhızlandıkça çalışanlardan daha da fazlasını\n\n14\n00:00:25,496 --> 00:00:27,550\nistiyor.\n\n15\n00:00:27,550 --> 00:00:30,125\nYani teknoloji verimliliği artırsa da,\n\n16\n00:00:30,125 --> 00:00:32,700\nüzerimizdeki baskı düşmek yerine yükseliyor.\n\n17\n00:00:32,700 --> 00:00:34,956\nSizce AI hayatımızı kolaylaştırıyor mu\n\n18\n00:00:34,956 --> 00:00:37,213\nyoksa köleleştiriyor mu? Yorumlarda buluşalım,\n\n19\n00:00:37,213 --> 00:00:39,470\nabone olmayı unutmayın!\n",
+    "error": "",
+    "title": "Yapay-zeka-is-yukunu-azaltacagina-artirdi-mi-h213722 html",
+    "ttsProvider": "elevenlabs",
+    "youtube_upload": {
+        "status": "uploaded",
+        "video_id": "ndY25TpSmo8",
+        "video_url": "https:\/\/youtube.com\/shorts\/ndY25TpSmo8",
+        "uploaded_at": "2026-03-18T18:45:34Z"
+    }
+}

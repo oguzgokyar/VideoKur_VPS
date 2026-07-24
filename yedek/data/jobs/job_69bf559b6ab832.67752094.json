@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b6ab832.67752094",
+  "url": "https://www.ahaber.com.tr/spor/2026/03/21/milli-takimda-romanya-mesaisi",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b6ab832.67752094/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,890\nMilli Takım'da Romanya mesaisi başladı!\n\n2\n00:00:02,890 --> 00:00:05,780\nMontella ve öğrencileri sahaya indi!\n\n3\n00:00:05,780 --> 00:00:08,259\nA Millî Takımımız, Romanya maçı\n\n4\n00:00:08,259 --> 00:00:10,740\nhazırlıklarına Riva'daki Hasan Doğan Tesisleri'nde\n\n5\n00:00:10,740 --> 00:00:13,220\nhız kesmeden devam ediyor.\n\n6\n00:00:13,220 --> 00:00:15,683\nTeknik Direktör Vincenzo Montella yönetimindeki\n\n7\n00:00:15,683 --> 00:00:18,146\nantrenman, fitness salonundaki analiz toplantısıyla\n\n8\n00:00:18,146 --> 00:00:20,610\nbaşladı.\n\n9\n00:00:20,610 --> 00:00:23,170\nBugünkü çalışmaya Fenerbahçe ve Galatasaraylı\n\n10\n00:00:23,170 --> 00:00:25,730\nyıldızların yanı sıra Ümit Milli\n\n11\n00:00:25,730 --> 00:00:28,289\nTakım'dan genç yetenekler de katıldı.\n\n12\n00:00:28,289 --> 00:00:30,890\nToplam 19 oyuncunun yer aldığı\n\n13\n00:00:30,890 --> 00:00:33,490\nbasına kapalı antrenmanla, Romanya maçı\n\n14\n00:00:33,490 --> 00:00:36,090\nöncesi taktik çalışmalar tamamlanıyor.\n\n15\n00:00:36,090 --> 00:00:38,483\nSizce Milli Takım Romanya'yı geçer\n\n16\n00:00:38,483 --> 00:00:40,876\nmi? Tahminlerinizi yorumlara yazın ve\n\n17\n00:00:40,876 --> 00:00:43,269\nbizi takip etmeyi unutmayın!\n",
+  "error": "",
+  "title": "Milli Takım’da Romanya mesaisi",
+  "content_id": "content_5e852c2d11b4",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d6fc",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "J1MDydlDevQ",
+        "post_url": "https://youtube.com/shorts/J1MDydlDevQ",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:27:44.467370+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:27:44.522090+00:00"
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf5525080bb0.89047506",
+  "url": "https://onedio.com/haber/faturayi-kadinlara-kesti-yapay-zekanin-hedefindeki-meslek-gruplari-aciklandi-1348273",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:34:13",
+  "previewUrl": "/output/job_69bf5525080bb0.89047506/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,873\nYapay zeka işinizi elinizden mi\n\n2\n00:00:01,873 --> 00:00:03,746\nalacak? Fatura bu kez kadınlara\n\n3\n00:00:03,746 --> 00:00:05,620\nkesildi!\n\n4\n00:00:05,620 --> 00:00:08,900\nYeni bir araştırma, yapay zekanın\n\n5\n00:00:08,900 --> 00:00:12,179\ntehdit ettiği işlerin yüzde 86'sında\n\n6\n00:00:12,179 --> 00:00:15,459\nkadınların çalıştığını ortaya koydu.\n\n7\n00:00:15,459 --> 00:00:17,706\nÖzellikle mütercim-tercümanlık mesleği, yapay zeka\n\n8\n00:00:17,706 --> 00:00:19,953\nyüzünden en yüksek risk grubunda\n\n9\n00:00:19,953 --> 00:00:22,199\nyer alıyor.\n\n10\n00:00:22,199 --> 00:00:24,175\nYönetici asistanları için de durum\n\n11\n00:00:24,175 --> 00:00:26,150\nkritik! Bu meslekte çalışanların yüzde\n\n12\n00:00:26,150 --> 00:00:28,125\n95'i kadın ve yapay zeka\n\n13\n00:00:28,125 --> 00:00:30,100\nonları zorluyor.\n\n14\n00:00:30,100 --> 00:00:31,942\nİyi haber ise şu: Uçuş\n\n15\n00:00:31,942 --> 00:00:33,785\ngörevlileri ve yardımcı hemşirelerin işleri,\n\n16\n00:00:33,785 --> 00:00:35,627\nyapay zeka karşısında şimdilik daha\n\n17\n00:00:35,627 --> 00:00:37,470\ngüvende.\n\n18\n00:00:37,470 --> 00:00:39,756\nPeki sizce yapay zeka mesleğinizi\n\n19\n00:00:39,756 --> 00:00:42,043\netkileyecek mi? Yorumlarda buluşalım, takip\n\n20\n00:00:42,043 --> 00:00:44,330\netmeyi unutmayın!\n",
+  "error": "",
+  "title": "Faturayı Kadınlara Kesti! Yapay Zekanın Hedefindeki Meslek Grupları Açıklandı",
+  "content_id": "content_8479296ff23e",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:34:13+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_02068bcd23984be0",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "_182sp6XAlw",
+        "post_url": "https://youtube.com/shorts/_182sp6XAlw",
+        "error": null,
+        "uploaded_at": "2026-03-22T02:48:03.794803+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T02:48:03.817391+00:00"
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "id": "job_69c68bbc222bd9.95732745",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/yasam-videolari\/bursadaki-uc-camide-ses-sistemlerine-saldiri-kirip-yerinden-soktu",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-27 14:53:00",
+    "previewUrl": "\/output\/job_69c68bbc222bd9.95732745\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,860\nBursa'da şok edici olay! Üç\n\n2\n00:00:01,860 --> 00:00:03,720\ncaminin ses sistemleri hedef alındı,\n\n3\n00:00:03,720 --> 00:00:05,580\nbilinmeyen bir saldırgan her şeyi\n\n4\n00:00:05,580 --> 00:00:07,440\nyerle bir etti!\n\n5\n00:00:07,440 --> 00:00:09,616\nBursa'nın Mudanya ilçesinde, üç camide\n\n6\n00:00:09,616 --> 00:00:11,793\npeş peşe ses sistemi saldırıları\n\n7\n00:00:11,793 --> 00:00:13,969\nyaşandı.\n\n8\n00:00:13,969 --> 00:00:15,833\n40 yaşındaki Bekir A., elindeki\n\n9\n00:00:15,833 --> 00:00:17,696\nsopayla hoparlörleri ve ses düzeneklerini\n\n10\n00:00:17,696 --> 00:00:19,559\nkırıp yerinden söktü.\n\n11\n00:00:19,559 --> 00:00:22,390\nBu anlar, camilerin güvenlik kameraları\n\n12\n00:00:22,390 --> 00:00:25,219\ntarafından saniye saniye kaydedildi.\n\n13\n00:00:25,219 --> 00:00:28,399\nŞüphelinin akli dengesinin yerinde olmadığı\n\n14\n00:00:28,399 --> 00:00:31,579\nve cezaevinden izinli çıktığı öğrenildi.\n\n15\n00:00:31,579 --> 00:00:33,933\nBu üzücü olay hakkında ne\n\n16\n00:00:33,933 --> 00:00:36,286\ndüşünüyorsunuz? Yorumlarda buluşalım, beğenmeyi ve\n\n17\n00:00:36,286 --> 00:00:38,639\nabone olmayı unutmayın!\n",
+    "error": "",
+    "title": "Bursa'daki üç camide ses sistemlerine saldırı: Kırıp yerinden söktü",
+    "content_id": "content_028d9361a66b",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c68bbc222bd9.95732745",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:30.549608+00:00"
+    }
+}

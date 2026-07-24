@@ -1,0 +1,1008 @@
+{
+    "queue": [
+        {
+            "queue_id": "social_c928ac7b7e0d7446",
+            "job_id": "job_69ca7a17026964.08056053",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69ca7a17026964.08056053\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T22:10:00+03:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "iPhone Kullanıcılarına Müjde: Kulaklıkla Anında Çeviri Özelliği Geldi",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-30T23:23:06+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "youtube-testr-8737ec"
+        },
+        {
+            "queue_id": "social_83b8407bf32042ed",
+            "job_id": "job_69caf2277f4141.92771467",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69caf2277f4141.92771467\\final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-30T22:11:13.624435+00:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "ASELSAN'ın LUNA2 uydusu başarıyla fırlatıldı",
+                "description": "Türkiye'den uzaya tarihi bir adım! ASELSAN'ın yeni uydusu LUNA-2 başarıyla fırlatıldı! ASELSAN, milli mühendislik gücüyle uzay ekosistemine yüksek katma değer sunmaya devam ediyor. Küçük boyutuna rağmen LUNA-2, dünyanın en ücra köşelerine bile kesintisiz ve güvenli sensör verileri sağlayacak. Tasarımından yazılımına, tüm geliştirme, üretim ve entegrasyon ASELSAN mühendislerinin eseri. Tamamen yerli ve milli! Bu başarı, Türkiye'nin bağımsız uzay teknolojileri vizyonuna önemli bir katkı. Serinin ilk uydusu LUNA-1 de uzayda! ASELSAN'ı tebrik ediyoruz! Daha fazla çığır açan teknoloji haberi için bizi takipte kalın!",
+                "tags": [],
+                "privacy_status": "public"
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-30T22:11:13.627301+00:00",
+            "retry_count": 0,
+            "last_error": null
+        },
+        {
+            "queue_id": "social_69cb72f32184a",
+            "job_id": "job_69ca7a16ed5b47.76650945",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69ca7a16ed5b47.76650945\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:08:35+03:00",
+            "status": "pending",
+            "priority": -22,
+            "metadata": {
+                "title": "ANALİZ | Küresel vicdanın seçiciliği! Algoritma vicdanları nasıl yönlendiriyor?",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T09:08:35+02:00",
+            "updated_at": "2026-03-31T09:08:35+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb72f321de4",
+            "job_id": "job_69ca7a170bd735.09295955",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69ca7a170bd735.09295955\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:08:35+03:00",
+            "status": "pending",
+            "priority": -24,
+            "metadata": {
+                "title": "Beynin Algoritması: Dijital Sürüye Karşı İçsel Anlatı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T09:08:35+02:00",
+            "updated_at": "2026-03-31T09:08:35+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb72fa610b4",
+            "job_id": "job_69ca7a16e00ce4.05697665",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69ca7a16e00ce4.05697665\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:08:42+03:00",
+            "status": "pending",
+            "priority": -21,
+            "metadata": {
+                "title": "İran'dan İsrail'e 87. füze dalgası! Kritik noktalar hedef alındı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T09:08:42+02:00",
+            "updated_at": "2026-03-31T09:08:42+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb730172551",
+            "job_id": "job_69c92ad0516724.05474687",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c92ad0516724.05474687\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:08:49+03:00",
+            "status": "pending",
+            "priority": -20,
+            "metadata": {
+                "title": "Kumluca'da hortum seraları vurdu, 10 dönüm alan zarar gördü",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T09:08:49+02:00",
+            "updated_at": "2026-03-31T09:08:49+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb730da4367",
+            "job_id": "job_69c92ad043be40.49632990",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c92ad043be40.49632990\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:09:01+03:00",
+            "status": "pending",
+            "priority": -19,
+            "metadata": {
+                "title": "Yanan otomobilden insan kemikleri çıktı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T09:09:01+02:00",
+            "updated_at": "2026-03-31T09:09:01+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_9a10116187fd982d",
+            "job_id": "job_69caf2277f4141.92771467",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69caf2277f4141.92771467\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T22:10:00+03:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "ASELSAN'ın LUNA2 uydusu başarıyla fırlatıldı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:28+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "youtube-testr-8737ec"
+        },
+        {
+            "queue_id": "social_69cb7f68b8138",
+            "job_id": "job_69bf559b9f1cf9.75694972",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69bf559b9f1cf9.75694972\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -1,
+            "metadata": {
+                "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8340",
+            "job_id": "job_69bf559baf60e0.79441025",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69bf559baf60e0.79441025\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -2,
+            "metadata": {
+                "title": "Gizli nükleer ağ ve askeri üsler deşifre oldu | A Haber’de çarpıcı analiz",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b84b9",
+            "job_id": "job_69bf559bb644d4.08751328",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69bf559bb644d4.08751328\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -3,
+            "metadata": {
+                "title": "Dimona'da yıkımın boyutu A Haber'de",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b85a6",
+            "job_id": "job_69bf559bbcaf18.32103193",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69bf559bbcaf18.32103193\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -4,
+            "metadata": {
+                "title": "Çorum’da feci kaza! Cip ile otomobil çarpıştı: 6 yaralı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8681",
+            "job_id": "job_69bf559bc3fb72.29701872",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69bf559bc3fb72.29701872\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -5,
+            "metadata": {
+                "title": "Bayram izninde kan donduran vahşet: Cezaevinden çıktı eniştesini katletti",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8748",
+            "job_id": "job_69c6797568d862.71592272",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c6797568d862.71592272\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -6,
+            "metadata": {
+                "title": "Bakan Yardımcısı Açıkladı: Starlink Türkiye&apos;de Hizmete Girebilir",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b87dd",
+            "job_id": "job_69c67988ca6459.95124265",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c67988ca6459.95124265\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -7,
+            "metadata": {
+                "title": "Tüm Dünyada Dijital Karanlık Tehlikesi: Akıllı Telefon ve Bilgisayar Fiyatlarına Tarihi Zam Gelebilir!",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8866",
+            "job_id": "job_69c67996208a30.04757623",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c67996208a30.04757623\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -8,
+            "metadata": {
+                "title": "Telefonunuzu Yanlış Şarj Ediyor Olabilirsiniz: Bu Hatalar Bataryayı Sessizce Öldürüyor",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b88ea",
+            "job_id": "job_69c68bbc222bd9.95732745",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c68bbc222bd9.95732745\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -9,
+            "metadata": {
+                "title": "Bursa'daki üç camide ses sistemlerine saldırı: Kırıp yerinden söktü",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b897a",
+            "job_id": "job_69c68bc62b84b7.58298274",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c68bc62b84b7.58298274\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -10,
+            "metadata": {
+                "title": "ANALİZ| ABD din savaşı mı çıkarmak istiyor? Savaş Bakanı'ndan skandal itiraf: Hedefimiz İslam!",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b89fb",
+            "job_id": "job_69c68bcc10d089.03775219",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c68bcc10d089.03775219\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -11,
+            "metadata": {
+                "title": "Taşacak Bu Deniz'in Eleni'sinden duygusal itiraf: \"Hepinize söylemek isterdim\"",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8a7d",
+            "job_id": "job_69c81dcf4ce8f5.25609454",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c81dcf4ce8f5.25609454\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -12,
+            "metadata": {
+                "title": "Trump’ın tehlikeli satranç oyunu! Hedefte Hark Adası mı var?",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8b00",
+            "job_id": "job_69c81dcf55df29.94857989",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c81dcf55df29.94857989\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -13,
+            "metadata": {
+                "title": "ABD-İsrail vahşetinde siviller hedefte! Tahran'da üç katlı bina mezar oldu",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8b80",
+            "job_id": "job_69c81dcf5fb6a4.36778662",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c81dcf5fb6a4.36778662\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -14,
+            "metadata": {
+                "title": "A Haber İsrail ve ABD'nin hedef aldığı binayı görüntüledi",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8c09",
+            "job_id": "job_69c81dcf693e08.90458734",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c81dcf693e08.90458734\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -15,
+            "metadata": {
+                "title": "Nisan Dolunayı 2026: Pembe Ay ne zaman görülecek?",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8c8e",
+            "job_id": "job_69c8196f6952b9.70877187",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c8196f6952b9.70877187\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -16,
+            "metadata": {
+                "title": "İsrail tarihi Sur kentini hedef aldı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8d18",
+            "job_id": "job_69c8686d177ad1.20500209",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c8686d177ad1.20500209\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -17,
+            "metadata": {
+                "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_69cb7f68b8d99",
+            "job_id": "job_69c92ad036c451.92790437",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69c92ad036c451.92790437\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T11:01:44+03:00",
+            "status": "pending",
+            "priority": -18,
+            "metadata": {
+                "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:01:44+02:00",
+            "updated_at": "2026-03-31T10:01:44+02:00",
+            "retry_count": 0
+        },
+        {
+            "queue_id": "social_97169486e5935222",
+            "job_id": "job_69caf2277f4141.92771467",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69caf2277f4141.92771467\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:05:03+02:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "ASELSAN'ın LUNA2 uydusu başarıyla fırlatıldı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:05:03+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "youtube-e4e9b6"
+        },
+        {
+            "queue_id": "social_7c38bfcdf8528972",
+            "job_id": "job_69caf2277f4141.92771467",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69caf2277f4141.92771467\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T10:05:57+02:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "ASELSAN'ın LUNA2 uydusu başarıyla fırlatıldı",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T10:05:57+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "test1-9912b3"
+        },
+        {
+            "queue_id": "social_3ecb94a091ec4af7",
+            "job_id": "job_69cb811e455b80.22046842",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69cb811e455b80.22046842\\final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-03-31T08:17:34.419215+00:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "Deneyap Teknoloji Atölyeleri 'geleceğin teknoloji yıldızları'nı arıyor",
+                "description": "Geleceğin teknoloji yıldızı olmak ister misin? DENEYAP kapılarını açıyor! Tam 36 ay boyunca ücretsiz teknoloji eğitimi, Türkiye genelinde 132 DENEYAP atölyesinde seni bekliyor! Başvurular 30 Mart 2026'ya kadar deneyap.org adresinden! Kimler başvurabilir? 4, 5, 8. sınıf ve lise hazırlık, 9. sınıf öğrencileri! Tasarım, Robotik, Siber Güvenlik, Havacılık, Yazılım, Yapay Zekâ... Toplam 11 farklı alanda kendini geliştir! Üç aşamalı bir seçme süreci var. İlk adım: Çevrimiçi E-Sınav! Teknoloji bilginizi konuşturun. Başarılı olanlar Çevrimiçi Eğitim ve Görevleri tamamlayacak, sonra Uygulama Sınavı'na geçecek! DENEYAP sadece Türkiye'de değil, 4 farklı ülkede de! 2024'te 156.000 başvuruyla gençlerin teknolojiye ilgisi rekor kırıyor! Haydi, sen de geleceğin teknolojisini şekillendirenlerden ol! Hemen başvur, fırsatı kaçırma!",
+                "tags": [],
+                "privacy_status": "public"
+            },
+            "platform_metadata": [],
+            "created_at": "2026-03-31T08:17:34.423800+00:00",
+            "retry_count": 0,
+            "last_error": null
+        },
+        {
+            "queue_id": "social_45c96e8e6d106492",
+            "job_id": "job_69cb811e455b80.22046842",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69cb811e455b80.22046842\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-04-01T11:03:55+02:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "Deneyap Teknoloji Atölyeleri 'geleceğin teknoloji yıldızları'nı arıyor",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-04-01T11:03:55+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "test-546ead"
+        },
+        {
+            "queue_id": "social_df05afa01f176d50",
+            "job_id": "job_69cb811e455b80.22046842",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69cb811e455b80.22046842\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-04-01T11:04:15+02:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "Deneyap Teknoloji Atölyeleri 'geleceğin teknoloji yıldızları'nı arıyor",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-04-01T11:04:15+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "test-546ead"
+        },
+        {
+            "queue_id": "social_16d368e9c9d3023b",
+            "job_id": "job_69cd1ac9493672.73804736",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69cd1ac9493672.73804736\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-04-01T15:40:49+02:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "Türkiye&apos;de 5G Kullanıma Sunuldu: Cumhurbaşkanı Erdoğan Butona Bastı!",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-04-01T15:40:49+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "y1-b82b67"
+        },
+        {
+            "queue_id": "social_54e4f76cd51e2d4d",
+            "job_id": "job_69cd1ac9493672.73804736",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\/output\/job_69cd1ac9493672.73804736\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-04-01T22:16:28+02:00",
+            "status": "pending",
+            "priority": 0,
+            "metadata": {
+                "title": "Türkiye&apos;de 5G Kullanıma Sunuldu: Cumhurbaşkanı Erdoğan Butona Bastı!",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": [],
+            "created_at": "2026-04-01T22:16:28+02:00",
+            "retry_count": 0,
+            "last_error": null,
+            "requeued": true,
+            "original_queue_id": "y1-b82b67"
+        },
+        {
+            "queue_id": "social_69cd8da0ad23f",
+            "job_id": "job_69cd88140229e0.38897530",
+            "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api\/..\/output\/job_69cd88140229e0.38897530\/final_video.mp4",
+            "platforms": [
+                "youtube"
+            ],
+            "platform_status": {
+                "youtube": {
+                    "status": "pending",
+                    "post_id": null,
+                    "post_url": null,
+                    "error": null,
+                    "uploaded_at": null
+                }
+            },
+            "scheduled_time": "2026-04-02T00:26:56+03:00",
+            "status": "pending",
+            "priority": -1,
+            "metadata": {
+                "title": "Savaşın İlk Kurşunu Artık Silahtan Çıkmıyor",
+                "description": "",
+                "tags": []
+            },
+            "platform_metadata": {},
+            "created_at": "2026-04-01T23:26:56+02:00",
+            "updated_at": "2026-04-01T23:26:56+02:00",
+            "retry_count": 0
+        }
+    ]
+}

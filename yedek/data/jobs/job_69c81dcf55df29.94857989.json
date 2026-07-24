@@ -1,0 +1,38 @@
+{
+    "id": "job_69c81dcf55df29.94857989",
+    "url": "https:\/\/www.ahaber.com.tr\/ozel-haberler\/2026\/03\/28\/abd-israil-vahsetinde-siviller-hedefte-tahranda-uc-katli-bina-mezar-oldu",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-28 19:28:31",
+    "previewUrl": "\/output\/job_69c81dcf55df29.94857989\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,166\nTahran'da şok edici bir saldırı!\n\n2\n00:00:02,166 --> 00:00:04,333\nSivil bina füzelerin hedefi oldu,\n\n3\n00:00:04,333 --> 00:00:06,500\ndramatik görüntüler ortaya çıktı.\n\n4\n00:00:06,500 --> 00:00:09,306\nİran'ın başkenti Tahran'ın güneyinde, yoğun\n\n5\n00:00:09,306 --> 00:00:12,113\nyerleşim alanındaki üç katlı bir\n\n6\n00:00:12,113 --> 00:00:14,919\nbina vuruldu.\n\n7\n00:00:14,919 --> 00:00:16,953\nSözde 'askeri hedef' iddialarına rağmen,\n\n8\n00:00:16,953 --> 00:00:18,986\nsaldırının sivil katliamı olduğu açıkça\n\n9\n00:00:18,986 --> 00:00:21,019\ngörüldü.\n\n10\n00:00:21,019 --> 00:00:23,643\nA Haber muhabiri Ekber Karabağ\n\n11\n00:00:23,643 --> 00:00:26,266\nve kameraman Mehdi Seferi, enkazdan\n\n12\n00:00:26,266 --> 00:00:28,890\nçıkarılan cansız bedenleri görüntüledi.\n\n13\n00:00:28,890 --> 00:00:31,106\nSokaklar hurdaya dönmüş araçlar ve\n\n14\n00:00:31,106 --> 00:00:33,323\nyıkıntı dolu. Sivil yerleşim yerle\n\n15\n00:00:33,323 --> 00:00:35,540\nbir oldu.\n\n16\n00:00:35,540 --> 00:00:37,500\nKarabağ, 'Vurulan binanın sivil bir\n\n17\n00:00:37,500 --> 00:00:39,460\nbina olduğu ifade edildi' diyerek\n\n18\n00:00:39,460 --> 00:00:41,420\ndurumu aktardı.\n\n19\n00:00:41,420 --> 00:00:43,880\nTahran'da tansiyon düşmüyor, savaşın siviller\n\n20\n00:00:43,880 --> 00:00:46,340\nüzerindeki yıkıcı etkisi devam ediyor.\n\n21\n00:00:46,340 --> 00:00:48,510\nBu tür haberleri kaçırmamak için\n\n22\n00:00:48,510 --> 00:00:50,680\nkanalımıza abone olmayı unutmayın!\n",
+    "error": "",
+    "title": "ABD-İsrail vahşetinde siviller hedefte! Tahran'da üç katlı bina mezar oldu",
+    "content_id": "content_68973e3dac6f",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c81dcf55df29.94857989",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:24.862175+00:00"
+    }
+}

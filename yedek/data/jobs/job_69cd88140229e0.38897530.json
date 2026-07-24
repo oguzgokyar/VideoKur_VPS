@@ -1,0 +1,46 @@
+{
+  "id": "job_69cd88140229e0.38897530",
+  "url": "https://onedio.com/haber/savasin-ilk-kursunu-artik-silahtan-cikmiyor-1351045",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "MarginL": 40,
+    "MarginR": 40,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-04-01 23:03:16",
+  "previewUrl": "/output/job_69cd88140229e0.38897530/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,529\nSavaşın ilk kurşunu artık silahtan\n\n2\n00:00:02,529 --> 00:00:05,059\nçıkmıyor! Peki nereden geliyor?\n\n3\n00:00:05,059 --> 00:00:08,169\nVideo oyunlarından alınmış görüntüler, 'cepheden\n\n4\n00:00:08,169 --> 00:00:11,279\nson dakika' diye servis ediliyor.\n\n5\n00:00:11,279 --> 00:00:14,244\nYapay zekâyla üretilmiş ses kayıtları,\n\n6\n00:00:14,244 --> 00:00:17,210\nliderlere hiç söylemedikleri sözleri söyletiyor.\n\n7\n00:00:17,210 --> 00:00:20,363\nSen bunu izlerken ne hissediyorsun?\n\n8\n00:00:20,363 --> 00:00:23,516\nÖfke mi? Korku mu? Tam\n\n9\n00:00:23,516 --> 00:00:26,669\nda o duyguyu hissetmen isteniyor.\n\n10\n00:00:26,669 --> 00:00:29,129\nDezenformasyon bir bilgi sorunu değil,\n\n11\n00:00:29,129 --> 00:00:31,589\nbir duygu mühendisliğidir.\n\n12\n00:00:31,589 --> 00:00:34,375\nAraştırmalar, savaş dönemlerinde doğrulanmamış içerik\n\n13\n00:00:34,375 --> 00:00:37,159\npaylaşımının yüzde 70 arttığını gösteriyor.\n\n14\n00:00:37,159 --> 00:00:39,566\nİnsanlar korktuğunda, endişelendiğinde doğrulama refleksi\n\n15\n00:00:39,566 --> 00:00:41,973\nçöküyor. 'Olabilir' dediğin an, dezenformasyon\n\n16\n00:00:41,973 --> 00:00:44,379\nkazanıyor.\n\n17\n00:00:44,379 --> 00:00:46,843\nMesele sadece yanlış bilgi değil.\n\n18\n00:00:46,843 --> 00:00:49,306\nMesele, yanlış bilginin seni bir\n\n19\n00:00:49,306 --> 00:00:51,769\ntarafa çekmesi.\n\n20\n00:00:51,769 --> 00:00:54,174\nBu dijital savaşta ayakta kalmak\n\n21\n00:00:54,174 --> 00:00:56,579\niçin, her bilgiyi sorgula ve\n\n22\n00:00:56,579 --> 00:00:58,984\neleştirel düşün! Abone ol, Beğen\n\n23\n00:00:58,984 --> 00:01:01,389\nve Yorum yap!\n",
+  "error": "",
+  "title": "Savaşın İlk Kurşunu Artık Silahtan Çıkmıyor",
+  "content_id": "content_62b8327a4284",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "y1-b82b67",
+    "queue_name": "y1",
+    "status": "queued",
+    "added_at": "2026-04-01T23:03:16+02:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "y1-b82b67_job_69cd88140229e0.38897530",
+    "status": "queued",
+    "platforms": {
+      "youtube": "published"
+    },
+    "updated_at": "2026-04-01T21:30:01.549537+00:00"
+  }
+}

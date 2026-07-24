@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf4374734d74.68040670",
+  "url": "https://onedio.com/haber/gokbilimciler-evrenin-en-nadir-yildizlarindan-birini-buldu-1349003",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 02:18:44",
+  "previewUrl": "/output/job_69bf4374734d74.68040670/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,976\nEvrenin en gizemli yıldızı keşfedildi!\n\n2\n00:00:01,976 --> 00:00:03,953\nBilim dünyası bu sıra dışı\n\n3\n00:00:03,953 --> 00:00:05,929\nkeşifle sarsılıyor.\n\n4\n00:00:05,929 --> 00:00:08,372\nGökbilimciler, dünyamızdan tam 150 bin\n\n5\n00:00:08,372 --> 00:00:10,814\nışık yılı uzaklıkta, Pictor II\n\n6\n00:00:10,814 --> 00:00:13,257\nadlı cüce galakside inanılmaz bir\n\n7\n00:00:13,257 --> 00:00:15,699\nşey buldu.\n\n8\n00:00:15,699 --> 00:00:18,036\nBu yıldızın adı PicII-503. İkinci\n\n9\n00:00:18,036 --> 00:00:20,373\nnesil yani 'Population II' sınıfına\n\n10\n00:00:20,373 --> 00:00:22,709\nait olduğu kesinleşti.\n\n11\n00:00:22,709 --> 00:00:25,653\nOnu diğerlerinden ayıran ise içerdiği\n\n12\n00:00:25,653 --> 00:00:28,596\nelementler. Demir oranı Güneş’in tam\n\n13\n00:00:28,596 --> 00:00:31,539\n40 binde biri kadar düşük.\n\n14\n00:00:31,539 --> 00:00:33,987\nDaha da ilginci, karbon oranı\n\n15\n00:00:33,987 --> 00:00:36,434\nGüneş'ten 1500 kat daha fazla!\n\n16\n00:00:36,434 --> 00:00:38,882\nBu, yıldızın bildiğimiz yollardan oluşmadığını\n\n17\n00:00:38,882 --> 00:00:41,329\nkanıtlıyor.\n\n18\n00:00:41,329 --> 00:00:43,546\nEvrenin sırlarını keşfetmeye devam ediyoruz.\n\n19\n00:00:43,546 --> 00:00:45,763\nDaha fazlası için takipte kalmayı\n\n20\n00:00:45,763 --> 00:00:47,979\nunutma!\n",
+  "error": "",
+  "title": "Gökbilimciler Evrenin En Nadir Yıldızlarından Birini Buldu",
+  "content_id": "content_d00c56f033a4",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T02:18:44+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_6ef4ab029dd148a0",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "42WPc_HjfIs",
+        "post_url": "https://youtube.com/shorts/42WPc_HjfIs",
+        "error": null,
+        "uploaded_at": "2026-03-22T01:48:11.765024+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T01:48:11.789538+00:00"
+  }
+}

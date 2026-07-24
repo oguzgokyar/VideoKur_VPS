@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf51079246f7.30167492",
+  "url": "https://onedio.com/haber/zekiyseniz-sebebi-anneniz-bilim-zeka-geninin-anneden-gectigini-acikladi-731736",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:16:39",
+  "previewUrl": "/output/job_69bf51079246f7.30167492/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,206\nAkademik başarılarınızın arkasındaki gizli kahramanı\n\n2\n00:00:02,206 --> 00:00:04,413\nöğrenmeye hazır mısınız? Cevap sizi\n\n3\n00:00:04,413 --> 00:00:06,619\nşaşırtacak!\n\n4\n00:00:06,619 --> 00:00:09,003\nEğer derslerde parlıyor ve karmaşık\n\n5\n00:00:09,003 --> 00:00:11,386\nkonuları hızla çözüyorsanız, bunun tek\n\n6\n00:00:11,386 --> 00:00:13,769\nbir sebebi olabilir.\n\n7\n00:00:13,769 --> 00:00:16,136\nPsychology Spot tarafından yayımlanan araştırmalara\n\n8\n00:00:16,136 --> 00:00:18,503\ngöre, zekanızın ana kaynağı aslında\n\n9\n00:00:18,503 --> 00:00:20,869\nanneniz!\n\n10\n00:00:20,869 --> 00:00:23,253\nBilim dünyası, zeka genlerinin babadan\n\n11\n00:00:23,253 --> 00:00:25,636\nziyade, ağırlıklı olarak anneden miras\n\n12\n00:00:25,636 --> 00:00:28,019\nkaldığını kanıtladı.\n\n13\n00:00:28,019 --> 00:00:31,294\nIQ seviyenizi belirleyen o temel\n\n14\n00:00:31,294 --> 00:00:34,569\ngenetik faktör, doğrudan annenizin mirası.\n\n15\n00:00:34,569 --> 00:00:36,353\nŞimdi o telefonu elinize alın\n\n16\n00:00:36,353 --> 00:00:38,136\nve bu değerli miras için\n\n17\n00:00:38,136 --> 00:00:39,919\nannenize kocaman bir teşekkür edin!\n\n18\n00:00:39,919 --> 00:00:43,289\nPeki siz zekanızı kimden aldığınızı\n\n19\n00:00:43,289 --> 00:00:46,659\ndüşünüyorsunuz? Yorumlarda buluşalım, beğenmeyi unutmayın!\n",
+  "error": "",
+  "title": "Zekiyseniz Sebebi Anneniz! Bilim Zeka Geninin Anneden Geçtiğini Açıkladı",
+  "content_id": "content_4e0c1d1f841a",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:16:39+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_f748ee9149d64459",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "67O1ApGo_ck",
+        "post_url": "https://youtube.com/shorts/67O1ApGo_ck",
+        "error": null,
+        "uploaded_at": "2026-03-22T02:31:35.896570+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T02:31:35.916249+00:00"
+  }
+}

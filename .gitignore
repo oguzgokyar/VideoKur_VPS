@@ -1,0 +1,78 @@
+# ===== CREDENTIALS & SECRETS =====
+# YouTube OAuth credentials
+data/youtube_credentials/client_secrets.json
+data/youtube_credentials/*_token.json
+
+# Social Media Credentials
+data/social_credentials/
+data/social_credentials/**/*
+
+# API Config with keys
+data/config.json
+
+# ===== BACKUP & MIGRATION FILES =====
+yedek/
+yedek/**/*
+
+# ===== DATA FILES (Runtime) =====
+data/*.json
+data/jobs/*.json
+!data/jobs/.gitkeep
+
+# ===== OUTPUT & GENERATED FILES =====
+# Generated videos and media
+output/
+logs/
+
+# ===== PYTHON =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+venv/
+env/
+.env
+
+# ===== IDE & EDITOR =====
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# ===== TEMPORARY FILES =====
+*.tmp
+*.temp
+*.log
+*.bak
+
+# ===== OS FILES =====
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.pickle.backup
+seison.md
+data/youtube_credentials/*.json
+sesion.md

@@ -1,0 +1,39 @@
+{
+    "id": "job_69bf559bbcaf18.32103193",
+    "url": "https:\/\/www.ahaber.com.tr\/yasam\/2026\/03\/21\/corumda-feci-kaza-cip-ile-otomobil-carpisti-6-yarali",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-22 03:36:11",
+    "previewUrl": "\/output\/job_69bf559bbcaf18.32103193\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,886\nÇorum'da feci kaza! Bir cip\n\n2\n00:00:01,886 --> 00:00:03,773\nve otomobil çarpıştı, tam 6\n\n3\n00:00:03,773 --> 00:00:05,660\nkişi yaralandı!\n\n4\n00:00:05,660 --> 00:00:08,050\nOlay, Çorum-Ortaköy yolu Karacaköy yol\n\n5\n00:00:08,050 --> 00:00:10,440\nayrımında meydana geldi.\n\n6\n00:00:10,440 --> 00:00:13,006\nMurathan Y. yönetimindeki otomobil ile\n\n7\n00:00:13,006 --> 00:00:15,573\nÖzcan B. idaresindeki cip, bilinmeyen\n\n8\n00:00:15,573 --> 00:00:18,140\nbir nedenle çarpıştı.\n\n9\n00:00:18,140 --> 00:00:20,186\nKazayı görenlerin ihbarıyla polis, jandarma,\n\n10\n00:00:20,186 --> 00:00:22,233\nitfaiye ve sağlık ekipleri hızla\n\n11\n00:00:22,233 --> 00:00:24,280\nolay yerine sevk edildi.\n\n12\n00:00:24,280 --> 00:00:26,542\nKazada sürücüler Murathan Y., Özcan\n\n13\n00:00:26,542 --> 00:00:28,804\nB. ile birlikte cipteki Rıza\n\n14\n00:00:28,804 --> 00:00:31,067\nB., Emine B., Zehra B.\n\n15\n00:00:31,067 --> 00:00:33,329\nve Dilek A. yaralandı.\n\n16\n00:00:33,329 --> 00:00:36,714\nYaralılar, ilk müdahalenin ardından ambulanslarla\n\n17\n00:00:36,714 --> 00:00:40,099\nÇorum'daki hastanelere kaldırıldı.\n\n18\n00:00:40,099 --> 00:00:42,436\nYaralılara geçmiş olsun dileklerimizi iletiyor,\n\n19\n00:00:42,436 --> 00:00:44,773\nhaberleri kaçırmamak için bizi takipte\n\n20\n00:00:44,773 --> 00:00:47,109\nkalmanızı rica ediyoruz!\n",
+    "error": "",
+    "title": "Çorum’da feci kaza! Cip ile otomobil çarpıştı: 6 yaralı",
+    "content_id": "content_02ede2348abb",
+    "source_type": "rss",
+    "pausedAt": "waiting",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69bf559bbcaf18.32103193",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:37.480133+00:00"
+    }
+}

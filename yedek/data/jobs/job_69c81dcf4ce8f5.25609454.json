@@ -1,0 +1,38 @@
+{
+    "id": "job_69c81dcf4ce8f5.25609454",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/dunya-videolari\/trumpin-tehlikeli-satranc-oyunu-hedefte-hark-adasi-mi-var",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-28 19:28:31",
+    "previewUrl": "\/output\/job_69c81dcf4ce8f5.25609454\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,339\nTrump'ın tehlikeli satranç oyunu! Hedefte\n\n2\n00:00:02,339 --> 00:00:04,679\nHark Adası mı var?\n\n3\n00:00:04,679 --> 00:00:07,609\nOrtadoğu'da tansiyon zirvede! Bölge adeta\n\n4\n00:00:07,609 --> 00:00:10,539\nbir barut fıçısı.\n\n5\n00:00:10,539 --> 00:00:12,889\n48 saatlik tehdit süreci! Enerji\n\n6\n00:00:12,889 --> 00:00:15,239\ntesisleri hedefte.\n\n7\n00:00:15,239 --> 00:00:18,144\nKüresel güçler restleşiyor. Büyük bir\n\n8\n00:00:18,144 --> 00:00:21,050\nhesaplaşma kapıda.\n\n9\n00:00:21,050 --> 00:00:23,859\nABD'nin 15 şartına karşı, İran'dan\n\n10\n00:00:23,859 --> 00:00:26,669\nağır talepler.\n\n11\n00:00:26,669 --> 00:00:30,750\nİsrail'in durdurulamayan saldırganlığı sürüyor.\n\n12\n00:00:30,750 --> 00:00:33,039\nTürkiye, diplomatik mekik diplomasisiyle çözüm\n\n13\n00:00:33,039 --> 00:00:35,329\narıyor.\n\n14\n00:00:35,329 --> 00:00:37,824\nBu kritik detayları Dış Politika\n\n15\n00:00:37,824 --> 00:00:40,319\nAnalisti Yeliz Albayrak aktardı.\n\n16\n00:00:40,319 --> 00:00:43,369\nSizce bu tehlikeli oyun nereye\n\n17\n00:00:43,369 --> 00:00:46,419\nvaracak? Yorumlarda belirtin, takipte kalın!\n",
+    "error": "",
+    "title": "Trump’ın tehlikeli satranç oyunu! Hedefte Hark Adası mı var?",
+    "content_id": "content_8f6c4fe870dc",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c81dcf4ce8f5.25609454",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:26.386444+00:00"
+    }
+}

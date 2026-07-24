@@ -1,0 +1,35 @@
+{
+  "id": "job_69bf3839bf9364.91073373",
+  "url": "https://onedio.com/haber/isler-tersine-dondu-yapay-zeka-artik-insanlara-para-karsiligi-is-yaptiracak-1349012",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 01:30:49",
+  "previewUrl": "",
+  "subtitles": "",
+  "error": "",
+  "title": "İşler Tersine Döndü: Yapay Zeka, Artık İnsanlara Para Karşılığı İş Yaptıracak!",
+  "content_id": "content_670380b8a40d",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T01:30:49+01:00"
+  }
+}

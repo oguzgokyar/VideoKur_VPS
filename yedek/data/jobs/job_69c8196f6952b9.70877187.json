@@ -1,0 +1,38 @@
+{
+    "id": "job_69c8196f6952b9.70877187",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/dunya-videolari\/israil-tarihi-sur-kentini-hedef-aldi",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-28 19:09:51",
+    "previewUrl": "\/output\/job_69c8196f6952b9.70877187\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,495\nTarihi Sur kenti hedef alındı!\n\n2\n00:00:02,495 --> 00:00:04,990\nOrta Doğu'da tansiyon yükseliyor!\n\n3\n00:00:04,990 --> 00:00:07,623\nİsrail ordusu, Lübnan'ın güneyindeki operasyonlarını\n\n4\n00:00:07,623 --> 00:00:10,256\nbinlerce yıllık geçmişe sahip Sur\n\n5\n00:00:10,256 --> 00:00:12,889\nkentine genişletti.\n\n6\n00:00:12,889 --> 00:00:15,089\nAkdeniz kıyısında tarihiyle, turizmiyle bilinen\n\n7\n00:00:15,089 --> 00:00:17,289\nbu kadim şehir, bugün bombardımanla\n\n8\n00:00:17,289 --> 00:00:19,489\nsarsılıyor.\n\n9\n00:00:19,489 --> 00:00:21,586\nA Haber'den Ata Gündüz Kurşun\n\n10\n00:00:21,586 --> 00:00:23,683\naktardı: Sur, topçu ve hava\n\n11\n00:00:23,683 --> 00:00:25,780\nsaldırılarıyla vuruluyor.\n\n12\n00:00:25,780 --> 00:00:28,480\nİsrail, bölgeyi insansızlaştırmak için kara\n\n13\n00:00:28,480 --> 00:00:31,179\nharekatı ve hava saldırılarını sürdürüyor.\n\n14\n00:00:31,179 --> 00:00:32,746\nBu tür kritik haberler için\n\n15\n00:00:32,746 --> 00:00:34,313\ntakipte kalın ve videomuzu beğenmeyi\n\n16\n00:00:34,313 --> 00:00:35,880\nunutmayın!\n",
+    "error": "",
+    "title": "İsrail tarihi Sur kentini hedef aldı",
+    "content_id": "content_62569e29f6de",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c8196f6952b9.70877187",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:20.615694+00:00"
+    }
+}

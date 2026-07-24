@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b5b8340.85329334",
+  "url": "https://www.ahaber.com.tr/gundem/2026/03/21/new-yorkta-elleri-kanli-teknoloji-devi-protesto-edildi",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b5b8340.85329334/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,143\nNew York sokakları karıştı! Teknoloji\n\n2\n00:00:02,143 --> 00:00:04,286\ndevi Palantir, 'elleri kanlı' sloganlarıyla\n\n3\n00:00:04,286 --> 00:00:06,429\nprotesto edildi.\n\n4\n00:00:06,429 --> 00:00:09,035\nYapay zeka devi Palantir'in New\n\n5\n00:00:09,035 --> 00:00:11,640\nYork merkezi, büyük bir protestoya\n\n6\n00:00:11,640 --> 00:00:14,245\nsahne oldu. Yüzlerce kişi şirketi\n\n7\n00:00:14,245 --> 00:00:16,850\nhedef aldı.\n\n8\n00:00:16,850 --> 00:00:18,350\nProtestocular, şirketin geliştirdiği 'Maven' platformunun\n\n9\n00:00:18,350 --> 00:00:19,850\nsivil ölümlerine neden olduğunu savunuyor.\n\n10\n00:00:19,850 --> 00:00:20,850\nMaven, uydulardan ve İHA'lardan gelen\n\n11\n00:00:20,850 --> 00:00:21,850\nverileri analiz ederek askeri hedefleri\n\n12\n00:00:21,850 --> 00:00:22,850\nbelirliyor.\n\n13\n00:00:22,850 --> 00:00:23,850\nPalantir, İsrail ordusuyla yakın iş\n\n14\n00:00:23,850 --> 00:00:24,850\nbirliği içinde çalışmakla suçlanıyor. Göstericiler\n\n15\n00:00:24,850 --> 00:00:25,850\ncaddeleri kapattı.\n\n16\n00:00:25,850 --> 00:00:27,730\nTeknoloji mi, yoksa bir savaş\n\n17\n00:00:27,730 --> 00:00:29,609\nmakinesi mi? İşte yapay zekanın\n\n18\n00:00:29,609 --> 00:00:31,489\nkaranlık yüzü.\n\n19\n00:00:31,489 --> 00:00:33,856\nPeki sizce teknoloji şirketleri savaşlarda\n\n20\n00:00:33,856 --> 00:00:36,223\nsorumlu tutulmalı mı? Yorumlarda buluşalım,\n\n21\n00:00:36,223 --> 00:00:38,589\ntakipte kalın!\n",
+  "error": "",
+  "title": "New York'ta \"elleri kanlı\" teknoloji devi protesto edildi",
+  "content_id": "content_d5f6986c5510",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d63c",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "ikNACnN4bXE",
+        "post_url": "https://youtube.com/shorts/ikNACnN4bXE",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:27:29.645346+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:27:29.701169+00:00"
+  }
+}

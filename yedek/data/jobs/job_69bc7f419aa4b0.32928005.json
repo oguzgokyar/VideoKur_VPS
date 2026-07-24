@@ -1,0 +1,67 @@
+{
+  "id": "job_69bc7f419aa4b0.32928005",
+  "url": "https://uyuyanguzel.com/bayram-sekeri-masali-ramazan-bayrami-masali/",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "BorderStyle": 1,
+    "Alignment": 2,
+    "preset": "config"
+  },
+  "status": "done",
+  "created_at": "2026-03-19 23:57:05",
+  "previewUrl": "/output/job_69bc7f419aa4b0.32928005/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,715\nHiç Ay Perisi ile tanışan\n\n2\n00:00:01,715 --> 00:00:03,430\nbir çocuk gördünüz mü? Minik\n\n3\n00:00:03,430 --> 00:00:05,145\nAli'nin Ramazan gecesindeki o gizemli\n\n4\n00:00:05,145 --> 00:00:06,860\nanına hazır olun!\n\n5\n00:00:06,860 --> 00:00:09,285\nRamazan'ın son gecesiydi. Minik Ali,\n\n6\n00:00:09,285 --> 00:00:11,710\nayın bitişine üzülürken odasına aniden\n\n7\n00:00:11,710 --> 00:00:14,135\nışıl ışıl bir Moon Sprite\n\n8\n00:00:14,135 --> 00:00:16,560\nyani Ay Perisi süzüldü.\n\n9\n00:00:16,560 --> 00:00:19,496\nAy Perisi Ali'ye fısıldadı: 'Ramazan\n\n10\n00:00:19,496 --> 00:00:22,433\nbir antrenmandı, bayram ise bu\n\n11\n00:00:22,433 --> 00:00:25,370\ngüzellikleri tüm dünyayla paylaşma zamanı!'\n\n12\n00:00:25,370 --> 00:00:28,170\nErtesi sabah Ali uyandı. Ninem'in\n\n13\n00:00:28,170 --> 00:00:30,970\nmutfağında hazırladığı lezzetli Bayram baklavası\n\n14\n00:00:30,970 --> 00:00:33,770\ntepsilerine yardım ederek güne başladı.\n\n15\n00:00:33,770 --> 00:00:36,290\nAli, arkadaşı Ayşe'ye bayram şekerini\n\n16\n00:00:36,290 --> 00:00:38,810\nuzattı. Perinin dediği gibi, o\n\n17\n00:00:38,810 --> 00:00:41,330\nküçük gülümsemeleri toplamaya başlamıştı bile.\n\n18\n00:00:41,330 --> 00:00:43,713\nSiz de bayramda paylaşmanın tadını\n\n19\n00:00:43,713 --> 00:00:46,096\nçıkarın! Daha fazla masal ve\n\n20\n00:00:46,096 --> 00:00:48,480\nhikaye için abone olmayı unutmayın!\n",
+  "error": "",
+  "title": "Bayram-sekeri-masali-ramazan-bayrami-masali",
+  "ttsProvider": "elevenlabs",
+  "youtube_upload": {
+    "status": "uploaded",
+    "video_id": "qqfSrP67GGY",
+    "video_url": "https://youtube.com/shorts/qqfSrP67GGY",
+    "thumbnail_uploaded": false,
+    "uploaded_at": "2026-03-19T23:15:19Z",
+    "metadata": {
+      "title": "Çocuk Masalları, Kısa Hikayeler #Shorts",
+      "description": "Çocuk Masalları, Kısa Hikayeler\n\n🔔 Abone olmayı unutmayın!\n💬 Yorumlarınızı bekliyoruz!\n\n#Shorts #Haber #Teknoloji #Türkçe",
+      "tags": [
+        "Shorts",
+        "haber",
+        "teknoloji",
+        "türkçe"
+      ],
+      "category_id": "28",
+      "privacy_status": "public"
+    }
+  },
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-21T14:31:03+01:00"
+  },
+  "social_upload": {
+    "queue_id": "social_562c167a89ff41e0",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "PTVkkdR816g",
+        "post_url": "https://youtube.com/shorts/PTVkkdR816g",
+        "error": null,
+        "uploaded_at": "2026-03-22T00:40:52.482078+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T00:40:52.504961+00:00"
+  }
+}

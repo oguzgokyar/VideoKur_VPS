@@ -1,0 +1,46 @@
+{
+  "geminiKey": "YOUR_GEMINI_API_KEY",
+  "elevenKey": "YOUR_ELEVENLABS_API_KEY",
+  "hfKey": "YOUR_HUGGINGFACE_API_KEY",
+  "pexelsKey": "YOUR_PEXELS_API_KEY",
+  "falKey": "YOUR_FAL_API_KEY",
+  "pollinationsKey": "",
+  "ttsProvider": "elevenlabs",
+  "imageService": "pollinations",
+  "scriptProvider": "gemini",
+  "geminiModel": "gemini-2.0-flash",
+  "pollinationsModel": "flux",
+  "pollinationsTextModel": "openai",
+  "falWidth": 768,
+  "falHeight": 768,
+  "falSteps": 4,
+  "toolsEnabled": {
+    "scriptGen": true,
+    "imageGen": true,
+    "ttsGen": true,
+    "videoCompose": true
+  },
+  "servicesEnabled": {
+    "fal_image": true,
+    "pollinations_image": true,
+    "huggingface_image": true,
+    "pexels_image": true,
+    "gemini_script": true,
+    "pollinations_text": true,
+    "elevenlabs_tts": true,
+    "edge_tts": true
+  },
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 24,
+    "PrimaryColour": "#FFFFFF",
+    "OutlineColour": "#000000",
+    "BackColour": "#80000000",
+    "BorderStyle": 3,
+    "Outline": 3,
+    "Shadow": 1,
+    "MarginV": 100,
+    "Alignment": 2,
+    "Bold": 1
+  }
+}

@@ -1,0 +1,38 @@
+{
+    "id": "job_69ca7a16e00ce4.05697665",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/dunya-videolari\/irandan-israile-87-fuze-dalgasi-kritik-noktalar-hedef-alindi",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-30 15:26:46",
+    "previewUrl": "\/output\/job_69ca7a16e00ce4.05697665\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,790\nSon Dakika: İran'dan İsrail'e dev\n\n2\n00:00:01,790 --> 00:00:03,580\nfüze dalgası!\n\n3\n00:00:03,580 --> 00:00:05,870\nİran Devrim Muhafızları, İsrail'e 87.\n\n4\n00:00:05,870 --> 00:00:08,160\nfüze dalgasını başlattı!\n\n5\n00:00:08,160 --> 00:00:10,714\nHayfa, Tel Aviv ve Berşeba\n\n6\n00:00:10,714 --> 00:00:13,269\ngibi kritik noktalar hedef alındı.\n\n7\n00:00:13,269 --> 00:00:16,245\nBölgedeki ABD askeri üsleri de\n\n8\n00:00:16,245 --> 00:00:19,220\nsaldırıların hedefindeydi.\n\n9\n00:00:19,220 --> 00:00:21,200\nFüzelerin üzerine yazılan mesajlar dikkat\n\n10\n00:00:21,200 --> 00:00:23,180\nçekti.\n\n11\n00:00:23,180 --> 00:00:24,850\nOrtadoğu'daki gerilim yeni bir boyuta\n\n12\n00:00:24,850 --> 00:00:26,520\nulaştı!\n\n13\n00:00:26,520 --> 00:00:28,630\nDaha fazla son dakika haberi\n\n14\n00:00:28,630 --> 00:00:30,740\niçin bizi takip etmeyi unutmayın!\n",
+    "error": "",
+    "title": "İran'dan İsrail'e 87. füze dalgası! Kritik noktalar hedef alındı",
+    "content_id": "content_ffa634a2c92d",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69ca7a16e00ce4.05697665",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:13.057366+00:00"
+    }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "job_69c81dcf41f7a3.08893181",
+  "url": "https://www.ahaber.com.tr/video/gundem-videolari/israilin-lubnan-isgalinde-buldozer-taktigi",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-28 19:28:31",
+  "previewUrl": "/output/job_69c81dcf41f7a3.08893181/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,185\nİsrail'in Lübnan'da uyguladığı şok edici\n\n2\n00:00:02,185 --> 00:00:04,370\ntaktik: 'Buldozer' stratejisi!\n\n3\n00:00:04,370 --> 00:00:06,883\nİşgalci İsrail ordusu, Hizbullah ile\n\n4\n00:00:06,883 --> 00:00:09,396\nmücadele bahanesiyle Lübnan topraklarında ilerlemeye\n\n5\n00:00:09,396 --> 00:00:11,910\nçalışıyor.\n\n6\n00:00:11,910 --> 00:00:14,755\nAncak kara harekatında büyük bir\n\n7\n00:00:14,755 --> 00:00:17,600\ndirenişle karşılaşıyorlar; ilerlemeleri yavaşlıyor.\n\n8\n00:00:17,600 --> 00:00:19,536\nA Haber muhabiri Ata Gündüz\n\n9\n00:00:19,536 --> 00:00:21,473\nKurşun, İsrail'in korkunç 'insansızlaştırma' politikasını\n\n10\n00:00:21,473 --> 00:00:23,410\ndeşifre etti.\n\n11\n00:00:23,410 --> 00:00:26,495\nBu taktikle, Lübnan topraklarını adeta\n\n12\n00:00:26,495 --> 00:00:29,580\nyaşanmaz hale getirmeyi hedefliyorlar.\n\n13\n00:00:29,580 --> 00:00:31,493\nSınır hattındaki bu gerilim tırmanırken,\n\n14\n00:00:31,493 --> 00:00:33,406\nbölge yeni ve tehlikeli bir\n\n15\n00:00:33,406 --> 00:00:35,320\nkrize sürükleniyor.\n\n16\n00:00:35,320 --> 00:00:37,246\nDaha fazla güncel haber için\n\n17\n00:00:37,246 --> 00:00:39,173\nkanalımızı takip edin ve gelişmelerden\n\n18\n00:00:39,173 --> 00:00:41,100\nanında haberdar olun!\n",
+  "error": "",
+  "title": "İsrail'in Lübnan işgalinde \"buldozer\" taktiği",
+  "content_id": "content_0252371bf085",
+  "source_type": "rss",
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_407d587fd0fc6d7e",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "HBaK0I8bEc8",
+        "post_url": "https://youtube.com/shorts/HBaK0I8bEc8",
+        "error": null,
+        "uploaded_at": "2026-03-29T19:01:17.266615+00:00"
+      }
+    },
+    "updated_at": "2026-03-29T19:01:17.292033+00:00"
+  }
+}

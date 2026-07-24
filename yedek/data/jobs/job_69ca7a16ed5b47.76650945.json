@@ -1,0 +1,38 @@
+{
+    "id": "job_69ca7a16ed5b47.76650945",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/ozel-haber\/analiz-kuresel-vicdanin-seciciligi-algoritma-vicdanlari-nasil-yonlendiriyor",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-30 15:26:46",
+    "previewUrl": "\/output\/job_69ca7a16ed5b47.76650945\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,896\nAlgoritmalar küresel vicdanı nasıl manipüle\n\n2\n00:00:01,896 --> 00:00:03,793\nediyor? Şok edici bir gerçeğe\n\n3\n00:00:03,793 --> 00:00:05,690\nhazır olun!\n\n4\n00:00:05,690 --> 00:00:09,144\nDijital çağda algoritmalar duygularımızı şekillendiriyor,\n\n5\n00:00:09,144 --> 00:00:12,599\nvicdanımızı etiketler üzerinden dağıtıyor.\n\n6\n00:00:12,599 --> 00:00:15,925\nBir hayvanın yaşadığı dram saniyeler\n\n7\n00:00:15,925 --> 00:00:19,250\niçinde milyonlara ulaşan kampanyalara dönüşürken...\n\n8\n00:00:19,250 --> 00:00:21,370\n...Gazze’de bombaların gölgesinde hayatını kaybeden\n\n9\n00:00:21,370 --> 00:00:23,490\nmasum çocukların çığlığı çoğu zaman\n\n10\n00:00:23,490 --> 00:00:25,610\nduyulmuyor.\n\n11\n00:00:25,610 --> 00:00:27,970\nİran’da sınıflarında hedef olan çocukların\n\n12\n00:00:27,970 --> 00:00:30,330\nacısı da dijital dünyanın yankısız\n\n13\n00:00:30,330 --> 00:00:32,690\nboşluğunda kayboluyor.\n\n14\n00:00:32,690 --> 00:00:36,075\nKüresel vicdanın seçiciliğine meydan okuyun.\n\n15\n00:00:36,075 --> 00:00:39,460\nGerçekleri görün, kendi vicdanınızı sorgulayın!\n",
+    "error": "",
+    "title": "ANALİZ | Küresel vicdanın seçiciliği! Algoritma vicdanları nasıl yönlendiriyor?",
+    "content_id": "content_6f04718233cd",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69ca7a16ed5b47.76650945",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:11.592205+00:00"
+    }
+}

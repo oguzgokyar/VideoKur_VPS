@@ -1,0 +1,38 @@
+{
+    "id": "job_69bf559bb644d4.08751328",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/gundem-videolari\/dimonada-yikimin-boyutu-a-haberde",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-22 03:36:11",
+    "previewUrl": "\/output\/job_69bf559bb644d4.08751328\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,350\nSon dakika! İsrail'in en kritik\n\n2\n00:00:02,350 --> 00:00:04,700\nnoktası saldırı altında!\n\n3\n00:00:04,700 --> 00:00:07,330\nİran ordusu, Dimona Nükleer Santrali'ne\n\n4\n00:00:07,330 --> 00:00:09,960\nbüyük bir saldırı başlattı.\n\n5\n00:00:09,960 --> 00:00:12,610\nBu santral, İsrail'in nükleer programı\n\n6\n00:00:12,610 --> 00:00:15,260\niçin hayati önem taşıyor.\n\n7\n00:00:15,260 --> 00:00:17,565\nBölgeden gelen görüntüler, yıkımın boyutunu\n\n8\n00:00:17,565 --> 00:00:19,870\ngözler önüne seriyor.\n\n9\n00:00:19,870 --> 00:00:22,019\nBu çarpıcı görüntüler ilk kez\n\n10\n00:00:22,019 --> 00:00:24,169\nA Haber'de yayınlandı.\n\n11\n00:00:24,169 --> 00:00:26,054\nDaha fazla son dakika gelişmesi\n\n12\n00:00:26,054 --> 00:00:27,940\niçin takipte kalın!\n",
+    "error": "",
+    "title": "Dimona'da yıkımın boyutu A Haber'de",
+    "content_id": "content_5b0f786e40db",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69bf559bb644d4.08751328",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:38.859874+00:00"
+    }
+}

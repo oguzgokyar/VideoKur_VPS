@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Multi-Project Test</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js" defer></script>
+</head>
+<body class="bg-gray-100 p-8">
+    
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg p-6" x-data="{
+        projects: [
+            {
+                id: 'project_1',
+                name: 'VideoKur Ana Proje',
+                daily_quota: 10000,
+                quota_used_today: 0,
+                upload_count_today: 1,
+                is_active: true,
+                is_default: true
+            }
+        ],
+        stats: {
+            totalProjects: 1,
+            totalQuota: 10000,
+            usedQuota: 0,
+            remainingQuota: 10000,
+            estimatedVideos: 5
+        },
+        rotationStrategy: 'round_robin',
+        addProjectModal: false,
+        newProject: {
+            name: '',
+            fileName: '',
+            fileData: null,
+            quota: 10000,
+            notes: ''
+        },
+        projectUploading: false,
+        
+        openAddProjectModal() {
+            this.addProjectModal = true;
+        },
+        closeAddProjectModal() {
+            this.addProjectModal = false;
+        },
+        handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file && file.type === 'application/json') {
+                this.newProject.fileName = file.name;
+                this.newProject.fileData = file;
+            } else {
+                alert('Lütfen geçerli bir JSON dosyası seçin');
+            }
+        },
+        canSubmitProject() {
+            return this.newProject.name && this.newProject.fileData && !this.projectUploading;
+        },
+        async submitNewProject() {
+            alert('Test modunda - Backend'e gönderilmedi\\nProje: ' + this.newProject.name + '\\nDosya: ' + this.newProject.fileName);
+            this.closeAddProjectModal();
+        },
+        toggleProjectActive(projectId) {
+            const project = this.projects.find(p => p.id === projectId);
+            if (project) {
+                project.is_active = !project.is_active;
+            }
+        },
+        setDefaultProject(projectId) {
+            this.projects.forEach(p => {
+                p.is_default = (p.id === projectId);
+            });
+        }
+    }">
+        
+        <h1 class="text-2xl font-bold mb-6">🔑 YouTube API Projeleri - Test</h1>
+        
+        <!-- Quota Dashboard -->
+        <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-5 mb-6 border border-blue-200">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+            <div>
+              <div class="text-2xl font-bold text-blue-900" x-text="stats.totalProjects"></div>
+              <div class="text-xs text-blue-600">Aktif Proje</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-blue-900" x-text="stats.totalQuota.toLocaleString()"></div>
+              <div class="text-xs text-blue-600">Toplam Kota</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-green-600" x-text="stats.remainingQuota.toLocaleString()"></div>
+              <div class="text-xs text-green-600">Kalan Kota</div>
+            </div>
+            <div>
+              <div class="text-2xl font-bold text-purple-600" x-text="'~' + stats.estimatedVideos"></div>
+              <div class="text-xs text-purple-600">Video/Gün</div>
+            </div>
+          </div>
+          
+          <div class="mt-4 pt-4 border-t border-blue-200 flex flex-wrap items-center gap-3">
+            <label class="text-sm font-semibold text-blue-700">Rotasyon Stratejisi:</label>
+            <select x-model="rotationStrategy" 
+                    class="text-sm px-3 py-1.5 rounded-lg border border-blue-300 bg-white text-gray-700">
+              <option value="round_robin">🔄 Round Robin (Sırayla)</option>
+              <option value="least_used">📊 En Az Kullanılan</option>
+              <option value="failover">⚡ Failover</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          
+          <!-- Project Cards -->
+          <template x-for="project in projects" :key="project.id">
+            <div class="border rounded-lg p-4 hover:bg-gray-50 transition-colors">
+              <div class="flex items-start justify-between mb-3">
+                <div class="flex-1">
+                  <h4 class="font-semibold text-gray-900 text-sm" x-text="project.name"></h4>
+                  <p class="text-xs text-gray-500" x-text="project.id"></p>
+                </div>
+                <button @click="setDefaultProject(project.id)" class="text-xl flex-shrink-0">
+                  <span x-show="project.is_default">⭐</span>
+                  <span x-show="!project.is_default">☆</span>
+                </button>
+              </div>
+              
+              <!-- Progress Bar -->
+              <div class="mb-3">
+                <div class="flex justify-between text-xs mb-1">
+                  <span class="text-gray-600">Kota Kullanımı</span>
+                  <span class="font-semibold" x-text="project.quota_used_today + '/' + project.daily_quota"></span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-2">
+                  <div class="bg-blue-500 h-2 rounded-full transition-all" 
+                       :style="`width: ${Math.min(100, (project.quota_used_today / project.daily_quota) * 100)}%`">
+                  </div>
+                </div>
+                <div class="text-xs text-gray-500 mt-1">
+                  Kalan: <span class="font-semibold" x-text="(project.daily_quota - project.quota_used_today).toLocaleString()"></span> units
+                </div>
+              </div>
+              
+              <!-- Stats -->
+              <div class="flex items-center justify-between text-xs mb-3 pb-3 border-b">
+                <span class="text-gray-600">
+                  Bugün: <span class="font-semibold" x-text="project.upload_count_today"></span> video
+                </span>
+                <span :class="project.is_active ? 'text-green-600' : 'text-gray-400'" x-text="project.is_active ? '🟢 Aktif' : '⏸️ Pasif'"></span>
+              </div>
+              
+              <!-- Actions -->
+              <div class="flex gap-2">
+                <button @click="toggleProjectActive(project.id)" 
+                        class="flex-1 px-2 py-1.5 text-xs rounded font-medium"
+                        :class="project.is_active ? 'bg-amber-100 text-amber-700 hover:bg-amber-200' : 'bg-green-100 text-green-700 hover:bg-green-200'">
+                  <span x-text="project.is_active ? '⏸️ Duraklat' : '▶️ Aktif'"></span>
+                </button>
+                <button class="px-3 py-1.5 bg-red-100 text-red-700 hover:bg-red-200 rounded text-xs font-medium">
+                  🗑️
+                </button>
+              </div>
+            </div>
+          </template>
+          
+          <!-- Add New Project Card -->
+          <div @click="openAddProjectModal()" 
+               class="border-2 border-dashed border-blue-300 rounded-lg p-4 flex flex-col items-center justify-center cursor-pointer hover:border-blue-500 hover:bg-blue-50 transition-colors min-h-[220px]">
+            <div class="text-4xl mb-2">➕</div>
+            <div class="font-semibold text-blue-700 text-sm">Yeni Proje Ekle</div>
+            <div class="text-xs text-gray-500 mt-1 text-center px-2">Kotanızı 2x, 3x artırın</div>
+          </div>
+          
+        </div>
+        
+        <!-- Modal -->
+        <div x-show="addProjectModal" 
+             class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+             @click.self="closeAddProjectModal()">
+          
+          <div class="bg-white rounded-xl shadow-2xl w-full max-w-lg">
+            
+            <div class="px-6 py-4 border-b bg-gradient-to-r from-blue-50 to-indigo-50">
+              <h3 class="text-lg font-bold text-gray-800">➕ YouTube API Projesi Ekle</h3>
+            </div>
+            
+            <div class="p-6 space-y-4">
+              
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  Proje Adı <span class="text-red-500">*</span>
+                </label>
+                <input x-model="newProject.name" 
+                       type="text" 
+                       placeholder="VideoKur Proje 2"
+                       class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">
+                  client_secrets.json <span class="text-red-500">*</span>
+                </label>
+                <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 text-center hover:border-blue-400 transition-colors">
+                  <input type="file" 
+                         id="testProjectFile"
+                         accept=".json"
+                         @change="handleFileSelect($event)"
+                         class="hidden" />
+                  <label for="testProjectFile" class="cursor-pointer block">
+                    <div class="text-4xl mb-2">📄</div>
+                    <div class="text-sm font-semibold text-gray-700">Dosya Seç</div>
+                    <div class="text-xs text-gray-500 mt-1">Google Cloud Console'dan JSON</div>
+                  </label>
+                  <template x-if="newProject.fileName">
+                    <div class="mt-3 p-2 bg-green-50 border border-green-200 rounded text-sm text-green-700">
+                      ✅ <span x-text="newProject.fileName"></span>
+                    </div>
+                  </template>
+                </div>
+              </div>
+              
+              <div>
+                <label class="block text-sm font-semibold text-gray-700 mb-2">Günlük Kota</label>
+                <input x-model.number="newProject.quota" 
+                       type="number" 
+                       value="10000"
+                       class="w-full border border-gray-300 rounded-lg px-4 py-2 text-sm focus:ring-2 focus:ring-blue-500 outline-none" />
+              </div>
+              
+            </div>
+            
+            <div class="px-6 py-4 border-t bg-gray-50 flex justify-end gap-3">
+              <button @click="closeAddProjectModal()" 
+                      class="px-4 py-2 text-sm text-gray-600 hover:bg-gray-200 rounded-lg font-medium">
+                İptal
+              </button>
+              <button @click="submitNewProject()" 
+                      :disabled="!canSubmitProject()"
+                      class="px-4 py-2 text-sm bg-blue-600 text-white rounded-lg hover:bg-blue-700 disabled:opacity-50">
+                Proje Ekle (Test)
+              </button>
+            </div>
+            
+          </div>
+        </div>
+        
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,3050 @@
+{
+  "history": [
+    {
+      "queue_id": "social_69cae8e5bc76b",
+      "job_id": "job_69ca7a170bd735.09295955",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69ca7a170bd735.09295955/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "NNEosFTYmKA",
+          "post_url": "https://youtube.com/shorts/NNEosFTYmKA",
+          "error": null,
+          "uploaded_at": "2026-03-30T21:21:40.587375+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-31T00:19:33+03:00",
+      "status": "success",
+      "priority": -24,
+      "metadata": {
+        "title": "Beynin Algoritması: Dijital Sürüye Karşı İçsel Anlatı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T23:19:33+02:00",
+      "updated_at": "2026-03-30T23:19:33+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-30T21:21:40.614090+00:00"
+    },
+    {
+      "queue_id": "social_69cae8e5bc551",
+      "job_id": "job_69ca7a17026964.08056053",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69ca7a17026964.08056053/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "-PEdf0Gcavc",
+          "post_url": "https://youtube.com/shorts/-PEdf0Gcavc",
+          "error": null,
+          "uploaded_at": "2026-03-30T21:21:07.004302+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-31T00:19:33+03:00",
+      "status": "success",
+      "priority": -23,
+      "metadata": {
+        "title": "iPhone Kullanıcılarına Müjde: Kulaklıkla Anında Çeviri Özelliği Geldi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T23:19:33+02:00",
+      "updated_at": "2026-03-30T23:19:33+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-30T21:21:07.034683+00:00"
+    },
+    {
+      "queue_id": "social_69cae8e5bc39c",
+      "job_id": "job_69ca7a16ed5b47.76650945",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69ca7a16ed5b47.76650945/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "IixUfCMrxng",
+          "post_url": "https://youtube.com/shorts/IixUfCMrxng",
+          "error": null,
+          "uploaded_at": "2026-03-30T21:20:35.050485+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-31T00:19:33+03:00",
+      "status": "success",
+      "priority": -22,
+      "metadata": {
+        "title": "ANALİZ | Küresel vicdanın seçiciliği! Algoritma vicdanları nasıl yönlendiriyor?",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T23:19:33+02:00",
+      "updated_at": "2026-03-30T23:19:33+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-30T21:20:35.089387+00:00"
+    },
+    {
+      "queue_id": "social_69cae8e5bc185",
+      "job_id": "job_69ca7a16e00ce4.05697665",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69ca7a16e00ce4.05697665/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "NavNaD5ai4Y",
+          "post_url": "https://youtube.com/shorts/NavNaD5ai4Y",
+          "error": null,
+          "uploaded_at": "2026-03-30T21:20:07.710174+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-31T00:19:33+03:00",
+      "status": "success",
+      "priority": -21,
+      "metadata": {
+        "title": "İran'dan İsrail'e 87. füze dalgası! Kritik noktalar hedef alındı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T23:19:33+02:00",
+      "updated_at": "2026-03-30T23:19:33+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-30T21:20:07.768507+00:00"
+    },
+    {
+      "queue_id": "social_4f784ad825647f5b",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "Cvy5642zSR8",
+          "post_url": "https://youtube.com/shorts/Cvy5642zSR8",
+          "error": null,
+          "uploaded_at": "2026-03-30T19:11:24.675278+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-30T22:10:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-30T09:06:13+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-30T19:11:24.698755+00:00"
+    },
+    {
+      "queue_id": "social_c70a107377127679",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "HsqYDA9YqEI",
+          "post_url": "https://youtube.com/shorts/HsqYDA9YqEI",
+          "error": null,
+          "uploaded_at": "2026-03-30T19:10:58.065079+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-30T22:10:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-30T09:06:09+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-30T19:10:58.089250+00:00"
+    },
+    {
+      "queue_id": "social_ccab03f13b74426f",
+      "job_id": "job_69ca7a170bd735.09295955",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69ca7a170bd735.09295955\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T13:56:00.525379+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Beynin Algoritması: Dijital Sürüye Karşı İçsel Anlatı",
+        "description": "Dijital çağın algoritmaları, kim olduğunu sana mı söylüyor? Gerçek hikayeni geri alma zamanı! Sosyal medyada 'Ben başarısızım' dediğin anlar oldu mu? Algoritma, bu etiketleri sana yapıştırıyor olabilir. Unutma: Problem sen değilsin, problem problemdir. Başarısızlık bir bulut gibi, senin tepende dolaşıyor, sen değilsin! Eski 'başarısızlık' hikayelerini al, yeniden yaz! Geçmişteki deneyimler seni bugünkü güçlü versiyonuna taşıdı. Algoritma sana öfke mi pompalıyor? Dur ve sorgula: Bu içeriği gerçekten ben mi istedim, yoksa o mu merakımı tetikledi? Her gün kendi hikayenin kahramanı ol. Algoritma 'tüket' derken, sen 'yarat' diye cevap ver! İçindeki 'yetersizsin' sesini duyduğunda, onu bir karakter olarak selamla. Teşekkür et ve yoluna devam et. Kendi anlatıcın ol. Algoritmalara karşı en güçlü silahın, kendi hikayen!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T13:56:00.549197+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-30T13:59:52.692054+00:00"
+    },
+    {
+      "queue_id": "social_37be47b12b7c4515",
+      "job_id": "job_69ca7a17026964.08056053",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69ca7a17026964.08056053\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T13:47:30.374631+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "iPhone Kullanıcılarına Müjde: Kulaklıkla Anında Çeviri Özelliği Geldi",
+        "description": "iPhone kullanıcıları dikkat! Dil bariyerleri tarih oluyor! Anında çeviri özelliğiyle dünyayla bağlantı kurmaya hazır mısınız? Apple, AirPods ve iPhone'larla canlı çeviriyi gerçek yapıyor! Artık farklı dillerdeki sohbetler anında anlaşılır hale geliyor. En önemlisi: Apple bu çeviriyi cihaz içinde yapıyor. Gizliliğiniz güvende, konuşmalarınız dışarıya sızmıyor. Peki ya Google? Onlar daha geniş bir kitleye hitap ediyor! Herhangi bir kablosuz kulaklıkla anında çeviri mümkün. Ancak bir fark var: Google Translate bulut tabanlı çalışıyor. Konuşmalarınız internet üzerinden işleniyor, dikkat! Yine de her iki özellik de dil engellerini ortadan kaldırmak için devrim niteliğinde! Dünya artık cebinizde. Peki siz hangi özelliği kullanmayı tercih edersiniz? Yorumlarda belirtmeyi ve bizi takip etmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T13:47:30.400879+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-30T13:50:49.892629+00:00"
+    },
+    {
+      "queue_id": "social_69ca7ea79fa3a",
+      "job_id": "job_69ca7a16ed5b47.76650945",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69ca7a16ed5b47.76650945/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T16:46:15+03:00",
+      "status": "failed",
+      "priority": -22,
+      "metadata": {
+        "title": "ANALİZ | Küresel vicdanın seçiciliği! Algoritma vicdanları nasıl yönlendiriyor?",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T15:46:15+02:00",
+      "updated_at": "2026-03-30T15:46:15+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-30T13:49:49.208543+00:00"
+    },
+    {
+      "queue_id": "social_69ca7ea79f62c",
+      "job_id": "job_69ca7a16e00ce4.05697665",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69ca7a16e00ce4.05697665/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T16:46:15+03:00",
+      "status": "failed",
+      "priority": -21,
+      "metadata": {
+        "title": "İran'dan İsrail'e 87. füze dalgası! Kritik noktalar hedef alındı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T15:46:15+02:00",
+      "updated_at": "2026-03-30T15:46:15+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-30T13:49:48.224571+00:00"
+    },
+    {
+      "queue_id": "social_c9f2f3fe74304590",
+      "job_id": "job_69ca7a16ed5b47.76650945",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69ca7a16ed5b47.76650945\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T13:39:00.241344+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "ANALİZ | Küresel vicdanın seçiciliği! Algoritma vicdanları nasıl yönlendiriyor?",
+        "description": "Algoritmalar küresel vicdanı nasıl manipüle ediyor? Şok edici bir gerçeğe hazır olun! Dijital çağda algoritmalar duygularımızı şekillendiriyor, vicdanımızı etiketler üzerinden dağıtıyor. Bir hayvanın yaşadığı dram saniyeler içinde milyonlara ulaşan kampanyalara dönüşürken... ...Gazze’de bombaların gölgesinde hayatını kaybeden masum çocukların çığlığı çoğu zaman duyulmuyor. İran’da sınıflarında hedef olan çocukların acısı da dijital dünyanın yankısız boşluğunda kayboluyor. Küresel vicdanın seçiciliğine meydan okuyun. Gerçekleri görün, kendi vicdanınızı sorgulayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-30T13:39:00.270775+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-30T13:42:38.220875+00:00"
+    },
+    {
+      "queue_id": "social_c044efb590c84266",
+      "job_id": "job_69ca7a16e00ce4.05697665",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69ca7a16e00ce4.05697665\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-30T13:33:00.075994+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "İran'dan İsrail'e 87. füze dalgası! Kritik noktalar hedef alındı",
+        "description": "Son Dakika: İran'dan İsrail'e dev füze dalgası! İran Devrim Muhafızları, İsrail'e 87. füze dalgasını başlattı! Hayfa, Tel Aviv ve Berşeba gibi kritik noktalar hedef alındı. Bölgedeki ABD askeri üsleri de saldırıların hedefindeydi. Füzelerin üzerine yazılan mesajlar dikkat çekti. Ortadoğu'daki gerilim yeni bir boyuta ulaştı! Daha fazla son dakika haberi için bizi takip etmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-30T13:33:00.112866+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "updated_at": "2026-03-30T15:34:32+02:00",
+      "completed_at": "2026-03-30T13:37:34.830636+00:00"
+    },
+    {
+      "queue_id": "social_8db8f092f7f0993c",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T22:40:00+03:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T21:20:52+02:00",
+      "retry_count": 3,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-30T07:02:07.020531+00:00"
+    },
+    {
+      "queue_id": "social_43a13b51e132dab0",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T22:40:00+03:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T21:20:47+02:00",
+      "retry_count": 3,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-30T07:02:06.225741+00:00"
+    },
+    {
+      "queue_id": "social_50ebc9932acc3c84",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T22:10:00+03:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T21:00:42+02:00",
+      "retry_count": 3,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T19:13:23.804377+00:00"
+    },
+    {
+      "queue_id": "social_c68309480431e574",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T22:10:00+03:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T21:00:36+02:00",
+      "retry_count": 3,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T19:13:22.909783+00:00"
+    },
+    {
+      "queue_id": "social_407d587fd0fc6d7e",
+      "job_id": "job_69c81dcf41f7a3.08893181",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c81dcf41f7a3.08893181/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "HBaK0I8bEc8",
+          "post_url": "https://youtube.com/shorts/HBaK0I8bEc8",
+          "error": null,
+          "uploaded_at": "2026-03-29T19:01:17.266615+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T22:00:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "İsrail'in Lübnan işgalinde \"buldozer\" taktiği",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-28T23:09:46+01:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T19:01:17.275704+00:00"
+    },
+    {
+      "queue_id": "social_7aa702b8a1bffc3d",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "HXFeS2q8ZQg",
+          "post_url": "https://youtube.com/shorts/HXFeS2q8ZQg",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:53:44.811466+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T15:30:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T20:53:00+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T18:53:44.843514+00:00"
+    },
+    {
+      "queue_id": "social_d2d0af2459e0227a",
+      "job_id": "job_69c92ad0516724.05474687",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad0516724.05474687/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "wxab7qWBeyE",
+          "post_url": "https://youtube.com/shorts/wxab7qWBeyE",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:52:08.992370+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T15:30:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Kumluca'da hortum seraları vurdu, 10 dönüm alan zarar gördü",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T20:49:32+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T18:52:09.018317+00:00"
+    },
+    {
+      "queue_id": "social_05cc438fa3e9eb3c",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "5N-Q72SzhJg",
+          "post_url": "https://youtube.com/shorts/5N-Q72SzhJg",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:51:35.345633+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T15:30:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T20:49:27+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T18:51:35.376039+00:00"
+    },
+    {
+      "queue_id": "social_77b1302e8d70c0ac",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "uLUyM7nRkvs",
+          "post_url": "https://youtube.com/shorts/uLUyM7nRkvs",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:50:59.105034+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T15:30:00+03:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T20:49:19+02:00",
+      "retry_count": 0,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "youtube-testr-8737ec",
+      "completed_at": "2026-03-29T18:50:59.118762+00:00"
+    },
+    {
+      "queue_id": "social_69c97076ea325",
+      "job_id": "job_69c92ad0516724.05474687",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c92ad0516724.05474687/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "PKanBDnsi_I",
+          "post_url": "https://youtube.com/shorts/PKanBDnsi_I",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:36:07.543231+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T20:33:26+02:00",
+      "status": "success",
+      "priority": -20,
+      "metadata": {
+        "title": "Kumluca'da hortum seraları vurdu, 10 dönüm alan zarar gördü",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T20:33:26+02:00",
+      "updated_at": "2026-03-29T20:33:26+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-29T18:36:07.555766+00:00"
+    },
+    {
+      "queue_id": "social_69c97076ea1c5",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "utGUxwYwZWI",
+          "post_url": "https://youtube.com/shorts/utGUxwYwZWI",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:35:36.121902+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T20:33:26+02:00",
+      "status": "success",
+      "priority": -19,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T20:33:26+02:00",
+      "updated_at": "2026-03-29T20:33:26+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-29T18:35:36.150290+00:00"
+    },
+    {
+      "queue_id": "social_69c97076ea043",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "64akNVEQ0-0",
+          "post_url": "https://youtube.com/shorts/64akNVEQ0-0",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:35:05.869142+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T20:33:26+02:00",
+      "status": "success",
+      "priority": -18,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T20:33:26+02:00",
+      "updated_at": "2026-03-29T20:33:26+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-29T18:35:05.902770+00:00"
+    },
+    {
+      "queue_id": "social_69c97076e9c0f",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c8686d177ad1.20500209/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "hPiy-kAweQ8",
+          "post_url": "https://youtube.com/shorts/hPiy-kAweQ8",
+          "error": null,
+          "uploaded_at": "2026-03-29T18:34:27.830350+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-29T20:33:26+02:00",
+      "status": "success",
+      "priority": -17,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T20:33:26+02:00",
+      "updated_at": "2026-03-29T20:33:26+02:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-29T18:34:27.861871+00:00"
+    },
+    {
+      "queue_id": "social_69c9325429be4",
+      "job_id": "job_69c92ad0516724.05474687",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c92ad0516724.05474687/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T16:08:20+02:00",
+      "status": "failed",
+      "priority": -20,
+      "metadata": {
+        "title": "Kumluca'da hortum seraları vurdu, 10 dönüm alan zarar gördü",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T16:08:20+02:00",
+      "updated_at": "2026-03-29T16:08:20+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T17:05:00.777407+00:00"
+    },
+    {
+      "queue_id": "social_69c9325429a9e",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c92ad043be40.49632990/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T16:08:20+02:00",
+      "status": "failed",
+      "priority": -19,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T16:08:20+02:00",
+      "updated_at": "2026-03-29T16:08:20+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T17:04:59.148235+00:00"
+    },
+    {
+      "queue_id": "social_69c9325429910",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c92ad036c451.92790437/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T16:08:20+02:00",
+      "status": "failed",
+      "priority": -18,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T16:08:20+02:00",
+      "updated_at": "2026-03-29T16:08:20+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T17:04:57.826914+00:00"
+    },
+    {
+      "queue_id": "social_69c9325427bf0",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c8686d177ad1.20500209/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T16:08:20+02:00",
+      "status": "failed",
+      "priority": -17,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T16:08:20+02:00",
+      "updated_at": "2026-03-29T16:08:20+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T17:04:56.403095+00:00"
+    },
+    {
+      "queue_id": "social_ee8b02e97c3c42b4",
+      "job_id": "job_69c92ad0516724.05474687",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c92ad0516724.05474687\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T14:01:03.732179+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Kumluca'da hortum seraları vurdu, 10 dönüm alan zarar gördü",
+        "description": "Antalya'da korkunç gece! Kumluca'yı vuran hortum bakın ne hale getirdi! Antalya'nın Kumluca ilçesi Sarıkavak Mahallesi'nde gece saatlerinde büyük bir hortum felaketi yaşandı. Felaket, yaklaşık 10 dönüm sera alanını yerle bir etti. İçindeki biberlerin tamamı telef oldu! Çiftçiler o anları anlattı: Can güvenliğimiz için dışarı çıkamadık, sadece korkunç bir gürültü duyduk. Sabah seralarına gittiklerinde karşılaştıkları manzara ise yürek burkucuydu. Emekleri bir anda yok oldu. Doğal afetlere karşı dikkatli olalım. Daha fazla güncel haber için bizi takip etmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T14:01:03.755929+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-29T14:04:47.777780+00:00"
+    },
+    {
+      "queue_id": "social_bdc66807f7df4341",
+      "job_id": "job_69c92ad043be40.49632990",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c92ad043be40.49632990\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T13:54:33.527565+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Yanan otomobilden insan kemikleri çıktı",
+        "description": "Şok Gelişme! Sakarya'da ormanlık alanda yanan otomobilden çıkanlar Türkiye'yi şoke etti! Adapazarı'nda korkunç bir keşif yapıldı. Yanmış bir otomobilde insan kemikleri bulundu. Olay, Karapınar Mahallesi'ndeki ormanlık alanda, 26 Mart'ta gerçekleşti. Ekipler aracın bir gün önce yandığını belirledi. 54 ACE 184 plakalı araç tamamen kül olmuştu. Kemiklerin, otomobil sahibi 33 yaşındaki Erkan Yılmaz'a ait olabileceği düşünülüyor. Kalıntılar, kimlik tespiti için Adli Tıp Kurumu'na sevk edildi. Geniş çaplı soruşturma başlatıldı. Bu gizemli olayın detayları için bizi takip etmeye devam edin!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T13:54:33.541678+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-29T13:57:44.024576+00:00"
+    },
+    {
+      "queue_id": "social_1d1d18f3a75f4ceb",
+      "job_id": "job_69c92ad036c451.92790437",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c92ad036c451.92790437\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T13:48:03.364332+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Şimşek ev sahiplerini uyardı: Son güne bırakmayın",
+        "description": "VERGİ SÜRPRİZİ! Bakan Şimşek'ten EV SAHİPLERİNE kritik uyarı! Son güne kalmayın! Yıllık gelir vergisi beyannameleri için son tarih 31 Mart! Dikkat: Yapay zeka destekli sistemler devrede! Bankalar, finans kuruluşları, POS verileri... Tüm para akışınız tek merkezde toplanıyor ve analiz ediliyor! Düşük beyan edenler, sürekli zarar gösteren işletmeler MERCEK ALTINDA! Uyumsuzluklar hızla tespit ediliyor. Gayrimenkul piyasası da unutulmadı! MEVA Projesiyle alım-satım işlemleri detaylı inceleniyor. Uydu görüntüleri, tapu kayıtları... Satış bedeli ile beyan edilen değerler karşılaştırılıyor! Unutmayın, son güne kalmayın! Beyannamenizi doğru ve eksiksiz verin. Daha fazla bilgi için beğenmeyi ve abone olmayı unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T13:48:03.381868+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-29T13:51:41.184620+00:00"
+    },
+    {
+      "queue_id": "social_69c92adb114cb",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c8686d177ad1.20500209/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T15:36:27+02:00",
+      "status": "failed",
+      "priority": -17,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T15:36:27+02:00",
+      "updated_at": "2026-03-29T15:36:27+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T13:39:38.168393+00:00"
+    },
+    {
+      "queue_id": "social_69c92756e6f6e",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c8686d177ad1.20500209/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T15:21:26+02:00",
+      "status": "failed",
+      "priority": -18,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-29T15:21:26+02:00",
+      "updated_at": "2026-03-29T15:21:26+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T13:25:32.415744+00:00"
+    },
+    {
+      "queue_id": "social_69c9137135c71",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c8686d177ad1.20500209/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T13:56:33+02:00",
+      "status": "failed",
+      "priority": -18,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T13:56:33+02:00",
+      "updated_at": "2026-03-29T13:56:33+02:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T12:00:24.885276+00:00"
+    },
+    {
+      "queue_id": "social_69c86c6a76001",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69c8686d177ad1.20500209/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-29T01:03:54+01:00",
+      "status": "failed",
+      "priority": -18,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-29T01:03:54+01:00",
+      "updated_at": "2026-03-29T01:03:54+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-29T00:07:33.969444+00:00"
+    },
+    {
+      "queue_id": "social_40f2ea189fec4e4e",
+      "job_id": "job_69c8686d177ad1.20500209",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c8686d177ad1.20500209\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-28T23:52:55.734420+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Ghosting mi yoksa reddedilmek mi daha çok etkiliyor? Bilim dünyasından şaşırtan sonuç",
+        "description": "Ghosting mi, reddedilmek mi daha kötü? Bilim şaşırtıcı sonuçları açıkladı! Hazır olun. Dijital çağın yeni kabusu: Ghosting! Açıklama yapmadan yok olmak, özellikle flört uygulamalarında çok yaygın. Ama yeni bir araştırma gösteriyor ki, ghosting doğrudan reddedilmekten daha fazla iz bırakıyor. Uzmanlara göre, belirsizlik duygusu iyileşmeyi zorlaştırıyor. Neden olduğu bilinmemek yıpratıcı. Bu çarpıcı sonuçlar İtalya'daki Milano-Bicocca Üniversitesi'nin psikologları tarafından ortaya kondu. Sizce hangisi daha zor? Yorumlarda düşüncelerinizi paylaşın ve bizi takip etmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T23:52:55.744972+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-28T23:56:29.925360+00:00"
+    },
+    {
+      "queue_id": "social_3e287c04494f0931",
+      "job_id": "job_69b9dd508f4cc8.47654028",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur/output/job_69b9dd508f4cc8.47654028/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-28T23:07:36+01:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Simulasyonda-yasayan-ilk-canli-uretildi-teknoloji-gundemi-h213847 html",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-28T23:07:36+01:00",
+      "retry_count": 3,
+      "last_error": null,
+      "requeued": true,
+      "original_queue_id": "Youtube",
+      "completed_at": "2026-03-28T22:11:33.659643+00:00"
+    },
+    {
+      "queue_id": "social_986824063536416a",
+      "job_id": "job_69c81dcf693e08.90458734",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c81dcf693e08.90458734\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "EDUze18zNVI",
+          "post_url": "https://youtube.com/shorts/EDUze18zNVI",
+          "error": null,
+          "uploaded_at": "2026-03-28T20:53:24.448998+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-28T20:52:26.055187+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Nisan Dolunayı 2026: Pembe Ay ne zaman görülecek?",
+        "description": "Nisan 2026'da gökyüzünde eşsiz bir şölen! 'Pembe Ay' geliyor, ama rengi neden pembe değil? Takvimler 1 Nisan'ı gösterdiğinde, dolunay yükselmeye başlayacak. 2 Nisan 2026 sabah 05:11'de en parlak haliyle Türkiye'den görülecek! Adı 'Pembe Ay' olsa da, aslında rengi pembe olmayacak. Peki, bu ilginç ismin sırrı ne? Bu isim, Kuzey Amerika'da baharın gelişiyle açan, pembe tonlu Phlox Subulata çiçeğinden geliyor. Baharın müjdecisi! Bu özel gecede sadece Ay değil, Spica, Arcturus, Regulus gibi parlak yıldızlar ve Jüpiter de gözlemlenecek! Gün batımından hemen sonra batı ufkuna bakanlar kısa süreliğine Venüs gezegenini de yakalayabilir. Erken gözlem şart! Gökyüzüne bakın, bu muhteşem manzarayı kaçırmayın! Daha fazla uzay haberleri için takipte kalın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T20:52:26.059151+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-28T20:53:24.471628+00:00"
+    },
+    {
+      "queue_id": "social_f217d04e9e7947af",
+      "job_id": "job_69c81dcf5fb6a4.36778662",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c81dcf5fb6a4.36778662\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "lLdwqwPYRIE",
+          "post_url": "https://youtube.com/shorts/lLdwqwPYRIE",
+          "error": null,
+          "uploaded_at": "2026-03-28T20:44:53.816188+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-28T20:43:25.843210+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "A Haber İsrail ve ABD'nin hedef aldığı binayı görüntüledi",
+        "description": "Tahran'da dehşet verici görüntüler! ABD ve İsrail'in hedef aldığı sivil bina A Haber tarafından görüntülendi! İran'daki savaşın birinci ayı dolmak üzereyken, acı bilanço her geçen saniye ağırlaşıyor. ABD ve İsrail vahşetinin hedefinde bu kez savunmasız siviller vardı. Başkent Tahran’ın güneyinde, sivil yerleşimin en yoğun olduğu noktada... Üç katlı bir bina füzelerin hedefi oldu! A Haber, o anları görüntüledi! Bu korkunç saldırılar hakkında ne düşünüyorsunuz? Yorumlarda bize bildirin ve kanalımıza abone olmayı unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T20:43:25.872804+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-28T20:44:53.830790+00:00"
+    },
+    {
+      "queue_id": "social_f7e0172e4a1b48cd",
+      "job_id": "job_69c81dcf55df29.94857989",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c81dcf55df29.94857989\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "uMRwBhlmAzc",
+          "post_url": "https://youtube.com/shorts/uMRwBhlmAzc",
+          "error": null,
+          "uploaded_at": "2026-03-28T18:56:03.457801+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-28T18:54:30.144651+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "ABD-İsrail vahşetinde siviller hedefte! Tahran'da üç katlı bina mezar oldu",
+        "description": "Tahran'da şok edici bir saldırı! Sivil bina füzelerin hedefi oldu, dramatik görüntüler ortaya çıktı. İran'ın başkenti Tahran'ın güneyinde, yoğun yerleşim alanındaki üç katlı bir bina vuruldu. Sözde 'askeri hedef' iddialarına rağmen, saldırının sivil katliamı olduğu açıkça görüldü. A Haber muhabiri Ekber Karabağ ve kameraman Mehdi Seferi, enkazdan çıkarılan cansız bedenleri görüntüledi. Sokaklar hurdaya dönmüş araçlar ve yıkıntı dolu. Sivil yerleşim yerle bir oldu. Karabağ, 'Vurulan binanın sivil bir bina olduğu ifade edildi' diyerek durumu aktardı. Tahran'da tansiyon düşmüyor, savaşın siviller üzerindeki yıkıcı etkisi devam ediyor. Bu tür haberleri kaçırmamak için kanalımıza abone olmayı unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T18:54:30.169483+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-28T18:56:03.466556+00:00"
+    },
+    {
+      "queue_id": "social_07ee1173fbb64701",
+      "job_id": "job_69c81dcf4ce8f5.25609454",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c81dcf4ce8f5.25609454\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "OIDm2E-hyTM",
+          "post_url": "https://youtube.com/shorts/OIDm2E-hyTM",
+          "error": null,
+          "uploaded_at": "2026-03-28T18:46:26.076095+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-28T18:45:30.025969+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Trump’ın tehlikeli satranç oyunu! Hedefte Hark Adası mı var?",
+        "description": "Trump'ın tehlikeli satranç oyunu! Hedefte Hark Adası mı var? Ortadoğu'da tansiyon zirvede! Bölge adeta bir barut fıçısı. 48 saatlik tehdit süreci! Enerji tesisleri hedefte. Küresel güçler restleşiyor. Büyük bir hesaplaşma kapıda. ABD'nin 15 şartına karşı, İran'dan ağır talepler. İsrail'in durdurulamayan saldırganlığı sürüyor. Türkiye, diplomatik mekik diplomasisiyle çözüm arıyor. Bu kritik detayları Dış Politika Analisti Yeliz Albayrak aktardı. Sizce bu tehlikeli oyun nereye varacak? Yorumlarda belirtin, takipte kalın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T18:45:30.066167+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-28T18:46:26.100146+00:00"
+    },
+    {
+      "queue_id": "social_d06e59db740e4f22",
+      "job_id": "job_69c81dcf41f7a3.08893181",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c81dcf41f7a3.08893181\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "u2xJmvHYiJY",
+          "post_url": "https://youtube.com/shorts/u2xJmvHYiJY",
+          "error": null,
+          "uploaded_at": "2026-03-28T18:37:01.841752+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-28T18:36:29.873682+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "İsrail'in Lübnan işgalinde \"buldozer\" taktiği",
+        "description": "İsrail'in Lübnan'da uyguladığı şok edici taktik: 'Buldozer' stratejisi! İşgalci İsrail ordusu, Hizbullah ile mücadele bahanesiyle Lübnan topraklarında ilerlemeye çalışıyor. Ancak kara harekatında büyük bir direnişle karşılaşıyorlar; ilerlemeleri yavaşlıyor. A Haber muhabiri Ata Gündüz Kurşun, İsrail'in korkunç 'insansızlaştırma' politikasını deşifre etti. Bu taktikle, Lübnan topraklarını adeta yaşanmaz hale getirmeyi hedefliyorlar. Sınır hattındaki bu gerilim tırmanırken, bölge yeni ve tehlikeli bir krize sürükleniyor. Daha fazla güncel haber için kanalımızı takip edin ve gelişmelerden anında haberdar olun!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T18:36:29.901270+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-28T18:37:01.863576+00:00"
+    },
+    {
+      "queue_id": "social_e4586ccd437e4cba",
+      "job_id": "job_69c8196f6952b9.70877187",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c8196f6952b9.70877187\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "lqkyc3kUQlw",
+          "post_url": "https://youtube.com/shorts/lqkyc3kUQlw",
+          "error": null,
+          "uploaded_at": "2026-03-28T18:22:30.160285+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-28T18:21:29.595162+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "İsrail tarihi Sur kentini hedef aldı",
+        "description": "Tarihi Sur kenti hedef alındı! Orta Doğu'da tansiyon yükseliyor! İsrail ordusu, Lübnan'ın güneyindeki operasyonlarını binlerce yıllık geçmişe sahip Sur kentine genişletti. Akdeniz kıyısında tarihiyle, turizmiyle bilinen bu kadim şehir, bugün bombardımanla sarsılıyor. A Haber'den Ata Gündüz Kurşun aktardı: Sur, topçu ve hava saldırılarıyla vuruluyor. İsrail, bölgeyi insansızlaştırmak için kara harekatı ve hava saldırılarını sürdürüyor. Bu tür kritik haberler için takipte kalın ve videomuzu beğenmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-28T18:21:29.599316+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-28T18:22:30.176361+00:00"
+    },
+    {
+      "queue_id": "social_327e16a296d746b9",
+      "job_id": "job_69c6db85b73ea2.58128885",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c6db85b73ea2.58128885\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "uDN0TE7O4JQ",
+          "post_url": "https://youtube.com/shorts/uDN0TE7O4JQ",
+          "error": null,
+          "uploaded_at": "2026-03-27T20:40:03.945301+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T20:38:43.309988+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Kirli ittifaktan itiraf: Körfez'de büyük tehlike",
+        "description": "Şok itiraf! Orta Doğu'da karanlık bir plan mı var? Körfez'de büyük tehlike çanları çalıyor! Trump'ın eski kurmayı Joe Kent'ten flaş açıklama: ABD ve İsrail'in kirli ittifakı ortaya çıktı! Kent, Esad'ı devirmek için DEAŞ ve El Kaide ile işbirliği yapıldığını itiraf etti! Akıl almaz gerçekler... Sıradaki hedef İran! Washington'ın hükümeti devirme planları tüm hızıyla sürüyor. The Economist'in 'Kör Öfke Operasyonu' manşeti ve Hürmüz Boğazı gerilimi, bölgeyi patlama noktasına getiriyor! ABD Senatörü Chris Murphy'nin Hürmüz Boğazı çıkışı, küresel enerji ve ekonomi savaşı riskini körüklüyor. SETA Araştırmacısı Dr. Tunç Demirtaş, A Haber'de ABD'nin bu kirli stratejisini çarpıcı ifadelerle yorumladı. Bu kritik gelişmeleri kaçırmamak için bizi takip edin ve videoyu beğenin!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T20:38:43.312076+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T20:40:03.979405+00:00"
+    },
+    {
+      "queue_id": "social_24985bd082734317",
+      "job_id": "job_69c68bcc10d089.03775219",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c68bcc10d089.03775219\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "KfKUWoxe8eg",
+          "post_url": "https://youtube.com/shorts/KfKUWoxe8eg",
+          "error": null,
+          "uploaded_at": "2026-03-27T20:25:33.236530+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T20:25:13.087705+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Taşacak Bu Deniz'in Eleni'sinden duygusal itiraf: \"Hepinize söylemek isterdim\"",
+        "description": "Taşacak Bu Deniz'in Eleni'sinden şok itiraf! Duygusal anlar yaşandı! 'Hepinize ayrı ayrı söylemek isterdim. Ben sizi daha çok seviyorum' diyerek kalpleri fethetti. Bu içten açıklama, Eleni'nin hayranlarıyla arasındaki güçlü bağı bir kez daha gösterdi. Daha fazla magazin haberi için takipte kalın, yorumlarınızı bekliyoruz!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T20:25:13.117144+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T20:25:33.276146+00:00"
+    },
+    {
+      "queue_id": "social_76475febdaf6420d",
+      "job_id": "job_69c68bc62b84b7.58298274",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c68bc62b84b7.58298274\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "0xmSvtHZfuM",
+          "post_url": "https://youtube.com/shorts/0xmSvtHZfuM",
+          "error": null,
+          "uploaded_at": "2026-03-27T20:18:20.081975+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T20:17:12.828662+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "ANALİZ| ABD din savaşı mı çıkarmak istiyor? Savaş Bakanı'ndan skandal itiraf: Hedefimiz İslam!",
+        "description": "ABD'den şok eden itiraf! Yıllardır saklanan gerçek ortaya çıktı: Hedefleri ne? ABD Savaş Bakanı Hegseth'ten skandal sözler! Orta Doğu'da artık silahlar değil, kelimeler savaşıyor. Hegseth açıkça ilan etti: 'İster Sünni ister Şia olsun, düşmanımız İslamcı düşmandır!' Artık 'demokrasi' maskesi yok! Yıllarca süren işgallerin gerçek yüzü: Açık bir inanç savaşı. Bu sadece bir açıklama değil, Batı'nın Orta Doğu üzerindeki kirli planlarının itirafı. Maskeler tamamen düştü! Bu gelişmeleri nasıl yorumluyorsunuz? Yorumlarda belirtmeyi ve bizi takip etmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T20:17:12.855150+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T20:18:20.113308+00:00"
+    },
+    {
+      "queue_id": "social_741f1bf434a243b5",
+      "job_id": "job_69c68bbc222bd9.95732745",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c68bbc222bd9.95732745\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "0pNKlbarfEY",
+          "post_url": "https://youtube.com/shorts/0pNKlbarfEY",
+          "error": null,
+          "uploaded_at": "2026-03-27T14:08:13.832243+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T14:07:37.959716+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Bursa'daki üç camide ses sistemlerine saldırı: Kırıp yerinden söktü",
+        "description": "Bursa'da şok edici olay! Üç caminin ses sistemleri hedef alındı, bilinmeyen bir saldırgan her şeyi yerle bir etti! Bursa'nın Mudanya ilçesinde, üç camide peş peşe ses sistemi saldırıları yaşandı. 40 yaşındaki Bekir A., elindeki sopayla hoparlörleri ve ses düzeneklerini kırıp yerinden söktü. Bu anlar, camilerin güvenlik kameraları tarafından saniye saniye kaydedildi. Şüphelinin akli dengesinin yerinde olmadığı ve cezaevinden izinli çıktığı öğrenildi. Bu üzücü olay hakkında ne düşünüyorsunuz? Yorumlarda buluşalım, beğenmeyi ve abone olmayı unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T14:07:37.962291+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T14:08:13.849660+00:00"
+    },
+    {
+      "queue_id": "social_81867e7e76244c1b",
+      "job_id": "job_69c67996208a30.04757623",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c67996208a30.04757623\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "VQEFY3wx5C0",
+          "post_url": "https://youtube.com/shorts/VQEFY3wx5C0",
+          "error": null,
+          "uploaded_at": "2026-03-27T14:01:06.305403+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T14:00:37.811009+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Telefonunuzu Yanlış Şarj Ediyor Olabilirsiniz: Bu Hatalar Bataryayı Sessizce Öldürüyor",
+        "description": "Telefonunuzu yanlış mı şarj ediyorsunuz? Pil ömrünü sessizce bitiren 3 kritik hatayı hemen öğrenin! Birinci hata: Şarjdayken yoğun kullanım. Oyun oynamak, video izlemek... Bu durum telefonu aşırı ısıtır. İkinci büyük hata: Kalitesiz şarj aksesuarları! Ucuz kablo ve adaptörler pilinize uzun vadede zarar verir. Peki doğrusu ne? Telefonu %20-30 seviyesindeyken şarja takın, %100 olduktan sonra hemen çıkarın. Orijinal veya güvenilir şarj ekipmanı kullanın. Cihazınızı asla aşırı sıcakta şarj etmeyin! Bu basit alışkanlıklar, telefonunuzun pil ömrünü belirgin şekilde uzatır ve performansını korur! Daha fazla teknoloji ipucu için bizi takip etmeyi unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T14:00:37.837688+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T14:01:06.321435+00:00"
+    },
+    {
+      "queue_id": "social_872b5c45983f4f9f",
+      "job_id": "job_69c67988ca6459.95124265",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c67988ca6459.95124265\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "qfmYfmDypLw",
+          "post_url": "https://youtube.com/shorts/qfmYfmDypLw",
+          "error": null,
+          "uploaded_at": "2026-03-27T13:50:57.750648+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T13:50:07.686555+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Tüm Dünyada Dijital Karanlık Tehlikesi: Akıllı Telefon ve Bilgisayar Fiyatlarına Tarihi Zam Gelebilir!",
+        "description": "Dikkat! Akıllı telefon ve bilgisayar fiyatlarına dev zam mı geliyor? Tüm dünyayı bekleyen 'dijital karanlık' tehlikesi kapıda! Küresel ticareti felç eden istikrarsızlık, elektronik ürünlerin üretim ve dağıtım maliyetlerini patlatıyor. Uzmanlar uyarıyor: Sevkiyat süreleri uzuyor, artan sigorta bedelleriyle fiyatlara %30'a varan artış yolda! Asya'dan Avrupa ve Amerika'ya ürün akışı durma noktasında. 'Dijital karanlık' denilen stok sorunları kapıda, raflar boş kalabilir! Özellikle ekran kartları, işlemciler ve mobil cihazlar etkilenecek. Petrol fiyatlarındaki dalgalanmalar sektörü derinden vuruyor. Analistler 2026 sonuna kadar teknoloji alışverişinin hiç olmadığı kadar maliyetli olacağını öngörüyor. Yeni nesil cihazlara ulaşmak zorlaşacak! Peki bu duruma hazır mısınız? Yorumlarda belirtin! Daha fazla güncel teknoloji haberi için bizi takip edin.",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T13:50:07.722725+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T13:50:57.772256+00:00"
+    },
+    {
+      "queue_id": "social_69c68aa06e787",
+      "job_id": "job_69bf559bc3fb72.29701872",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559bc3fb72.29701872/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "h91Fq2tbXqc",
+          "post_url": "https://youtube.com/shorts/h91Fq2tbXqc",
+          "error": null,
+          "uploaded_at": "2026-03-27T13:48:49.517693+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T14:48:16+01:00",
+      "status": "success",
+      "priority": -5,
+      "metadata": {
+        "title": "Bayram izninde kan donduran vahşet: Cezaevinden çıktı eniştesini katletti",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T14:48:16+01:00",
+      "updated_at": "2026-03-27T14:48:16+01:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-27T13:48:49.542523+00:00"
+    },
+    {
+      "queue_id": "social_59bd11f848144bca",
+      "job_id": "job_69c6797568d862.71592272",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69c6797568d862.71592272\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "CQfjnqubLYg",
+          "post_url": "https://youtube.com/shorts/CQfjnqubLYg",
+          "error": null,
+          "uploaded_at": "2026-03-27T12:41:41.492312+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T12:41:07.128784+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Bakan Yardımcısı Açıkladı: Starlink Türkiye&apos;de Hizmete Girebilir",
+        "description": "Türkiye'de internet devrimi kapıda! Starlink ve Amazon Kuiper, Türkiye'ye geliyor olabilir! Ulaştırma Bakan Yardımcısı duyurdu: SpaceX'in Starlink'i ve Amazon'un Kuiper'ı Türkiye'ye geliyor! Bu dev firmalarla fuar çerçevesinde önemli görüşmeler yapıldı. Yüksek hızlı uydu internet dönemi çok yakın! Peki ama nasıl? Türkiye, bu sistemlerin güvenlik ve regülasyon uyumunu talep ediyor. Uyum sağlandığı takdirde bir yol haritası sunulacak. Beklentiler yüksek! Siz bu konuda ne düşünüyorsunuz? Yorumlarda buluşalım ve abone olmayı unutmayın!",
+        "tags": [],
+        "privacy_status": "public"
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T12:41:07.153355+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-27T12:41:41.519120+00:00"
+    },
+    {
+      "queue_id": "social_69c66c625063d",
+      "job_id": "job_69bf559bbcaf18.32103193",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559bbcaf18.32103193/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "93SbGLH_iQA",
+          "post_url": "https://youtube.com/shorts/93SbGLH_iQA",
+          "error": null,
+          "uploaded_at": "2026-03-27T11:40:34.698306+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T12:39:14+01:00",
+      "status": "success",
+      "priority": -4,
+      "metadata": {
+        "title": "Çorum’da feci kaza! Cip ile otomobil çarpıştı: 6 yaralı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T12:39:14+01:00",
+      "updated_at": "2026-03-27T12:39:14+01:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-27T11:40:34.707417+00:00"
+    },
+    {
+      "queue_id": "social_69c66c62505b5",
+      "job_id": "job_69bf559bb644d4.08751328",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559bb644d4.08751328/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "zzdl4G09HlI",
+          "post_url": "https://youtube.com/shorts/zzdl4G09HlI",
+          "error": null,
+          "uploaded_at": "2026-03-27T11:40:26.975199+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T12:39:14+01:00",
+      "status": "success",
+      "priority": -3,
+      "metadata": {
+        "title": "Dimona'da yıkımın boyutu A Haber'de",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T12:39:14+01:00",
+      "updated_at": "2026-03-27T12:39:14+01:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-27T11:40:26.996289+00:00"
+    },
+    {
+      "queue_id": "social_69c66c624e1a6",
+      "job_id": "job_69bf559baf60e0.79441025",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559baf60e0.79441025/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "redgYjEG4m0",
+          "post_url": "https://youtube.com/shorts/redgYjEG4m0",
+          "error": null,
+          "uploaded_at": "2026-03-27T11:40:21.642209+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-27T12:39:14+01:00",
+      "status": "success",
+      "priority": -2,
+      "metadata": {
+        "title": "Gizli nükleer ağ ve askeri üsler deşifre oldu | A Haber’de çarpıcı analiz",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-27T12:39:14+01:00",
+      "updated_at": "2026-03-27T12:39:14+01:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-27T11:40:21.654148+00:00"
+    },
+    {
+      "queue_id": "social_69c5395bbd73e",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b9f1cf9.75694972/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "Pu_aulgZnkQ",
+          "post_url": "https://youtube.com/shorts/Pu_aulgZnkQ",
+          "error": null,
+          "uploaded_at": "2026-03-26T13:50:33.850359+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-26T14:49:15+01:00",
+      "status": "success",
+      "priority": -1,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-26T14:49:15+01:00",
+      "updated_at": "2026-03-26T14:49:15+01:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-26T13:50:33.882260+00:00"
+    },
+    {
+      "queue_id": "social_69c53249a5479",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b9f1cf9.75694972/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "Upload failed",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-26T14:19:05+01:00",
+      "status": "failed",
+      "priority": -19,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-26T14:19:05+01:00",
+      "updated_at": "2026-03-26T14:19:05+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-26T13:45:49.951503+00:00"
+    },
+    {
+      "queue_id": "social_69c53249a5301",
+      "job_id": "job_69bf559b969105.84696119",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b969105.84696119/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "Upload failed",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-26T14:19:05+01:00",
+      "status": "failed",
+      "priority": -18,
+      "metadata": {
+        "title": "İran’dan kritik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-26T14:19:05+01:00",
+      "updated_at": "2026-03-26T14:30:06+01:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-26T13:45:49.860049+00:00"
+    },
+    {
+      "queue_id": "social_69c145d4b4f2e",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b9f1cf9.75694972/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T14:53:24+01:00",
+      "status": "failed",
+      "priority": -19,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-23T14:53:24+01:00",
+      "updated_at": "2026-03-23T14:53:24+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:57:01.164856+00:00"
+    },
+    {
+      "queue_id": "social_69c145d4b4cf8",
+      "job_id": "job_69bf559b969105.84696119",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b969105.84696119/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T14:53:24+01:00",
+      "status": "failed",
+      "priority": -18,
+      "metadata": {
+        "title": "İran’dan kritik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-23T14:53:24+01:00",
+      "updated_at": "2026-03-23T14:53:24+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:56:58.345078+00:00"
+    },
+    {
+      "queue_id": "social_69c144472d9b4",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b9f1cf9.75694972/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T14:46:47+01:00",
+      "status": "failed",
+      "priority": -20,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-23T14:46:47+01:00",
+      "updated_at": "2026-03-23T14:46:47+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:50:32.789334+00:00"
+    },
+    {
+      "queue_id": "social_69c144472d6bb",
+      "job_id": "job_69bf559b969105.84696119",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b969105.84696119/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T14:46:47+01:00",
+      "status": "failed",
+      "priority": -19,
+      "metadata": {
+        "title": "İran’dan kritik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-23T14:46:47+01:00",
+      "updated_at": "2026-03-23T14:46:47+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:50:30.315262+00:00"
+    },
+    {
+      "queue_id": "social_69c1414e35cbd",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b9f1cf9.75694972/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T14:34:06+01:00",
+      "status": "failed",
+      "priority": -20,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-23T14:34:06+01:00",
+      "updated_at": "2026-03-23T14:34:06+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:38:10.824535+00:00"
+    },
+    {
+      "queue_id": "social_69c1414e35187",
+      "job_id": "job_69bf559b969105.84696119",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b969105.84696119/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T14:34:06+01:00",
+      "status": "failed",
+      "priority": -19,
+      "metadata": {
+        "title": "İran’dan kritik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-23T14:34:06+01:00",
+      "updated_at": "2026-03-23T14:34:06+01:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:38:06.884738+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d930",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b9f1cf9.75694972/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "failed",
+      "priority": -21,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:31:47.841385+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d8d6",
+      "job_id": "job_69bf559b969105.84696119",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b969105.84696119/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "failed",
+      "priority": -20,
+      "metadata": {
+        "title": "İran’dan kritik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 3,
+      "completed_at": "2026-03-23T13:31:41.770815+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d875",
+      "job_id": "job_69bf559b8e7382.99942758",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b8e7382.99942758/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "PUJUg761PSM",
+          "post_url": "https://youtube.com/shorts/PUJUg761PSM",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:28:19.781817+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -19,
+      "metadata": {
+        "title": "Kanarya’da orta sahada yeni dönem! Tedesco’dan Kante kararı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:28:19.791016+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d815",
+      "job_id": "job_69bf559b846fb3.26133417",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b846fb3.26133417/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "HOslMiWqda4",
+          "post_url": "https://youtube.com/shorts/HOslMiWqda4",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:28:11.576226+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -18,
+      "metadata": {
+        "title": "İsrail'in Arad şehrine füze düşme anı! A Haber’de çarpıcı görüntüler",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:28:11.589365+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d7b5",
+      "job_id": "job_69bf559b7af2a7.43783812",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b7af2a7.43783812/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "0kTy3Z8_FYI",
+          "post_url": "https://youtube.com/shorts/0kTy3Z8_FYI",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:28:03.860177+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -17,
+      "metadata": {
+        "title": "Bayram tatili bitti! Dönüş çilesi başladı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:28:03.870298+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d75c",
+      "job_id": "job_69bf559b726997.32570735",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b726997.32570735/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "DpTXRNuJT50",
+          "post_url": "https://youtube.com/shorts/DpTXRNuJT50",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:56.773957+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -16,
+      "metadata": {
+        "title": "Neden kot pantolonlarda küçük cep var? İşte 150 yıllık hikayesi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:27:56.784965+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d6fc",
+      "job_id": "job_69bf559b6ab832.67752094",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b6ab832.67752094/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "J1MDydlDevQ",
+          "post_url": "https://youtube.com/shorts/J1MDydlDevQ",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:44.467370+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -15,
+      "metadata": {
+        "title": "Milli Takım’da Romanya mesaisi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:27:44.487713+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d6a1",
+      "job_id": "job_69bf559b6490e2.63345678",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b6490e2.63345678/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "d5NUT8L50gs",
+          "post_url": "https://youtube.com/shorts/d5NUT8L50gs",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:37.836977+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -14,
+      "metadata": {
+        "title": "İran’dan İsrail’e stratejik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:27:37.869046+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d63c",
+      "job_id": "job_69bf559b5b8340.85329334",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b5b8340.85329334/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "ikNACnN4bXE",
+          "post_url": "https://youtube.com/shorts/ikNACnN4bXE",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:29.645346+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -13,
+      "metadata": {
+        "title": "New York'ta \"elleri kanlı\" teknoloji devi protesto edildi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:27:29.662301+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d55f",
+      "job_id": "job_69bf559b42b704.21034777",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b42b704.21034777/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "pReoewht6vw",
+          "post_url": "https://youtube.com/shorts/pReoewht6vw",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:21.943125+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -11,
+      "metadata": {
+        "title": "İran'ın yeni füzeleri Demir Kubbe'yi nasıl aşıyor?",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:27:21.961986+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4d4e7",
+      "job_id": "job_69bf559b3bec80.82364190",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b3bec80.82364190/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "ciXNZh3Utno",
+          "post_url": "https://youtube.com/shorts/ciXNZh3Utno",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:14.332381+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -10,
+      "metadata": {
+        "title": "Bolu’da husumetli gruplar sokak ortasında çatıştı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T12:35:57+03:00",
+      "retry_count": 0,
+      "completed_at": "2026-03-23T13:27:14.352674+00:00"
+    },
+    {
+      "queue_id": "social_69c1097d4b141",
+      "job_id": "job_69bf559b357552.93126517",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\api/../output/job_69bf559b357552.93126517/final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "SUf_qT73V8I",
+          "post_url": "https://youtube.com/shorts/SUf_qT73V8I",
+          "error": null,
+          "uploaded_at": "2026-03-23T13:27:05.493412+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-23T12:35:57+03:00",
+      "status": "success",
+      "priority": -9,
+      "metadata": {
+        "title": "İran'ın vurduğu Arad'da büyük yıkım | Çok sayıda ölü ve yaralı var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-23T12:35:57+03:00",
+      "updated_at": "2026-03-23T13:40:27+01:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-23T13:27:05.500776+00:00"
+    },
+    {
+      "queue_id": "social_7cf4be19c10d43d0",
+      "job_id": "job_69bf559b357552.93126517",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b357552.93126517\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046479+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "İran'ın vurduğu Arad'da büyük yıkım | Çok sayıda ölü ve yaralı var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046480+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:03:14.765845+00:00"
+    },
+    {
+      "queue_id": "social_1d69fc3c0af348d7",
+      "job_id": "job_69bf559b3bec80.82364190",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b3bec80.82364190\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The request cannot be completed because you have exceeded your <a href=\"/youtube/v3/getting-started#quota\">quota</a>.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046475+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Bolu’da husumetli gruplar sokak ortasında çatıştı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046477+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:03:10.344016+00:00"
+    },
+    {
+      "queue_id": "social_a1f5a033036d4028",
+      "job_id": "job_69bf559b42b704.21034777",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b42b704.21034777\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046472+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "İran'ın yeni füzeleri Demir Kubbe'yi nasıl aşıyor?",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046473+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:03:06.584336+00:00"
+    },
+    {
+      "queue_id": "social_64e84ea79a1548e6",
+      "job_id": "job_69be9d81488911.65994191",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69be9d81488911.65994191\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046468+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Kalpten-gelen-dua-minik-aysenin-huzurlu-hikayesi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046469+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:03:03.820990+00:00"
+    },
+    {
+      "queue_id": "social_51760b45f03e49bb",
+      "job_id": "job_69bee50f4ab897.05006987",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bee50f4ab897.05006987\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046464+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Kucuk-oruc-kahraman-eymen-ramazann-ilk-gunu-masal",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046465+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:03:01.255140+00:00"
+    },
+    {
+      "queue_id": "social_539f143952534b5f",
+      "job_id": "job_69bf559b5b8340.85329334",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b5b8340.85329334\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046460+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "New York'ta \"elleri kanlı\" teknoloji devi protesto edildi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046461+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:57.964853+00:00"
+    },
+    {
+      "queue_id": "social_6db37dbe1add4c50",
+      "job_id": "job_69bf559b6490e2.63345678",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b6490e2.63345678\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046456+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "İran’dan İsrail’e stratejik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046457+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:55.727352+00:00"
+    },
+    {
+      "queue_id": "social_ca8ebca85a604363",
+      "job_id": "job_69bf559b6ab832.67752094",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b6ab832.67752094\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046452+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Milli Takım’da Romanya mesaisi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046453+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:53.439618+00:00"
+    },
+    {
+      "queue_id": "social_1c580336c7824873",
+      "job_id": "job_69bf559b726997.32570735",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b726997.32570735\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046446+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Neden kot pantolonlarda küçük cep var? İşte 150 yıllık hikayesi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046447+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:50.881674+00:00"
+    },
+    {
+      "queue_id": "social_acd0bc5d45294429",
+      "job_id": "job_69bf559b7af2a7.43783812",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b7af2a7.43783812\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046442+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Bayram tatili bitti! Dönüş çilesi başladı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046443+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:48.272414+00:00"
+    },
+    {
+      "queue_id": "social_be850fdd08ee4b2e",
+      "job_id": "job_69bf559b846fb3.26133417",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b846fb3.26133417\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046438+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "İsrail'in Arad şehrine füze düşme anı! A Haber’de çarpıcı görüntüler",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046439+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:45.806944+00:00"
+    },
+    {
+      "queue_id": "social_5f9ba36fef4e41dc",
+      "job_id": "job_69bf559b8e7382.99942758",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b8e7382.99942758\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046433+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Kanarya’da orta sahada yeni dönem! Tedesco’dan Kante kararı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046434+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:43.618184+00:00"
+    },
+    {
+      "queue_id": "social_7a3120e12f1747d6",
+      "job_id": "job_69bf559b969105.84696119",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b969105.84696119\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046424+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "İran’dan kritik hamle: Savunma değil sensörler hedefte",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046426+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:40.882459+00:00"
+    },
+    {
+      "queue_id": "social_c08a84bb20994c4a",
+      "job_id": "job_69bf559b9f1cf9.75694972",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b9f1cf9.75694972\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "The user has exceeded the number of videos they may upload.",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-22T21:56:57.046404+00:00",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Yeni bir gezegen sınıfı keşfedildi: Derinliklerinde magma okyanusu var",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T21:56:57.046414+00:00",
+      "retry_count": 3,
+      "last_error": null,
+      "completed_at": "2026-03-22T22:02:38.433961+00:00"
+    },
+    {
+      "queue_id": "social_418a79fc6371411d",
+      "job_id": "job_69bf559b2ed134.65560868",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf559b2ed134.65560868\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "pnjezZC8I7w",
+          "post_url": "https://youtube.com/shorts/pnjezZC8I7w",
+          "error": null,
+          "uploaded_at": "2026-03-22T03:15:26.776179+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T03:14:16.908534+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Dimona ve Arad’a kritik saldırı: Dokunulamaz denen bölgedeler vuruldu",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T03:14:16.912529+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T03:15:26.789856+00:00"
+    },
+    {
+      "queue_id": "social_2237ca1fe8894386",
+      "job_id": "job_69bf55250f6b49.26001828",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf55250f6b49.26001828\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "ESrcQ8r1pjg",
+          "post_url": "https://youtube.com/shorts/ESrcQ8r1pjg",
+          "error": null,
+          "uploaded_at": "2026-03-22T03:00:48.484401+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T02:59:46.692484+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "ChatGPT Yardımıyla Köpeği İçin Kişiselleştirilmiş Kanser Aşısı Geliştirdi",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T02:59:46.697156+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T03:00:48.492967+00:00"
+    },
+    {
+      "queue_id": "social_02068bcd23984be0",
+      "job_id": "job_69bf5525080bb0.89047506",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf5525080bb0.89047506\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "_182sp6XAlw",
+          "post_url": "https://youtube.com/shorts/_182sp6XAlw",
+          "error": null,
+          "uploaded_at": "2026-03-22T02:48:03.794803+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T02:46:46.478909+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Faturayı Kadınlara Kesti! Yapay Zekanın Hedefindeki Meslek Grupları Açıklandı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T02:46:46.482617+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T02:48:03.808685+00:00"
+    },
+    {
+      "queue_id": "social_f748ee9149d64459",
+      "job_id": "job_69bf51079246f7.30167492",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf51079246f7.30167492\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "67O1ApGo_ck",
+          "post_url": "https://youtube.com/shorts/67O1ApGo_ck",
+          "error": null,
+          "uploaded_at": "2026-03-22T02:31:35.896570+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T02:30:16.342546+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Zekiyseniz Sebebi Anneniz! Bilim Zeka Geninin Anneden Geçtiğini Açıkladı",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T02:30:16.347475+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T02:31:35.907896+00:00"
+    },
+    {
+      "queue_id": "social_34f94ed28bc24259",
+      "job_id": "job_69bf43996961e4.24463412",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf43996961e4.24463412\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "2Qugq2D-vPk",
+          "post_url": "https://youtube.com/shorts/2Qugq2D-vPk",
+          "error": null,
+          "uploaded_at": "2026-03-22T01:59:39.103066+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T01:57:16.086996+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Google Gemini&apos;dan Bayram Şekeri Gibi Akım: Fotoğrafları Nostaljik Karelere Dönüştürdüler",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T01:57:16.089207+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T01:59:39.122414+00:00"
+    },
+    {
+      "queue_id": "social_6ef4ab029dd148a0",
+      "job_id": "job_69bf4374734d74.68040670",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf4374734d74.68040670\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "42WPc_HjfIs",
+          "post_url": "https://youtube.com/shorts/42WPc_HjfIs",
+          "error": null,
+          "uploaded_at": "2026-03-22T01:48:11.765024+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T01:45:45.938863+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Gökbilimciler Evrenin En Nadir Yıldızlarından Birini Buldu",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T01:45:45.942573+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T01:48:11.773509+00:00"
+    },
+    {
+      "queue_id": "social_364c243d8b344e3e",
+      "job_id": "job_69bf42e8a24c38.70475922",
+      "video_path": "C:\\Users\\user\\Documents\\GitHub\\Antigravity\\Video_Kur\\output\\job_69bf42e8a24c38.70475922\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "lPVXo3K8ZBY",
+          "post_url": "https://youtube.com/shorts/lPVXo3K8ZBY",
+          "error": null,
+          "uploaded_at": "2026-03-22T01:33:04.476591+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-22T01:31:45.297403+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "İşler Tersine Döndü: Yapay Zeka, Artık İnsanlara Para Karşılığı İş Yaptıracak!",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-22T01:31:45.302999+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T01:33:04.500707+00:00"
+    },
+    {
+      "queue_id": "social_562c167a89ff41e0",
+      "job_id": "job_69bc7f419aa4b0.32928005",
+      "video_path": "output\\job_69bc7f419aa4b0.32928005\\final_video.mp4",
+      "platforms": [
+        "youtube"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "success",
+          "post_id": "PTVkkdR816g",
+          "post_url": "https://youtube.com/shorts/PTVkkdR816g",
+          "error": null,
+          "uploaded_at": "2026-03-22T00:40:52.482078+00:00"
+        }
+      },
+      "scheduled_time": "2026-03-21T23:34:46.302730+00:00",
+      "status": "success",
+      "priority": 0,
+      "metadata": {
+        "title": "Bayram-sekeri-masali-ramazan-bayrami-masali",
+        "description": "",
+        "tags": []
+      },
+      "platform_metadata": {},
+      "created_at": "2026-03-21T23:34:46.302746+00:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T00:40:52.492526+00:00"
+    },
+    {
+      "queue_id": "social_612c99141074accc",
+      "job_id": "job_69bd66143544c1.20546059",
+      "video_path": "/output/job_69bd66143544c1.20546059/final_video.mp4",
+      "platforms": [
+        "youtube",
+        "tiktok",
+        "instagram",
+        "facebook"
+      ],
+      "platform_status": {
+        "youtube": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "Video dosyası bulunamadı: /output/job_69bd66143544c1.20546059/final_video.mp4",
+          "uploaded_at": null
+        },
+        "tiktok": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "Video dosyası bulunamadı: /output/job_69bd66143544c1.20546059/final_video.mp4",
+          "uploaded_at": null
+        },
+        "instagram": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "Video dosyası bulunamadı: /output/job_69bd66143544c1.20546059/final_video.mp4",
+          "uploaded_at": null
+        },
+        "facebook": {
+          "status": "failed",
+          "post_id": null,
+          "post_url": null,
+          "error": "Video dosyası bulunamadı: /output/job_69bd66143544c1.20546059/final_video.mp4",
+          "uploaded_at": null
+        }
+      },
+      "scheduled_time": "2026-03-20T21:34:48.882Z",
+      "status": "failed",
+      "priority": 0,
+      "metadata": {
+        "title": "Güzel Dini Masallar: Köstebek Masalı Ve Emek Hikayesi #Shorts",
+        "description": "Güzel Dini Masallar: Köstebek Masalı ve Emek Hikayesi\n\n🔔 Abone olmayı unutmayın!\n💬 Yorumlarınızı bekliyoruz!\n\n#Shorts #Haber #Teknoloji #Türkçe",
+        "tags": [
+          "Shorts",
+          "video",
+          "viral"
+        ]
+      },
+      "platform_metadata": [],
+      "created_at": "2026-03-20T22:34:48+01:00",
+      "retry_count": 0,
+      "last_error": null,
+      "completed_at": "2026-03-22T00:37:49.189119+00:00"
+    }
+  ]
+}

@@ -1,0 +1,50 @@
+{
+    "id": "job_69bf559b357552.93126517",
+    "url": "https:\/\/www.ahaber.com.tr\/video\/dunya-videolari\/iranin-vurdugu-aradda-buyuk-yikim-cok-sayida-olu-ve-yarali-var",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-22 03:36:11",
+    "previewUrl": "\/output\/job_69bf559b357552.93126517\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:01,856\nİran'ın hedef aldığı Arad kentinden\n\n2\n00:00:01,856 --> 00:00:03,713\ngelen görüntüler dünyayı ayağa kaldırdı,\n\n3\n00:00:03,713 --> 00:00:05,570\ndurum çok ciddi!\n\n4\n00:00:05,570 --> 00:00:07,906\nİran füzeleri İsrail'in güneyindeki Arad\n\n5\n00:00:07,906 --> 00:00:10,243\nkentini doğrudan hedef aldı, büyük\n\n6\n00:00:10,243 --> 00:00:12,579\nbir yıkım yaşanıyor.\n\n7\n00:00:12,579 --> 00:00:15,173\nİsrail medyasından gelen son bilgilere\n\n8\n00:00:15,173 --> 00:00:17,766\ngöre saldırıda ilk belirlemelere göre\n\n9\n00:00:17,766 --> 00:00:20,359\n6 kişi hayatını kaybetti.\n\n10\n00:00:20,359 --> 00:00:22,926\nYaralı sayısı ise hızla artıyor.\n\n11\n00:00:22,926 --> 00:00:25,493\nŞu an itibarıyla 100'ün üzerinde\n\n12\n00:00:25,493 --> 00:00:28,059\nyaralı olduğu resmi kaynaklarca doğrulandı.\n\n13\n00:00:28,059 --> 00:00:30,459\nBölgedeki durumun her geçen dakika\n\n14\n00:00:30,459 --> 00:00:32,859\nağırlaştığı ve arama kurtarma çalışmalarının\n\n15\n00:00:32,859 --> 00:00:35,259\nsürdüğü belirtiliyor.\n\n16\n00:00:35,259 --> 00:00:36,973\nGelişmeleri takip etmek için kanala\n\n17\n00:00:36,973 --> 00:00:38,686\nabone olmayı ve bildirimleri açmayı\n\n18\n00:00:38,686 --> 00:00:40,399\nunutmayın.\n",
+    "error": "",
+    "title": "İran'ın vurduğu Arad'da büyük yıkım | Çok sayıda ölü ve yaralı var",
+    "content_id": "content_32bea160d09b",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "social_69c1097d4b141",
+        "status": "success",
+        "platforms": {
+            "youtube": {
+                "status": "success",
+                "post_id": "SUf_qT73V8I",
+                "post_url": "https:\/\/youtube.com\/shorts\/SUf_qT73V8I",
+                "error": null,
+                "uploaded_at": "2026-03-23T13:27:05.493412+00:00"
+            }
+        },
+        "updated_at": "2026-03-23T13:27:05.529274+00:00"
+    },
+    "queue_status": {
+        "queue_id": "youtube-testr-8737ec",
+        "queue_name": "Youtube Testr",
+        "status": "queued",
+        "added_at": "2026-03-23T14:47:47+01:00"
+    }
+}

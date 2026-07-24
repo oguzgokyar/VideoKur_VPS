@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf43996961e4.24463412",
+  "url": "https://onedio.com/haber/google-gemini-dan-bayram-sekeri-gibi-akim-fotograflari-nostaljik-karelere-donusturduler-1348859",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 02:19:21",
+  "previewUrl": "/output/job_69bf43996961e4.24463412/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,383\nEski aile fotoğraflarınız artık dijital\n\n2\n00:00:02,383 --> 00:00:04,766\nbirer nostalji bombasına dönüşüyor! Google\n\n3\n00:00:04,766 --> 00:00:07,150\nGemini ile bu nasıl mümkün?\n\n4\n00:00:07,150 --> 00:00:09,390\nBayram ziyaretlerinde çekilen o samimi\n\n5\n00:00:09,390 --> 00:00:11,630\naile fotoğrafları, sadece birer anı\n\n6\n00:00:11,630 --> 00:00:13,870\nolarak kalmıyor.\n\n7\n00:00:13,870 --> 00:00:15,943\nGoogle’ın yapay zeka harikası Gemini,\n\n8\n00:00:15,943 --> 00:00:18,016\nbu kareleri nostaljik birer tebrik\n\n9\n00:00:18,016 --> 00:00:20,090\nkartına dönüştürmenizi sağlıyor.\n\n10\n00:00:20,090 --> 00:00:22,082\nSosyal medyada çığ gibi büyüyen\n\n11\n00:00:22,082 --> 00:00:24,075\nbu akım sayesinde, bayram coşkusunu\n\n12\n00:00:24,075 --> 00:00:26,067\nsevdiklerinizle çok daha farklı bir\n\n13\n00:00:26,067 --> 00:00:28,060\nşekilde paylaşabilirsiniz.\n\n14\n00:00:28,060 --> 00:00:30,226\nTek yapmanız gereken Gemini’a fotoğrafınızı\n\n15\n00:00:30,226 --> 00:00:32,393\nyüklemek ve o sihirli dokunuşu\n\n16\n00:00:32,393 --> 00:00:34,560\nbeklemek!\n\n17\n00:00:34,560 --> 00:00:37,810\nPeki siz ilk hangi fotoğrafınızı\n\n18\n00:00:37,810 --> 00:00:41,060\ndönüştüreceksiniz? Yorumlarda buluşalım, takipte kalın!\n",
+  "error": "",
+  "title": "Google Gemini&apos;dan Bayram Şekeri Gibi Akım: Fotoğrafları Nostaljik Karelere Dönüştürdüler",
+  "content_id": "content_68f27a96fdf2",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T02:19:21+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_34f94ed28bc24259",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "2Qugq2D-vPk",
+        "post_url": "https://youtube.com/shorts/2Qugq2D-vPk",
+        "error": null,
+        "uploaded_at": "2026-03-22T01:59:39.103066+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T01:59:39.134239+00:00"
+  }
+}

@@ -1,0 +1,44 @@
+{
+    "id": "job_69cb811e455b80.22046842",
+    "url": "https:\/\/www.trthaber.com\/haber\/bilim-teknoloji\/deneyap-teknoloji-atolyeleri-gelecegin-teknoloji-yildizlarini-ariyor-939458.html",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-31 10:09:02",
+    "previewUrl": "\/output\/job_69cb811e455b80.22046842\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,734\nGeleceğin teknoloji yıldızı olmak ister\n\n2\n00:00:02,734 --> 00:00:05,469\nmisin? DENEYAP kapılarını açıyor!\n\n3\n00:00:05,469 --> 00:00:08,143\nTam 36 ay boyunca ücretsiz\n\n4\n00:00:08,143 --> 00:00:10,816\nteknoloji eğitimi, Türkiye genelinde 132\n\n5\n00:00:10,816 --> 00:00:13,490\nDENEYAP atölyesinde seni bekliyor!\n\n6\n00:00:13,490 --> 00:00:17,089\nBaşvurular 30 Mart 2026'ya kadar\n\n7\n00:00:17,089 --> 00:00:20,690\ndeneyap.org adresinden! Kimler başvurabilir? 4,\n\n8\n00:00:20,690 --> 00:00:24,290\n5, 8. sınıf ve lise\n\n9\n00:00:24,290 --> 00:00:27,890\nhazırlık, 9. sınıf öğrencileri!\n\n10\n00:00:27,890 --> 00:00:30,483\nTasarım, Robotik, Siber Güvenlik, Havacılık,\n\n11\n00:00:30,483 --> 00:00:33,076\nYazılım, Yapay Zekâ... Toplam 11\n\n12\n00:00:33,076 --> 00:00:35,670\nfarklı alanda kendini geliştir!\n\n13\n00:00:35,670 --> 00:00:38,716\nÜç aşamalı bir seçme süreci\n\n14\n00:00:38,716 --> 00:00:41,763\nvar. İlk adım: Çevrimiçi E-Sınav!\n\n15\n00:00:41,763 --> 00:00:44,810\nTeknoloji bilginizi konuşturun.\n\n16\n00:00:44,810 --> 00:00:47,090\nBaşarılı olanlar Çevrimiçi Eğitim ve\n\n17\n00:00:47,090 --> 00:00:49,370\nGörevleri tamamlayacak, sonra Uygulama Sınavı'na\n\n18\n00:00:49,370 --> 00:00:51,650\ngeçecek!\n\n19\n00:00:51,650 --> 00:00:53,942\nDENEYAP sadece Türkiye'de değil, 4\n\n20\n00:00:53,942 --> 00:00:56,234\nfarklı ülkede de! 2024'te 156.000\n\n21\n00:00:56,234 --> 00:00:58,527\nbaşvuruyla gençlerin teknolojiye ilgisi rekor\n\n22\n00:00:58,527 --> 00:01:00,819\nkırıyor!\n\n23\n00:01:00,819 --> 00:01:03,156\nHaydi, sen de geleceğin teknolojisini\n\n24\n00:01:03,156 --> 00:01:05,493\nşekillendirenlerden ol! Hemen başvur, fırsatı\n\n25\n00:01:05,493 --> 00:01:07,829\nkaçırma!\n",
+    "error": "",
+    "title": "Deneyap Teknoloji Atölyeleri 'geleceğin teknoloji yıldızları'nı arıyor",
+    "content_id": "content_e777d2aca727",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "social_df05afa01f176d50",
+        "status": "pending",
+        "platforms": {
+            "youtube": {
+                "status": "pending",
+                "post_id": null,
+                "post_url": null,
+                "error": null,
+                "uploaded_at": null
+            }
+        },
+        "requeued_at": "2026-04-01T11:04:15+02:00"
+    }
+}

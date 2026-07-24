@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf55250f6b49.26001828",
+  "url": "https://onedio.com/haber/chatgpt-yardimiyla-kopegi-icin-kisisellestirilmis-kanser-asisi-gelistirdi-1347899",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:34:13",
+  "previewUrl": "/output/job_69bf55250f6b49.26001828/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,819\nChatGPT bir köpeğin hayatını kurtardı!\n\n2\n00:00:02,819 --> 00:00:05,639\nİnanılmaz gelişmenin detaylarına bakın.\n\n3\n00:00:05,639 --> 00:00:07,776\nConyngham, köpeği Rosie için ChatGPT\n\n4\n00:00:07,776 --> 00:00:09,913\nkullanarak kişiselleştirilmiş bir kanser aşısı\n\n5\n00:00:09,913 --> 00:00:12,050\ngeliştirdi.\n\n6\n00:00:12,050 --> 00:00:14,010\nSonuçlar şok edici: Tümör yüzde\n\n7\n00:00:14,010 --> 00:00:15,970\n75 oranında küçüldü ve Rosie\n\n8\n00:00:15,970 --> 00:00:17,930\nyeniden koşmaya başladı.\n\n9\n00:00:17,930 --> 00:00:20,273\nDr. Thordarson'a göre bu yöntem,\n\n10\n00:00:20,273 --> 00:00:22,616\ngelecekte insanlar için de kanser\n\n11\n00:00:22,616 --> 00:00:24,960\ntedavisi umudu taşıyor.\n\n12\n00:00:24,960 --> 00:00:27,033\nModerna gibi dev şirketler de\n\n13\n00:00:27,033 --> 00:00:29,106\nartık kişiye özel mRNA kanser\n\n14\n00:00:29,106 --> 00:00:31,180\naşıları üzerinde çalışıyor.\n\n15\n00:00:31,180 --> 00:00:33,403\nTeknoloji ve sevginin birleşimi, tıp\n\n16\n00:00:33,403 --> 00:00:35,626\ndünyasında yepyeni bir dönemin kapısını\n\n17\n00:00:35,626 --> 00:00:37,850\naraladı.\n\n18\n00:00:37,850 --> 00:00:40,825\nBu devrim niteliğindeki gelişme hakkında\n\n19\n00:00:40,825 --> 00:00:43,800\nne düşünüyorsunuz? Yorumlarda buluşalım!\n",
+  "error": "",
+  "title": "ChatGPT Yardımıyla Köpeği İçin Kişiselleştirilmiş Kanser Aşısı Geliştirdi",
+  "content_id": "content_355f4e8d2733",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:34:13+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_2237ca1fe8894386",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "ESrcQ8r1pjg",
+        "post_url": "https://youtube.com/shorts/ESrcQ8r1pjg",
+        "error": null,
+        "uploaded_at": "2026-03-22T03:00:48.484401+00:00"
+      }
+    },
+    "updated_at": "2026-03-22T03:00:48.511354+00:00"
+  }
+}

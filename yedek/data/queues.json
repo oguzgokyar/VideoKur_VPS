@@ -1,0 +1,107 @@
+{
+  "queues": [
+    {
+      "id": "y1-b82b67",
+      "name": "y1",
+      "platforms": [
+        "youtube"
+      ],
+      "schedule": {
+        "timezone": "Europe/Istanbul"
+      },
+      "video_settings": {
+        "dimensionPreset": "vertical",
+        "videoWidth": 1080,
+        "videoHeight": 1920,
+        "subtitleMode": "config",
+        "subtitlePreset": "classic",
+        "customSubtitle": null
+      },
+      "videos": [
+        {
+          "job_id": "job_69cd88140229e0.38897530",
+          "added_at": "2026-04-02T00:03:16+03:00",
+          "status": "completed",
+          "platform_status": {
+            "youtube": {
+              "status": "published",
+              "video_url": "https://youtube.com/shorts/qb3za6YTdXs",
+              "published_at": "2026-04-02T00:30:01.517426+03:00"
+            }
+          },
+          "position": 1,
+          "scheduled_time": "2026-04-02T00:26:56+03:00",
+          "retry_count": 0,
+          "last_error": null
+        }
+      ],
+      "created_at": "2026-04-01T12:26:03+03:00",
+      "last_publish": null,
+      "is_active": true,
+      "strict_mode": false,
+      "fail_threshold": 3,
+      "consecutive_fails": 0,
+      "platform_settings": {
+        "youtube": {
+          "enabled": true,
+          "channelId": "channel_001",
+          "scheduleType": "now",
+          "intervalHours": 2,
+          "intervalMinutes": 120,
+          "startTime": "",
+          "dailyLimit": 0,
+          "specificTimes": [
+            "09:00",
+            "15:00",
+            "21:00"
+          ],
+          "playlistId": "PL3GZ1PxCkH8aHkhCSebQk_7IRRXNBi1Au",
+          "categoryId": "22",
+          "privacy": "unlisted",
+          "titleTemplate": "{title}",
+          "descriptionTemplate": "{description}\n\n#shorts",
+          "tagsTemplate": "shorts,haber"
+        },
+        "instagram": {
+          "enabled": false,
+          "scheduleType": "specific",
+          "intervalHours": 3,
+          "specificTimes": [
+            "10:00",
+            "16:00",
+            "20:00"
+          ],
+          "hashtagStrategy": "auto",
+          "hashtags": "#reels,#haber",
+          "captionTemplate": "{title}\n\n{description}",
+          "allowComments": true
+        },
+        "tiktok": {
+          "enabled": false,
+          "scheduleType": "interval",
+          "intervalHours": 4,
+          "specificTimes": [
+            "12:00",
+            "18:00"
+          ],
+          "privacy": "public_to_everyone",
+          "allowDuet": true,
+          "allowStitch": true,
+          "captionTemplate": "{title} #fyp"
+        },
+        "facebook": {
+          "enabled": false,
+          "scheduleType": "now",
+          "intervalHours": 6,
+          "specificTimes": [
+            "11:00",
+            "17:00"
+          ],
+          "pageId": "",
+          "privacy": "EVERYONE"
+        }
+      },
+      "resumed_at": "2026-04-02T00:27:08+03:00"
+    }
+  ]
+}

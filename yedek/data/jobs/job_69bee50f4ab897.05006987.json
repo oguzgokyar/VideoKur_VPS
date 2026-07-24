@@ -1,0 +1,42 @@
+{
+  "id": "job_69bee50f4ab897.05006987",
+  "url": "https://www.cocukmasallarioku.com/masal-oku/kucuk-oruc-kahraman-eymen-ramazann-ilk-gunu-masal/",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "BorderStyle": 1,
+    "Alignment": 2,
+    "preset": "config"
+  },
+  "status": "done",
+  "created_at": "2026-03-21 19:35:59",
+  "previewUrl": "/output/job_69bee50f4ab897.05006987/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,486\n6 yaşındaki Eymen'in Ramazan heyecanına\n\n2\n00:00:02,486 --> 00:00:04,973\nşahit olmaya hazır mısınız? İşte\n\n3\n00:00:04,973 --> 00:00:07,460\nminik kahramanın büyük oruç macerası!\n\n4\n00:00:07,460 --> 00:00:09,603\nSabahın ilk ışıklarıyla Eymen, Ramazan'ın\n\n5\n00:00:09,603 --> 00:00:11,746\ngeldiğini müjdeleyen o tatlı heyecanla\n\n6\n00:00:11,746 --> 00:00:13,889\nuyandı.\n\n7\n00:00:13,889 --> 00:00:16,570\nMutfaktan gelen o huzurlu sesler...\n\n8\n00:00:16,570 --> 00:00:19,250\nAilesi, Ramazan'ın ilk sahur sofrasını\n\n9\n00:00:19,250 --> 00:00:21,929\nkuruyordu.\n\n10\n00:00:21,929 --> 00:00:23,969\nEymen'in kalbinde büyük bir soru\n\n11\n00:00:23,969 --> 00:00:26,009\nvardı: 'Ben henüz küçüğüm, acaba\n\n12\n00:00:26,009 --> 00:00:28,049\noruç tutabilir miyim?'\n\n13\n00:00:28,049 --> 00:00:31,113\nAnnesi ve babası ona destek\n\n14\n00:00:31,113 --> 00:00:34,176\noldu. Ona öğlene kadar dayanabileceği,\n\n15\n00:00:34,176 --> 00:00:37,239\nnazik bir oruç yolu gösterdiler.\n\n16\n00:00:37,239 --> 00:00:39,143\nKüçük Eymen ellerini birleştirdi ve\n\n17\n00:00:39,143 --> 00:00:41,046\nniyetini etti: 'Beni güçlü yap\n\n18\n00:00:41,046 --> 00:00:42,950\nAllah'ım!'\n\n19\n00:00:42,950 --> 00:00:44,836\nRamazan'ın ilk günü, Eymen için\n\n20\n00:00:44,836 --> 00:00:46,723\nartık hayatının en özel ve\n\n21\n00:00:46,723 --> 00:00:48,610\nen gururlu başlangıcıydı.\n\n22\n00:00:48,610 --> 00:00:50,736\nEymen'in bu tatlı macerasını beğendiyseniz\n\n23\n00:00:50,736 --> 00:00:52,863\nbeğenmeyi ve Ramazan paylaşımlarımız için\n\n24\n00:00:52,863 --> 00:00:54,990\nabone olmayı unutmayın!\n",
+  "error": "",
+  "title": "Kucuk-oruc-kahraman-eymen-ramazann-ilk-gunu-masal",
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_51760b45f03e49bb",
+    "status": "failed",
+    "platforms": {
+      "youtube": {
+        "status": "failed",
+        "post_id": null,
+        "post_url": null,
+        "error": "The user has exceeded the number of videos they may upload.",
+        "uploaded_at": null
+      }
+    },
+    "updated_at": "2026-03-22T22:03:01.273241+00:00"
+  }
+}

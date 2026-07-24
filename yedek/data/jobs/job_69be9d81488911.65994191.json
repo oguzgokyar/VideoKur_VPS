@@ -1,0 +1,42 @@
+{
+  "id": "job_69be9d81488911.65994191",
+  "url": "https://www.cocukmasallarioku.com/hikaye-oku/kalpten-gelen-dua-minik-aysenin-huzurlu-hikayesi/",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "BorderStyle": 1,
+    "Alignment": 2,
+    "preset": "config"
+  },
+  "status": "done",
+  "created_at": "2026-03-21 14:30:41",
+  "previewUrl": "/output/job_69be9d81488911.65994191/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,740\nKüçük Ayşe'nin kalbinden dökülen dua,\n\n2\n00:00:01,740 --> 00:00:03,480\nkoca bir köyü nasıl değiştirdi?\n\n3\n00:00:03,480 --> 00:00:05,219\nİşte huzur dolu o masalsı\n\n4\n00:00:05,219 --> 00:00:06,960\nhikaye!\n\n5\n00:00:06,960 --> 00:00:09,223\nYemyeşil çiçeklerle dolu bir köyde,\n\n6\n00:00:09,223 --> 00:00:11,486\nMinik Ayşe adında neşeli bir\n\n7\n00:00:11,486 --> 00:00:13,750\nkız çocuğu yaşarmış.\n\n8\n00:00:13,750 --> 00:00:16,246\nAnnesi ona duanın, kalpten gelen\n\n9\n00:00:16,246 --> 00:00:18,743\nbir selam olduğunu ve insanın\n\n10\n00:00:18,743 --> 00:00:21,239\niçini huzurla doldurduğunu öğretmiş.\n\n11\n00:00:21,239 --> 00:00:23,663\nAyşe bahçede papatyaları toplarken, ailesinin\n\n12\n00:00:23,663 --> 00:00:26,086\nsağlığı ve mutluluğu için içtenlikle\n\n13\n00:00:26,086 --> 00:00:28,509\ndua etmiş.\n\n14\n00:00:28,509 --> 00:00:30,526\nArkadaşı Mehmet uçurtmasını kaybettiğinde, Ayşe\n\n15\n00:00:30,526 --> 00:00:32,543\nonunla birlikte dua etmiş ve\n\n16\n00:00:32,543 --> 00:00:34,559\nmucize gerçekleşmiş.\n\n17\n00:00:34,559 --> 00:00:36,753\nKöyde Hira Teyze hastalandığında, herkes\n\n18\n00:00:36,753 --> 00:00:38,946\nbir araya gelip onun için\n\n19\n00:00:38,946 --> 00:00:41,140\nşifa duaları etmiş.\n\n20\n00:00:41,140 --> 00:00:43,293\nPeki siz bugün kalbinizden hangi\n\n21\n00:00:43,293 --> 00:00:45,446\ngüzel duayı geçirdiniz? Yorumlarda bizimle\n\n22\n00:00:45,446 --> 00:00:47,600\npaylaşın!\n",
+  "error": "",
+  "title": "Kalpten-gelen-dua-minik-aysenin-huzurlu-hikayesi",
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_64e84ea79a1548e6",
+    "status": "failed",
+    "platforms": {
+      "youtube": {
+        "status": "failed",
+        "post_id": null,
+        "post_url": null,
+        "error": "The user has exceeded the number of videos they may upload.",
+        "uploaded_at": null
+      }
+    },
+    "updated_at": "2026-03-22T22:03:03.838784+00:00"
+  }
+}

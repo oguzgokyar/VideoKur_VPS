@@ -1,0 +1,38 @@
+{
+    "id": "job_69ca7a170bd735.09295955",
+    "url": "https:\/\/onedio.com\/haber\/beynin-algoritmasi-dijital-suruye-karsi-icsel-anlati-1350255",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-30 15:26:47",
+    "previewUrl": "\/output\/job_69ca7a170bd735.09295955\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,086\nDijital çağın algoritmaları, kim olduğunu\n\n2\n00:00:02,086 --> 00:00:04,173\nsana mı söylüyor? Gerçek hikayeni\n\n3\n00:00:04,173 --> 00:00:06,259\ngeri alma zamanı!\n\n4\n00:00:06,259 --> 00:00:09,099\nSosyal medyada 'Ben başarısızım' dediğin\n\n5\n00:00:09,099 --> 00:00:11,939\nanlar oldu mu? Algoritma, bu\n\n6\n00:00:11,939 --> 00:00:14,779\netiketleri sana yapıştırıyor olabilir.\n\n7\n00:00:14,779 --> 00:00:18,083\nUnutma: Problem sen değilsin, problem\n\n8\n00:00:18,083 --> 00:00:21,386\nproblemdir. Başarısızlık bir bulut gibi,\n\n9\n00:00:21,386 --> 00:00:24,690\nsenin tepende dolaşıyor, sen değilsin!\n\n10\n00:00:24,690 --> 00:00:27,186\nEski 'başarısızlık' hikayelerini al, yeniden\n\n11\n00:00:27,186 --> 00:00:29,683\nyaz! Geçmişteki deneyimler seni bugünkü\n\n12\n00:00:29,683 --> 00:00:32,179\ngüçlü versiyonuna taşıdı.\n\n13\n00:00:32,179 --> 00:00:34,597\nAlgoritma sana öfke mi pompalıyor?\n\n14\n00:00:34,597 --> 00:00:37,014\nDur ve sorgula: Bu içeriği\n\n15\n00:00:37,014 --> 00:00:39,432\ngerçekten ben mi istedim, yoksa\n\n16\n00:00:39,432 --> 00:00:41,849\no mu merakımı tetikledi?\n\n17\n00:00:41,849 --> 00:00:44,193\nHer gün kendi hikayenin kahramanı\n\n18\n00:00:44,193 --> 00:00:46,536\nol. Algoritma 'tüket' derken, sen\n\n19\n00:00:46,536 --> 00:00:48,879\n'yarat' diye cevap ver!\n\n20\n00:00:48,879 --> 00:00:51,959\nİçindeki 'yetersizsin' sesini duyduğunda, onu\n\n21\n00:00:51,959 --> 00:00:55,039\nbir karakter olarak selamla. Teşekkür\n\n22\n00:00:55,039 --> 00:00:58,119\net ve yoluna devam et.\n\n23\n00:00:58,119 --> 00:01:01,109\nKendi anlatıcın ol. Algoritmalara karşı\n\n24\n00:01:01,109 --> 00:01:04,099\nen güçlü silahın, kendi hikayen!\n",
+    "error": "",
+    "title": "Beynin Algoritması: Dijital Sürüye Karşı İçsel Anlatı",
+    "content_id": "content_ded52f9f7c5c",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69ca7a170bd735.09295955",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:08.854203+00:00"
+    }
+}

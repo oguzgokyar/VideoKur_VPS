@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b846fb3.26133417",
+  "url": "https://www.ahaber.com.tr/video/dunya-videolari/israilin-arad-sehrine-fuze-dusme-ani-a-haberde-carpici-goruntuler",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b846fb3.26133417/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,056\nİsrail'de dehşet anları! Arad şehrine\n\n2\n00:00:02,056 --> 00:00:04,113\nfüze düştüğü o anlar saniye\n\n3\n00:00:04,113 --> 00:00:06,169\nsaniye kaydedildi!\n\n4\n00:00:06,169 --> 00:00:08,544\nBölgeden gelen görüntüler kan dondurdu.\n\n5\n00:00:08,544 --> 00:00:10,919\nDimona için sirenler çalarken, İran\n\n6\n00:00:10,919 --> 00:00:13,294\nfüzesi Arad şehrine işte böyle\n\n7\n00:00:13,294 --> 00:00:15,669\ndüştü.\n\n8\n00:00:15,669 --> 00:00:17,872\nA Haber ekranlarına yansıyan o\n\n9\n00:00:17,872 --> 00:00:20,074\nanlarda, füzenin yarattığı büyük yıkım\n\n10\n00:00:20,074 --> 00:00:22,277\nve oluşan devasa enkaz net\n\n11\n00:00:22,277 --> 00:00:24,480\nbir şekilde görülüyor.\n\n12\n00:00:24,480 --> 00:00:26,560\nFelaketin boyutları saatler geçtikçe daha\n\n13\n00:00:26,560 --> 00:00:28,640\nda belirginleşiyor. Bölge halkı büyük\n\n14\n00:00:28,640 --> 00:00:30,719\nbir panik içinde.\n\n15\n00:00:30,719 --> 00:00:32,640\nGelişmeleri anlık takip etmek için\n\n16\n00:00:32,640 --> 00:00:34,560\nkanalımıza abone olmayı ve bildirimleri\n\n17\n00:00:34,560 --> 00:00:36,480\naçmayı unutmayın.\n",
+  "error": "",
+  "title": "İsrail'in Arad şehrine füze düşme anı! A Haber’de çarpıcı görüntüler",
+  "content_id": "content_5c665ebdde7c",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d815",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "HOslMiWqda4",
+        "post_url": "https://youtube.com/shorts/HOslMiWqda4",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:28:11.576226+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:28:11.624324+00:00"
+  }
+}

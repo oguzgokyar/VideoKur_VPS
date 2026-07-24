@@ -1,0 +1,56 @@
+{
+  "projects": [
+    {
+      "id": "video-kur2",
+      "name": "video-kur2",
+      "client_secrets_file": "client_secrets_video-kur2.json",
+      "daily_quota": 10000,
+      "quota_used_today": 0,
+      "is_active": true,
+      "channel_id": "channel_001",
+      "api_id": "api_d5cce8",
+      "last_reset": "2026-04-01T14:16:09.534806+00:00"
+    },
+    {
+      "id": "video-kur4",
+      "name": "video-kur4",
+      "client_secrets_file": "client_secrets_video-kur4.json",
+      "daily_quota": 10000,
+      "quota_used_today": 0,
+      "is_active": true,
+      "channel_id": "channel_001",
+      "api_id": "api_6e50ee",
+      "last_reset": "2026-04-01T14:16:09.534806+00:00"
+    },
+    {
+      "id": "video-kur3",
+      "name": "video-kur3",
+      "client_secrets_file": "client_secrets_video-kur3.json",
+      "daily_quota": 10000,
+      "quota_used_today": 1650,
+      "is_active": false,
+      "channel_id": "channel_001",
+      "api_id": "api_b43bc8",
+      "last_reset": "2026-04-01T21:02:47.357939+00:00",
+      "upload_count_today": 1,
+      "last_upload": "2026-04-01T21:30:01.515515+00:00"
+    },
+    {
+      "id": "video-kur-490612",
+      "name": "video-kur-490612",
+      "client_secrets_file": "client_secrets_video-kur-490612.json",
+      "daily_quota": 10000,
+      "quota_used_today": 0,
+      "is_active": false,
+      "channel_id": "channel_001",
+      "api_id": "api_c055cc",
+      "last_reset": "2026-04-01T21:02:47.357939+00:00"
+    }
+  ],
+  "rotation_strategy": "round_robin",
+  "auto_switch_on_quota_error": true,
+  "quota_per_upload": 1600,
+  "quota_per_thumbnail": 50,
+  "quota_safety_margin": 500,
+  "current_project_index": 0
+}

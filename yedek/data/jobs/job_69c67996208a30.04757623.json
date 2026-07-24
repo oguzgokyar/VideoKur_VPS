@@ -1,0 +1,38 @@
+{
+    "id": "job_69c67996208a30.04757623",
+    "url": "https:\/\/onedio.com\/haber\/telefonunuzu-yanlis-sarj-ediyor-olabilirsiniz-bu-hatalar-bataryayi-sessizce-olduruyor-1349630",
+    "template": "short_haber",
+    "scriptId": "",
+    "videoWidth": 1080,
+    "videoHeight": 1920,
+    "subtitleStyle": {
+        "FontName": "Arial",
+        "FontSize": 16,
+        "PrimaryColour": "#FFFF00",
+        "OutlineColour": "#000000",
+        "Outline": 2,
+        "Shadow": 1,
+        "MarginV": 80,
+        "Bold": 1,
+        "preset": "config",
+        "BorderStyle": 1,
+        "Alignment": 2
+    },
+    "status": "done",
+    "created_at": "2026-03-27 13:35:34",
+    "previewUrl": "\/output\/job_69c67996208a30.04757623\/final_video.mp4",
+    "subtitles": "1\n00:00:00,000 --> 00:00:02,183\nTelefonunuzu yanlış mı şarj ediyorsunuz?\n\n2\n00:00:02,183 --> 00:00:04,366\nPil ömrünü sessizce bitiren 3\n\n3\n00:00:04,366 --> 00:00:06,549\nkritik hatayı hemen öğrenin!\n\n4\n00:00:06,549 --> 00:00:09,823\nBirinci hata: Şarjdayken yoğun kullanım.\n\n5\n00:00:09,823 --> 00:00:13,096\nOyun oynamak, video izlemek... Bu\n\n6\n00:00:13,096 --> 00:00:16,369\ndurum telefonu aşırı ısıtır.\n\n7\n00:00:16,369 --> 00:00:19,443\nİkinci büyük hata: Kalitesiz şarj\n\n8\n00:00:19,443 --> 00:00:22,516\naksesuarları! Ucuz kablo ve adaptörler\n\n9\n00:00:22,516 --> 00:00:25,589\npilinize uzun vadede zarar verir.\n\n10\n00:00:25,589 --> 00:00:28,663\nPeki doğrusu ne? Telefonu %20-30\n\n11\n00:00:28,663 --> 00:00:31,736\nseviyesindeyken şarja takın, %100 olduktan\n\n12\n00:00:31,736 --> 00:00:34,810\nsonra hemen çıkarın.\n\n13\n00:00:34,810 --> 00:00:37,376\nOrijinal veya güvenilir şarj ekipmanı\n\n14\n00:00:37,376 --> 00:00:39,943\nkullanın. Cihazınızı asla aşırı sıcakta\n\n15\n00:00:39,943 --> 00:00:42,510\nşarj etmeyin!\n\n16\n00:00:42,510 --> 00:00:44,493\nBu basit alışkanlıklar, telefonunuzun pil\n\n17\n00:00:44,493 --> 00:00:46,476\nömrünü belirgin şekilde uzatır ve\n\n18\n00:00:46,476 --> 00:00:48,460\nperformansını korur!\n\n19\n00:00:48,460 --> 00:00:50,550\nDaha fazla teknoloji ipucu için\n\n20\n00:00:50,550 --> 00:00:52,640\nbizi takip etmeyi unutmayın!\n",
+    "error": "",
+    "title": "Telefonunuzu Yanlış Şarj Ediyor Olabilirsiniz: Bu Hatalar Bataryayı Sessizce Öldürüyor",
+    "content_id": "content_527355077f47",
+    "source_type": "rss",
+    "ttsProvider": "elevenlabs",
+    "social_upload": {
+        "queue_id": "youtube-testr-8737ec_job_69c67996208a30.04757623",
+        "status": "queued",
+        "platforms": {
+            "youtube": "pending"
+        },
+        "updated_at": "2026-03-31T07:23:31.885055+00:00"
+    }
+}

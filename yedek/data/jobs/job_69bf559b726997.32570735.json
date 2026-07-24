@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b726997.32570735",
+  "url": "https://www.ahaber.com.tr/viral/galeri/liste/neden-kot-pantolonlarda-kucuk-cep-var-iste-150-yillik-hikayesi",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b726997.32570735/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:01,745\nKot pantolonlarınızdaki o minik cebin\n\n2\n00:00:01,745 --> 00:00:03,490\nneden orada olduğunu hiç düşündünüz\n\n3\n00:00:03,490 --> 00:00:05,235\nmü? İnanın, süs olsun diye\n\n4\n00:00:05,235 --> 00:00:06,980\nkonulmadı!\n\n5\n00:00:06,980 --> 00:00:09,554\n1873 yılına gidelim. Levi's marka\n\n6\n00:00:09,554 --> 00:00:12,129\nilk dayanıklı iş pantolonları üretildiğinde,\n\n7\n00:00:12,129 --> 00:00:14,704\no küçük cep hayat kurtarıcı\n\n8\n00:00:14,704 --> 00:00:17,279\nbir amaca sahipti.\n\n9\n00:00:17,279 --> 00:00:19,739\nO dönemde madenciler ve demiryolu\n\n10\n00:00:19,739 --> 00:00:22,199\nişçileri için en değerli eşya,\n\n11\n00:00:22,199 --> 00:00:24,660\ncep saatleriydi. Kırılmaması için güvenli\n\n12\n00:00:24,660 --> 00:00:27,120\nbir yere ihtiyaçları vardı.\n\n13\n00:00:27,120 --> 00:00:29,585\nİşte bu minik cep, tam\n\n14\n00:00:29,585 --> 00:00:32,049\nda o cep saatlerini zinciriyle\n\n15\n00:00:32,049 --> 00:00:34,515\nbirlikte güvenle saklamak için tasarlandı.\n\n16\n00:00:34,515 --> 00:00:36,980\nYani aslında bir 'saat cebi'ydi.\n\n17\n00:00:36,980 --> 00:00:40,213\n1890'larda seri üretime geçilmesiyle kotlar\n\n18\n00:00:40,213 --> 00:00:43,446\ndünyaya yayıldı. Saatler değişti ama\n\n19\n00:00:43,446 --> 00:00:46,680\ntasarım mirası değişmedi.\n\n20\n00:00:46,680 --> 00:00:48,737\nBugün o cepte bozuk para\n\n21\n00:00:48,737 --> 00:00:50,795\nveya USB bellek taşıyor olabilirsiniz\n\n22\n00:00:50,795 --> 00:00:52,852\nama o aslında 150 yıllık\n\n23\n00:00:52,852 --> 00:00:54,909\nbir mühendislik harikası!\n\n24\n00:00:54,909 --> 00:00:57,063\nPeki siz o minik cepte\n\n25\n00:00:57,063 --> 00:00:59,216\nne taşıyorsunuz? Yorumlarda buluşalım, abone\n\n26\n00:00:59,216 --> 00:01:01,370\nolmayı unutmayın!\n",
+  "error": "",
+  "title": "Neden kot pantolonlarda küçük cep var? İşte 150 yıllık hikayesi",
+  "content_id": "content_8313176f7b70",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d75c",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "DpTXRNuJT50",
+        "post_url": "https://youtube.com/shorts/DpTXRNuJT50",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:27:56.773957+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:27:56.831556+00:00"
+  }
+}

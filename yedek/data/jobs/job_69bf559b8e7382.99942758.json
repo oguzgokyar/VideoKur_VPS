@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b8e7382.99942758",
+  "url": "https://www.ahaber.com.tr/spor/fenerbahce/2026/03/21/kanaryada-orta-sahada-yeni-donem-tedescodan-kante-karari",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b8e7382.99942758/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,439\nFenerbahçe'de N'Golo Kante bombası! Transfer\n\n2\n00:00:02,439 --> 00:00:04,879\nyılan hikayesine dönmüştü ama düğümü\n\n3\n00:00:04,879 --> 00:00:07,320\nCumhurbaşkanı Erdoğan çözdü!\n\n4\n00:00:07,320 --> 00:00:10,166\nKış transfer döneminin en çok\n\n5\n00:00:10,166 --> 00:00:13,013\nkonuşulan ismi N'Golo Kante'nin Fenerbahçe'ye\n\n6\n00:00:13,013 --> 00:00:15,859\ntransferi neredeyse iptal oluyordu.\n\n7\n00:00:15,859 --> 00:00:18,843\nAl-Ittihad kulübü belgeleri göndermeyince kriz\n\n8\n00:00:18,843 --> 00:00:21,826\nçıktı. Ancak tam o anda\n\n9\n00:00:21,826 --> 00:00:24,809\ndevreye Cumhurbaşkanı Erdoğan girdi.\n\n10\n00:00:24,809 --> 00:00:27,209\nSuudi yetkililerle bizzat görüşen Erdoğan,\n\n11\n00:00:27,209 --> 00:00:29,609\ntransferin önündeki tüm engelleri tek\n\n12\n00:00:29,609 --> 00:00:32,009\ntek kaldırdı.\n\n13\n00:00:32,009 --> 00:00:34,203\nDünyaca ünlü yıldızın transferi KAP'a\n\n14\n00:00:34,203 --> 00:00:36,396\nbildirildi! Fenerbahçe taraftarı adeta bayram\n\n15\n00:00:36,396 --> 00:00:38,590\nediyor.\n\n16\n00:00:38,590 --> 00:00:40,910\nBaşkan Sadettin Saran, büyük desteklerinden\n\n17\n00:00:40,910 --> 00:00:43,230\ndolayı Cumhurbaşkanı Erdoğan'a özel olarak\n\n18\n00:00:43,230 --> 00:00:45,550\nteşekkür etti.\n\n19\n00:00:45,550 --> 00:00:47,926\nPeki sizce Kante, Fenerbahçe'ye büyük\n\n20\n00:00:47,926 --> 00:00:50,303\nkatkı sağlar mı? Yorumlarda buluşalım,\n\n21\n00:00:50,303 --> 00:00:52,679\nabone olmayı unutmayın!\n",
+  "error": "",
+  "title": "Kanarya’da orta sahada yeni dönem! Tedesco’dan Kante kararı",
+  "content_id": "content_87573da83a07",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d875",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "PUJUg761PSM",
+        "post_url": "https://youtube.com/shorts/PUJUg761PSM",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:28:19.781817+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:28:19.820941+00:00"
+  }
+}

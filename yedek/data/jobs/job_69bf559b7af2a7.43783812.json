@@ -1,0 +1,50 @@
+{
+  "id": "job_69bf559b7af2a7.43783812",
+  "url": "https://www.ahaber.com.tr/yasam/2026/03/21/bayram-tatili-bitti-donus-cilesi-basladi",
+  "template": "short_haber",
+  "scriptId": "",
+  "videoWidth": 1080,
+  "videoHeight": 1920,
+  "subtitleStyle": {
+    "FontName": "Arial",
+    "FontSize": 16,
+    "PrimaryColour": "#FFFF00",
+    "OutlineColour": "#000000",
+    "Outline": 2,
+    "Shadow": 1,
+    "MarginV": 80,
+    "Bold": 1,
+    "preset": "config",
+    "BorderStyle": 1,
+    "Alignment": 2
+  },
+  "status": "done",
+  "created_at": "2026-03-22 03:36:11",
+  "previewUrl": "/output/job_69bf559b7af2a7.43783812/final_video.mp4",
+  "subtitles": "1\n00:00:00,000 --> 00:00:02,555\nBayram tatili bitti, yollar kilit!\n\n2\n00:00:02,555 --> 00:00:05,110\nDönüş çilesi resmen başladı!\n\n3\n00:00:05,110 --> 00:00:07,246\nAnadolu Otoyolu Düzce kesiminde İstanbul\n\n4\n00:00:07,246 --> 00:00:09,383\nistikametine doğru araç yoğunluğu hızla\n\n5\n00:00:09,383 --> 00:00:11,519\nartıyor.\n\n6\n00:00:11,519 --> 00:00:13,783\nAnkara istikameti ise tam tersine\n\n7\n00:00:13,783 --> 00:00:16,046\noldukça sakin, araç trafiği yok\n\n8\n00:00:16,046 --> 00:00:18,309\ndenecek kadar az.\n\n9\n00:00:18,309 --> 00:00:20,286\nDikkat! Düzce'de yağmur başladı ve\n\n10\n00:00:20,286 --> 00:00:22,263\nyüksek kesimlerde sis görüş mesafesini\n\n11\n00:00:22,263 --> 00:00:24,239\ndüşürüyor.\n\n12\n00:00:24,239 --> 00:00:27,309\nYetkililer uyarıyor: Takip mesafenizi koruyun,\n\n13\n00:00:27,309 --> 00:00:30,379\ntrafik kurallarına mutlaka uyun!\n\n14\n00:00:30,379 --> 00:00:33,449\nGüvenli yolculuklar! Trafik güncellemeleri için\n\n15\n00:00:33,449 --> 00:00:36,519\nkanalımıza abone olmayı unutmayın.\n",
+  "error": "",
+  "title": "Bayram tatili bitti! Dönüş çilesi başladı",
+  "content_id": "content_173135e3ef2a",
+  "source_type": "rss",
+  "queue_status": {
+    "queue_id": "youtube-testr-8737ec",
+    "queue_name": "Youtube Testr",
+    "status": "queued",
+    "added_at": "2026-03-22T03:36:11+01:00"
+  },
+  "ttsProvider": "elevenlabs",
+  "social_upload": {
+    "queue_id": "social_69c1097d4d7b5",
+    "status": "success",
+    "platforms": {
+      "youtube": {
+        "status": "success",
+        "post_id": "0kTy3Z8_FYI",
+        "post_url": "https://youtube.com/shorts/0kTy3Z8_FYI",
+        "error": null,
+        "uploaded_at": "2026-03-23T13:28:03.860177+00:00"
+      }
+    },
+    "updated_at": "2026-03-23T13:28:03.884181+00:00"
+  }
+}
