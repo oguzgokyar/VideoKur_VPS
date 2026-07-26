@@ -91,18 +91,6 @@ $active_page = 'settings';
         gemini_script: true, pollinations_text: true,
         elevenlabs_tts: true, edge_tts: true
       },
-      socialStaging: {
-        enabled: false,
-        provider: 'r2',
-        bucket: '',
-        region: 'auto',
-        endpointUrl: '',
-        accessKeyId: '',
-        secretAccessKey: '',
-        publicBaseUrl: '',
-        prefix: 'instagram',
-        cleanupAfterUpload: true
-      },
       saveMsg: '', saveError: false,
       checks: {
         gemini: {loading:false,result:null}, elevenlabs: {loading:false,result:null},
@@ -591,11 +579,6 @@ $active_page = 'settings';
               edge_tts: d.servicesEnabled.edge_tts !== false
             };
           }
-          if (d.socialStaging) {
-            this.socialStaging = Object.assign({}, this.socialStaging, d.socialStaging);
-            this.socialStaging.enabled = !!this.socialStaging.enabled;
-            this.socialStaging.cleanupAfterUpload = this.socialStaging.cleanupAfterUpload !== false;
-          }
         }).catch(() => {});
         
         // Scheduler durumu yükle
@@ -618,19 +601,7 @@ $active_page = 'settings';
             falWidth: this.falWidth, falHeight: this.falHeight, falSteps: this.falSteps,
             subtitleStyle: this.subtitleStyle,
             toolsEnabled: this.toolsEnabled,
-            servicesEnabled: this.servicesEnabled,
-            socialStaging: {
-              enabled: !!this.socialStaging.enabled,
-              provider: this.socialStaging.provider || 'r2',
-              bucket: (this.socialStaging.bucket || '').trim(),
-              region: (this.socialStaging.region || 'auto').trim(),
-              endpointUrl: (this.socialStaging.endpointUrl || '').trim(),
-              accessKeyId: (this.socialStaging.accessKeyId || '').trim(),
-              secretAccessKey: (this.socialStaging.secretAccessKey || '').trim(),
-              publicBaseUrl: (this.socialStaging.publicBaseUrl || '').trim(),
-              prefix: (this.socialStaging.prefix || 'instagram').trim() || 'instagram',
-              cleanupAfterUpload: this.socialStaging.cleanupAfterUpload !== false
-            }
+            servicesEnabled: this.servicesEnabled
           })
         })
         .then(r => r.json())
@@ -803,72 +774,6 @@ $active_page = 'settings';
                 <template x-if="checks.ffmpeg.result">
                   <div class="text-xs mt-1 px-1 font-medium" :class="checks.ffmpeg.result.valid ? 'text-green-600' : 'text-red-600'" x-text="checks.ffmpeg.result.message"></div>
                 </template>
-              </div>
-
-              <!-- Instagram Staging -->
-              <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mt-6">
-                <div class="flex items-center justify-between mb-2">
-                  <h2 class="text-lg font-semibold text-gray-800">📦 Instagram Staging</h2>
-                  <label class="toggle-switch">
-                    <input type="checkbox" x-model="socialStaging.enabled">
-                    <span class="toggle-slider"></span>
-                  </label>
-                </div>
-                <p class="text-xs text-gray-500 mb-4">Instagram için yerel videoyu önce object storage'a yükleyip public URL ile paylaşır.</p>
-
-                <div :class="!socialStaging.enabled && 'opacity-40 pointer-events-none'" class="space-y-3">
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div>
-                      <label class="block mb-1 text-sm font-semibold text-gray-700">Provider</label>
-                      <select x-model="socialStaging.provider" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                        <option value="r2">Cloudflare R2</option>
-                        <option value="s3">Amazon S3</option>
-                      </select>
-                    </div>
-                    <div>
-                      <label class="block mb-1 text-sm font-semibold text-gray-700">Bucket</label>
-                      <input type="text" x-model="socialStaging.bucket" placeholder="my-bucket" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                    </div>
-                  </div>
-
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div>
-                      <label class="block mb-1 text-sm font-semibold text-gray-700">Region</label>
-                      <input type="text" x-model="socialStaging.region" placeholder="auto / eu-central-1" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                    </div>
-                    <div>
-                      <label class="block mb-1 text-sm font-semibold text-gray-700">Prefix</label>
-                      <input type="text" x-model="socialStaging.prefix" placeholder="instagram" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                    </div>
-                  </div>
-
-                  <div x-show="socialStaging.provider === 'r2'">
-                    <label class="block mb-1 text-sm font-semibold text-gray-700">R2 Endpoint URL</label>
-                    <input type="text" x-model="socialStaging.endpointUrl" placeholder="https://<account>.r2.cloudflarestorage.com" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                  </div>
-
-                  <div>
-                    <label class="block mb-1 text-sm font-semibold text-gray-700">Public Base URL</label>
-                    <input type="text" x-model="socialStaging.publicBaseUrl" placeholder="https://cdn.example.com" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                    <p class="text-xs text-gray-500 mt-1">Instagram'ın erişeceği herkese açık URL tabanı.</p>
-                  </div>
-
-                  <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
-                    <div>
-                      <label class="block mb-1 text-sm font-semibold text-gray-700">Access Key ID</label>
-                      <input type="password" x-model="socialStaging.accessKeyId" placeholder="AKIA... / R2 key" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                    </div>
-                    <div>
-                      <label class="block mb-1 text-sm font-semibold text-gray-700">Secret Access Key</label>
-                      <input type="password" x-model="socialStaging.secretAccessKey" placeholder="********" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 text-sm">
-                    </div>
-                  </div>
-
-                  <label class="flex items-center gap-2 cursor-pointer pt-1">
-                    <input type="checkbox" x-model="socialStaging.cleanupAfterUpload" class="w-4 h-4 accent-blue-600">
-                    <span class="text-sm text-gray-700">Yükleme sonrası staged dosyayı bucket'tan sil</span>
-                  </label>
-                </div>
               </div>
 
               <!-- Sistem Güncellemesi -->
