@@ -66,7 +66,7 @@ $active_page = 'settings';
       sidebarOpen: false, sidebarCollapsed: localStorage.getItem('sidebarCollapsed') === '1', darkMode: false, activeTab: 'genel',
       geminiKey: '', elevenKey: '', hfKey: '', pexelsKey: '', falKey: '', pollinationsKey: '',
       geminiKeys: [], elevenKeys: [], falKeys: [], pollinationsKeys: [],
-      ttsProvider: 'elevenlabs', geminiModel: 'gemini-2.0-flash',
+      ttsProvider: 'elevenlabs', geminiModel: 'gemini-3.6-flash',
       imageService: 'pollinations', pollinationsModel: 'flux',
       pollinationsTextModel: 'openai-fast', scriptProvider: 'gemini',
       falWidth: 768, falHeight: 768, falSteps: 4,
@@ -540,7 +540,7 @@ $active_page = 'settings';
           this.falKey = d.falKey || '';
           this.pollinationsKey = d.pollinationsKey || '';
           this.ttsProvider = d.ttsProvider || 'elevenlabs';
-          this.geminiModel = d.geminiModel || 'gemini-2.0-flash';
+          this.geminiModel = d.geminiModel || 'gemini-3.6-flash';
           this.imageService = d.imageService || 'pollinations';
           this.pollinationsModel = d.pollinationsModel || 'flux';
           this.pollinationsTextModel = d.pollinationsTextModel || 'openai-fast';
@@ -1104,15 +1104,12 @@ $active_page = 'settings';
                     <div>
                       <label class="block mb-1 text-sm font-semibold text-gray-700">Gemini Model</label>
                       <select x-model="geminiModel" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-sm text-gray-700">
-                        <option value="gemini-2.0-flash">Gemini 2.0 Flash (Hızlı)</option>
-                        <option value="gemini-2.0-flash-lite">Gemini 2.0 Flash Lite</option>
-                        <option value="gemini-2.5-flash">Gemini 2.5 Flash</option>
-                        <option value="gemini-2.5-pro">Gemini 2.5 Pro (Kaliteli)</option>
-                        <option value="gemini-2.5-flash-lite">Gemini 2.5 Flash Lite</option>
-                        <option value="gemini-3-flash-preview">Gemini 3 Flash Preview</option>
-                        <option value="gemini-3-pro-preview">Gemini 3 Pro Preview</option>
-                        <option value="gemini-3.1-flash-lite-preview">Gemini 3.1 Flash Lite Preview</option>
+                        <option value="gemini-3.6-flash">Gemini 3.6 Flash (Önerilen)</option>
+                        <option value="gemini-3.5-flash">Gemini 3.5 Flash</option>
+                        <option value="gemini-3.5-flash-lite">Gemini 3.5 Flash Lite</option>
+                        <option value="gemini-3.1-flash-lite">Gemini 3.1 Flash Lite</option>
                         <option value="gemini-3.1-pro-preview">Gemini 3.1 Pro Preview</option>
+                        <option value="gemini-3-flash-preview">Gemini 3 Flash Preview</option>
                       </select>
                     </div>
                   </template>

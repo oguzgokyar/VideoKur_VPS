@@ -180,7 +180,7 @@ def main():
     config   = load_config(base_dir)
 
     gemini_key = config.get('geminiKey', '')
-    gemini_model = config.get('geminiModel', 'gemini-2.0-flash')
+    gemini_model = config.get('geminiModel', 'gemini-3.6-flash')
 
     # Job ve script metnini yükle
     job = load_job(base_dir, args.job_id)

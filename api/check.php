@@ -113,11 +113,14 @@ function parseApiError($body) {
 switch ($provider) {
     case 'gemini':
         // Pipeline ile aynı kriter: generate_content çağrısıyla test et
-        $model = trim((string)($input['model'] ?? 'gemini-2.0-flash'));
+        $model = trim((string)($input['model'] ?? 'gemini-3.6-flash'));
         $url = "https://generativelanguage.googleapis.com/v1beta/models/" . rawurlencode($model) . ":generateContent?key=" . urlencode($key);
         $payload = [
             'contents' => [
                 ['parts' => [['text' => 'ping']]]
+            ],
+            'generationConfig' => [
+                'maxOutputTokens' => 8
             ]
         ];
         $result = checkApiPost($url, $payload, [], 30);
@@ -149,12 +152,27 @@ switch ($provider) {
                 'error_status' => 'PERMISSION_DENIED'
             ]);
         } elseif ($httpCode === 429 || $err['code'] === '429') {
+            $quotaLimitZero = stripos((string)($err['message'] ?? ''), 'limit: 0') !== false;
+            $retryDelay = null;
+            foreach (($err['details'] ?? []) as $detail) {
+                if (isset($detail['retryDelay'])) {
+                    $retryDelay = (string)$detail['retryDelay'];
+                    break;
+                }
+            }
+            $message = $quotaLimitZero
+                ? "429 RESOURCE_EXHAUSTED: Anahtar geçerli; {$model} modeli için bu projedeki üretim limiti 0. Gemini 3.6 Flash modelini seçin."
+                : '429 RESOURCE_EXHAUSTED: Anahtar geçerli; geçici istek limiti aşıldı.' . ($retryDelay ? " {$retryDelay} sonra tekrar deneyin." : ' Bir süre sonra tekrar deneyin.');
             echo json_encode([
                 'valid' => false,
-                'message' => '429 RESOURCE_EXHAUSTED: Key geçerli ama quota dolu.',
+                'key_valid' => true,
+                'message' => $message,
                 'http_code' => $httpCode,
                 'error_code' => '429',
-                'error_status' => $err['status'] ?: 'RESOURCE_EXHAUSTED'
+                'error_status' => $err['status'] ?: 'RESOURCE_EXHAUSTED',
+                'quota_limit_zero' => $quotaLimitZero,
+                'retry_after' => $retryDelay,
+                'model' => $model
             ]);
         } elseif ($httpCode === 503 || $err['code'] === '503') {
             echo json_encode([

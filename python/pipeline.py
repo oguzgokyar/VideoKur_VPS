@@ -393,7 +393,7 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     fal_key            = config.get('falKey', '')  # Fal.ai API key
     pollinations_key   = config.get('pollinationsKey', '')  # Pollinations API key
     tts_provider       = config.get('ttsProvider', 'elevenlabs')
-    gemini_model       = config.get('geminiModel', 'gemini-2.0-flash')
+    gemini_model       = config.get('geminiModel', 'gemini-3.6-flash')
     image_service      = config.get('imageService', 'pollinations')   # pollinations | fal | huggingface | pexels | auto
     pollinations_model = config.get('pollinationsModel', 'flux')
     script_provider    = config.get('scriptProvider', 'gemini')

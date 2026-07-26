@@ -87,7 +87,7 @@ class SocialMediaScheduler:
         # Initialize metadata optimizers
         config = self._load_config()
         gemini_key = config.get('geminiKey')
-        gemini_model = config.get('geminiModel', 'gemini-2.0-flash')
+        gemini_model = config.get('geminiModel', 'gemini-3.6-flash')
         # Sosyal platformlar icin (TikTok, Instagram, Facebook) → caption + hashtags
         self.metadata_optimizer = PlatformMetadataOptimizer(gemini_key, model=gemini_model)
         # YouTube icin → optimize edilmis title + description + tags

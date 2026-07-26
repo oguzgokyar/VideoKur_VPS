@@ -131,7 +131,7 @@ def run_regenerate(job_id: str, section: str, config_file: str, extra: dict = No
     pollinations_key = config.get('pollinationsKey', '')  # Pollinations API key
     fal_key      = config.get('falKey', '')  # Fal.ai API key
     tts_provider = config.get('ttsProvider', 'elevenlabs')
-    gemini_model = config.get('geminiModel', 'gemini-2.0-flash')
+    gemini_model = config.get('geminiModel', 'gemini-3.6-flash')
     pollinations_model = config.get('pollinationsModel', 'flux')
 
     job_file = os.path.join(jobs_dir, f"{job_id}.json")

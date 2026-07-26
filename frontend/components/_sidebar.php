@@ -159,6 +159,7 @@ $active_page = $active_page ?? 'videos';
       </div>
     </a>
     
+    <a href="notes.php" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'notes' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>" :class="sidebarCollapsedState ? 'justify-center' : ''" :title="sidebarCollapsedState ? 'Notlar' : ''"><span class="text-lg">📚</span><span x-show="!sidebarCollapsedState" class="whitespace-nowrap">Notlar</span></a>
     <?php if ($active_page === 'project'): ?>
     <div class="border-t border-gray-100 dark:border-slate-700 mt-2 pt-2">
       <span 

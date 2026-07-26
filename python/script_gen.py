@@ -131,7 +131,7 @@ Yanıtı şu JSON formatında ver (sadece JSON, başka açıklama yazma):
   "thumbnail_image_prompt": "Professional YouTube thumbnail with dramatic lighting, bold colors, eye-catching composition for news topic, space for text overlay"
 }}"""
 
-def generate_script(title: str, text: str, api_key: str, max_duration: int = 55, model_name: str = 'gemini-2.0-flash', prompt_template: str | None = None, timeout: int = 120) -> dict:
+def generate_script(title: str, text: str, api_key: str, max_duration: int = 55, model_name: str = 'gemini-3.6-flash', prompt_template: str | None = None, timeout: int = 120) -> dict:
     """
     Gemini API ile haber metninden video scripti üretir.
     
@@ -195,7 +195,7 @@ def generate_script(title: str, text: str, api_key: str, max_duration: int = 55,
     return result
 
 
-def generate_script_with_fallback(title: str, text: str, api_keys: list, max_duration: int = 55, model_name: str = 'gemini-2.0-flash', prompt_template: str | None = None, timeout: int = 120) -> dict:
+def generate_script_with_fallback(title: str, text: str, api_keys: list, max_duration: int = 55, model_name: str = 'gemini-3.6-flash', prompt_template: str | None = None, timeout: int = 120) -> dict:
     """
     Multi-key desteği ile Gemini script üretimi.
     

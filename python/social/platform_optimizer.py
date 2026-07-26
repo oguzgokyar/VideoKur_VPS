@@ -50,7 +50,7 @@ class PlatformMetadataOptimizer:
         }
     }
     
-    def __init__(self, gemini_key: str = None, model: str = "gemini-2.0-flash"):
+    def __init__(self, gemini_key: str = None, model: str = "gemini-3.6-flash"):
         """
         Initialize optimizer
         

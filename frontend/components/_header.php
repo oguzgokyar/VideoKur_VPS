@@ -8,6 +8,7 @@ $page_titles = [
   'content' => '📥 İçerikler',
   'scripts' => '📝 Script Yönetimi',
   'settings' => '⚙️ Ayarlar',
+  'notes' => '📚 Notlar',
   'accounts' => '🔗 Hesaplar',
   'accounts_youtube' => '📺 YouTube Hesapları',
   'accounts_meta' => '📘 Meta Hesapları'

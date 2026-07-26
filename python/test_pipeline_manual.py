@@ -53,7 +53,7 @@ def test_pipeline():
             text=TEST_NEWS['text'],
             api_key=gemini_keys[0] if gemini_keys else '',
             max_duration=55,
-            model_name=config.get('geminiModel', 'gemini-2.0-flash')
+            model_name=config.get('geminiModel', 'gemini-3.6-flash')
         )
         if script_result and script_result.get('success') and script_result.get('script'):
             script_data = script_result['script']

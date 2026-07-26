@@ -6,7 +6,7 @@ if [ -n "${TZ:-}" ] && [ -f "/usr/share/zoneinfo/${TZ}" ]; then
   printf '%s\n' "$TZ" > /etc/timezone
 fi
 
-mkdir -p /app/data/jobs /app/data/.locks /app/data/templates /app/data/social_credentials /app/data/youtube_credentials /app/data/update /app/output /app/logs /app/assets
+mkdir -p /app/data/jobs /app/data/.locks /app/data/templates /app/data/social_credentials /app/data/youtube_credentials /app/data/update /app/data/notes /app/output /app/logs /app/assets
 
 seed_file() {
   target="$1"
@@ -30,6 +30,16 @@ seed_file /app/data/scheduler_status.json /app/data-seed/scheduler_status.json '
 
 if [ -d /app/data-seed/templates ]; then
   cp -n /app/data-seed/templates/* /app/data/templates/ 2>/dev/null || true
+fi
+
+# Repository documentation seeds the persistent notes area without overwriting
+# notes edited from the web panel.
+if [ -d /app/docs ]; then
+  cp -Rn /app/docs/. /app/data/notes/ 2>/dev/null || true
+fi
+
+if [ -f /app/docker/migrate_config.php ]; then
+  php /app/docker/migrate_config.php
 fi
 
 chown -R www-data:www-data /app/data /app/output /app/logs /app/assets
