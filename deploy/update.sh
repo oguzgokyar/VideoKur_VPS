@@ -8,20 +8,24 @@ LOCK_FILE=${VIDEOKUR_UPDATE_LOCK:-/tmp/videokur-update.lock}
 
 cd "$PROJECT_DIR"
 
+git_repo() {
+  git -c safe.directory="$PROJECT_DIR" "$@"
+}
+
 exec 9>"$LOCK_FILE"
 if ! flock -n 9; then
   echo "Başka bir VideoKur güncellemesi çalışıyor."
   exit 1
 fi
 
-dirty_code=$(git status --porcelain --untracked-files=no | grep -vE '^.. data/' || true)
+dirty_code=$(git_repo status --porcelain --untracked-files=no | grep -vE '^.. data/' || true)
 if [ -n "$dirty_code" ]; then
   echo "Takip edilen kod dosyalarında yerel değişiklik var; güncelleme durduruldu."
   printf '%s\n' "$dirty_code"
   exit 1
 fi
 
-old_commit=$(git rev-parse HEAD)
+old_commit=$(git_repo rev-parse HEAD)
 timestamp=$(date +%Y%m%d-%H%M%S)
 mkdir -p "$BACKUP_DIR"
 backup="$BACKUP_DIR/videokur-$timestamp.tar.gz"
@@ -38,8 +42,8 @@ fi
 
 # Older releases tracked runtime JSON files. The backup above is authoritative;
 # clean only those legacy tracked files so the first fast-forward can proceed.
-if git ls-files data | grep -q .; then
-  git restore --source=HEAD --worktree -- data
+if git_repo ls-files data | grep -q .; then
+  git_repo restore --source=HEAD --worktree -- data
 fi
 
 current_image=""
@@ -48,9 +52,9 @@ if docker inspect videokur >/dev/null 2>&1; then
   docker tag "$current_image" "videokur:$old_commit"
 fi
 
-git fetch origin "$BRANCH"
-target_commit=$(git rev-parse "origin/$BRANCH")
-git merge --ff-only "$target_commit"
+git_repo fetch origin "$BRANCH"
+target_commit=$(git_repo rev-parse "origin/$BRANCH")
+git_repo merge --ff-only "$target_commit"
 
 # A commit that removes formerly tracked runtime JSON files must not remove
 # live data. Restore the pre-update runtime snapshot after the code update.
@@ -76,6 +80,6 @@ done
 echo "Yeni sürüm health check'i geçemedi; önceki sürüme dönülüyor."
 docker compose logs --tail=100 videokur || true
 APP_VERSION="$old_commit" docker compose up -d --no-build --remove-orphans || true
-git reset --hard "$old_commit"
+git_repo reset --hard "$old_commit"
 if [ -f "$backup" ]; then tar -xzf "$backup" -C "$PROJECT_DIR"; fi
 exit 1
