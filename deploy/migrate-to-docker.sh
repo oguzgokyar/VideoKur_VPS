@@ -30,7 +30,7 @@ for service in $native_services; do
 done
 
 if "$PROJECT_DIR/deploy/update.sh"; then
-  for service in videokur-production videokur-social videokur-content; do
+  for service in $native_services; do
     systemctl disable "$service" 2>/dev/null || true
   done
   echo "Docker geçişi başarılı."
