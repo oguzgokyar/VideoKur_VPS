@@ -50,20 +50,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $source_id = $_GET['source_id'] ?? null;
         $limit = intval($_GET['limit'] ?? 20);
         
-        // Python feed parser'ı çağır
-        $pythonPath = getenv('PYTHON_BIN') ?: 'python';
-        $scriptPath = __DIR__ . '/../python/content/feed_parser.py';
+        // Python feed parser'ı proje kökünden çağır
+        $baseDir = dirname(__DIR__);
+        $venvPython = '/opt/videokur-venv/bin/python';
+        $pythonPath = getenv('PYTHON_BIN') ?: (file_exists($venvPython) ? $venvPython : 'python');
+        $scriptPath = $baseDir . '/python/content/feed_parser.py';
         
-        $cmd = "$pythonPath \"$scriptPath\"";
+        $cmd = escapeshellarg($pythonPath) . ' ' . escapeshellarg($scriptPath);
         if ($source_id && $source_id !== 'all') {
-            $cmd .= " --source-id \"$source_id\"";
+            $cmd .= ' --source-id ' . escapeshellarg($source_id);
         }
-        $cmd .= " --limit $limit";
+        $cmd .= ' --limit ' . intval($limit);
         
-        // Windows'ta çalıştır
         $output = [];
         $return_code = 0;
+        $previousCwd = getcwd();
+        chdir($baseDir);
         exec($cmd . " 2>&1", $output, $return_code);
+        if ($previousCwd) {
+            chdir($previousCwd);
+        }
         
         if ($return_code === 0) {
             // Başarılı - yeni eklenen içerik sayısını bul

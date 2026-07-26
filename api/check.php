@@ -323,17 +323,45 @@ switch ($provider) {
         break;
 
     case 'pollinations_image':
-        $model = $input['model'] ?? 'flux';
-        // Check connectivity using the fast /models endpoint first
-        $modelsResult = checkApi("https://image.pollinations.ai/models", [], 10);
-        if ($modelsResult['code'] !== 200) {
-            echo json_encode(['valid' => false, 'message' => 'Pollinations image API erişilemiyor (HTTP ' . $modelsResult['code'] . ')']);
+        $model = trim((string)($input['model'] ?? ''));
+        if ($model === '') {
+            echo json_encode(['valid' => false, 'message' => 'Pollinations model adı gerekli']);
             break;
         }
-        $availableModels = json_decode($modelsResult['body'], true) ?: [];
-        // Add "flux" to list if not present (it still works even if not in models endpoint)
-        $modelNote = in_array($model, $availableModels) ? $model : "$model (veya: " . implode(', ', $availableModels) . ")";
-        echo json_encode(['valid' => true, 'message' => "Pollinations Görsel API çalışıyor ✓ (Mevcut modeller: " . implode(', ', $availableModels) . ")"]);
+
+        // Üretim pipeline'ı ile aynı güncel API kataloğunu kullan.
+        $headers = !empty($key) ? ['Authorization: Bearer ' . $key] : [];
+        $modelsResult = checkApi('https://gen.pollinations.ai/image/models', $headers, 15);
+        if ($modelsResult['code'] !== 200) {
+            echo json_encode(['valid' => false, 'message' => 'Pollinations model kataloğuna erişilemiyor (HTTP ' . $modelsResult['code'] . ')']);
+            break;
+        }
+
+        $catalog = json_decode($modelsResult['body'], true);
+        $entries = is_array($catalog) && isset($catalog['data']) && is_array($catalog['data'])
+            ? $catalog['data']
+            : (is_array($catalog) ? $catalog : []);
+        $availableModels = [];
+        foreach ($entries as $entry) {
+            if (is_string($entry)) {
+                $availableModels[] = $entry;
+            } elseif (is_array($entry)) {
+                $id = $entry['id'] ?? $entry['name'] ?? $entry['model'] ?? null;
+                if (is_string($id) && $id !== '') {
+                    $availableModels[] = $id;
+                }
+            }
+        }
+        $availableModels = array_values(array_unique($availableModels));
+        if (!$availableModels) {
+            echo json_encode(['valid' => false, 'message' => 'Pollinations model kataloğu okunamadı']);
+            break;
+        }
+        if (!in_array($model, $availableModels, true)) {
+            echo json_encode(['valid' => false, 'message' => 'Model güncel Pollinations görsel kataloğunda yok: ' . $model]);
+            break;
+        }
+        echo json_encode(['valid' => true, 'message' => 'Model üretim endpointinde geçerli ✓ ' . $model]);
         break;
 
     case 'pollinations_text':

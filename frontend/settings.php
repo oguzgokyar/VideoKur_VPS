@@ -639,7 +639,7 @@ $active_page = 'settings';
           this.testKey('pollinations_text', '', {model: this.pollinationsTextModel});
         } else if (this.activeTab === 'gorsel') {
           this.testKey('fal', this.falKey);
-          this.testKey('pollinations_image', '', {model: this.pollinationsModel});
+          this.testKey('pollinations_image', this.pollinationsKey, {model: this.pollinationsModel});
           this.testKey('huggingface', this.hfKey);
           this.testKey('pexels', this.pexelsKey);
         } else if (this.activeTab === 'ses') {
@@ -1235,9 +1235,9 @@ $active_page = 'settings';
 
                   <label class="block mb-1 text-sm font-semibold text-gray-700">Servis Tercihi</label>
                   <select x-model="imageService" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 mb-4 focus:ring-2 focus:ring-blue-500 outline-none text-sm text-gray-700">
-                    <option value="pollinations">🌸 Pollinations FLUX (Önerilen)</option>
+                    <option value="pollinations">🌸 Pollinations API</option>
                     <option value="fal">⚡ Fal.ai FLUX (Hızlı &amp; Ucuz)</option>
-                    <option value="auto">🔄 Otomatik (Pollinations → Fal → HuggingFace → Pexels)</option>
+                    <option value="auto">🔄 Otomatik (Fal → Pollinations → HuggingFace → Pexels)</option>
                     <option value="huggingface">🤗 HuggingFace (SDXL)</option>
                     <option value="pexels">📷 Pexels (Stok Fotoğraf)</option>
                   </select>
@@ -1245,25 +1245,8 @@ $active_page = 'settings';
                   <template x-if="imageService === 'pollinations' || imageService === 'auto'">
                     <div>
                       <label class="block mb-1 text-sm font-semibold text-gray-700">Pollinations Model</label>
-                      <select x-model="pollinationsModel" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-sm text-gray-700">
-                        <optgroup label="🆓 Ücretsiz Modeller">
-                          <option value="flux">Flux Schnell (Hızlı, Önerilen)</option>
-                          <option value="zimage">Z-Image Turbo (2x Upscale)</option>
-                          <option value="gptimage">GPT Image 1 Mini</option>
-                          <option value="grok-imagine">🔥 Grok Imagine (xAI)</option>
-                          <option value="qwen-image">Qwen Image Plus (Alibaba)</option>
-                        </optgroup>
-                        <optgroup label="💎 Premium Modeller">
-                          <option value="grok-imagine-pro">⭐ Grok Aurora Pro (xAI)</option>
-                          <option value="gptimage-large">GPT Image 1.5 Large</option>
-                          <option value="nanobanana">NanoBanana (Gemini 2.5)</option>
-                          <option value="nanobanana-2">NanoBanana 2 (Gemini 3.1)</option>
-                          <option value="nanobanana-pro">NanoBanana Pro (4K)</option>
-                          <option value="seedream5">Seedream 5.0 (ByteDance)</option>
-                          <option value="kontext">FLUX Kontext (Edit)</option>
-                        </optgroup>
-                      </select>
-                      <p class="text-xs text-gray-500 mt-1">Haber videoları için <strong>flux</strong>, <strong>grok-imagine</strong> veya <strong>gptimage</strong> önerilir.</p>
+                      <input type="text" x-model.trim="pollinationsModel" autocomplete="off" spellcheck="false" placeholder="Örn. flux" class="w-full border border-gray-300 rounded-lg px-4 py-2.5 focus:ring-2 focus:ring-blue-500 outline-none text-sm text-gray-700 font-mono">
+                      <p class="text-xs text-gray-500 mt-1">Model adını Pollinations kataloğundaki teknik adıyla girin (örn. <strong>flux</strong>). Kaydetmeden önce <strong>Test Et</strong> ile güncel katalogda doğrulayın.</p>
                     </div>
                   </template>
                 </div>
@@ -1291,7 +1274,7 @@ $active_page = 'settings';
                         <span class="ml-2 text-xs font-medium" :class="checks.pollinations_image.result.valid ? 'text-green-600' : 'text-red-600'" x-text="checks.pollinations_image.result.message"></span>
                       </template>
                     </div>
-                    <button type="button" @click="testKey('pollinations_image', '', {model: pollinationsModel})" :disabled="checks.pollinations_image.loading" class="px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded text-xs font-semibold transition disabled:opacity-50">
+                    <button type="button" @click="testKey('pollinations_image', pollinationsKey, {model: pollinationsModel})" :disabled="checks.pollinations_image.loading" class="px-3 py-1.5 bg-purple-100 hover:bg-purple-200 text-purple-700 rounded text-xs font-semibold transition disabled:opacity-50">
                       <span x-show="!checks.pollinations_image.loading">Test Et</span><span x-show="checks.pollinations_image.loading">⏳</span>
                     </button>
                   </div>

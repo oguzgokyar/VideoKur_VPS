@@ -30,8 +30,8 @@ FAL_COST_OPTIMIZED_SIZE = {"width": 768, "height": 768}  # Maliyet/kalite denges
 # POLLINATIONS AYARLARI
 # ============================================================================
 POLLINATIONS_RATE_LIMIT = 15  # Anonymous tier: 15 saniye/istek
-POLLINATIONS_TIMEOUT = 180
-POLLINATIONS_MAX_RETRIES = 3
+POLLINATIONS_TIMEOUT = 25
+POLLINATIONS_MAX_RETRIES = 2
 
 # Son başarılı istek zamanı (rate limit için)
 _last_pollinations_request = 0
@@ -223,7 +223,6 @@ POLLINATIONS_IMAGE_MODELS = ['flux', 'grok-imagine', 'gptimage', 'zimage', 'qwen
 
 # Pollinations API endpoint'leri
 POLLINATIONS_API_URL = "https://gen.pollinations.ai/image"  # Yeni endpoint (API key destekli)
-POLLINATIONS_FREE_URL = "https://image.pollinations.ai/prompt"  # Eski ücretsiz endpoint
 
 
 def generate_image_pollinations(prompt: str, output_path: str, model: str = None, 
@@ -235,7 +234,7 @@ def generate_image_pollinations(prompt: str, output_path: str, model: str = None
     Args:
         prompt: Görsel açıklaması
         output_path: Çıktı dosya yolu
-        model: AI modeli ('flux', 'turbo') - None ise otomatik fallback
+        model: Ayarlarda seçili Pollinations modeli - None ise otomatik fallback
         width: Görsel genişliği (opsiyonel)
         height: Görsel yüksekliği (opsiyonel)
         enhance: AI ile prompt iyileştirme
@@ -245,48 +244,43 @@ def generate_image_pollinations(prompt: str, output_path: str, model: str = None
     Returns:
         bool: Başarılı ise True
     """
+    if not api_key:
+        print("[Pollinations] HATA: Üretim için Ayarlar''da Pollinations API anahtarı gerekli.")
+        return False
+
     encoded = quote(prompt)
     
-    # Model listesi: belirtilen model varsa önce onu dene, sonra diğerlerini
+    # Ayarda açıkça model seçildiyse sadece o model denenir.
+    # Böylece kullanıcı ayarı dışında ekstra model/API isteği oluşmaz.
     if model:
-        models_to_try = [model] + [m for m in POLLINATIONS_IMAGE_MODELS if m != model]
+        models_to_try = [model]
     else:
         models_to_try = POLLINATIONS_IMAGE_MODELS
     
     for current_model in models_to_try:
         for attempt in range(POLLINATIONS_MAX_RETRIES):
             try:
-                # Rate limit kontrolü (API key varsa daha hızlı)
-                if not api_key:
-                    _wait_for_rate_limit()
-                
                 seed = random.randint(1, 99999)
-                
-                # URL parametreleri
+
+                # Görsel ölçüleri doğrudan üretim servisine iletilir.
                 params = [f"model={current_model}", f"seed={seed}", "enhance=false"]
                 if width:
                     params.append(f"width={width}")
                 if height:
                     params.append(f"height={height}")
                 if enhance:
-                    params[-3] = "enhance=true"  # enhance parametresini güncelle
+                    params[2] = "enhance=true"
                 if safe:
                     params.append("safe=true")
-                if api_key:
-                    params.append(f"key={api_key}")
-                
-                # API key varsa yeni endpoint, yoksa eski endpoint
-                if api_key:
-                    url = f"{POLLINATIONS_API_URL}/{encoded}?{'&'.join(params)}"
-                else:
-                    url = f"{POLLINATIONS_FREE_URL}/{encoded}?{'&'.join(params)}"
-                
-                print(f"[Pollinations] Model={current_model}, Deneme {attempt+1}/{POLLINATIONS_MAX_RETRIES}" + (" (API)" if api_key else " (Free)"))
-                
+
+                # Sunucu tarafı API çağrısında resmi Bearer kimlik doğrulamasını kullan.
+                url = f"{POLLINATIONS_API_URL}/{encoded}?{'&'.join(params)}"
+                print(f"[Pollinations] Model={current_model}, Deneme {attempt+1}/{POLLINATIONS_MAX_RETRIES} (API)")
                 resp = requests.get(url, timeout=POLLINATIONS_TIMEOUT, headers={
-                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36'
+                    'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36',
+                    'Authorization': f"Bearer {api_key}"
                 })
-                
+
                 _update_last_request()
                 
                 if resp.status_code == 200:
@@ -303,6 +297,9 @@ def generate_image_pollinations(prompt: str, output_path: str, model: str = None
                     print(f"[Pollinations] Rate limit aşıldı - 30s bekleniyor...")
                     time.sleep(30)
                     continue
+                elif resp.status_code == 400:
+                    print(f"[Pollinations] Geçersiz istek/model ({current_model}): {resp.text[:200]}")
+                    break
                 elif resp.status_code == 500:
                     error_msg = resp.text[:100] if resp.text else "Unknown error"
                     print(f"[Pollinations] Sunucu hatası ({current_model}): {error_msg}")

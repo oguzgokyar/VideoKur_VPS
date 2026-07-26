@@ -541,8 +541,14 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     def _try_pollinations(prompt, img_path):
         if not svc_pollinations_image:
             return False
-        return generate_image_pollinations(prompt, img_path, pollinations_model, 
-                                           width=video_width, height=video_height, 
+        if not pollinations_key:
+            print("  [Pollinations] API anahtarı yok; ücretsiz endpoint kullanılmayacak.")
+            return False
+        if not str(pollinations_model).strip():
+            print("  [Pollinations] Model adı boş; üretim başlatılmadı.")
+            return False
+        return generate_image_pollinations(prompt, img_path, str(pollinations_model).strip(),
+                                           width=video_width, height=video_height,
                                            api_key=pollinations_key)
 
     def _try_huggingface(prompt, img_path):
@@ -556,8 +562,15 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
         query = ' '.join(prompt.split()[:4])
         return generate_image_pexels(query, img_path, pexels_key) if pexels_key else False
 
+    def _image_exists(img_path):
+        return os.path.exists(img_path) and os.path.getsize(img_path) > 0
+
     def _generate_image(prompt, img_path):
         """Belirtilen servisle görsel üretir, kullanılan servis adını döndürür."""
+        if _image_exists(img_path):
+            print(f"  [Görsel] Mevcut dosya kullanılıyor, API isteği atlanıyor: {os.path.basename(img_path)}")
+            return 'existing'
+
         used_service = 'failed'
         if image_service == 'fal':
             if _try_fal(prompt, img_path):
@@ -583,8 +596,8 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
                 used_service = 'pexels'
         return used_service
 
-    total_images = len(scenes) + (1 if script.get('hook') else 0) + (1 if script.get('outro') else 0)
-    print(f"[3/6] Görseller üretiliyor ({total_images} görsel: sahneler + hook/outro)...")
+    total_images = len(scenes) + (1 if script.get('hook') else 0) + (1 if script.get('outro') else 0) + 1
+    print(f"[3/6] Görseller üretiliyor ({total_images} görsel: sahneler + hook/outro + thumbnail)...")
     update_job(jobs_dir, job_id, {'status': 'imaging'})
 
     # Pause check
@@ -899,11 +912,36 @@ if __name__ == '__main__':
         except Exception as e:
             print(f"[QUEUE] Warning: Could not update queue status: {e}")
         
-        # Run the pipeline
-        run_pipeline(job_id, url, template, config_file)
+        # Run only the failed stage when a retry follows a video composition error.
+        jobs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'jobs')
+        job_file = os.path.join(jobs_dir, f"{job_id}.json")
+        output_dir = os.path.join(base_dir, 'output', job_id)
+        video_retry_error = False
+        if os.path.exists(job_file):
+            try:
+                with open(job_file, 'r', encoding='utf-8') as f:
+                    existing_job = json.load(f)
+                video_retry_error = (
+                    existing_job.get('status') == 'failed'
+                    and 'Video birleştirme başarısız' in str(existing_job.get('error', ''))
+                )
+            except Exception:
+                video_retry_error = False
+
+        video_ready_inputs = all(os.path.exists(os.path.join(output_dir, name)) for name in [
+            'script.json',
+            'audio.mp3',
+            'subtitles.srt'
+        ]) and os.path.isdir(os.path.join(output_dir, 'images'))
+
+        if video_retry_error and video_ready_inputs:
+            print("[RESUME] Video birleştirme hatası sonrası sadece video aşaması yeniden çalıştırılıyor")
+            from regenerate import run_regenerate
+            run_regenerate(job_id, 'video', config_file)
+        else:
+            run_pipeline(job_id, url, template, config_file)
         
         # Check if job completed successfully
-        jobs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'jobs')
         job_file = os.path.join(jobs_dir, f"{job_id}.json")
         success = False
         error_msg = None

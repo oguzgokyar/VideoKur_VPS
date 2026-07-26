@@ -58,10 +58,19 @@ class GlobalProductionLock:
                 print(f"[LOCK] Stale lock detected (age: {age:.0f}s), will clean up")
                 return True
             
-            # Check if PID still exists
+            # If a restarted container reuses the same PID for the same job,
+            # the new pipeline can otherwise wait forever on its own old lock.
             pid = meta.get('pid')
+            if pid == os.getpid() and meta.get('job_id') == self.job_id:
+                print(f"[LOCK] Self-referential lock detected for job {self.job_id}; lock is stale")
+                return True
+
+            # Check if PID still exists
             if pid and not self._pid_exists(pid):
                 print(f"[LOCK] Process {pid} no longer exists, lock is stale")
+                return True
+            if pid and not self._pid_matches_job(pid, meta.get('job_id')):
+                print(f"[LOCK] Process {pid} is not the pipeline for job {meta.get('job_id')}, lock is stale")
                 return True
                 
             return False
@@ -69,6 +78,18 @@ class GlobalProductionLock:
             print(f"[LOCK] Error checking stale lock: {e}")
             return True
     
+    def _pid_matches_job(self, pid: int, job_id: str) -> bool:
+        """Return True only when PID is the pipeline process for this job."""
+        try:
+            if platform.system() == 'Windows':
+                return True
+            cmdline_path = Path('/proc') / str(pid) / 'cmdline'
+            if not cmdline_path.exists():
+                return False
+            cmdline = cmdline_path.read_bytes().replace(b'\x00', b' ').decode('utf-8', errors='ignore')
+            return 'pipeline.py' in cmdline and (job_id or '') in cmdline
+        except Exception:
+            return True
     def _pid_exists(self, pid: int) -> bool:
         """Check if process with given PID exists (cross-platform)."""
         try:
@@ -140,6 +161,8 @@ class GlobalProductionLock:
         """
         if self.acquired:
             return True
+        
+        self.job_id = job_id
         
         # Use provided timeout or fall back to instance timeout
         max_wait = timeout if timeout is not None else self.timeout

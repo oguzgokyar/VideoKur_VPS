@@ -133,7 +133,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $elevenKeys = $normalizeKeys($input['elevenKeys'] ?? []);
     $falKeys = $normalizeKeys($input['falKeys'] ?? []);
     $pollinationsKeys = $normalizeKeys($input['pollinationsKeys'] ?? []);
-
+    $pollinationsModel = trim((string)($input['pollinationsModel'] ?? 'flux'));
+    if ($pollinationsModel === '' || !preg_match('/^[A-Za-z0-9._:-]{1,120}$/', $pollinationsModel)) {
+        echo json_encode(['success' => false, 'error' => 'Pollinations model adı boş olamaz; yalnızca harf, sayı, nokta, alt çizgi, tire ve iki nokta kullanın.']);
+        exit;
+    }
     $knownConfig = [
         'geminiKey' => $geminiKeys[0] ?? '',
         'elevenKey' => $elevenKeys[0] ?? trim((string)($input['elevenKey'] ?? '')),
@@ -148,7 +152,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'ttsProvider' => $input['ttsProvider'] ?? 'elevenlabs',
         'geminiModel' => $input['geminiModel'] ?? 'gemini-3.6-flash',
         'imageService' => $input['imageService'] ?? 'pollinations',
-        'pollinationsModel' => $input['pollinationsModel'] ?? 'flux',
+        'pollinationsModel' => $pollinationsModel,
         'pollinationsTextModel' => $input['pollinationsTextModel'] ?? 'openai',
         'scriptProvider' => $input['scriptProvider'] ?? 'gemini',
         'falWidth' => (int)($input['falWidth'] ?? 768),

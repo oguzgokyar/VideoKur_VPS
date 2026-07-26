@@ -45,6 +45,7 @@ jieba3k==0.35.1
 jmespath==1.1.0
 joblib==1.5.3
 lxml==6.1.1
+lxml_html_clean==0.4.3
 moviepy==2.2.1
 msgpack==1.2.1
 multidict==6.7.1

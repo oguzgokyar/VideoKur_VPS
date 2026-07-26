@@ -437,14 +437,18 @@ def compose_video(scenes: list, images_dir: str, audio_path: str, srt_path: str,
         final = final.with_audio(mixed_audio)
 
         # Önce geçici video oluştur
+        output_dir = os.path.dirname(output_path)
         temp_path = output_path.replace('.mp4', '_temp.mp4')
+        temp_audio_path = os.path.join(output_dir, f"{os.path.splitext(os.path.basename(temp_path))[0]}_audio_temp.m4a")
         final.write_videofile(
             temp_path,
             fps=FPS,
             codec='libx264',
             audio_codec='aac',
             preset='medium',
-            threads=4
+            threads=4,
+            temp_audiofile=temp_audio_path,
+            remove_temp=True
         )
 
         # Close all clips and wait for file handles to release (Windows fix)

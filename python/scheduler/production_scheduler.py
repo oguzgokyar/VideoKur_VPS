@@ -18,23 +18,24 @@ from utils.production_lock import GlobalProductionLock
 
 class ProductionScheduler:
     """Production scheduler - processes queue sequentially"""
-    
+
     def __init__(self, base_dir: str, check_interval: int = 10):
         self.base_dir = Path(base_dir)
         self.check_interval = check_interval
         self.stuck_threshold = 600  # 10 minutes in seconds
         self.watchdog_check_interval = 30  # Check every 30 seconds
         self.last_watchdog_check = 0
-        
+        self.active_process = None
+
         # Initialize queue manager and lock
         self.queue_manager = ProductionQueueManager(str(self.base_dir / 'data'))
         self.production_lock = GlobalProductionLock()
-        
+
         # Paths
         self.config_file = self.base_dir / 'data' / 'config.json'
         self.python_dir = self.base_dir / 'python'
         self.jobs_dir = self.base_dir / 'data' / 'jobs'
-        
+
         print("=" * 70)
         print("Production Scheduler - ACTIVE MODE")
         print("=" * 70)
@@ -47,7 +48,7 @@ class ProductionScheduler:
         print("✅ One video at a time - no parallel processing")
         print("✅ Stuck job detection enabled")
         print("=" * 70)
-    
+
     def run(self):
         """Main loop - process production queue"""
         print()
@@ -56,7 +57,7 @@ class ProductionScheduler:
         print("🔍 Watchdog monitoring for stuck jobs...")
         print("Press Ctrl+C to stop")
         print()
-        
+
         try:
             while True:
                 # Run watchdog check if needed
@@ -64,52 +65,54 @@ class ProductionScheduler:
                 if now - self.last_watchdog_check > self.watchdog_check_interval:
                     self._check_stuck_jobs()
                     self.last_watchdog_check = now
-                
+
                 # Process queue
                 self._process_queue()
                 time.sleep(self.check_interval)
-                
+
         except KeyboardInterrupt:
             print("\n\n⏸️  Production Scheduler stopped")
         except Exception as e:
             print(f"\n❌ Error: {e}")
             traceback.print_exc()
             raise
-    
+
     def _process_queue(self):
         """Check queue and process next job if available"""
         now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
+
+        self._check_active_process()
+
         # Check if production is locked (another process running)
         if self.production_lock.is_locked():
             current_job = self.production_lock.get_current_job()
             print(f"[{now}] ⏳ Production in progress: {current_job}", end='\r')
             return
-        
+
         # Get queue status
         status = self.queue_manager.get_status()
         queue_length = status['queue_length']
         current_job = status['current_job']
-        
+
         if queue_length == 0 and not current_job:
             print(f"[{now}] 💤 Queue empty - waiting for jobs...", end='\r')
             return
-        
+
         # Get next job
         next_job = self.queue_manager.get_next_job()
-        
+
         if not next_job:
             print(f"[{now}] ⏸️  Queue: {queue_length} job(s) | No jobs ready", end='\r')
             return
-        
+
         job_id = next_job['job_id']
         position = next_job.get('position', '?')
-        
+
         print(f"\n[{now}] 🎬 Starting production: {job_id} (position {position}/{queue_length})")
-        
+
         # Start the job
         self._start_production(job_id)
-    
+
     def _start_production(self, job_id: str):
         """Start video production for a job"""
         try:
@@ -118,68 +121,135 @@ class ProductionScheduler:
             if not result['success']:
                 print(f"❌ Failed to start job: {result.get('error')}")
                 return
-            
+
             print(f"📝 Job marked as processing: {job_id}")
-            
+
             # Build pipeline command
             pipeline_script = self.python_dir / 'pipeline.py'
-            
+
             # Get URL from job file
             job_file = self.base_dir / 'data' / 'jobs' / f'{job_id}.json'
             if not job_file.exists():
                 print(f"❌ Job file not found: {job_file}")
                 self.queue_manager.complete_job(job_id, success=False, error='Job file not found')
                 return
-            
+
             with open(job_file, 'r', encoding='utf-8') as f:
                 job_data = json.load(f)
-            
+
             url = job_data.get('url')
             source_mode = (job_data.get('source_mode') or 'url').lower()
             template = job_data.get('template', 'short_haber')
-            
+
             if source_mode != 'prompt' and not url:
                 print(f"❌ No URL in job data")
                 self.queue_manager.complete_job(job_id, success=False, error='No URL in job data')
                 return
             if source_mode == 'prompt' and not url:
                 url = f'prompt://{job_id}'
-            
+
+            log_path = self.base_dir / 'output' / job_id / 'log.txt'
+            log_path.parent.mkdir(parents=True, exist_ok=True)
+            log_handle = open(log_path, 'a', encoding='utf-8', buffering=1)
+            log_handle.write("\n" + "=" * 80 + "\n")
+            log_handle.write(f"Scheduler launch: {datetime.now().isoformat()}\n")
+            log_handle.write("=" * 80 + "\n")
+
             # Start pipeline in background
             cmd = [
-                'python',
+                sys.executable,
                 str(pipeline_script),
                 job_id,
                 url,
                 template,
                 str(self.config_file)
             ]
-            
+
             print(f"🚀 Starting pipeline: {' '.join(cmd)}")
-            
-            # Use detached async execution.
-            # Do NOT pipe stdout/stderr without readers; PIPE buffers can block child process.
+
             process = subprocess.Popen(
                 cmd,
                 cwd=str(self.base_dir),
-                stdout=subprocess.DEVNULL,
+                stdout=log_handle,
                 stderr=subprocess.STDOUT
             )
-            
+            self.active_process = {
+                'job_id': job_id,
+                'process': process,
+                'log_handle': log_handle,
+                'log_path': str(log_path)
+            }
+
             print(f"✅ Pipeline started (PID: {process.pid})")
-            print(f"📊 Status will be monitored by pipeline process")
-            
+            print(f"📄 Pipeline output: {log_path}")
+            print(f"📊 Status will be monitored by scheduler and pipeline process")
         except Exception as e:
             print(f"❌ Error starting production: {e}")
             traceback.print_exc()
-            
+
             # Mark job as failed
             self.queue_manager.complete_job(job_id, success=False, error=str(e))
-    
+
+    def _check_active_process(self):
+        """Detect pipeline failures that the child cannot report."""
+        if not self.active_process:
+            return
+
+        process = self.active_process['process']
+        returncode = process.poll()
+        if returncode is None:
+            return
+
+        job_id = self.active_process['job_id']
+        log_handle = self.active_process.get('log_handle')
+        log_path = self.active_process.get('log_path')
+
+        if log_handle:
+            log_handle.write(f"\nScheduler observed exit code: {returncode}\n")
+            log_handle.close()
+
+        self.active_process = None
+
+        if returncode == 0:
+            print(f"\n✅ Pipeline exited cleanly: {job_id}")
+            return
+
+        error = f"Pipeline exited with code {returncode}. Log: {log_path}"
+        print(f"\n❌ Pipeline failed: {job_id}")
+        print(f"   {error}")
+
+        self._mark_job_failed(job_id, error)
+        self.queue_manager.complete_job(job_id, success=False, error=error)
+
+    def _mark_job_failed(self, job_id: str, error: str):
+        """Update job file when pipeline dies before it can update its own status."""
+        job_file = self.jobs_dir / f'{job_id}.json'
+        if not job_file.exists():
+            return
+
+        try:
+            with open(job_file, 'r', encoding='utf-8') as f:
+                job = json.load(f)
+
+            job['status'] = 'failed'
+            job['error'] = error
+            job['failed_at'] = datetime.now().isoformat()
+            job['last_update_time'] = time.time()
+            job['updated_at'] = time.strftime('%Y-%m-%d %H:%M:%S')
+
+            temp_file = self.jobs_dir / f'{job_id}.json.tmp'
+            with open(temp_file, 'w', encoding='utf-8') as f:
+                json.dump(job, f, ensure_ascii=False, indent=2)
+
+            temp_file.replace(job_file)
+
+        except Exception as e:
+            print(f"⚠️ Could not mark job failed: {e}")
+
     def _check_stuck_jobs(self):
         """
         Watchdog: Check for stuck jobs and mark them as stuck
-        
+
         A job is considered stuck if:
         - Status is 'processing', 'scripting', 'rendering', etc.
         - No progress update for stuck_threshold seconds (default 10 minutes)
@@ -188,29 +258,29 @@ class ProductionScheduler:
             # Get all job files
             if not self.jobs_dir.exists():
                 return
-            
+
             now = time.time()
             stuck_count = 0
-            
+
             for job_file in self.jobs_dir.glob('*.json'):
                 # Skip temp files
                 if job_file.name.endswith('.tmp'):
                     continue
-                
+
                 try:
                     with open(job_file, 'r', encoding='utf-8') as f:
                         job = json.load(f)
-                    
+
                     job_id = job.get('id', job_file.stem)
                     status = job.get('status', '')
-                    
+
                     # Only check active jobs
                     if status not in ['processing', 'scripting', 'rendering', 'generating']:
                         continue
-                    
+
                     # Check last update time
                     last_update = job.get('last_update_time', job.get('created_at', now))
-                    
+
                     # Convert created_at string to timestamp if needed
                     if isinstance(last_update, str):
                         try:
@@ -219,41 +289,41 @@ class ProductionScheduler:
                             last_update = dt.timestamp()
                         except:
                             last_update = now
-                    
+
                     elapsed = now - last_update
-                    
+
                     # Check if stuck
                     if elapsed > self.stuck_threshold:
                         stuck_count += 1
                         elapsed_minutes = int(elapsed // 60)
-                        
+
                         print(f"\n🚨 STUCK JOB DETECTED: {job_id}")
                         print(f"   Status: {status}")
                         print(f"   No update for: {elapsed_minutes} minutes")
                         print(f"   Threshold: {self.stuck_threshold//60} minutes")
-                        
+
                         # Mark as stuck
                         self._mark_job_stuck(job_id, elapsed_minutes, status)
-                        
+
                 except Exception as e:
                     # Skip problematic job files
                     print(f"⚠️ Error checking job {job_file.name}: {e}")
                     continue
-            
+
             if stuck_count > 0:
                 print(f"\n⚠️ Watchdog found {stuck_count} stuck job(s)\n")
-                
+
         except Exception as e:
             print(f"⚠️ Watchdog error: {e}")
-    
+
     def _mark_job_stuck(self, job_id: str, elapsed_minutes: int, previous_status: str):
         """Mark a job as stuck and notify user"""
         job_file = self.jobs_dir / f'{job_id}.json'
-        
+
         try:
             with open(job_file, 'r', encoding='utf-8') as f:
                 job = json.load(f)
-            
+
             # Update job status
             job['status'] = 'stuck'
             job['previous_status'] = previous_status
@@ -268,28 +338,28 @@ class ProductionScheduler:
             job['stuck_elapsed_minutes'] = elapsed_minutes
             job['last_update_time'] = time.time()
             job['updated_at'] = time.strftime('%Y-%m-%d %H:%M:%S')
-            
+
             # Write atomically
             temp_file = self.jobs_dir / f'{job_id}.json.tmp'
             with open(temp_file, 'w', encoding='utf-8') as f:
                 json.dump(job, f, ensure_ascii=False, indent=2)
-            
+
             temp_file.replace(job_file)
-            
+
             print(f"✅ Job {job_id} marked as stuck")
-            
+
         except Exception as e:
             print(f"❌ Error marking job as stuck: {e}")
-    
+
     def _check_status(self):
         """Check and display queue status"""
         status = self.queue_manager.get_status()
         now = datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-        
+
         queue_length = status['queue_length']
         current_job = status['current_job']
         stats = status['stats']
-        
+
         if current_job:
             print(f"[{now}] 🎬 Processing: {current_job} | Queue: {queue_length}", end='\r')
         elif queue_length > 0:
@@ -300,11 +370,11 @@ class ProductionScheduler:
 
 if __name__ == '__main__':
     import argparse
-    
+
     parser = argparse.ArgumentParser(description='Production Scheduler (Passive Mode)')
     parser.add_argument('--interval', type=int, default=30, help='Check interval in seconds')
     args = parser.parse_args()
-    
+
     base_dir = Path(__file__).parent.parent.parent
     scheduler = ProductionScheduler(str(base_dir), args.interval)
     scheduler.run()
