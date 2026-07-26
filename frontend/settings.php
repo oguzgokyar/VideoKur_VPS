@@ -906,6 +906,8 @@ $active_page = 'settings';
                     <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">GitHub sürümü</p>
                     <p class="font-mono text-base font-semibold text-gray-800 dark:text-white" x-text="systemUpdate.latest_short || '-'"></p>
                     <p x-show="systemUpdate.latest_message" class="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate" x-text="systemUpdate.latest_message"></p>
+                    <p x-show="systemUpdate.checked_at" class="text-xs text-gray-400 dark:text-gray-500 mt-1"
+                      x-text="'Son kontrol: ' + new Date(systemUpdate.checked_at).toLocaleString('tr-TR')"></p>
                   </div>
                 </div>
 
