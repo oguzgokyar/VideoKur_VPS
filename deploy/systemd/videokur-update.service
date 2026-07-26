@@ -1,0 +1,11 @@
+[Unit]
+Description=VideoKur web panel update runner
+After=docker.service network-online.target
+Requires=docker.service
+
+[Service]
+Type=oneshot
+User=root
+WorkingDirectory=/var/www/videokur
+ExecStart=/var/www/videokur/deploy/host-update-runner.sh
+TimeoutStartSec=30min

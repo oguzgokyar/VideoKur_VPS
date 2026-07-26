@@ -70,6 +70,9 @@ while [ "$attempt" -lt 30 ]; do
   health=$(docker inspect --format '{{if .State.Health}}{{.State.Health.Status}}{{else}}none{{end}}' videokur 2>/dev/null || true)
   if [ "$health" = "healthy" ]; then
     printf '%s\n' "$target_commit" > .current-version
+    if [ "$(id -u)" -eq 0 ] && [ -x "$PROJECT_DIR/deploy/install-update-service.sh" ]; then
+      "$PROJECT_DIR/deploy/install-update-service.sh" || echo "Uyarı: Web güncelleme hizmeti kurulamadı."
+    fi
     echo "VideoKur güncellendi: $target_commit"
     exit 0
   fi

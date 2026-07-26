@@ -6,7 +6,7 @@ if [ -n "${TZ:-}" ] && [ -f "/usr/share/zoneinfo/${TZ}" ]; then
   printf '%s\n' "$TZ" > /etc/timezone
 fi
 
-mkdir -p /app/data/jobs /app/data/.locks /app/data/templates /app/data/social_credentials /app/data/youtube_credentials /app/output /app/logs /app/assets
+mkdir -p /app/data/jobs /app/data/.locks /app/data/templates /app/data/social_credentials /app/data/youtube_credentials /app/data/update /app/output /app/logs /app/assets
 
 seed_file() {
   target="$1"

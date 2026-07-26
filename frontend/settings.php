@@ -288,6 +288,21 @@ $active_page = 'settings';
       maintenanceLoading: false,
       maintenanceConfirmText: '',
       maintenanceResult: null,
+
+      // System update state
+      systemUpdate: {
+        loading: false,
+        update_enabled: false,
+        current_short: '-',
+        latest_short: '-',
+        update_available: false,
+        check_error: null,
+        deployment_status: { state: 'idle', message: 'Güncelleme bekleniyor.' }
+      },
+      systemUpdateBusy: false,
+      systemUpdateMessage: '',
+      systemUpdateError: '',
+      systemUpdatePollTimer: null,
       
       // Scheduler methods
       async loadSchedulerStatus() {
@@ -458,6 +473,70 @@ $active_page = 'settings';
           this.maintenanceLoading = false;
         }
       },
+      async loadSystemUpdate(force = false) {
+        this.systemUpdate.loading = true;
+        if (!this.systemUpdateBusy) this.systemUpdateError = '';
+        try {
+          const response = await fetch('/api/system_update.php?refresh=' + (force ? '1' : '0'), {
+            headers: { 'Accept': 'application/json' },
+            cache: 'no-store'
+          });
+          const data = await response.json();
+          if (!response.ok || !data.success) throw new Error(data.error || 'Sürüm bilgisi alınamadı.');
+
+          this.systemUpdate = Object.assign({ loading: false }, data);
+          const state = data.deployment_status?.state || 'idle';
+          if (state === 'running') {
+            this.systemUpdateBusy = true;
+            this.systemUpdateMessage = data.deployment_status?.message || 'Güncelleme devam ediyor...';
+            this.scheduleSystemUpdatePoll();
+          } else if (this.systemUpdateBusy && state === 'failed') {
+            this.systemUpdateBusy = false;
+            this.systemUpdateError = data.deployment_status?.message || 'Güncelleme başarısız oldu.';
+          } else if (this.systemUpdateBusy && state === 'success' && !data.update_available) {
+            this.systemUpdateBusy = false;
+            this.systemUpdateMessage = data.deployment_status?.message || 'Güncelleme tamamlandı.';
+          } else if (this.systemUpdateBusy) {
+            this.scheduleSystemUpdatePoll();
+          }
+        } catch (error) {
+          this.systemUpdate.loading = false;
+          this.systemUpdateError = this.systemUpdateBusy
+            ? 'Uygulama yeni sürümle yeniden başlatılıyor...'
+            : (error.message || 'GitHub bağlantısı kurulamadı.');
+          if (this.systemUpdateBusy) this.scheduleSystemUpdatePoll();
+        }
+      },
+      scheduleSystemUpdatePoll() {
+        if (this.systemUpdatePollTimer) clearTimeout(this.systemUpdatePollTimer);
+        this.systemUpdatePollTimer = setTimeout(() => this.loadSystemUpdate(false), 3000);
+      },
+      async startSystemUpdate() {
+        if (!this.systemUpdate.update_enabled || !this.systemUpdate.update_available || this.systemUpdateBusy) return;
+        const target = this.systemUpdate.latest_short || 'son sürüm';
+        if (!confirm(`VideoKur ${target} sürümüne güncellensin mi?\n\nCanlı veriler yedeklenecek ve uygulama kısa süreliğine yeniden başlayacak.`)) return;
+
+        this.systemUpdateBusy = true;
+        this.systemUpdateError = '';
+        this.systemUpdateMessage = 'Güncelleme isteği gönderiliyor...';
+        try {
+          const response = await fetch('/api/system_update.php', {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json',
+              'X-Requested-With': 'VideoKur'
+            },
+            body: JSON.stringify({ action: 'update' })
+          });
+          const data = await response.json();
+          if (!response.ok || !data.success) throw new Error(data.error || 'Güncelleme başlatılamadı.');
+          this.systemUpdateMessage = data.message || 'Güncelleme başlatıldı.';
+          this.scheduleSystemUpdatePoll();
+        } catch (error) {
+          this.systemUpdateBusy = false;
+          this.systemUpdateError = error.message || 'Güncelleme isteği gönderilemedi.';
+        }
+      },
       toggleDark() {
         this.darkMode = !this.darkMode;
         localStorage.setItem('darkMode', this.darkMode ? '1' : '0');
@@ -522,6 +601,7 @@ $active_page = 'settings';
         // Scheduler durumu yükle
         this.loadSchedulerStatus();
         this.loadSchedulerLogs();
+        this.loadSystemUpdate(false);
       },
       saveConfig() {
         this.saveMsg = ''; this.saveError = false;
@@ -789,6 +869,57 @@ $active_page = 'settings';
                     <span class="text-sm text-gray-700">Yükleme sonrası staged dosyayı bucket'tan sil</span>
                   </label>
                 </div>
+              </div>
+
+              <!-- Sistem Güncellemesi -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 mt-6">
+                <div class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4 mb-5">
+                  <div>
+                    <h2 class="text-lg font-semibold text-gray-800 dark:text-white">🚀 Sistem Güncellemesi</h2>
+                    <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                      GitHub <span class="font-mono" x-text="systemUpdate.repository || 'oguzgokyar/VideoKur_VPS'"></span>
+                      deposunun <span class="font-mono" x-text="systemUpdate.branch || 'main'"></span> dalını kontrol eder.
+                    </p>
+                  </div>
+                  <div class="flex flex-wrap gap-2">
+                    <button type="button" @click="loadSystemUpdate(true)" :disabled="systemUpdate.loading || systemUpdateBusy"
+                      class="px-4 py-2 rounded-lg bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-slate-600 text-sm font-semibold transition disabled:opacity-50">
+                      <span x-show="!systemUpdate.loading">🔍 Güncelleme Kontrol Et</span>
+                      <span x-show="systemUpdate.loading">⏳ Kontrol ediliyor...</span>
+                    </button>
+                    <button type="button" @click="startSystemUpdate()"
+                      :disabled="!systemUpdate.update_enabled || !systemUpdate.update_available || systemUpdateBusy || !!systemUpdate.check_error"
+                      class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-semibold transition disabled:opacity-40 disabled:cursor-not-allowed">
+                      <span x-show="!systemUpdateBusy && systemUpdate.update_enabled">⬆️ Güncelle</span>
+                      <span x-show="systemUpdateBusy">⏳ Güncelleniyor...</span>
+                      <span x-show="!systemUpdateBusy && !systemUpdate.update_enabled">Yalnızca VPS</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-3 mb-4">
+                  <div class="p-4 bg-gray-50 dark:bg-slate-900 rounded-lg border border-gray-100 dark:border-slate-700">
+                    <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">Kurulu sürüm</p>
+                    <p class="font-mono text-base font-semibold text-gray-800 dark:text-white" x-text="systemUpdate.current_short || '-'"></p>
+                  </div>
+                  <div class="p-4 bg-gray-50 dark:bg-slate-900 rounded-lg border border-gray-100 dark:border-slate-700">
+                    <p class="text-xs uppercase tracking-wide text-gray-500 dark:text-gray-400 mb-1">GitHub sürümü</p>
+                    <p class="font-mono text-base font-semibold text-gray-800 dark:text-white" x-text="systemUpdate.latest_short || '-'"></p>
+                    <p x-show="systemUpdate.latest_message" class="text-xs text-gray-500 dark:text-gray-400 mt-1 truncate" x-text="systemUpdate.latest_message"></p>
+                  </div>
+                </div>
+
+                <div x-show="!systemUpdate.loading && !systemUpdate.check_error && systemUpdate.latest_version"
+                  class="p-3 rounded-lg text-sm font-medium"
+                  :class="systemUpdate.update_available ? 'bg-amber-50 border border-amber-200 text-amber-800' : 'bg-green-50 border border-green-200 text-green-700'">
+                  <span x-text="systemUpdate.update_available ? '🆕 GitHub’da yeni bir sürüm var.' : '✅ Uygulama güncel.'"></span>
+                </div>
+
+                <div x-show="systemUpdateMessage" class="mt-3 p-3 rounded-lg bg-blue-50 border border-blue-200 text-blue-700 text-sm" x-text="systemUpdateMessage"></div>
+                <div x-show="systemUpdateError || systemUpdate.check_error" class="mt-3 p-3 rounded-lg bg-red-50 border border-red-200 text-red-700 text-sm" x-text="systemUpdateError || systemUpdate.check_error"></div>
+                <p x-show="!systemUpdate.update_enabled" class="text-xs text-gray-500 dark:text-gray-400 mt-3">
+                  Yerel Docker ortamında yalnızca sürüm kontrol edilir. Güncelleme düğmesi güvenlik nedeniyle VPS yayın ortamında aktiftir.
+                </p>
               </div>
             </div>
 

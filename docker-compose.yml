@@ -9,6 +9,11 @@ services:
     environment:
       APP_ENV: "${APP_ENV:-local}"
       APP_BASE_URL: "${APP_BASE_URL:-http://localhost:8000}"
+      APP_VERSION: "${APP_VERSION:-local}"
+      APP_UPDATE_ENABLED: "${APP_UPDATE_ENABLED:-false}"
+      APP_GITHUB_REPOSITORY: "${APP_GITHUB_REPOSITORY:-oguzgokyar/VideoKur_VPS}"
+      APP_GITHUB_BRANCH: "${APP_GITHUB_BRANCH:-main}"
+      APP_UPDATE_DIR: /app/data/update
       TZ: "${TZ:-Europe/Istanbul}"
       SOCIAL_SCHEDULER_INTERVAL: "${SOCIAL_SCHEDULER_INTERVAL:-60}"
       PYTHON_BIN: /opt/videokur-venv/bin/python

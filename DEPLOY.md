@@ -50,6 +50,15 @@ Script runtime verilerini yedekler, native Nginx/PHP-FPM/scheduler servislerini 
 
 ## Sonraki VPS güncellemeleri
 
+En kolay yöntem panelde **Ayarlar → Genel → Sistem Güncellemesi** bölümünden önce **Güncelleme Kontrol Et**, ardından **Güncelle** düğmesine basmaktır. Web güncelleme hizmetinin ilk kurulumu:
+
+```bash
+cd /var/www/videokur
+sudo ./deploy/install-update-service.sh
+```
+
+Komut satırı alternatifi:
+
 ```bash
 cd /var/www/videokur
 sudo ./deploy/update.sh
@@ -89,4 +98,4 @@ Host bind volume'leri
 └── ./assets -> /app/assets
 ```
 
-`deploy/nginx/` ve `deploy/systemd/` altındaki dosyalar yalnız eski native kurulumun geri dönüş referanslarıdır. Aktif ortak container yapılandırmaları `docker/` altındadır.
+`deploy/nginx/` ve eski scheduler unit dosyaları yalnız native kurulumun geri dönüş referanslarıdır. `videokur-update.path` ile `videokur-update.service`, web panelinden güvenli host güncellemesini tetikleyen aktif unit dosyalarıdır. Ortak container yapılandırmaları `docker/` altındadır.
