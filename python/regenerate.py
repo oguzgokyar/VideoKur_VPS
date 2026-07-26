@@ -481,7 +481,8 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
         update_job(jobs_dir, job_id, {'status': 'composing'})
         video_scenes = []
         for idx, seg in enumerate(segments):
-            vs = {'text': seg['text'], 'duration': actual_durations[idx], 'type': seg['type']}
+            vs = {'text': seg['text'], 'duration': actual_durations[idx], 'type': seg['type'],
+                  'effect': seg.get('effect', 'ken_burns_zoom_in')}
             if seg['type'] == 'scene':
                 vs['image_index'] = seg['index']
             video_scenes.append(vs)
@@ -545,7 +546,9 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             lock.acquire(job_id, blocking=True)
             
             video_ok = compose_video(video_scenes, images_dir, audio_path, srt_path, video_path,
-                                     subtitle_style=subtitle_style)
+                                     subtitle_style=subtitle_style,
+                                     width=video_width, height=video_height,
+                                     fps=int(job.get('videoFPS', config.get('videoFPS', 30))))
         except TimeoutError as e:
             print(f"  [Lock] Timeout: {e}")
             update_job(jobs_dir, job_id, {'status': prev_status, 'error': f'Lock timeout: {e}'})

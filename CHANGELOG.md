@@ -4,6 +4,23 @@ Bu dosya, projedeki tüm önemli değişiklikleri kronolojik sırayla takip eder
 
 ---
 
+## [2.6.0] - 2026-07-27 - FFmpeg Video Motoru ve Minimal Ana Sayfa
+
+### ⚡ Video Üretimi
+- MoviePy tabanlı kompozisyon tamamen kaldırıldı; video, ses, altyazı ve isteğe bağlı BGM tek FFmpeg encode geçişinde üretiliyor.
+- FFmpeg graph builder, güvenli process runner, FFprobe doğrulaması, zaman aşımı, `.part` çıktı ve atomik yayınlama eklendi.
+- 9:16, 1:1, 16:9 ve özel ebatlar destekleniyor; 14 görsel efekt FFmpeg filtrelerine taşındı.
+- 49,56 saniyelik 1080×1920 test videosu container içinde yaklaşık 20 saniyede üretildi; eski MoviePy ilk encode ölçümü 139 saniyeydi.
+
+### 🏠 Arayüz
+- Yeni minimalist ana sayfa eklendi: hızlı URL/prompt ile proje başlatma ve tamamlanmış videolar için oynatılabilir kapak grid'i.
+- Eski ayrıntılı video yönetim ekranı `videos.php` adresine taşındı; sidebar ve kuyruk bağlantıları yeni adrese güncellendi.
+
+### 🧪 Doğrulama
+- FFmpeg efekt, çözünürlük, BGM ve altyazı testleri; Docker imajı, PHP syntax ve sağlık kontrolleri başarıyla tamamlandı.
+
+---
+
 ## [2.5.1] - 2026-04-13 - Meta Hesap Kaynağı Birleştirme
 
 ### 🧹 Kaldırılanlar

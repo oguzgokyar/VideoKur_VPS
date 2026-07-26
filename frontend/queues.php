@@ -1745,7 +1745,7 @@
                     <div class="max-h-[500px] overflow-y-auto" id="videoSortList">
                       <div x-show="filteredVideos.length === 0" class="p-6 text-center">
                         <p class="text-gray-400 dark:text-gray-500 text-sm">Video yok</p>
-                        <a href="dashboard.php" class="text-indigo-600 text-xs hover:underline mt-2 inline-block">Ekle →</a>
+                        <a href="videos.php" class="text-indigo-600 text-xs hover:underline mt-2 inline-block">Ekle →</a>
                       </div>
                       
                       <template x-for="(video, idx) in filteredVideos" :key="idx">
@@ -2676,7 +2676,7 @@
               <template x-if="!selectedQueue.videos || selectedQueue.videos.length === 0">
                 <div class="text-center py-8 bg-gray-50 dark:bg-slate-700 rounded-xl">
                   <p class="text-gray-500 dark:text-gray-400">Bu kuyrukta henüz video yok.</p>
-                  <a href="dashboard.php" class="inline-block mt-3 text-indigo-600 dark:text-indigo-400 hover:underline">Videolar sayfasından ekleyin →</a>
+                  <a href="videos.php" class="inline-block mt-3 text-indigo-600 dark:text-indigo-400 hover:underline">Videolar sayfasından ekleyin →</a>
                 </div>
               </template>
               

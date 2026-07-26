@@ -3,23 +3,23 @@ $active_page = $active_page ?? 'videos';
 ?>
 <div x-show="sidebarOpen" @click="sidebarOpen = false" class="fixed inset-0 bg-black/30 z-20 md:hidden" x-transition.opacity></div>
 
-<aside 
+<aside
   x-data="{ sidebarCollapsedState: localStorage.getItem('sidebarCollapsed') === '1' }"
   :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'"
   class="fixed md:static inset-y-0 left-0 z-30 bg-white dark:bg-slate-800 border-r border-gray-200 dark:border-slate-700 transform transition-all duration-300 ease-in-out pt-16 md:pt-0 overflow-hidden"
   :style="sidebarCollapsedState ? 'width: 4rem' : 'width: 15rem'"
 >
   <!-- Toggle Button (Desktop Only) -->
-  <button 
+  <button
     @click="sidebarCollapsedState = !sidebarCollapsedState; localStorage.setItem('sidebarCollapsed', sidebarCollapsedState ? '1' : '0')"
     class="hidden md:flex absolute top-4 -right-3 z-40 w-6 h-6 bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-full items-center justify-center shadow-sm hover:shadow-md transition-all hover:scale-110"
     title="Sidebar'ı aç/kapat"
   >
-    <svg 
+    <svg
       class="w-3 h-3 text-gray-600 dark:text-gray-300 transition-transform duration-300"
       :class="sidebarCollapsedState ? 'rotate-180' : ''"
-      fill="none" 
-      viewBox="0 0 24 24" 
+      fill="none"
+      viewBox="0 0 24 24"
       stroke="currentColor"
     >
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M15 19l-7-7 7-7"/>
@@ -27,8 +27,18 @@ $active_page = $active_page ?? 'videos';
   </button>
 
   <nav class="flex flex-col p-3 gap-1">
-    <a 
-      href="create.php" 
+    <a
+      href="dashboard.php"
+      class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'home' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
+      :class="sidebarCollapsedState ? 'justify-center' : ''"
+      :title="sidebarCollapsedState ? 'Ana Sayfa' : ''"
+    >
+      <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 11.5L12 4l9 7.5M5 10v10h14V10M9 20v-6h6v6"/></svg>
+      <span x-show="!sidebarCollapsedState" class="whitespace-nowrap">Ana Sayfa</span>
+      <div x-show="sidebarCollapsedState" class="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">Ana Sayfa</div>
+    </a>
+    <a
+      href="create.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'create' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'Yeni Video' : ''"
@@ -40,9 +50,9 @@ $active_page = $active_page ?? 'videos';
         Yeni Video
       </div>
     </a>
-    
-    <a 
-      href="content.php" 
+
+    <a
+      href="content.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'content' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'İçerikler' : ''"
@@ -53,9 +63,9 @@ $active_page = $active_page ?? 'videos';
         İçerikler
       </div>
     </a>
-    
-    <a 
-      href="dashboard.php" 
+
+    <a
+      href="videos.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'videos' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'Videolar' : ''"
@@ -66,9 +76,9 @@ $active_page = $active_page ?? 'videos';
         Videolar
       </div>
     </a>
-    
-    <a 
-      href="queues.php" 
+
+    <a
+      href="queues.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'queues' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'Kuyruklar' : ''"
@@ -79,9 +89,9 @@ $active_page = $active_page ?? 'videos';
         Kuyruklar
       </div>
     </a>
-    
-    <a 
-      href="scripts.php" 
+
+    <a
+      href="scripts.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'scripts' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'Script Yönetimi' : ''"
@@ -93,8 +103,8 @@ $active_page = $active_page ?? 'videos';
       </div>
     </a>
 
-    <a 
-      href="music.php" 
+    <a
+      href="music.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'music' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'Müzik Yönetimi' : ''"
@@ -105,7 +115,7 @@ $active_page = $active_page ?? 'videos';
         Müzik Yönetimi
       </div>
     </a>
-    
+
     <div class="border-t border-gray-100 dark:border-slate-700 mt-2 pt-2 space-y-1">
       <div
         class="flex items-center gap-3 px-3 py-2 text-xs uppercase tracking-wide font-semibold rounded-lg group <?= in_array($active_page, ['accounts_youtube', 'accounts_meta'], true) ? 'text-blue-700 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20' : 'text-gray-500 dark:text-gray-400' ?>"
@@ -145,9 +155,9 @@ $active_page = $active_page ?? 'videos';
         </div>
       </a>
     </div>
-    
-    <a 
-      href="settings.php" 
+
+    <a
+      href="settings.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'settings' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
       :title="sidebarCollapsedState ? 'Ayarlar' : ''"
@@ -158,11 +168,11 @@ $active_page = $active_page ?? 'videos';
         Ayarlar
       </div>
     </a>
-    
+
     <a href="notes.php" class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'notes' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>" :class="sidebarCollapsedState ? 'justify-center' : ''" :title="sidebarCollapsedState ? 'Notlar' : ''"><span class="text-lg">📚</span><span x-show="!sidebarCollapsedState" class="whitespace-nowrap">Notlar</span></a>
     <?php if ($active_page === 'project'): ?>
     <div class="border-t border-gray-100 dark:border-slate-700 mt-2 pt-2">
-      <span 
+      <span
         class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold text-sm group"
         :class="sidebarCollapsedState ? 'justify-center' : ''"
       >

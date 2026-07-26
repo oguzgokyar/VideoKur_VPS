@@ -22,6 +22,7 @@ from tts_engine import generate_tts
 from image_gen import generate_image, generate_image_fal, generate_image_pollinations, generate_image_huggingface, generate_image_pexels
 from subtitle_gen import generate_srt
 from video_composer import compose_video, SUBTITLE_PRESETS
+from media_probe import find_ffmpeg, get_media_duration
 from utils.video_lock import VideoCompositorLock, setup_job_temp_dir, cleanup_job_temp_dir
 from utils.production_lock import GlobalProductionLock
 
@@ -275,28 +276,20 @@ def check_pause(jobs_dir: str, job_id: str, timeout: int = 3600):
 
 
 def get_audio_duration(audio_path: str) -> float:
-    """Ses dosyasının süresini saniye cinsinden döndürür."""
-    try:
-        from moviepy import AudioFileClip
-        clip = AudioFileClip(audio_path)
-        duration = clip.duration
-        clip.close()
-        return duration
-    except Exception:
-        return 5.0
+    """Ses dosyasının süresini ffprobe ile saniye cinsinden döndürür."""
+    return get_media_duration(audio_path, fallback=5.0)
 
 
 def concat_audio_files(audio_files: list, output_path: str) -> bool:
     """ffmpeg ile ses dosyalarını birleştirir."""
     try:
-        from moviepy.config import FFMPEG_BINARY
         concat_dir = os.path.dirname(output_path)
         list_file = os.path.join(concat_dir, '_concat_list.txt')
         with open(list_file, 'w', encoding='utf-8') as f:
             for af in audio_files:
-                safe_path = af.replace('\\', '/')
+                safe_path = os.path.abspath(af).replace('\\', '/').replace("'", "'\\''")
                 f.write(f"file '{safe_path}'\n")
-        cmd = [FFMPEG_BINARY, '-y', '-f', 'concat', '-safe', '0',
+        cmd = [find_ffmpeg(), '-y', '-f', 'concat', '-safe', '0',
                '-i', list_file, '-c', 'copy', output_path]
         result = subprocess.run(cmd, capture_output=True, text=True)
         os.remove(list_file)
@@ -844,7 +837,10 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
             subtitle_style,
             enable_effects,
             bgm_path=bgm_path,
-            bgm_volume_db=bgm_volume_db
+            bgm_volume_db=bgm_volume_db,
+            width=video_width,
+            height=video_height,
+            fps=int(job_data.get('videoFPS', config.get('videoFPS', 30)))
         )
         
     except TimeoutError as e:

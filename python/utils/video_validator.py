@@ -3,10 +3,15 @@ Video Validator and Optimizer
 Validates video specs and optimizes for YouTube Shorts
 """
 import os
-import subprocess
-import json
 from pathlib import Path
 from typing import Dict, Optional, Tuple
+import sys
+
+PYTHON_DIR = str(Path(__file__).resolve().parent.parent)
+if PYTHON_DIR not in sys.path:
+    sys.path.insert(0, PYTHON_DIR)
+
+from media_probe import find_ffmpeg, find_ffprobe, probe_media
 
 
 class VideoValidator:
@@ -26,21 +31,19 @@ class VideoValidator:
         self.ffprobe_path = self._find_ffprobe()
     
     def _find_ffmpeg(self) -> Optional[str]:
-        """Find FFmpeg binary"""
+        """Find FFmpeg binary without MoviePy."""
         try:
-            from moviepy.config import FFMPEG_BINARY
-            return FFMPEG_BINARY
-        except Exception as e:
-            print(f"[DEBUG] MoviePy FFmpeg config unavailable: {e}")
-            # Try system PATH
-            import shutil
-            return shutil.which('ffmpeg')
-    
+            return find_ffmpeg()
+        except FileNotFoundError:
+            return None
+
     def _find_ffprobe(self) -> Optional[str]:
-        """Find FFprobe binary"""
-        import shutil
-        return shutil.which('ffprobe')
-    
+        """Find FFprobe binary without MoviePy."""
+        try:
+            return find_ffprobe()
+        except FileNotFoundError:
+            return None
+
     def validate(self, video_path: str) -> Tuple[bool, Dict]:
         """
         Validate video for YouTube Shorts
@@ -111,98 +114,29 @@ class VideoValidator:
         return is_valid, result
     
     def get_video_info(self, video_path: str) -> Optional[Dict]:
-        """
-        Get video metadata using ffprobe
-        
-        Args:
-            video_path: Path to video file
-            
-        Returns:
-            Dict with video info or None
-        """
+        """Get normalized video metadata using ffprobe."""
         if not self.ffprobe_path:
-            print("⚠️  ffprobe not found, using basic info")
-            return self._get_basic_info(video_path)
-        
+            print("ffprobe not found")
+            return None
         try:
-            cmd = [
-                self.ffprobe_path,
-                '-v', 'quiet',
-                '-print_format', 'json',
-                '-show_format',
-                '-show_streams',
-                video_path
-            ]
-            
-            result = subprocess.run(cmd, capture_output=True, text=True)
-            
-            if result.returncode != 0:
+            info = probe_media(video_path)
+            video = info.get('video')
+            if not video:
                 return None
-            
-            data = json.loads(result.stdout)
-            
-            # Find video stream
-            video_stream = None
-            for stream in data.get('streams', []):
-                if stream.get('codec_type') == 'video':
-                    video_stream = stream
-                    break
-            
-            if not video_stream:
-                return None
-            
-            format_info = data.get('format', {})
-            
             return {
-                'width': int(video_stream.get('width', 0)),
-                'height': int(video_stream.get('height', 0)),
-                'duration': float(format_info.get('duration', 0)),
-                'codec_name': video_stream.get('codec_name', ''),
-                'bit_rate': int(format_info.get('bit_rate', 0)),
-                'size': int(format_info.get('size', 0)),
-                'format_name': format_info.get('format_name', ''),
-                'frame_rate': self._parse_frame_rate(video_stream.get('r_frame_rate', ''))
+                'width': video['width'],
+                'height': video['height'],
+                'duration': info['duration'],
+                'codec_name': video['codec_name'],
+                'bit_rate': info['bit_rate'],
+                'size': info['size'],
+                'format_name': info['format_name'],
+                'frame_rate': video['frame_rate'],
             }
-            
         except Exception as e:
             print(f"ffprobe error: {e}")
             return None
-    
-    def _get_basic_info(self, video_path: str) -> Optional[Dict]:
-        """Get basic video info using moviepy"""
-        try:
-            from moviepy import VideoFileClip
-            clip = VideoFileClip(video_path)
-            
-            info = {
-                'width': clip.w,
-                'height': clip.h,
-                'duration': clip.duration,
-                'codec_name': 'unknown',
-                'bit_rate': 0,
-                'size': os.path.getsize(video_path),
-                'format_name': 'mp4',
-                'frame_rate': clip.fps
-            }
-            
-            clip.close()
-            return info
-            
-        except Exception as e:
-            print(f"moviepy error: {e}")
-            return None
-    
-    def _parse_frame_rate(self, frame_rate_str: str) -> float:
-        """Parse frame rate string like '30/1' to float"""
-        try:
-            if '/' in frame_rate_str:
-                num, den = frame_rate_str.split('/')
-                return float(num) / float(den)
-            return float(frame_rate_str)
-        except Exception as e:
-            print(f"[WARN] Invalid frame rate format '{frame_rate_str}': {e}")
-            return 0.0
-    
+
     def print_validation_result(self, is_valid: bool, result: Dict):
         """Print validation result"""
         print("\n📹 Video Validation")

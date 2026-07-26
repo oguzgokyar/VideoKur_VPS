@@ -1,6 +1,7 @@
 <?php
 $show_status = $show_status ?? false;
 $page_titles = [
+  'home' => 'Ana Sayfa',
   'dashboard' => '📹 Videolar',
   'videos' => '📹 Videolar',
   'queues' => '📦 Kuyruklar',
