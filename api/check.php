@@ -338,7 +338,7 @@ switch ($provider) {
         break;
 
     case 'edge_tts':
-        $pythonCmd = 'python';
+        $pythonCmd = getenv('PYTHON_BIN') ?: 'python';
         $testScript = 'import edge_tts; print("OK")';
         $output = [];
         $retCode = -1;
@@ -353,7 +353,8 @@ switch ($provider) {
     case 'ffmpeg':
         $output = [];
         $retCode = -1;
-        exec("ffmpeg -version 2>&1", $output, $retCode);
+        $ffmpegCmd = getenv('FFMPEG_BIN') ?: 'ffmpeg';
+        exec(escapeshellarg($ffmpegCmd) . " -version 2>&1", $output, $retCode);
         if ($retCode === 0) {
             $ver = isset($output[0]) ? $output[0] : '';
             echo json_encode(['valid' => true, 'message' => 'FFmpeg kurulu ✓ ' . substr($ver, 0, 60)]);

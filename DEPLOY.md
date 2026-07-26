@@ -1,203 +1,92 @@
-# VideoKur VPS ve Lokal Test Mimarisi
+# VideoKur — Tek Docker Ortamı
 
-Bu repo, orijinal `oguzgokyar/Video_Kur` reposundan ayrilmis temiz bir projedir. Orijinal repo bu kurulumdan etkilenmez.
+VideoKur lokal bilgisayarda ve VPS'te aynı `Dockerfile` ile aynı `docker-compose.yml` dosyasını kullanır. Tek `videokur` container'ı Nginx, PHP-FPM, Python/FFmpeg ve üç scheduler sürecini Supervisor ile çalıştırır.
 
-## Hedef Mimari
-
-```text
-Internet
-  |
-Nginx + SSL
-  |
-PHP web panel / API
-  |
-Python pipeline + FFmpeg
-  |
-data, output, logs
-
-Arka plan servisleri:
-- production scheduler: tek seferde 1 video uretimi
-- social scheduler: sosyal medya kuyruklari
-- content scheduler: RSS/icerik havuzu
-```
-
-## Lokal VPS Provasi
-
-Gerekenler:
-
-- Docker Desktop
-- Docker Compose
-
-Ilk calistirma:
-
-```bash
-cp .env.example .env
-docker compose up --build
-```
-
-Windows PowerShell icin:
+## Lokal kullanım
 
 ```powershell
 Copy-Item .env.example .env
-docker compose up --build
+docker compose up -d --build
 ```
 
-Panel:
+Panel: `http://localhost:8000`
 
-```text
-http://localhost:8000
-```
+Kontrol:
 
-Scheduler servisleriyle calistirma:
-
-```bash
-docker compose --profile schedulers up --build
-```
-
-Arka planda calistirma:
-
-```bash
-docker compose --profile schedulers up -d --build
-```
-
-Log izleme:
-
-```bash
-docker compose logs -f app
-docker compose logs -f production-scheduler
-```
-
-Temel kontrol:
-
-```bash
+```powershell
 docker compose ps
-docker compose exec app python --version
-docker compose exec app ffmpeg -version
+docker compose logs -f videokur
+curl.exe -f http://localhost:8000/api/health.php
 ```
 
-Runtime dosyalari lokal klasorlere yazilir:
+## Günlük geliştirme akışı
 
-```text
-data/
-output/
-logs/
-```
+1. Kod değişikliğini yapın.
+2. `docker compose up -d --build` çalıştırın.
+3. Paneli ve `/api/health.php` adresini test edin.
+4. Değişiklikleri GitHub'a gönderin.
+5. VPS'te `sudo /var/www/videokur/deploy/update.sh` çalıştırın.
 
-## VPS Native Kurulum
+## Kalıcı veriler
 
-Onerilen image:
+Aşağıdaki klasörler image dışında bind volume olarak kalır ve Git tarafından takip edilmez:
 
-```text
-Ubuntu 24.04 LTS
-```
+- `data/`
+- `output/`
+- `logs/`
 
-Temel paketler:
+API anahtarları `data/config.json` içinde tutulur. `.env` ve credential dosyaları GitHub'a gönderilmez. İlk kurulum başlangıç verilerini `docker/data-seed/` klasöründen oluşturur.
 
-```bash
-sudo apt update
-sudo apt install -y nginx php-fpm php-cli php-curl php-mbstring python3 python3-venv python3-pip ffmpeg certbot python3-certbot-nginx unzip
-```
+## İlk VPS Docker geçişi
 
-Proje dizini:
-
-```text
-/var/www/videokur
-```
-
-Python ortami:
+Ubuntu üzerinde Docker Engine ve Compose plugin kurulduktan sonra:
 
 ```bash
 cd /var/www/videokur
-python3 -m venv .venv
-. .venv/bin/activate
-pip install --upgrade pip setuptools wheel
-pip install -r python/requirements.txt
+sudo ./deploy/migrate-to-docker.sh
 ```
 
-Gerekli runtime klasorleri:
+Script runtime verilerini yedekler, native Nginx/PHP-FPM/scheduler servislerini durdurur, tek container'ı build eder ve health check sonucunu bekler. Başarısızlıkta native servisleri yeniden başlatır.
+
+## Sonraki VPS güncellemeleri
 
 ```bash
-mkdir -p data/jobs data/.locks output logs
+cd /var/www/videokur
+sudo ./deploy/update.sh
 ```
 
-Docker lokal testte kolaylik icin `php -S` kullanir. VPS'te Nginx + PHP-FPM tercih edilir.
+Updater:
 
-## systemd Servisleri
+1. Runtime verilerini `/var/backups/videokur/` altına yedekler.
+2. `origin/main` için fast-forward güncelleme yapar.
+3. Commit SHA etiketli image build eder.
+4. Container'ı yeniler.
+5. Health check'i bekler.
+6. Başarısızlıkta önceki image ve commit'e döner.
 
-Production scheduler:
+## Manuel rollback
 
-```ini
-[Unit]
-Description=VideoKur Production Scheduler
-After=network.target
-
-[Service]
-Type=simple
-WorkingDirectory=/var/www/videokur
-Environment=PYTHONUNBUFFERED=1
-ExecStart=/var/www/videokur/.venv/bin/python python/scheduler/production_scheduler.py
-Restart=always
-RestartSec=5
-User=www-data
-Group=www-data
-
-[Install]
-WantedBy=multi-user.target
+```bash
+cd /var/www/videokur
+sudo ./deploy/rollback.sh <commit-sha>
 ```
 
-Social scheduler:
+## Mimari
 
-```ini
-[Unit]
-Description=VideoKur Social Scheduler
-After=network.target
+```text
+videokur container
+├── Supervisor
+├── Nginx :80
+├── PHP-FPM :9000
+├── production-scheduler
+├── social-scheduler
+└── content-scheduler
 
-[Service]
-Type=simple
-WorkingDirectory=/var/www/videokur
-Environment=PYTHONUNBUFFERED=1
-ExecStart=/var/www/videokur/.venv/bin/python python/scheduler/social_scheduler.py --interval 60
-Restart=always
-RestartSec=5
-User=www-data
-Group=www-data
-
-[Install]
-WantedBy=multi-user.target
+Host bind volume'leri
+├── ./data   -> /app/data
+├── ./output -> /app/output
+├── ./logs   -> /app/logs
+└── ./assets -> /app/assets
 ```
 
-Content scheduler:
-
-```ini
-[Unit]
-Description=VideoKur Content Scheduler
-After=network.target
-
-[Service]
-Type=simple
-WorkingDirectory=/var/www/videokur
-Environment=PYTHONUNBUFFERED=1
-ExecStart=/var/www/videokur/.venv/bin/python python/content/scheduler.py
-Restart=always
-RestartSec=5
-User=www-data
-Group=www-data
-
-[Install]
-WantedBy=multi-user.target
-```
-
-## Yayina Almadan Once Test Listesi
-
-- `http://localhost:8000` veya staging domain aciliyor.
-- Ayarlar ekraninda Python ve FFmpeg testi basarili.
-- `data/config.json` repoya commitlenmiyor.
-- Kisa bir test video kuyruga ekleniyor.
-- Production scheduler tek video isliyor.
-- `output/<job_id>/final_video.mp4` olusuyor.
-- Disk kullanimi ve loglar kontrol ediliyor.
-- Staging domain SSL ile aciliyor.
-
-## Kaynak Notu
-
-2 vCPU / 4 GB RAM baslangic icin yeterli olabilir. Render sirasinda rahat calismasi icin VPS'te 2-4 GB swap onerilir. Uzun vadede ikinci SaaS veya daha yogun video uretimi icin 4 vCPU / 8 GB RAM daha saglikli olur.
+`deploy/nginx/` ve `deploy/systemd/` altındaki dosyalar yalnız eski native kurulumun geri dönüş referanslarıdır. Aktif ortak container yapılandırmaları `docker/` altındadır.

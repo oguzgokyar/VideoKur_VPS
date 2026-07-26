@@ -281,6 +281,9 @@ $active_page = 'settings';
         social: { running: false, pid: null, started_at: null }
       },
       schedulerLogs: [],
+      failedJobs: [],
+      selectedJobId: '',
+      jobLogs: [],
       schedulerLoading: false,
       maintenanceLoading: false,
       maintenanceConfirmText: '',
@@ -330,6 +333,31 @@ $active_page = 'settings';
         }
       },
       
+      async loadFailedJobs() {
+        try {
+          const response = await fetch('/api/jobs.php?list=1');
+          const data = await response.json();
+          const jobs = Array.isArray(data.jobs) ? data.jobs : [];
+          this.failedJobs = jobs.filter(job => ['failed', 'paused', 'error'].includes(String(job.status || '').toLowerCase()));
+        } catch (error) {
+          console.error('Hatalı işler yüklenemedi:', error);
+          this.failedJobs = [];
+        }
+      },
+
+      async loadJobLogs(jobId) {
+        this.selectedJobId = jobId || '';
+        this.jobLogs = [];
+        if (!this.selectedJobId) return;
+        try {
+          const response = await fetch('/api/job_logs.php?id=' + encodeURIComponent(this.selectedJobId));
+          const data = await response.json();
+          this.jobLogs = Array.isArray(data.logs) ? data.logs : [data.message || data.error || 'Log bulunamadı'];
+        } catch (error) {
+          this.jobLogs = ['Log yükleme hatası: ' + error.message];
+        }
+      },
+
       async toggleScheduler(type) {
         this.schedulerLoading = true;
         const isRunning = this.schedulerStatus[type]?.running;

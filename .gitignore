@@ -15,9 +15,7 @@ yedek/
 yedek/**/*
 
 # ===== DATA FILES (Runtime) =====
-data/*.json
-data/jobs/*.json
-!data/jobs/.gitkeep
+data/
 
 # ===== OUTPUT & GENERATED FILES =====
 # Generated videos and media
@@ -76,5 +74,4 @@ Thumbs.db
 seison.md
 data/youtube_credentials/*.json
 sesion.md
-
-
+.current-version

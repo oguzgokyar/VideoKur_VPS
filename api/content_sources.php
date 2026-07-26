@@ -51,7 +51,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         $limit = intval($_GET['limit'] ?? 20);
         
         // Python feed parser'ı çağır
-        $pythonPath = 'python';
+        $pythonPath = getenv('PYTHON_BIN') ?: 'python';
         $scriptPath = __DIR__ . '/../python/content/feed_parser.py';
         
         $cmd = "$pythonPath \"$scriptPath\"";

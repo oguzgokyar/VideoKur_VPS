@@ -6,12 +6,10 @@ __pycache__/
 *.tmp
 output/
 logs/
-data/config.json
-data/jobs/*.json
-data/social_credentials/
-data/youtube_credentials/
+data/
 yedek/
 venv/
 env/
+.venv/
 .vscode/
 .idea/
