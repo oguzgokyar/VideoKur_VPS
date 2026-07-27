@@ -64,8 +64,9 @@ $active_page = 'settings';
   function settingsApp() {
     return {
       sidebarOpen: false, sidebarCollapsed: localStorage.getItem('sidebarCollapsed') === '1', darkMode: false, activeTab: 'genel',
-      geminiKey: '', elevenKey: '', hfKey: '', pexelsKey: '', falKey: '', pollinationsKey: '',
-      geminiKeys: [], elevenKeys: [], falKeys: [], pollinationsKeys: [],
+      youtubeBaseUrl: '',
+      geminiKey: '', elevenKey: '', cartesiaKey: '', hfKey: '', pexelsKey: '', falKey: '', pollinationsKey: '',
+      geminiKeys: [], elevenKeys: [], cartesiaKeys: [], falKeys: [], pollinationsKeys: [],
       ttsProvider: 'elevenlabs', geminiModel: 'gemini-3.6-flash',
       imageService: 'pollinations', pollinationsModel: 'flux',
       pollinationsTextModel: 'openai-fast', scriptProvider: 'gemini',
@@ -89,11 +90,11 @@ $active_page = 'settings';
       servicesEnabled: {
         fal_image: true, pollinations_image: true, huggingface_image: true, pexels_image: true,
         gemini_script: true, pollinations_text: true,
-        elevenlabs_tts: true, edge_tts: true
+        elevenlabs_tts: true, cartesia_tts: true, edge_tts: true
       },
       saveMsg: '', saveError: false,
       checks: {
-        gemini: {loading:false,result:null}, elevenlabs: {loading:false,result:null},
+        gemini: {loading:false,result:null}, elevenlabs: {loading:false,result:null}, cartesia: {loading:false,result:null},
         huggingface: {loading:false,result:null}, pexels: {loading:false,result:null},
         fal: {loading:false,result:null}, pollinations: {loading:false,result:null},
         pollinations_image: {loading:false,result:null}, pollinations_text: {loading:false,result:null},
@@ -112,13 +113,14 @@ $active_page = 'settings';
       apiModalTestResult: null,
       apiModalTestLoading: false,
       apiKeyTestStatuses: {
-        gemini: {}, eleven: {}, fal: {}, pollinations: {}, huggingface: {}, pexels: {}
+        gemini: {}, eleven: {}, cartesia: {}, fal: {}, pollinations: {}, huggingface: {}, pexels: {}
       },
 
       // Service metadata
       serviceInfo: {
         gemini: { name: 'Gemini', icon: '🤖', color: 'blue', multi: true, placeholder: 'AIza...', url: 'https://aistudio.google.com/apikey' },
         eleven: { name: 'ElevenLabs', icon: '🔊', color: 'purple', multi: true, placeholder: 'sk_...', url: 'https://elevenlabs.io/api' },
+        cartesia: { name: 'Cartesia', icon: '🎙️', color: 'pink', multi: true, placeholder: 'sk_car_...', url: 'https://play.cartesia.ai/keys' },
         fal: { name: 'Fal.ai', icon: '⚡', color: 'amber', multi: true, placeholder: 'xxx-xxx:xxx', url: 'https://fal.ai/dashboard/keys' },
         pollinations: { name: 'Pollinations', icon: '🌸', color: 'green', multi: true, placeholder: 'pk_...', url: 'https://pollinations.ai/pricing' },
         huggingface: { name: 'HuggingFace', icon: '🤗', color: 'yellow', multi: false, placeholder: 'hf_...', url: 'https://huggingface.co/settings/tokens' },
@@ -139,6 +141,7 @@ $active_page = 'settings';
       getServiceKeys(service) {
         if (service === 'gemini') return this.geminiKeys;
         if (service === 'eleven') return this.elevenKeys;
+        if (service === 'cartesia') return this.cartesiaKeys;
         if (service === 'fal') return this.falKeys;
         if (service === 'pollinations') return this.pollinationsKeys;
         if (service === 'huggingface') return this.hfKey ? [this.hfKey] : [];
@@ -151,6 +154,7 @@ $active_page = 'settings';
 
         if (service === 'gemini') { this.geminiKeys.push(key); this.geminiKey = this.geminiKeys[0] || ''; }
         else if (service === 'eleven') this.elevenKeys.push(key);
+        else if (service === 'cartesia') { this.cartesiaKeys.push(key); this.cartesiaKey = this.cartesiaKeys[0] || ''; }
         else if (service === 'fal') this.falKeys.push(key);
         else if (service === 'pollinations') this.pollinationsKeys.push(key);
         else if (service === 'huggingface') this.hfKey = key;
@@ -167,6 +171,7 @@ $active_page = 'settings';
 
         if (service === 'gemini') { this.geminiKeys.splice(idx, 1); this.geminiKey = this.geminiKeys[0] || ''; }
         else if (service === 'eleven') this.elevenKeys.splice(idx, 1);
+        else if (service === 'cartesia') { this.cartesiaKeys.splice(idx, 1); this.cartesiaKey = this.cartesiaKeys[0] || ''; }
         else if (service === 'fal') this.falKeys.splice(idx, 1);
         else if (service === 'pollinations') this.pollinationsKeys.splice(idx, 1);
         else if (service === 'huggingface') this.hfKey = '';
@@ -236,7 +241,7 @@ $active_page = 'settings';
         this.apiModalTestResult = null;
 
         const providerMap = {
-          gemini: 'gemini', eleven: 'elevenlabs', fal: 'fal',
+          gemini: 'gemini', eleven: 'elevenlabs', cartesia: 'cartesia', fal: 'fal',
           pollinations: 'pollinations', huggingface: 'huggingface', pexels: 'pexels'
         };
 
@@ -529,8 +534,10 @@ $active_page = 'settings';
       loadConfig() {
         this.darkMode = localStorage.getItem('darkMode') === '1';
         fetch('/api/config.php').then(r => r.json()).then(d => {
+          this.youtubeBaseUrl = d.youtubeBaseUrl || '';
           this.geminiKey = d.geminiKey || '';
           this.elevenKey = d.elevenKey || '';
+          this.cartesiaKey = d.cartesiaKey || '';
           this.hfKey = d.hfKey || '';
           this.pexelsKey = d.pexelsKey || '';
           this.falKey = d.falKey || '';
@@ -549,6 +556,8 @@ $active_page = 'settings';
           this.geminiKeys = [...new Set((d.geminiKeys || (d.geminiKey ? [d.geminiKey] : [])).filter(Boolean))];
           this.geminiKey = this.geminiKeys[0] || '';
           this.elevenKeys = d.elevenKeys || (d.elevenKey ? [d.elevenKey] : []);
+          this.cartesiaKeys = d.cartesiaKeys || (d.cartesiaKey ? [d.cartesiaKey] : []);
+          this.cartesiaKey = this.cartesiaKeys[0] || '';
           this.falKeys = d.falKeys || (d.falKey ? [d.falKey] : []);
           this.pollinationsKeys = d.pollinationsKeys || (d.pollinationsKey ? [d.pollinationsKey] : []);
 
@@ -572,6 +581,7 @@ $active_page = 'settings';
               gemini_script: d.servicesEnabled.gemini_script !== false,
               pollinations_text: d.servicesEnabled.pollinations_text !== false,
               elevenlabs_tts: d.servicesEnabled.elevenlabs_tts !== false,
+              cartesia_tts: d.servicesEnabled.cartesia_tts !== false,
               edge_tts: d.servicesEnabled.edge_tts !== false
             };
           }
@@ -583,9 +593,10 @@ $active_page = 'settings';
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
-            geminiKey: this.geminiKeys[0] || '', elevenKey: this.elevenKey, hfKey: this.hfKey, pexelsKey: this.pexelsKey,
+            youtubeBaseUrl: this.youtubeBaseUrl,
+            geminiKey: this.geminiKeys[0] || '', elevenKey: this.elevenKey, cartesiaKey: this.cartesiaKey, hfKey: this.hfKey, pexelsKey: this.pexelsKey,
             falKey: this.falKey, pollinationsKey: this.pollinationsKey,
-            geminiKeys: this.geminiKeys, elevenKeys: this.elevenKeys, falKeys: this.falKeys, pollinationsKeys: this.pollinationsKeys,
+            geminiKeys: this.geminiKeys, elevenKeys: this.elevenKeys, cartesiaKeys: this.cartesiaKeys, falKeys: this.falKeys, pollinationsKeys: this.pollinationsKeys,
           })
         })
         .then(r => r.json())
@@ -691,6 +702,13 @@ $active_page = 'settings';
                     <span class="text-xs text-gray-500 mt-1" x-text="elevenKeys.length + ' key'"></span>
                   </button>
 
+                  <!-- Cartesia Card -->
+                  <button type="button" @click="openApiModal('cartesia')"
+                    class="flex flex-col items-center p-4 bg-gradient-to-br from-pink-50 to-rose-50 hover:from-pink-100 hover:to-rose-100 border border-pink-200 rounded-xl transition cursor-pointer group">
+                    <span class="text-2xl mb-2">🎙️</span>
+                    <span class="font-semibold text-gray-800 text-sm">Cartesia</span>
+                    <span class="text-xs text-gray-500 mt-1" x-text="cartesiaKeys.length + ' key'"></span>
+                  </button>
                   <!-- Fal.ai Card -->
                   <button type="button" @click="openApiModal('fal')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 border border-amber-200 rounded-xl transition cursor-pointer group">
@@ -729,6 +747,32 @@ $active_page = 'settings';
 
             <!-- ═══════════ TAB: SİSTEM ═══════════ -->
             <div x-show="activeTab === 'system'" x-transition>
+              <!-- YouTube OAuth -->
+              <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 mb-6">
+                <h2 class="text-lg font-semibold text-gray-800 dark:text-white">🔐 YouTube OAuth</h2>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 mb-4">
+                  Google login dönüş adresinin temel URL'si. Local için <span class="font-mono">http://localhost:8000</span>,
+                  VPS için <span class="font-mono">https://alanadiniz.com</span> kullanın.
+                </p>
+                <label for="youtube-base-url" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Uygulama adresi</label>
+                <div class="flex flex-col sm:flex-row gap-3">
+                  <input id="youtube-base-url" type="url" x-model.trim="youtubeBaseUrl"
+                    placeholder="http://localhost:8000"
+                    class="flex-1 px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-lg text-sm dark:bg-slate-900 dark:text-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                  <button type="button" @click="saveConfig()"
+                    class="px-4 py-2 rounded-lg bg-blue-600 text-white hover:bg-blue-700 text-sm font-semibold transition">
+                    Kaydet
+                  </button>
+                </div>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-3">
+                  Google Cloud Authorized redirect URI:
+                  <span class="font-mono" x-text="(youtubeBaseUrl || 'http://localhost:8000').replace(/\/+$/, '') + '/api/youtube_oauth.php'"></span>
+                </p>
+                <div x-show="saveMsg" class="mt-3 p-3 rounded-lg text-sm"
+                  :class="saveError ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-green-50 text-green-700 border border-green-200'"
+                  x-text="saveMsg"></div>
+              </div>
+
               <!-- Sistem Araçları -->
               <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4">🖥️ Sistem Araçları</h2>

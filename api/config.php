@@ -11,14 +11,17 @@ $dataDir = __DIR__ . '/../data';
 if (!is_dir($dataDir)) { mkdir($dataDir, 0777, true); }
 
 $defaults = [
+    'youtubeBaseUrl' => '',
     'geminiKey' => '',
     'elevenKey' => '',
+    'cartesiaKey' => '',
     'hfKey' => '',
     'pexelsKey' => '',
     'falKey' => '',
     'pollinationsKey' => '',
     'geminiKeys' => [],
     'elevenKeys' => [],
+    'cartesiaKeys' => [],
     'falKeys' => [],
     'pollinationsKeys' => [],
     'ttsProvider' => 'elevenlabs',
@@ -44,6 +47,7 @@ $defaults = [
         'gemini_script' => true,
         'pollinations_text' => true,
         'elevenlabs_tts' => true,
+        'cartesia_tts' => true,
         'edge_tts' => true
     ],
     'subtitleStyle' => [
@@ -135,22 +139,35 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $geminiKeys = $normalizeKeys($input['geminiKeys'] ?? []);
     $elevenKeys = $normalizeKeys($input['elevenKeys'] ?? []);
+    $cartesiaKeys = $normalizeKeys($input['cartesiaKeys'] ?? []);
     $falKeys = $normalizeKeys($input['falKeys'] ?? []);
     $pollinationsKeys = $normalizeKeys($input['pollinationsKeys'] ?? []);
     $pollinationsModel = trim((string)($input['pollinationsModel'] ?? 'flux'));
+    $youtubeBaseUrl = rtrim(trim((string)($input['youtubeBaseUrl'] ?? ($existing['youtubeBaseUrl'] ?? ''))), '/');
+    if ($youtubeBaseUrl !== '' && !filter_var($youtubeBaseUrl, FILTER_VALIDATE_URL)) {
+        echo json_encode(['success' => false, 'error' => 'YouTube OAuth uygulama adresi geçerli bir URL olmalıdır.']);
+        exit;
+    }
+    if ($youtubeBaseUrl !== '' && !in_array(strtolower((string)parse_url($youtubeBaseUrl, PHP_URL_SCHEME)), ['http', 'https'], true)) {
+        echo json_encode(['success' => false, 'error' => 'YouTube OAuth uygulama adresi http veya https ile başlamalıdır.']);
+        exit;
+    }
     if ($pollinationsModel === '' || !preg_match('/^[A-Za-z0-9._:-]{1,120}$/', $pollinationsModel)) {
         echo json_encode(['success' => false, 'error' => 'Pollinations model adı boş olamaz; yalnızca harf, sayı, nokta, alt çizgi, tire ve iki nokta kullanın.']);
         exit;
     }
     $knownConfig = [
+        'youtubeBaseUrl' => $youtubeBaseUrl,
         'geminiKey' => $geminiKeys[0] ?? '',
         'elevenKey' => $elevenKeys[0] ?? trim((string)($input['elevenKey'] ?? '')),
+        'cartesiaKey' => $cartesiaKeys[0] ?? trim((string)($input['cartesiaKey'] ?? '')),
         'hfKey' => trim((string)($input['hfKey'] ?? '')),
         'pexelsKey' => trim((string)($input['pexelsKey'] ?? '')),
         'falKey' => $falKeys[0] ?? trim((string)($input['falKey'] ?? '')),
         'pollinationsKey' => $pollinationsKeys[0] ?? trim((string)($input['pollinationsKey'] ?? '')),
         'geminiKeys' => $geminiKeys,
         'elevenKeys' => $elevenKeys,
+        'cartesiaKeys' => $cartesiaKeys,
         'falKeys' => $falKeys,
         'pollinationsKeys' => $pollinationsKeys,
         'ttsProvider' => $input['ttsProvider'] ?? 'elevenlabs',
@@ -176,6 +193,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'gemini_script' => (bool)($input['servicesEnabled']['gemini_script'] ?? true),
             'pollinations_text' => (bool)($input['servicesEnabled']['pollinations_text'] ?? true),
             'elevenlabs_tts' => (bool)($input['servicesEnabled']['elevenlabs_tts'] ?? true),
+            'cartesia_tts' => (bool)($input['servicesEnabled']['cartesia_tts'] ?? true),
             'edge_tts' => (bool)($input['servicesEnabled']['edge_tts'] ?? true)
         ],
         'subtitleStyle' => $subtitleStyle ?? $defaults['subtitleStyle']

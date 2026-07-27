@@ -62,8 +62,24 @@ function loadClientSecrets($path) {
 
 // Build redirect URI
 function getRedirectUri() {
-    $protocol = isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? 'https' : 'http';
-    $host = $_SERVER['HTTP_HOST'];
+    $configFile = __DIR__ . '/../data/config.json';
+    $config = file_exists($configFile)
+        ? (json_decode(file_get_contents($configFile), true) ?: [])
+        : [];
+    $configuredBaseUrl = trim((string)($config['youtubeBaseUrl'] ?? ''));
+    $environmentBaseUrl = trim((string)(getenv('APP_BASE_URL') ?: ''));
+    $baseUrl = rtrim($configuredBaseUrl !== '' ? $configuredBaseUrl : $environmentBaseUrl, '/');
+
+    if ($baseUrl !== '') {
+        return $baseUrl . '/api/youtube_oauth.php';
+    }
+
+    $forwardedProtocol = strtolower((string)($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? ''));
+    $protocol = (
+        (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        || $forwardedProtocol === 'https'
+    ) ? 'https' : 'http';
+    $host = $_SERVER['HTTP_HOST'] ?? 'localhost:8000';
     return $protocol . '://' . $host . '/api/youtube_oauth.php';
 }
 
