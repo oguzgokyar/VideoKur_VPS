@@ -219,6 +219,27 @@ switch ($provider) {
         }
         break;
 
+    case 'cartesia':
+        $result = checkApi('https://api.cartesia.ai/voices?limit=1', [
+            'Authorization: Bearer ' . $key,
+            'Cartesia-Version: 2026-03-01'
+        ]);
+        if ($result['error']) {
+            echo json_encode(['valid' => false, 'message' => 'Bağlantı hatası: ' . $result['error']]);
+        } elseif ($result['code'] === 200) {
+            echo json_encode(['valid' => true, 'message' => 'Cartesia API geçerli ✓']);
+        } else {
+            $error = json_decode((string)$result['body'], true) ?: [];
+            $message = trim((string)($error['message'] ?? 'API hatası'));
+            echo json_encode([
+                'valid' => false,
+                'message' => 'Cartesia hatası (HTTP ' . $result['code'] . '): ' . $message,
+                'http_code' => $result['code'],
+                'error_code' => $error['error_code'] ?? (string)$result['code'],
+                'error_status' => $error['title'] ?? 'ERROR'
+            ]);
+        }
+        break;
     case 'huggingface':
         // First validate the token
         $whoami = checkApi('https://huggingface.co/api/whoami-v2', ['Authorization: Bearer ' . $key]);

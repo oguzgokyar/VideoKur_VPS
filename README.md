@@ -16,7 +16,7 @@ Haber URL'lerinden otomatik YouTube Shorts videoları üreten ve çoklu sosyal m
 ### 🤖 AI Destekli İçerik Üretimi
 - **Script Üretimi** - Gemini / Pollinations AI
 - **Görsel Üretimi** - Fal.ai FLUX / Pollinations / HuggingFace / Pexels
-- **Ses Sentezi** - ElevenLabs (Premium) / Edge-TTS (Ücretsiz)
+- **Ses Sentezi** - Cartesia Sonic / ElevenLabs (Premium) / Edge-TTS (Ücretsiz)
 
 ### 🎬 Gelişmiş Video Düzenleme
 - **10 Video Efekti** - Ken Burns, Zoom, Pan, Pulse, Glitch
@@ -82,6 +82,7 @@ cd ..
 {
   "geminiKey": "YOUR_GEMINI_API_KEY",
   "elevenKey": "YOUR_ELEVENLABS_API_KEY",
+  "cartesiaKey": "YOUR_CARTESIA_API_KEY",
   "falKey": "YOUR_FAL_API_KEY",
   "pexelsKey": "YOUR_PEXELS_API_KEY"
 }
@@ -223,7 +224,7 @@ URL Girişi
 ### AI Servisleri
 - **Google Gemini** - Script üretimi
 - **Fal.ai / Pollinations** - Görsel üretimi
-- **ElevenLabs / Edge-TTS** - Ses sentezi
+- **Cartesia / ElevenLabs / Edge-TTS** - Ses sentezi
 
 ---
 

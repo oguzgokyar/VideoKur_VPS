@@ -75,6 +75,7 @@ function vp_provider_capabilities($baseDir) {
     $config = vp_load_credentials($baseDir);
     $gemini = vp_clean_key_list($config['geminiKeys'] ?? [], $config['geminiKey'] ?? '');
     $eleven = vp_clean_key_list($config['elevenKeys'] ?? [], $config['elevenKey'] ?? '');
+    $cartesia = vp_clean_key_list($config['cartesiaKeys'] ?? [], $config['cartesiaKey'] ?? '');
     $fal = vp_clean_key_list($config['falKeys'] ?? [], $config['falKey'] ?? '');
     $pollinations = vp_clean_key_list($config['pollinationsKeys'] ?? [], $config['pollinationsKey'] ?? '');
     $hf = trim((string)($config['hfKey'] ?? ''));
@@ -99,6 +100,8 @@ function vp_provider_capabilities($baseDir) {
         'voiceover' => [
             ['id' => 'elevenlabs', 'label' => 'ElevenLabs', 'available' => !empty($eleven), 'supportsModel' => true, 'requiresVoice' => true,
                 'models' => ['eleven_multilingual_v2', 'eleven_turbo_v2_5', 'eleven_flash_v2_5']],
+            ['id' => 'cartesia', 'label' => 'Cartesia', 'available' => !empty($cartesia), 'supportsModel' => true, 'requiresVoice' => true,
+                'models' => ['sonic-3.5', 'sonic-3.5-2026-05-04', 'sonic-3']],
             ['id' => 'edge-tts', 'label' => 'Edge TTS', 'available' => true, 'supportsModel' => false, 'requiresVoice' => true,
                 'models' => [], 'voices' => [
                     ['id' => 'tr-TR-EmelNeural', 'name' => 'Emel (Kadın)'],
@@ -106,6 +109,12 @@ function vp_provider_capabilities($baseDir) {
                 ]],
         ],
     ];
+}
+
+function vp_default_voice_model($providerId) {
+    if ($providerId === 'elevenlabs') return 'eleven_multilingual_v2';
+    if ($providerId === 'cartesia') return 'sonic-3.5';
+    return '';
 }
 
 function vp_first_available_provider($capabilities, $group, $preferred = '') {
@@ -169,9 +178,10 @@ function vp_build_defaults($baseDir) {
         'voiceover' => [
             'enabled' => true,
             'provider' => $voiceId,
-            'model' => $voiceId === 'elevenlabs' ? 'eleven_multilingual_v2' : '',
+            'model' => vp_default_voice_model($voiceId),
             'voiceId' => $voiceId === 'edge-tts' ? 'tr-TR-EmelNeural' : '',
             'fallbackProvider' => '',
+            'fallbackModel' => '',
             'fallbackVoiceId' => '',
         ],
         'music' => [
@@ -234,6 +244,9 @@ function vp_normalize_profile($script, $baseDir, $categoryName = null) {
             'model' => trim((string)($voiceover['model'] ?? '')),
             'voiceId' => trim((string)($voiceover['voiceId'] ?? '')),
             'fallbackProvider' => trim((string)($voiceover['fallbackProvider'] ?? '')),
+            'fallbackModel' => trim((string)($voiceover['fallbackModel'] ?? '')) !== ''
+                ? trim((string)$voiceover['fallbackModel'])
+                : vp_default_voice_model(trim((string)($voiceover['fallbackProvider'] ?? ''))),
             'fallbackVoiceId' => trim((string)($voiceover['fallbackVoiceId'] ?? '')),
         ],
         'music' => [
@@ -343,6 +356,26 @@ function vp_validate_profile($profile, $baseDir) {
         }
         if (!empty($cap['requiresVoice']) && trim((string)($profile[$field]['voiceId'] ?? '')) === '') {
             $errors[] = $cap['label'] . ' için ses seçin veya ses kimliği girin.';
+        }
+    }
+
+    if (!empty($profile['voiceover']['enabled'])) {
+        $primaryId = trim((string)($profile['voiceover']['provider'] ?? ''));
+        $fallbackId = trim((string)($profile['voiceover']['fallbackProvider'] ?? ''));
+        if ($fallbackId !== '') {
+            $fallback = vp_find_capability($caps, 'voiceover', $fallbackId);
+            if ($fallbackId === $primaryId) {
+                $errors[] = 'Fallback ses servisi ana servisle aynı olamaz.';
+            } elseif (!$fallback || empty($fallback['available'])) {
+                $errors[] = 'Fallback için kullanılabilir bir ses servisi seçin.';
+            } else {
+                if (!empty($fallback['supportsModel']) && trim((string)($profile['voiceover']['fallbackModel'] ?? '')) === '') {
+                    $errors[] = $fallback['label'] . ' fallback modeli gerekli.';
+                }
+                if (!empty($fallback['requiresVoice']) && trim((string)($profile['voiceover']['fallbackVoiceId'] ?? '')) === '') {
+                    $errors[] = $fallback['label'] . ' fallback sesi gerekli.';
+                }
+            }
         }
     }
 

@@ -350,6 +350,7 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     gemini_key = config.get('geminiKey', '')
     gemini_keys = config.get('geminiKeys', []) or ([gemini_key] if gemini_key else [])
     eleven_key = config.get('elevenKey', '')
+    cartesia_key = config.get('cartesiaKey', '')
     hf_key = config.get('hfKey', '')
     pexels_key = config.get('pexelsKey', '')
     fal_key = config.get('falKey', '')
@@ -362,6 +363,7 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     tts_model = (voice_settings.get('model') or '').strip()
     tts_voice_id = (voice_settings.get('voiceId') or '').strip()
     tts_fallback_provider = (voice_settings.get('fallbackProvider') or '').strip()
+    tts_fallback_model = (voice_settings.get('fallbackModel') or '').strip()
     tts_fallback_voice_id = (voice_settings.get('fallbackVoiceId') or '').strip()
     fal_width, fal_height = video_width, video_height
     fal_steps = int((visual_settings.get('options') or {}).get('steps', 4))
@@ -375,6 +377,7 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     svc_gemini_script = script_provider == 'gemini'
     svc_pollinations_text = script_provider == 'pollinations'
     svc_elevenlabs_tts = tts_provider == 'elevenlabs' or tts_fallback_provider == 'elevenlabs'
+    svc_cartesia_tts = tts_provider == 'cartesia' or tts_fallback_provider == 'cartesia'
     svc_edge_tts = tts_provider == 'edge-tts' or tts_fallback_provider == 'edge-tts'
     if fal_key:
         os.environ['FAL_KEY'] = fal_key
@@ -685,7 +688,9 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
                 seg['text'], seg_audio, tts_provider, eleven_key,
                 voice_id=tts_voice_id, model_id=tts_model, voice_profile=voice_prof,
                 fallback_provider=tts_fallback_provider, fallback_voice_id=tts_fallback_voice_id,
-                svc_elevenlabs=svc_elevenlabs_tts, svc_edge_tts=svc_edge_tts
+                fallback_model_id=tts_fallback_model, cartesia_api_key=cartesia_key,
+                svc_elevenlabs=svc_elevenlabs_tts, svc_edge_tts=svc_edge_tts,
+                svc_cartesia=svc_cartesia_tts
             )
             if not tts_ok:
                 print(f"  [WARN] Segment {idx+1} TTS basarisiz, atlaniyor")

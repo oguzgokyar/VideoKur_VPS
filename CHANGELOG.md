@@ -4,6 +4,18 @@ Bu dosya, projedeki tüm önemli değişiklikleri kronolojik sırayla takip eder
 
 ---
 
+## [2.7.0] - 2026-07-27 - Cartesia TTS Entegrasyonu
+
+### 🎙️ Seslendirme
+- Cartesia Sonic 3.5, Türkçe MP3 üretimi ve yedi ses profiline uygun hız/duygu kontrolleriyle eklendi.
+- Cartesia API anahtarı yönetimi, bağlantı testi ve Türkçe ses kataloğu script profili ekranına bağlandı.
+- Sağlayıcılar arası fallback akışına bağımsız fallback model seçimi eklendi.
+- Cartesia için geçici API/concurrency hatalarında kontrollü yeniden deneme ve yapılandırılmış hata loglama eklendi.
+
+### 🧪 Doğrulama
+- Cartesia istek gövdesi, ses profili eşlemesi ve fallback model aktarımı için birim testleri eklendi.
+
+---
 ## [2.6.0] - 2026-07-27 - FFmpeg Video Motoru ve Minimal Ana Sayfa
 
 ### ⚡ Video Üretimi

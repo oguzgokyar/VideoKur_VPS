@@ -1434,7 +1434,7 @@ $show_status = true;
                   <div class="flex items-center gap-2 bg-gray-50 border border-gray-100 rounded-lg px-3 py-2 text-xs">
                     <span class="text-gray-600">TTS Servisi:</span>
                     <span class="font-bold text-pink-700 bg-pink-50 px-2 py-0.5 rounded-full"
-                      x-text="job.ttsProvider === 'elevenlabs' ? '🎙️ ElevenLabs' : job.ttsProvider === 'edge-tts' ? '🔊 Edge TTS' : (job.ttsProvider || 'Bilinmiyor')"></span>
+                      x-text="job.ttsProvider === 'elevenlabs' ? '🎙️ ElevenLabs' : job.ttsProvider === 'cartesia' ? '🎙️ Cartesia' : job.ttsProvider === 'edge-tts' ? '🔊 Edge TTS' : (job.ttsProvider || 'Bilinmiyor')"></span>
                   </div>
                 </div>
                 <div>

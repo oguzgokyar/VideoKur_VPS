@@ -126,6 +126,7 @@ def run_regenerate(job_id: str, section: str, config_file: str, extra: dict = No
     if not gemini_keys and gemini_key:
         gemini_keys = [gemini_key]
     eleven_key   = config.get('elevenKey', '')
+    cartesia_key = config.get('cartesiaKey', '')
     hf_key       = config.get('hfKey', '')
     pexels_key   = config.get('pexelsKey', '')
     pollinations_key = config.get('pollinationsKey', '')  # Pollinations API key
@@ -144,6 +145,7 @@ def run_regenerate(job_id: str, section: str, config_file: str, extra: dict = No
     tts_model = (voice_settings.get('model') or '').strip()
     tts_voice_id = (voice_settings.get('voiceId') or '').strip()
     tts_fallback_provider = (voice_settings.get('fallbackProvider') or '').strip()
+    tts_fallback_model = (voice_settings.get('fallbackModel') or '').strip()
     tts_fallback_voice_id = (voice_settings.get('fallbackVoiceId') or '').strip()
     gemini_model = (prompt_settings.get('model') or '').strip()
     image_service = (visual_settings.get('provider') or '').strip()
@@ -411,7 +413,8 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             seg_audio = os.path.join(audio_dir, f"seg_{idx:02d}.mp3")
             tts_ok = generate_tts(seg['text'], seg_audio, tts_provider, eleven_key,
                                   voice_id=tts_voice_id, model_id=tts_model,
-                                  fallback_provider=tts_fallback_provider, fallback_voice_id=tts_fallback_voice_id)
+                                  fallback_provider=tts_fallback_provider, fallback_voice_id=tts_fallback_voice_id,
+                                  fallback_model_id=tts_fallback_model, cartesia_api_key=cartesia_key)
             if tts_ok:
                 dur = get_audio_duration(seg_audio)
                 actual_durations.append(dur)
