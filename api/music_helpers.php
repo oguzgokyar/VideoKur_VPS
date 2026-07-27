@@ -7,7 +7,7 @@ function normalizeMusicCategory($value) {
 
 function normalizeMusicMode($value) {
     $mode = trim(strtolower((string)$value));
-    return in_array($mode, ['off', 'auto'], true) ? $mode : 'off';
+    return in_array($mode, ['off', 'single', 'rotate'], true) ? $mode : 'off';
 }
 
 function normalizeMusicFilePath($file) {
@@ -132,5 +132,56 @@ function selectMusicTrackForCategory($baseDir, $categoryId) {
         'categoryId' => $category,
         'file' => $file,
         'volumeDb' => (float)($selected['volumeDb'] ?? -22.0)
+    ];
+}
+
+function selectMusicTrackForScript($baseDir, $scriptProfile) {
+    $music = is_array($scriptProfile['music'] ?? null) ? $scriptProfile['music'] : [];
+    $mode = normalizeMusicMode($music['mode'] ?? 'off');
+    $trackIds = array_values(array_filter(array_map('strval', is_array($music['trackIds'] ?? null) ? $music['trackIds'] : [])));
+    if ($mode === 'off' || empty($trackIds)) return null;
+
+    $library = loadMusicLibrary($baseDir);
+    $byId = [];
+    foreach ($library['tracks'] as $track) {
+        $id = trim((string)($track['id'] ?? ''));
+        $file = normalizeMusicFilePath($track['file'] ?? '');
+        if ($id === '' || $file === null || ($track['active'] ?? true) === false) continue;
+        if (!file_exists($baseDir . '/' . str_replace('/', DIRECTORY_SEPARATOR, $file))) continue;
+        $byId[$id] = $track;
+    }
+    $validIds = array_values(array_filter($trackIds, fn($id) => isset($byId[$id])));
+    if (!$validIds) return null;
+
+    $selectedId = $validIds[0];
+    if ($mode === 'rotate' && count($validIds) > 1) {
+        $stateFile = $baseDir . '/data/script_music_rotation.json';
+        $handle = fopen($stateFile, 'c+');
+        if ($handle && flock($handle, LOCK_EX)) {
+            $raw = stream_get_contents($handle);
+            $state = json_decode($raw ?: '{}', true);
+            if (!is_array($state)) $state = [];
+            $scriptId = trim((string)($scriptProfile['id'] ?? 'unknown'));
+            $index = max(0, (int)($state[$scriptId]['nextIndex'] ?? 0));
+            $selectedId = $validIds[$index % count($validIds)];
+            $state[$scriptId] = ['nextIndex' => ($index + 1) % count($validIds), 'updatedAt' => date('c')];
+            rewind($handle);
+            ftruncate($handle, 0);
+            fwrite($handle, json_encode($state, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+            fflush($handle);
+            flock($handle, LOCK_UN);
+            fclose($handle);
+        } elseif ($handle) {
+            fclose($handle);
+        }
+    }
+
+    $track = $byId[$selectedId];
+    return [
+        'id' => $selectedId,
+        'name' => (string)($track['name'] ?? ''),
+        'categoryId' => normalizeMusicCategory($track['categoryId'] ?? 'genel'),
+        'file' => normalizeMusicFilePath($track['file'] ?? ''),
+        'volumeDb' => (float)($music['volumeDb'] ?? $track['volumeDb'] ?? -22.0),
     ];
 }

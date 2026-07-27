@@ -30,18 +30,18 @@ from utils.production_lock import GlobalProductionLock
 def setup_job_logging(job_id: str, base_dir: str) -> str:
     """
     Setup job-specific log file.
-    
+
     Args:
         job_id: Job ID
         base_dir: Base directory
-    
+
     Returns:
         Path to log file
     """
     log_dir = os.path.join(base_dir, 'output', job_id)
     os.makedirs(log_dir, exist_ok=True)
     log_file = os.path.join(log_dir, 'job.log')
-    
+
     # Initialize log file with header
     import time
     try:
@@ -52,14 +52,14 @@ def setup_job_logging(job_id: str, base_dir: str) -> str:
             f.write(f"{'='*80}\n\n")
     except Exception as e:
         print(f"⚠️ Could not create log file: {e}")
-    
+
     return log_file
 
 
 def log_to_job(log_file: str, message: str, level: str = 'INFO'):
     """
     Write to job log with timestamp.
-    
+
     Args:
         log_file: Path to log file
         message: Log message
@@ -75,7 +75,7 @@ def log_to_job(log_file: str, message: str, level: str = 'INFO'):
             'SUCCESS': '✅',
             'DEBUG': '🔍'
         }.get(level, 'ℹ️')
-        
+
         with open(log_file, 'a', encoding='utf-8') as f:
             f.write(f"[{timestamp}] [{level}] {emoji} {message}\n")
     except Exception as e:
@@ -178,22 +178,22 @@ def _ensure_outro_cta(script: dict) -> dict:
 def update_job(jobs_dir: str, job_id: str, updates: dict, max_retries: int = 3, log_file: str = None):
     """
     İş dosyasını günceller - guaranteed update with retry.
-    
+
     Args:
         jobs_dir: Jobs dizini
         job_id: Job ID
         updates: Güncellenecek alanlar
         max_retries: Maximum retry sayısı (varsayılan 3)
         log_file: Optional job-specific log file
-    
+
     Returns:
         True if successful, False if all retries failed
     """
     import time
-    
+
     job_file = os.path.join(jobs_dir, f"{job_id}.json")
     temp_file = os.path.join(jobs_dir, f"{job_id}.json.tmp")
-    
+
     for attempt in range(max_retries):
         try:
             # Read existing job
@@ -202,30 +202,30 @@ def update_job(jobs_dir: str, job_id: str, updates: dict, max_retries: int = 3, 
                     job = json.load(f)
             else:
                 job = {}
-            
+
             # Update fields
             job.update(updates)
-            
+
             # Add last update timestamp for stuck detection
             job['last_update_time'] = time.time()
             job['updated_at'] = time.strftime('%Y-%m-%d %H:%M:%S')
-            
+
             # Write to temp file first (atomic write)
             with open(temp_file, 'w', encoding='utf-8') as f:
                 json.dump(job, f, ensure_ascii=False, indent=2)
-            
+
             # Atomic rename
             os.replace(temp_file, job_file)
-            
+
             # Log to job file if provided
             if log_file:
                 try:
                     log_to_job(log_file, f"Job updated: {', '.join(updates.keys())}", "INFO")
                 except:
                     pass
-            
+
             return True
-            
+
         except Exception as e:
             if attempt == max_retries - 1:
                 # Last attempt failed - CRITICAL ERROR
@@ -235,7 +235,7 @@ def update_job(jobs_dir: str, job_id: str, updates: dict, max_retries: int = 3, 
                 print(f"   Updates: {updates}")
                 print(f"   Error: {e}")
                 print(f"{'='*70}\n")
-                
+
                 # Try to log to file
                 try:
                     log_file_path = os.path.join(jobs_dir, 'update_failures.log')
@@ -243,19 +243,19 @@ def update_job(jobs_dir: str, job_id: str, updates: dict, max_retries: int = 3, 
                         f.write(f"{time.strftime('%Y-%m-%d %H:%M:%S')} - Job {job_id} - {e}\n")
                 except:
                     pass
-                
+
                 # Log to job file if provided
                 if log_file:
                     try:
                         log_to_job(log_file, f"CRITICAL: Job update failed after {max_retries} attempts: {e}", "ERROR")
                     except:
                         pass
-                
+
                 return False
-            
+
             # Wait before retry
             time.sleep(0.5 * (attempt + 1))  # 0.5s, 1s, 1.5s
-    
+
     return False
 
 
@@ -332,91 +332,52 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     prompt_text = (job_data.get('prompt_text') or '').strip()
     visual_theme_id, visual_theme_prompt = resolve_visual_theme(job_data)
     bgm_path, bgm_volume_db = resolve_bgm_for_job(base_dir, job_data)
-    
-    # Video ve görsel ebatları - job'dan al, yoksa varsayılan
-    video_width = job_data.get('videoWidth', 1080)
-    video_height = job_data.get('videoHeight', 1920)
+
+    profile = job_data.get('scriptProfile')
+    if not isinstance(profile, dict) or profile.get('schemaVersion') != 2:
+        update_job(jobs_dir, job_id, {'status': 'failed', 'error': 'İş geçerli bir V2 script profili içermiyor'})
+        return
+    video_width = int(job_data.get('videoWidth', 1080))
+    video_height = int(job_data.get('videoHeight', 1920))
     video_type = _get_video_type(video_width, video_height)
-    
-    # Subtitle style - Ayarlar > Altyazı (config) her zaman varsayılan kaynak
-    subtitle_style = config.get('subtitleStyle', None)
-    if job_data.get('subtitleStyle') and subtitle_style is not None:
-        print("  [Altyazı] Job içi stil yok sayıldı, Ayarlar > Altyazı varsayılanı kullanılıyor")
-    elif job_data.get('subtitleStyle') and subtitle_style is None:
-        # Config eksikse eski job stilini son çare olarak kullan
-        subtitle_style = job_data['subtitleStyle']
-    
-    # Handle string preset names (e.g., 'classic', 'bold_bottom')
-    if isinstance(subtitle_style, str):
-        subtitle_style = SUBTITLE_PRESETS.get(subtitle_style, SUBTITLE_PRESETS['classic'])
-        print(f"  [Altyazı] Preset kullanılıyor: {subtitle_style}")
-    
-    # Handle dict with 'preset' field (remove it, it's just metadata)
-    elif isinstance(subtitle_style, dict) and 'preset' in subtitle_style:
-        preset_name = subtitle_style.pop('preset', None)
-        # If subtitle_style is now empty or minimal (was only preset name), load full preset
-        if not subtitle_style or len(subtitle_style) <= 1:
-            subtitle_style = SUBTITLE_PRESETS.get(preset_name, SUBTITLE_PRESETS['classic'])
-            print(f"  [Altyazı] Preset yüklendi: {preset_name}")
-    
-    # Fallback to classic if None
-    if subtitle_style is None:
-        print("  [Altyazı] Config ve job'da stil yok, 'classic' preset kullanılıyor")
-        subtitle_style = SUBTITLE_PRESETS['classic']
-
-    # Multi-key support - use geminiKeys array if available
+    prompt_settings = profile.get('prompt') or {}
+    visual_settings = profile.get('visual') or {}
+    voice_settings = profile.get('voiceover') or {}
+    subtitle_settings = profile.get('subtitles') or {}
+    subtitle_enabled = bool(subtitle_settings.get('enabled', True))
+    subtitle_style = subtitle_settings.get('style') or SUBTITLE_PRESETS['classic']
+    subtitle_max_words = max(1, min(12, int(subtitle_settings.get('maxWordsPerLine', 5))))
     gemini_key = config.get('geminiKey', '')
-    gemini_keys = config.get('geminiKeys', [])
-    
-    # If geminiKeys array exists and not empty, use it (multi-key support)
-    # Otherwise fallback to single geminiKey
-    if gemini_keys and len(gemini_keys) > 0:
-        api_keys_to_use = gemini_keys
-        print(f"  [Multi-key] {len(gemini_keys)} Gemini API key kullanılabilir")
-    elif gemini_key:
-        api_keys_to_use = [gemini_key]
-        print(f"  [Single-key] 1 Gemini API key kullanılabilir")
-    else:
-        api_keys_to_use = []
-        print(f"  [UYARI] Hiç Gemini API key yok!")
-    
-    eleven_key         = config.get('elevenKey', '')
-    hf_key             = config.get('hfKey', '')
-    pexels_key         = config.get('pexelsKey', '')
-    fal_key            = config.get('falKey', '')  # Fal.ai API key
-    pollinations_key   = config.get('pollinationsKey', '')  # Pollinations API key
-    tts_provider       = config.get('ttsProvider', 'elevenlabs')
-    gemini_model       = config.get('geminiModel', 'gemini-3.6-flash')
-    image_service      = config.get('imageService', 'pollinations')   # pollinations | fal | huggingface | pexels | auto
-    pollinations_model = config.get('pollinationsModel', 'flux')
-    script_provider    = config.get('scriptProvider', 'gemini')
-    poll_text_model    = config.get('pollinationsTextModel', 'openai-fast')
-    
-    # Fal.ai ayarları - video ebatlarını kullan
-    fal_width          = video_width
-    fal_height         = video_height
-    fal_steps          = config.get('falSteps', 4)
-
-    tools_enabled = config.get('toolsEnabled', {})
-    script_enabled = tools_enabled.get('scriptGen', True)
-    image_enabled  = tools_enabled.get('imageGen', True)
-    tts_enabled    = tools_enabled.get('ttsGen', True)
-    video_enabled  = tools_enabled.get('videoCompose', True)
-
-    services_enabled = config.get('servicesEnabled', {})
-    svc_fal_image          = services_enabled.get('fal_image', True)  # Fal.ai varsayılan aktif
-    svc_pollinations_image = services_enabled.get('pollinations_image', True)
-    svc_huggingface_image  = services_enabled.get('huggingface_image', True)
-    svc_pexels_image       = services_enabled.get('pexels_image', True)
-    svc_gemini_script      = services_enabled.get('gemini_script', True)
-    svc_pollinations_text  = services_enabled.get('pollinations_text', True)
-    svc_elevenlabs_tts     = services_enabled.get('elevenlabs_tts', True)
-    svc_edge_tts           = services_enabled.get('edge_tts', True)
-    
-    # Fal.ai API key'i environment variable olarak ayarla
+    gemini_keys = config.get('geminiKeys', []) or ([gemini_key] if gemini_key else [])
+    eleven_key = config.get('elevenKey', '')
+    hf_key = config.get('hfKey', '')
+    pexels_key = config.get('pexelsKey', '')
+    fal_key = config.get('falKey', '')
+    pollinations_key = config.get('pollinationsKey', '')
+    script_provider = (prompt_settings.get('provider') or '').strip()
+    script_model = (prompt_settings.get('model') or '').strip()
+    image_service = (visual_settings.get('provider') or '').strip()
+    visual_model = (visual_settings.get('model') or '').strip()
+    tts_provider = (voice_settings.get('provider') or '').strip()
+    tts_model = (voice_settings.get('model') or '').strip()
+    tts_voice_id = (voice_settings.get('voiceId') or '').strip()
+    tts_fallback_provider = (voice_settings.get('fallbackProvider') or '').strip()
+    tts_fallback_voice_id = (voice_settings.get('fallbackVoiceId') or '').strip()
+    fal_width, fal_height = video_width, video_height
+    fal_steps = int((visual_settings.get('options') or {}).get('steps', 4))
+    image_enabled = bool(visual_settings.get('enabled', True))
+    tts_enabled = bool(voice_settings.get('enabled', True))
+    video_enabled = True
+    svc_fal_image = image_service == 'fal'
+    svc_pollinations_image = image_service == 'pollinations'
+    svc_huggingface_image = image_service == 'huggingface'
+    svc_pexels_image = image_service == 'pexels'
+    svc_gemini_script = script_provider == 'gemini'
+    svc_pollinations_text = script_provider == 'pollinations'
+    svc_elevenlabs_tts = tts_provider == 'elevenlabs' or tts_fallback_provider == 'elevenlabs'
+    svc_edge_tts = tts_provider == 'edge-tts' or tts_fallback_provider == 'edge-tts'
     if fal_key:
-        import os as _os
-        _os.environ['FAL_KEY'] = fal_key
+        os.environ['FAL_KEY'] = fal_key
 
     print(f"[1/6] Haber çekiliyor: {url}")
     update_job(jobs_dir, job_id, {'status': 'scraping'}, log_file=log_file)
@@ -435,7 +396,7 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
 
     with open(os.path.join(output_dir, 'news.json'), 'w', encoding='utf-8') as f:
         json.dump(news, f, ensure_ascii=False, indent=2)
-    
+
     log_to_job(log_file, f"News scraped successfully: {len(news.get('text', ''))} characters", "SUCCESS")
 
     # Pause check
@@ -444,30 +405,26 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     print(f"[2/6] Script üretiliyor...")
     update_job(jobs_dir, job_id, {'status': 'scripting'}, log_file=log_file)
     log_to_job(log_file, "Starting script generation phase", "INFO")
-    
-    selected_script = _load_custom_script(base_dir, job_data, video_type)
+
+    selected_script = profile
     if not selected_script:
         error_msg = 'Script seçimi zorunlu: geçerli bir scriptId bulunamadı'
         update_job(jobs_dir, job_id, {'status': 'failed', 'error': error_msg}, log_file=log_file)
         log_to_job(log_file, error_msg, "ERROR")
         return
 
-    selected_prompt = selected_script.get('prompt') if selected_script else None
+    selected_prompt = prompt_settings.get('text')
     selected_max_duration = int(selected_script.get('maxDuration', 55)) if selected_script else 55
 
-    if not script_enabled:
-        print("  Script üretimi devre dışı, atlanıyor.")
-        log_to_job(log_file, "Script generation disabled, using fallback", "WARNING")
-        script = {'hook': news.get('title', ''), 'scenes': [{'scene': 1, 'text': news['text'][:200], 'image_prompt': 'news background', 'duration': 10}], 'outro': ''}
-    elif script_provider == 'pollinations':
+    if script_provider == 'pollinations':
         if not svc_pollinations_text:
             error_msg = 'Pollinations Text servisi devre dışı'
             update_job(jobs_dir, job_id, {'status': 'failed', 'error': error_msg}, log_file=log_file)
             log_to_job(log_file, error_msg, "ERROR")
             return
         from script_gen import generate_script_pollinations
-        log_to_job(log_file, f"Using Pollinations for script generation (model: {poll_text_model})", "INFO")
-        result = generate_script_pollinations(news['title'], news['text'], poll_text_model, selected_max_duration, selected_prompt)
+        log_to_job(log_file, f"Using Pollinations for script generation (model: {script_model})", "INFO")
+        result = generate_script_pollinations(news['title'], news['text'], script_model, selected_max_duration, selected_prompt)
         if not result.get('success'):
             error_msg = f"Script hatası: {result.get('error', '')}"
             update_job(jobs_dir, job_id, {'status': 'failed', 'error': error_msg}, log_file=log_file)
@@ -481,28 +438,28 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
             update_job(jobs_dir, job_id, {'status': 'failed', 'error': error_msg}, log_file=log_file)
             log_to_job(log_file, error_msg, "ERROR")
             return
-        
+
         # Multi-key desteği: geminiKeys array'i varsa onu kullan, yoksa geminiKey'i array'e çevir
         gemini_keys = config.get('geminiKeys', [])
         if not gemini_keys and gemini_key:
             gemini_keys = [gemini_key]
-        
+
         if not gemini_keys:
             error_msg = 'Gemini API key eksik'
             update_job(jobs_dir, job_id, {'status': 'failed', 'error': error_msg}, log_file=log_file)
             log_to_job(log_file, error_msg, "ERROR")
             return
-        
+
         log_to_job(log_file, f"Using Gemini for script generation with {len(gemini_keys)} API key(s)", "INFO")
-        log_to_job(log_file, f"Model: {gemini_model}, Max duration: {selected_max_duration}s", "INFO")
-        
+        log_to_job(log_file, f"Model: {script_model}, Max duration: {selected_max_duration}s", "INFO")
+
         from script_gen import generate_script_with_fallback
         result = generate_script_with_fallback(
             news['title'],
             news['text'],
             gemini_keys,
             max_duration=selected_max_duration,
-            model_name=gemini_model,
+            model_name=script_model,
             prompt_template=selected_prompt
         )
         if not result.get('success'):
@@ -527,9 +484,9 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
         if not fal_key and not os.environ.get('FAL_KEY'):
             print(f"  [Fal.ai] API key yok, atlanıyor...")
             return False
-        return generate_image_fal(prompt, img_path, 
-                                  width=fal_width, height=fal_height, 
-                                  steps=fal_steps, optimize_cost=True)
+        return generate_image_fal(prompt, img_path,
+                                  width=fal_width, height=fal_height,
+                                  steps=fal_steps, model=visual_model, optimize_cost=True)
 
     def _try_pollinations(prompt, img_path):
         if not svc_pollinations_image:
@@ -537,17 +494,17 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
         if not pollinations_key:
             print("  [Pollinations] API anahtarı yok; ücretsiz endpoint kullanılmayacak.")
             return False
-        if not str(pollinations_model).strip():
+        if not str(visual_model).strip():
             print("  [Pollinations] Model adı boş; üretim başlatılmadı.")
             return False
-        return generate_image_pollinations(prompt, img_path, str(pollinations_model).strip(),
+        return generate_image_pollinations(prompt, img_path, str(visual_model).strip(),
                                            width=video_width, height=video_height,
                                            api_key=pollinations_key)
 
     def _try_huggingface(prompt, img_path):
         if not svc_huggingface_image:
             return False
-        return generate_image_huggingface(prompt, img_path, hf_key) if hf_key else False
+        return generate_image_huggingface(prompt, img_path, hf_key, model=visual_model) if hf_key else False
 
     def _try_pexels(prompt, img_path):
         if not svc_pexels_image:
@@ -621,7 +578,7 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
 
             scenes[i]['used_service'] = used_service
             print(f"  Sahne {i+1} görseli: {'OK' if os.path.exists(img_path) else 'FAIL'} ({used_service})")
-            
+
             # Pollinations API için görseller arası 15 saniye bekleme (rate limit)
             if used_service == 'pollinations' and (i < len(scenes) - 1 or script.get('outro')):
                 import time
@@ -636,13 +593,13 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
             outro_service = _generate_image(outro_prompt, outro_img_path)
             script['outro_used_service'] = outro_service
             print(f"  Outro görseli: {'OK' if os.path.exists(outro_img_path) else 'FAIL'} ({outro_service})")
-            
+
             # Pollinations cooldown before thumbnail
             if outro_service == 'pollinations':
                 import time
                 print(f"  [Pollinations cooldown: 15 saniye bekleniyor...]")
                 time.sleep(15)
-        
+
         # Thumbnail görseli üret (YouTube kapak için)
         thumbnail_prompt = script.get('thumbnail_image_prompt', f"Professional YouTube thumbnail, dramatic lighting, bold colors, eye-catching, news media style, {news.get('title', 'breaking news')[:50]}, space for text overlay")
         thumbnail_prompt = apply_visual_theme(thumbnail_prompt, visual_theme_id, visual_theme_prompt)
@@ -668,22 +625,22 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
         segments = []
         if script.get('hook'):
             segments.append({
-                'text': script['hook'], 
+                'text': script['hook'],
                 'type': 'hook',
                 'effect': script.get('hook_effect', 'zoom_in_fast'),
                 'voice_profile': script.get('hook_voice_profile', 'urgent')
             })
         for i, scene in enumerate(scenes):
             segments.append({
-                'text': scene.get('text', ''), 
-                'type': 'scene', 
+                'text': scene.get('text', ''),
+                'type': 'scene',
                 'index': i,
                 'effect': scene.get('effect', 'ken_burns_zoom_in'),
                 'voice_profile': scene.get('voice_profile', 'neutral')
             })
         if script.get('outro'):
             segments.append({
-                'text': script['outro'], 
+                'text': script['outro'],
                 'type': 'outro',
                 'effect': script.get('outro_effect', 'pulse_strong'),
                 'voice_profile': script.get('outro_voice_profile', 'cheerful')
@@ -696,22 +653,22 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
         segments = []
         if script.get('hook'):
             segments.append({
-                'text': script['hook'], 
+                'text': script['hook'],
                 'type': 'hook',
                 'effect': script.get('hook_effect', 'zoom_in_fast'),
                 'voice_profile': script.get('hook_voice_profile', 'urgent')
             })
         for i, scene in enumerate(scenes):
             segments.append({
-                'text': scene.get('text', ''), 
-                'type': 'scene', 
+                'text': scene.get('text', ''),
+                'type': 'scene',
                 'index': i,
                 'effect': scene.get('effect', 'ken_burns_zoom_in'),
                 'voice_profile': scene.get('voice_profile', 'neutral')
             })
         if script.get('outro'):
             segments.append({
-                'text': script['outro'], 
+                'text': script['outro'],
                 'type': 'outro',
                 'effect': script.get('outro_effect', 'pulse_strong'),
                 'voice_profile': script.get('outro_voice_profile', 'cheerful')
@@ -724,9 +681,12 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
             seg_audio = os.path.join(audio_dir, f"seg_{idx:02d}.mp3")
             voice_prof = seg.get('voice_profile', 'neutral')
             print(f"  TTS segment {idx+1}/{len(segments)}: {seg['type']} (profil: {voice_prof})...")
-            tts_ok = generate_tts(seg['text'], seg_audio, tts_provider, eleven_key,
-                                  voice_profile=voice_prof,
-                                  svc_elevenlabs=svc_elevenlabs_tts, svc_edge_tts=svc_edge_tts)
+            tts_ok = generate_tts(
+                seg['text'], seg_audio, tts_provider, eleven_key,
+                voice_id=tts_voice_id, model_id=tts_model, voice_profile=voice_prof,
+                fallback_provider=tts_fallback_provider, fallback_voice_id=tts_fallback_voice_id,
+                svc_elevenlabs=svc_elevenlabs_tts, svc_edge_tts=svc_edge_tts
+            )
             if not tts_ok:
                 print(f"  [WARN] Segment {idx+1} TTS basarisiz, atlaniyor")
                 actual_durations.append(3.0)
@@ -769,8 +729,11 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
             'duration': actual_durations[idx]
         })
 
-    srt_path = os.path.join(output_dir, 'subtitles.srt')
-    srt_content = generate_srt(srt_segments, srt_path)
+    srt_path = None
+    srt_content = ''
+    if subtitle_enabled:
+        srt_path = os.path.join(output_dir, 'subtitles.srt')
+        srt_content = generate_srt(srt_segments, srt_path, max_words_per_line=subtitle_max_words)
 
     # --- Video: gerçek sürelerle ---
     print(f"[6/6] Video birleştiriliyor...")
@@ -803,30 +766,28 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
         video_scenes.append(vs)
 
     video_path = os.path.join(output_dir, 'final_video.mp4')
-    
+
     # Efektleri config'den veya job'dan al (varsayılan: True)
-    enable_effects = config.get('enableVideoEffects', True)
-    if 'enableVideoEffects' in job_data:
-        enable_effects = job_data['enableVideoEffects']
-    
+    enable_effects = True
+
     # ===== VIDEO COMPOSITION WITH LOCK & TEMP ISOLATION =====
     # Setup job-specific temp directory for MoviePy
     job_temp_dir = setup_job_temp_dir(job_id)
     original_temp = os.environ.get('TEMP', '')
     original_tmp = os.environ.get('TMP', '')
-    
+
     # Acquire compositor lock (prevents parallel MoviePy conflicts)
     lock = VideoCompositorLock()
     video_ok = False
-    
+
     try:
         # Set job-specific temp directory
         os.environ['TEMP'] = job_temp_dir
         os.environ['TMP'] = job_temp_dir
-        
+
         # Acquire lock (will wait for other jobs to finish)
         lock.acquire(job_id, blocking=True)
-        
+
         # Compose video with isolation
         video_ok = compose_video(
             video_scenes,
@@ -840,9 +801,9 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
             bgm_volume_db=bgm_volume_db,
             width=video_width,
             height=video_height,
-            fps=int(job_data.get('videoFPS', config.get('videoFPS', 30)))
+            fps=30
         )
-        
+
     except TimeoutError as e:
         print(f"  [Lock] Timeout waiting for video compositor: {e}")
         update_job(jobs_dir, job_id, {'status': 'failed', 'error': f'Video kompozisyon kilidi timeout: {e}'})
@@ -854,13 +815,13 @@ def run_pipeline(job_id: str, url: str, template: str, config_file: str):
     finally:
         # Release lock
         lock.release()
-        
+
         # Restore original temp directories
         if original_temp:
             os.environ['TEMP'] = original_temp
         if original_tmp:
             os.environ['TMP'] = original_tmp
-        
+
         # Cleanup job temp (only old dirs)
         cleanup_job_temp_dir(job_temp_dir, max_age_hours=1)
     # ===== END VIDEO COMPOSITION =====
@@ -883,22 +844,22 @@ if __name__ == '__main__':
     if len(sys.argv) < 5:
         print("Kullanım: python pipeline.py <job_id> <url> <template> <config_file>")
         sys.exit(1)
-    
+
     job_id = sys.argv[1]
     url = sys.argv[2]
     template = sys.argv[3]
     config_file = sys.argv[4]
-    
+
     # ===== GLOBAL PRODUCTION LOCK =====
     # Acquire global production lock to ensure sequential processing
     # Only ONE video production at a time across the entire system
     production_lock = GlobalProductionLock()
-    
+
     try:
         print(f"\n[LOCK] Acquiring global production lock for job: {job_id}")
         production_lock.acquire(job_id, blocking=True)
         print(f"[LOCK] ✅ Production lock acquired - starting video production\n")
-        
+
         # Mark job as started in production queue
         try:
             from scheduler.production_queue_manager import ProductionQueueManager
@@ -907,7 +868,7 @@ if __name__ == '__main__':
             queue_manager.start_job(job_id)
         except Exception as e:
             print(f"[QUEUE] Warning: Could not update queue status: {e}")
-        
+
         # Run only the failed stage when a retry follows a video composition error.
         jobs_dir = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'data', 'jobs')
         job_file = os.path.join(jobs_dir, f"{job_id}.json")
@@ -936,24 +897,24 @@ if __name__ == '__main__':
             run_regenerate(job_id, 'video', config_file)
         else:
             run_pipeline(job_id, url, template, config_file)
-        
+
         # Check if job completed successfully
         job_file = os.path.join(jobs_dir, f"{job_id}.json")
         success = False
         error_msg = None
-        
+
         if os.path.exists(job_file):
             with open(job_file, 'r', encoding='utf-8') as f:
                 job_data = json.load(f)
             status = job_data.get('status')
             success = (status == 'done')
             error_msg = job_data.get('error') if not success else None
-        
+
         # Mark job as completed in production queue
         try:
             queue_manager.complete_job(job_id, success=success, error=error_msg)
             print(f"\n[QUEUE] Job marked as {'completed' if success else 'failed'}")
-            
+
             # Get next job info
             if success:
                 status = queue_manager.get_status()
@@ -963,13 +924,13 @@ if __name__ == '__main__':
                         print(f"[QUEUE] Next job in queue: {next_job['job_id']}")
         except Exception as e:
             print(f"[QUEUE] Warning: Could not complete job in queue: {e}")
-        
+
     except TimeoutError as e:
         print(f"\n[LOCK] ❌ Timeout acquiring production lock: {e}")
         print("[LOCK] Another video is currently being produced")
         print("[LOCK] Job will remain in queue for retry")
         sys.exit(1)
-    
+
     except KeyboardInterrupt:
         print(f"\n[LOCK] ❌ Production interrupted by user")
         try:
@@ -980,12 +941,12 @@ if __name__ == '__main__':
         except:
             pass
         sys.exit(1)
-    
+
     except Exception as e:
         print(f"\n[PIPELINE] ❌ Error during production: {e}")
         import traceback
         traceback.print_exc()
-        
+
         try:
             from scheduler.production_queue_manager import ProductionQueueManager
             base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -994,9 +955,8 @@ if __name__ == '__main__':
         except:
             pass
         sys.exit(1)
-    
+
     finally:
         # Release production lock
         production_lock.release()
         print(f"\n[LOCK] ✅ Production lock released")
-

@@ -17,6 +17,7 @@ $socialQueueFile = $dataDir . '/social_queue.json';
 $contentPoolFile = $dataDir . '/content_pool.json';
 $pythonCmd = 'python';
 require_once __DIR__ . '/music_helpers.php';
+require_once __DIR__ . '/script_profile_helpers.php';
 
 if (!is_dir($jobsDir)) { mkdir($jobsDir, 0777, true); }
 if (!is_dir($outputDir)) { mkdir($outputDir, 0777, true); }
@@ -38,19 +39,8 @@ function deleteDirectoryRecursive($dir) {
 }
 
 function findScriptById($scriptId) {
-    global $scriptsFile;
-    if (!file_exists($scriptsFile)) {
-        return null;
-    }
-
-    $data = json_decode(file_get_contents($scriptsFile), true);
-    $scripts = $data['scripts'] ?? [];
-    foreach ($scripts as $script) {
-        if (($script['id'] ?? '') === $scriptId) {
-            return $script;
-        }
-    }
-    return null;
+    global $baseDir;
+    return vp_find_script($baseDir, $scriptId);
 }
 
 function loadProductionQueueData() {
@@ -408,9 +398,9 @@ function clearAllVideoProductions() {
 // Helper: Detect resume point for a job
 function detectResumePoint($jobId) {
     global $outputDir;
-    
+
     $jobOutputDir = "$outputDir/$jobId";
-    
+
     if (!is_dir($jobOutputDir)) {
         return [
             'resume_from' => 'scraping',
@@ -422,21 +412,21 @@ function detectResumePoint($jobId) {
             'progress_percent' => 0
         ];
     }
-    
+
     $completed = [];
     $resumeFrom = 'scraping';
     $missingFiles = [];
-    
+
     // Check scraping (news.json)
     if (file_exists("$jobOutputDir/news.json")) {
         $completed[] = 'scraping';
         $resumeFrom = 'scripting';
     } else {
         $missingFiles[] = 'news.json';
-        return buildResumeResult('scraping', $completed, $missingFiles, true, 
+        return buildResumeResult('scraping', $completed, $missingFiles, true,
             'Will start from scraping stage');
     }
-    
+
     // Check scripting (script.json)
     if (file_exists("$jobOutputDir/script.json")) {
         $completed[] = 'scripting';
@@ -446,7 +436,7 @@ function detectResumePoint($jobId) {
         return buildResumeResult('scripting', $completed, $missingFiles, true,
             'Will resume from script generation');
     }
-    
+
     // Check imaging (images/*.png)
     if (is_dir("$jobOutputDir/images")) {
         $images = glob("$jobOutputDir/images/*.png");
@@ -463,9 +453,9 @@ function detectResumePoint($jobId) {
         return buildResumeResult('imaging', $completed, $missingFiles, true,
             'Will resume from image generation');
     }
-    
+
     // Check TTS (audio.mp3 or audio_segments/*.mp3)
-    if (file_exists("$jobOutputDir/audio.mp3") || 
+    if (file_exists("$jobOutputDir/audio.mp3") ||
         (is_dir("$jobOutputDir/audio_segments") && count(glob("$jobOutputDir/audio_segments/*.mp3")) > 0)) {
         $completed[] = 'tts';
         $resumeFrom = 'subtitling';
@@ -474,7 +464,7 @@ function detectResumePoint($jobId) {
         return buildResumeResult('tts', $completed, $missingFiles, true,
             'Will resume from TTS generation');
     }
-    
+
     // Check subtitling (subtitles.srt)
     if (file_exists("$jobOutputDir/subtitles.srt")) {
         $completed[] = 'subtitling';
@@ -484,7 +474,7 @@ function detectResumePoint($jobId) {
         return buildResumeResult('subtitling', $completed, $missingFiles, true,
             'Will resume from subtitle generation');
     }
-    
+
     // Check composing (final_video.mp4)
     if (file_exists("$jobOutputDir/final_video.mp4")) {
         $completed[] = 'composing';
@@ -500,7 +490,7 @@ function detectResumePoint($jobId) {
 function buildResumeResult($resumeFrom, $completed, $missing, $canResume, $message) {
     $totalStages = 6;
     $completedCount = count($completed);
-    
+
     return [
         'resume_from' => $resumeFrom,
         'completed_stages' => $completed,
@@ -570,25 +560,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $template = $input['template'] ?? 'short_haber';
     $scriptId = trim((string)($input['scriptId'] ?? ''));
     $contentType = trim((string)($input['contentType'] ?? ''));
-    $videoWidth = intval($input['videoWidth'] ?? 1080);
-    $videoHeight = intval($input['videoHeight'] ?? 1920);
-    $subtitleStyle = $input['subtitleStyle'] ?? null;
+    // Video biçimi ve tüm üretim ayarları seçilen script profilinden gelir.
     $sourceMode = strtolower(trim((string)($input['source_mode'] ?? 'url')));
     if (!in_array($sourceMode, ['url', 'prompt'], true)) {
         $sourceMode = 'url';
     }
     $promptText = trim((string)($input['prompt_text'] ?? ''));
-    $visualThemeId = trim((string)($input['visual_theme_id'] ?? 'default'));
-    if ($visualThemeId === '') {
-        $visualThemeId = 'default';
-    }
-    $visualThemePrompt = trim((string)($input['visual_theme_prompt'] ?? ''));
-    $musicMode = normalizeMusicMode($input['music_mode'] ?? 'off');
-    $bgmVolumeDb = (float)($input['bgm_volume_db'] ?? -22.0);
 
-    // Ebat sınırları kontrolü
-    $videoWidth = max(360, min(4096, $videoWidth));
-    $videoHeight = max(360, min(4096, $videoHeight));
 
     if ($sourceMode === 'url') {
         if (empty($url)) {
@@ -620,19 +598,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
-    if ($contentType === '') {
-        $contentType = trim((string)($selectedScript['contentType'] ?? 'genel'));
-    }
-    $contentType = strtolower($contentType);
-    $scriptCategoryId = resolveScriptCategory($selectedScript, $contentType);
-
-    $selectedMusic = null;
-    if ($musicMode === 'auto') {
-        $selectedMusic = selectMusicTrackForCategory($baseDir, $scriptCategoryId);
-    }
+        $contentType = strtolower(trim((string)($selectedScript['contentType'] ?? 'genel')));
+    $scriptCategoryId = $selectedScript['categoryId'] ?? $contentType;
+    [$videoWidth, $videoHeight] = vp_video_dimensions($selectedScript['videoType'] ?? 'short');
+    $selectedMusic = selectMusicTrackForScript($baseDir, $selectedScript);
+    $musicMode = $selectedScript['music']['mode'] ?? 'off';
+    $subtitleStyle = !empty($selectedScript['subtitles']['enabled']) ? ($selectedScript['subtitles']['style'] ?? null) : null;
 
     $jobId = uniqid('job_', true);
-    
+
     // Başlık fallback'i oluştur
     $titleGuess = 'Yeni Video';
     if ($sourceMode === 'prompt' && $promptText !== '') {
@@ -645,7 +619,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $titleGuess = preg_replace('/[^a-zA-Z0-9\s-]/', ' ', urldecode($titleGuess));
         $titleGuess = ucfirst(trim($titleGuess)) ?: 'Yeni Video';
     }
-    
+
     $jobData = [
         'id' => $jobId,
         'url' => $url,
@@ -654,18 +628,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'template' => $template,
         'scriptId' => $scriptId,
         'scriptName' => $selectedScript['name'] ?? '',
+        'scriptProfile' => $selectedScript,
         'contentType' => $contentType,
         'videoWidth' => $videoWidth,
         'videoHeight' => $videoHeight,
         'subtitleStyle' => $subtitleStyle,
-        'visual_theme_id' => $visualThemeId,
-        'visual_theme_prompt' => $visualThemePrompt !== '' ? $visualThemePrompt : null,
+        'visual_theme_id' => 'default',
+        'visual_theme_prompt' => null,
         'music_mode' => $musicMode,
         'bgm_category_id' => $scriptCategoryId,
         'bgm_track_id' => $selectedMusic['id'] ?? null,
         'bgm_track_name' => $selectedMusic['name'] ?? null,
         'bgm_file' => $selectedMusic['file'] ?? null,
-        'bgm_volume_db' => $selectedMusic ? (float)($selectedMusic['volumeDb'] ?? $bgmVolumeDb) : $bgmVolumeDb,
+        'bgm_volume_db' => $selectedMusic ? (float)($selectedMusic['volumeDb'] ?? -22.0) : (float)($selectedScript['music']['volumeDb'] ?? -22.0),
         'status' => 'pending',
         'created_at' => date('Y-m-d H:i:s'),
         'previewUrl' => '',
@@ -730,7 +705,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
     } elseif ($action === 'resume') {
         // Smart resume: Detect where to continue from
         $resumeInfo = detectResumePoint($jobId);
-        
+
         if (!$resumeInfo['can_resume']) {
             echo json_encode([
                 'success' => false,
@@ -745,7 +720,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'PATCH') {
             ], JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
             exit;
         }
-        
+
         $resumeFrom = $resumeInfo['resume_from'];
         $section = mapResumeSectionForRegenerate($resumeFrom);
 
@@ -847,7 +822,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 
     $job = json_decode(file_get_contents($jobFile), true);
-    
+
     // news.json'dan gerçek başlığı al
     $newsFile = "$outputDir/$jobId/news.json";
     if (file_exists($newsFile)) {

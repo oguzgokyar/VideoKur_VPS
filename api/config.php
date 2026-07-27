@@ -78,9 +78,13 @@ $defaults = [
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     if (file_exists($configFile)) {
         $saved = json_decode(file_get_contents($configFile), true) ?: [];
-        echo json_encode(array_replace_recursive($defaults, $saved));
+        $result = array_replace_recursive($defaults, $saved);
+        foreach (['ttsProvider','geminiModel','imageService','pollinationsModel','pollinationsTextModel','scriptProvider','falWidth','falHeight','falSteps','toolsEnabled','servicesEnabled','subtitleStyle'] as $key) unset($result[$key]);
+        echo json_encode($result);
     } else {
-        echo json_encode($defaults);
+        $result = $defaults;
+        foreach (['ttsProvider','geminiModel','imageService','pollinationsModel','pollinationsTextModel','scriptProvider','falWidth','falHeight','falSteps','toolsEnabled','servicesEnabled','subtitleStyle'] as $key) unset($result[$key]);
+        echo json_encode($result);
     }
     exit;
 }
@@ -186,6 +190,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $config['socialStaging'] = array_replace($baseStaging, $input['socialStaging']);
     }
 
+    foreach (['ttsProvider','geminiModel','imageService','pollinationsModel','pollinationsTextModel','scriptProvider','falWidth','falHeight','falSteps','toolsEnabled','servicesEnabled','subtitleStyle'] as $key) unset($config[$key]);
     $written = file_put_contents($configFile, json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
     if ($written === false) {
         echo json_encode(['success' => false, 'error' => 'Dosya yazılamadı: ' . $configFile]);

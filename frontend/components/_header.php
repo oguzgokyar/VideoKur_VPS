@@ -5,7 +5,6 @@ $page_titles = [
   'dashboard' => '📹 Videolar',
   'videos' => '📹 Videolar',
   'queues' => '📦 Kuyruklar',
-  'create' => '➕ Yeni Video',
   'content' => '📥 İçerikler',
   'scripts' => '📝 Script Yönetimi',
   'settings' => '⚙️ Ayarlar',

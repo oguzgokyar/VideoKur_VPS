@@ -56,7 +56,7 @@
       previewPlatform: 'youtube',
       editingQueue: false,
       editingMetadata: false,
-      
+
       // YouTube Channels for dropdown
       youtubeChannels: [],
       metaAccounts: {
@@ -71,19 +71,19 @@
         facebook_count: 0,
         message: null
       },
-      
+
       // Queue Stats
       queueStats: null,
       loadingStats: false,
       statsInterval: null,
-      
+
       // Metadata form
       metadata: {
         title: '',
         description: '',
         tags: ''
       },
-      
+
       // Modal states
       createModal: false,
       editModal: false,
@@ -91,7 +91,7 @@
       moveModal: false,
       queueSettingsModal: false,
       activePlatformTab: 'youtube', // Active platform tab in settings modal
-      
+
       // Form data
       form: {
         name: '',
@@ -164,12 +164,12 @@
           }
         }
       },
-      
+
       // Config'den yüklenen varsayılan altyazı
       configSubtitle: { FontName: 'Arial', FontSize: 24, PrimaryColour: '#FFFFFF', OutlineColour: '#000000', Outline: 2, MarginV: 60, MarginL: 40, MarginR: 40, Bold: 1 },
-      
+
       submitting: false,
-      
+
       // Video ebat presetleri
       dimensionPresets: {
         vertical: { label: '📱 Dikey (9:16)', width: 1080, height: 1920, desc: 'Shorts/Reels/TikTok' },
@@ -177,7 +177,7 @@
         horizontal: { label: '🖥️ Yatay (16:9)', width: 1920, height: 1080, desc: 'YouTube/TV' },
         custom: { label: '✏️ Özel', width: null, height: null, desc: 'Manuel giriş' }
       },
-      
+
       // Altyazı presetleri
       subtitlePresets: {
         classic: { label: 'Klasik', FontSize: 24, PrimaryColour: '#FFFFFF', OutlineColour: '#000000', Outline: 2, MarginV: 60, MarginL: 40, MarginR: 40, Bold: 1 },
@@ -199,27 +199,27 @@
         { id: 'reportage-sketch', label: 'Reportage Sketch', prompt: 'reportage sketch style, monochrome ink and charcoal texture' },
         { id: 'infinity', label: 'Infinity', prompt: 'epic fantasy concept art, monumental scale, surreal atmosphere' }
       ],
-      
+
       // Computed video dimensions
-      get formVideoWidth() { 
-        return this.form.dimensionPreset === 'custom' ? this.form.customWidth : this.dimensionPresets[this.form.dimensionPreset]?.width || 1080; 
+      get formVideoWidth() {
+        return this.form.dimensionPreset === 'custom' ? this.form.customWidth : this.dimensionPresets[this.form.dimensionPreset]?.width || 1080;
       },
-      get formVideoHeight() { 
-        return this.form.dimensionPreset === 'custom' ? this.form.customHeight : this.dimensionPresets[this.form.dimensionPreset]?.height || 1920; 
+      get formVideoHeight() {
+        return this.form.dimensionPreset === 'custom' ? this.form.customHeight : this.dimensionPresets[this.form.dimensionPreset]?.height || 1920;
       },
-      
+
       platformOptions: [
         { id: 'youtube', name: 'YouTube', icon: '📺', color: 'red' },
         { id: 'instagram', name: 'Instagram', icon: '📸', color: 'pink' },
         { id: 'facebook', name: 'Facebook', icon: '📘', color: 'blue' }
       ],
-      
+
       scheduleOptions: [
         { id: 'now', name: 'Hemen Paylaş', desc: 'Video eklenince hemen paylaşılır' },
         { id: 'interval', name: 'Aralıklı', desc: 'Belirli saat aralıklarında paylaşılır' },
         { id: 'specific', name: 'Belirli Saatler', desc: 'Günün belirli saatlerinde paylaşılır' }
       ],
-      
+
       togglePlatform(platformId) {
         const idx = this.form.platforms.indexOf(platformId);
         if (idx > -1) {
@@ -264,7 +264,7 @@
         const sep = url.includes('?') ? '&' : '?';
         return `${url}${sep}_t=${Date.now()}`;
       },
-      
+
       openCreateModal() {
         // Basit kuyruk oluşturma - sadece isim ve platformlar
         this.form = {
@@ -274,13 +274,13 @@
         };
         this.createModal = true;
       },
-      
+
       openEditModal(queue) {
         this.selectedQueue = queue;
         const vs = queue.video_settings || {};
         const schedule = queue.schedule || {};
         const ps = queue.platform_settings || {};
-        
+
         this.form = {
           name: queue.name,
           platforms: [...queue.platforms],
@@ -354,11 +354,11 @@
         };
         this.editModal = true;
       },
-      
+
       async openDetailModal(queue) {
         this.selectedQueue = null;
         this.detailModal = true;
-        
+
         try {
           const r = await fetch(this.noCacheUrl('/api/queues.php?action=get&id=' + queue.id), { cache: 'no-store' });
           const d = await r.json();
@@ -369,7 +369,7 @@
           console.error('Kuyruk detayı yüklenemedi:', e);
         }
       },
-      
+
       closeModals() {
         this.createModal = false;
         this.editModal = false;
@@ -377,7 +377,7 @@
         this.moveModal = false;
         this.queueSettingsModal = false;
       },
-      
+
       // Select queue tab
       async selectQueueTab(queue) {
         this.activeTab = queue.id;
@@ -390,7 +390,7 @@
             this.filterVideos();
             this.selectedVideo = null;
             this.editingMetadata = false;
-            
+
             // Auto-select first video for preview
             this.$nextTick(() => {
               this.initSortable();
@@ -398,7 +398,7 @@
                 this.selectedVideo = this.filteredVideos[0];
               }
             });
-            
+
             // Load queue stats with auto-refresh
             this.loadQueueStats();
             // Clear old interval and set new 15-second refresh
@@ -409,7 +409,7 @@
           console.error('Kuyruk detayı yüklenemedi:', e);
         }
       },
-      
+
       // Load queue statistics
       async loadQueueStats() {
         if (!this.selectedQueue) return;
@@ -436,12 +436,12 @@
       isProductionSchedulerRunning() {
         return !!(this.queueStats?.scheduler_status?.production?.running);
       },
-      
+
       // New: Select queue for two-column view
       async selectQueueForDetail(queue) {
         await this.selectQueueTab(queue);
       },
-      
+
       // Toggle queue settings edit mode
       toggleQueueEdit() {
         if (!this.editingQueue) {
@@ -464,7 +464,7 @@
         }
         this.editingQueue = !this.editingQueue;
       },
-      
+
       // Open queue settings modal
       async openQueueSettingsModal() {
         await this.loadMetaAccounts();
@@ -472,10 +472,10 @@
         const vs = this.selectedQueue.video_settings || {};
         const ps = this.selectedQueue.platform_settings || {};
         const schedule = this.selectedQueue.schedule || {};
-        
+
         // Set active tab to first enabled platform
         this.activePlatformTab = this.selectedQueue.platforms?.[0] || 'youtube';
-        
+
         this.form = {
           name: this.selectedQueue.name,
           platforms: [...(this.selectedQueue.platforms || [])],
@@ -560,7 +560,7 @@
         };
         this.queueSettingsModal = true;
       },
-      
+
       // Build video_settings object from form
       buildVideoSettings() {
         let themePrompt = this.form.visualThemePrompt || '';
@@ -579,7 +579,7 @@
           customSubtitle: this.form.subtitleMode === 'custom' ? this.form.customSubtitle : null
         };
       },
-      
+
       // Save queue settings from modal
       async saveQueueSettings() {
         const platformSettings = JSON.parse(JSON.stringify(this.form.platformSettings || {}));
@@ -643,16 +643,16 @@
             return;
           }
         }
-        
+
         this.submitting = true;
-        
+
         // Build platforms array from enabled platform settings
         const enabledPlatforms = [];
         if (platformSettings.youtube?.enabled) enabledPlatforms.push('youtube');
         if (platformSettings.instagram?.enabled) enabledPlatforms.push('instagram');
         if (platformSettings.tiktok?.enabled) enabledPlatforms.push('tiktok');
         if (platformSettings.facebook?.enabled) enabledPlatforms.push('facebook');
-        
+
         try {
           const response = await fetch('/api/queues.php', {
             method: 'POST',
@@ -672,7 +672,6 @@
                   specific_times: this.form.specificTimes,
                   timezone: 'Europe/Istanbul'
                 },
-                video_settings: this.buildVideoSettings(),
                 platform_settings: platformSettings
               }
             })
@@ -708,7 +707,7 @@
 
         return 'Önce Hesaplar > Meta ekranından Meta OAuth ile hesap/sayfa bağlayın.';
       },
-      
+
       // Video metadata editing
       startEditMetadata() {
         this.metadata = {
@@ -718,17 +717,17 @@
         };
         this.editingMetadata = true;
       },
-      
+
       cancelEditMetadata() {
         this.editingMetadata = false;
       },
-      
+
       async saveMetadata() {
         // For now just close - API extension needed for full implementation
         this.editingMetadata = false;
         alert('Metadata güncellendi!');
       },
-      
+
       filterVideos() {
         if (!this.selectedQueue?.videos) {
           this.filteredVideos = [];
@@ -743,13 +742,13 @@
           videos = videos.filter(v => this.allPublished(v));
         }
         this.filteredVideos = videos;
-        
+
         // Auto-select first video after filtering
         if (videos.length > 0 && !this.selectedVideo) {
           this.selectedVideo = videos[0];
         }
       },
-      
+
       selectVideo(video) {
         this.selectedVideo = video;
         if (video.platform_status) {
@@ -757,7 +756,7 @@
           if (platforms.length > 0) this.previewPlatform = platforms[0];
         }
       },
-      
+
       initSortable() {
         const el = document.getElementById('videoSortList');
         if (!el || !window.Sortable) return;
@@ -773,7 +772,7 @@
           }
         });
       },
-      
+
       async reorderVideos(order) {
         try {
           await fetch('/api/queues.php', {
@@ -784,11 +783,11 @@
           await this.selectQueueForDetail({ id: this.selectedQueue.id });
         } catch(e) { console.error('Sıralama hatası:', e); }
       },
-      
+
       openMoveModal() {
         this.moveModal = true;
       },
-      
+
       async moveVideoToQueue(targetQueueId) {
         if (!this.selectedVideo) return;
         try {
@@ -810,7 +809,7 @@
           await this.loadQueues();
         } catch(e) { alert('Hata: ' + e.message); }
       },
-      
+
       async createQueue() {
         if (!this.form.name.trim()) {
           alert('Kuyruk ismi gerekli!');
@@ -820,9 +819,9 @@
           alert('En az bir platform seçmelisiniz!');
           return;
         }
-        
+
         this.submitting = true;
-        
+
         try {
           const response = await fetch('/api/queues.php', {
             method: 'POST',
@@ -834,9 +833,9 @@
               timezone: this.form.timezone || 'Europe/Istanbul'
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             alert('✅ Kuyruk oluşturuldu! Şimdi kuyruk ayarlarından platform ayarlarını yapılandırın.');
             this.closeModals();
@@ -850,7 +849,7 @@
           this.submitting = false;
         }
       },
-      
+
       async updateQueue() {
         if (!this.form.name.trim()) {
           alert('Kuyruk ismi gerekli!');
@@ -860,7 +859,7 @@
           alert('En az bir platform seçmelisiniz!');
           return;
         }
-        
+
         // YouTube platformu seçiliyse kanal zorunlu
         if (this.form.platforms.includes('youtube') && this.form.platformSettings.youtube.enabled) {
           if (!this.form.platformSettings.youtube.channelId) {
@@ -868,9 +867,9 @@
             return;
           }
         }
-        
+
         this.submitting = true;
-        
+
         try {
           const schedule = {
             type: this.form.scheduleType,
@@ -878,7 +877,7 @@
             specific_times: this.form.specificTimes,
             timezone: 'Europe/Istanbul'
           };
-          
+
           const response = await fetch('/api/queues.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
@@ -889,13 +888,12 @@
                 name: this.form.name.trim(),
                 platforms: this.form.platforms,
                 schedule: schedule,
-                video_settings: this.buildVideoSettings()
               }
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             this.closeModals();
             this.loadQueues();
@@ -908,7 +906,7 @@
           this.submitting = false;
         }
       },
-      
+
       async pauseQueue(queue) {
         try {
           const response = await fetch('/api/queues.php', {
@@ -919,9 +917,9 @@
               queue_id: queue.id
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             await this.loadQueues();
             if (this.selectedQueue && this.selectedQueue.id === queue.id) {
@@ -934,7 +932,7 @@
           alert('Hata: ' + error.message);
         }
       },
-      
+
       async resumeQueue(queue) {
         try {
           const response = await fetch('/api/queues.php', {
@@ -945,9 +943,9 @@
               queue_id: queue.id
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             await this.loadQueues();
             if (this.selectedQueue && this.selectedQueue.id === queue.id) {
@@ -960,12 +958,12 @@
           alert('Hata: ' + error.message);
         }
       },
-      
+
       async resetAndResumeQueue(queue) {
         if (!confirm('Kuyruk resetlenecek ve scheduler yeniden başlatılacak:\n\n✓ Duplicate videolar temizlenecek\n✓ Sıra numaraları düzenlenecek\n✓ Takılı kalan durumlar sıfırlanacak\n✓ Social scheduler yeniden başlatılacak\n\nDevam edilsin mi?')) {
           return;
         }
-        
+
         try {
           // Step 1: Reset queue
           const response = await fetch('/api/queues.php', {
@@ -976,9 +974,9 @@
               queue_id: queue.id
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             const stats = result.stats || {};
             let message = 'Kuyruk başarıyla resetlendi!\n\n';
@@ -986,7 +984,7 @@
             if (stats.positions_fixed > 0) message += `✓ ${stats.positions_fixed} position düzeltildi\n`;
             if (stats.status_reset > 0) message += `✓ ${stats.status_reset} durum sıfırlandı\n`;
             if (stats.jobs_reset > 0) message += `✓ ${stats.jobs_reset} job dosyası güncellendi\n`;
-            
+
             // Step 2: Restart social scheduler
             try {
               const schedulerResponse = await fetch('/api/scheduler_control.php', {
@@ -997,7 +995,7 @@
                   type: 'social'
                 })
               });
-              
+
               const schedulerResult = await schedulerResponse.json();
               if (schedulerResult.success) {
                 message += `\n🔄 Scheduler yeniden başlatıldı (PID: ${schedulerResult.pid})`;
@@ -1007,9 +1005,9 @@
             } catch (schedulerError) {
               message += `\n⚠️ Scheduler restart hatası: ${schedulerError.message}`;
             }
-            
+
             alert(message);
-            
+
             await this.loadQueues();
             if (this.selectedQueue && this.selectedQueue.id === queue.id) {
               await this.selectQueueTab(queue);
@@ -1023,12 +1021,12 @@
           alert('Hata: ' + error.message);
         }
       },
-      
+
       async deleteQueue(queue) {
         if (!confirm('Bu kuyruğu silmek istediğinizden emin misiniz?\n\nKuyruk: ' + queue.name + '\nİçindeki ' + (queue.videos?.length || 0) + ' video kuyruktan çıkarılacak.')) {
           return;
         }
-        
+
         try {
           const response = await fetch('/api/queues.php', {
             method: 'POST',
@@ -1038,9 +1036,9 @@
               queue_id: queue.id
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             // Close any open modals
             this.closeModals();
@@ -1060,12 +1058,12 @@
           alert('Hata: ' + error.message);
         }
       },
-      
+
       async removeFromQueue(jobId) {
         if (!confirm('Bu videoyu kuyruktan çıkarmak istediğinizden emin misiniz?')) {
           return;
         }
-        
+
         try {
           const response = await fetch('/api/queues.php', {
             method: 'POST',
@@ -1076,9 +1074,9 @@
               job_id: jobId
             })
           });
-          
+
           const result = await response.json();
-          
+
           if (result.success) {
             this.selectedVideo = null;
             // Reload with new method if in two-column view
@@ -1095,7 +1093,7 @@
           alert('Hata: ' + error.message);
         }
       },
-      
+
       getScheduleText(queue) {
         const s = queue.schedule;
         if (!s) return 'Ayarlanmamış';
@@ -1114,27 +1112,27 @@
         if (s.type === 'specific') return '📅 ' + (s.specific_times?.join(', ') || '');
         return 'Bilinmiyor';
       },
-      
+
       getPendingCount(queue) {
         return (queue.videos || []).filter(v => v.status !== 'published').length;
       },
-      
+
       getPublishedCount(queue) {
         return (queue.videos || []).filter(v => v.status === 'published').length;
       },
-      
+
       toggleDark() {
         this.darkMode = !this.darkMode;
         localStorage.setItem('darkMode', this.darkMode ? '1' : '0');
         document.documentElement.classList.toggle('dark', this.darkMode);
       },
-      
+
       async loadQueues() {
         try {
           const r = await fetch(this.noCacheUrl('/api/queues.php?action=list'), { cache: 'no-store' });
           const d = await r.json();
           this.queues = d.queues || [];
-          
+
           // İlk kuyruk seçili gelsin (boş ekran olmasın)
           if (this.queues.length > 0 && !this.activeTab) {
             await this.selectQueueTab(this.queues[0]);
@@ -1177,12 +1175,12 @@
       // ── Planlanan Paylaşım Tarihi Hesaplama ──────────────────────────────
       getScheduledPublishDate(video, platform) {
         if (!video || !this.selectedQueue) return 'Hesaplanıyor...';
-        
+
         // 1. Video'da direkt scheduled_publish_date varsa kullan
         if (video.scheduled_publish_date) {
           return this.formatScheduleDate(video.scheduled_publish_date);
         }
-        
+
         // 2. Platform status'ta uploaded_at varsa "Yayınlandı" göster
         const ps = video.platform_status?.[platform];
         if (ps) {
@@ -1195,108 +1193,108 @@
             return 'Yayınlandı ✓';
           }
         }
-        
+
         // 3. Kuyruk ayarlarından hesapla
         const schedule = this.selectedQueue.schedule || {};
         const platformSettings = this.selectedQueue.platform_settings?.[platform] || {};
-        
+
         // Schedule type kontrolü
         if (schedule.type === 'now') {
           return '⚡ Hemen';
         }
-        
+
         // Video pozisyonu
         const position = video.position || 1;
-        
+
         // Günlük limit
         const dailyLimit = parseInt(platformSettings.dailyLimit) || parseInt(schedule.daily_limit) || 0;
-        
+
         // Başlangıç saati
         const startTime = platformSettings.startTime || schedule.start_time || '09:00';
-        
+
         // Interval (dakika)
         const intervalMins = parseInt(platformSettings.intervalMinutes) || parseInt(schedule.interval_minutes) || 60;
-        
+
         // Hesaplama
         const now = new Date();
         let targetDate = new Date();
-        
+
         // Başlangıç saatini parse et
         const [startHour, startMin] = startTime.split(':').map(Number);
-        
+
         if (schedule.type === 'interval') {
           // Kuyrukta bu videodan önceki pending video sayısı
           const pendingBefore = (this.selectedQueue.videos || [])
             .filter(v => (v.position || 999) < position && this.getPlatformStatus(v, platform) === 'pending')
             .length;
-          
+
           // Bugün yapılan upload sayısı (published olanlar)
           const todayPublished = (this.selectedQueue.videos || [])
             .filter(v => {
               const s = this.getPlatformStatus(v, platform);
               return s === 'success' || s === 'published';
             }).length;
-          
+
           // Eğer günlük limit varsa, hangi güne denk geleceğini hesapla
           let daysToAdd = 0;
           let videoIndexToday = pendingBefore;
-          
+
           if (dailyLimit > 0) {
             // Bu video kaçıncı günde paylaşılacak?
             daysToAdd = Math.floor(videoIndexToday / dailyLimit);
             videoIndexToday = videoIndexToday % dailyLimit;
           }
-          
+
           // Hedef gün
           targetDate.setDate(now.getDate() + daysToAdd);
-          
+
           // Hedef saat = başlangıç + (sıra * interval)
           const totalMinutes = startHour * 60 + startMin + (videoIndexToday * intervalMins);
           targetDate.setHours(Math.floor(totalMinutes / 60), totalMinutes % 60, 0, 0);
-          
+
           // Eğer hesaplanan zaman geçmişte kaldıysa, sonraki güne at
           if (targetDate < now && daysToAdd === 0) {
             targetDate.setDate(targetDate.getDate() + 1);
           }
-          
+
         } else if (schedule.type === 'specific') {
           // Belirli saatler modunda
           const times = platformSettings.specificTimes || schedule.specific_times || ['09:00', '15:00', '21:00'];
-          
+
           // Kuyrukta bu videodan önceki pending sayısı
           const pendingBefore = (this.selectedQueue.videos || [])
             .filter(v => (v.position || 999) < position && this.getPlatformStatus(v, platform) === 'pending')
             .length;
-          
+
           // Hangi slot'a denk geliyor?
           const slotIndex = pendingBefore % times.length;
           const daysToAdd = Math.floor(pendingBefore / times.length);
-          
+
           const [slotHour, slotMin] = times[slotIndex].split(':').map(Number);
-          
+
           targetDate.setDate(now.getDate() + daysToAdd);
           targetDate.setHours(slotHour, slotMin, 0, 0);
-          
+
           // Geçmişteyse sonraki güne
           if (targetDate < now && daysToAdd === 0) {
             targetDate.setDate(targetDate.getDate() + 1);
           }
         }
-        
+
         return this.formatScheduleDate(targetDate.toISOString());
       },
-      
+
       // ── Scheduled Time Gösterimi (YENİ UNIFIED QUEUE SİSTEMİ) ──────────
       formatScheduledTime(scheduledTimeStr) {
         if (!scheduledTimeStr) return 'Hesaplanıyor...';
-        
+
         try {
           const scheduled = new Date(scheduledTimeStr);
           const now = new Date();
-          
+
           // Geçmiş mi kontrol et
           const isPast = scheduled < now;
-          
+
           // Tarih formatı
           const options = {
             year: 'numeric',
@@ -1306,13 +1304,13 @@
             minute: '2-digit'
           };
           const dateStr = scheduled.toLocaleDateString('tr-TR', options);
-          
+
           // Kalan süre hesapla
           const diff = scheduled - now;
           const hours = Math.floor(diff / (1000 * 60 * 60));
           const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
           const days = Math.floor(hours / 24);
-          
+
           let remainingStr = '';
           if (isPast) {
             remainingStr = '⚠️ Geçti';
@@ -1325,22 +1323,22 @@
           } else {
             remainingStr = '⚡ Şimdi';
           }
-          
+
           return { dateStr, remainingStr, isPast };
         } catch (e) {
           return { dateStr: scheduledTimeStr, remainingStr: '', isPast: false };
         }
       },
-      
+
       getScheduledTimeDisplay(video) {
         if (!video || !video.scheduled_time) {
           return { show: false, dateStr: '', remainingStr: '' };
         }
-        
+
         const result = this.formatScheduledTime(video.scheduled_time);
         return { show: true, ...result };
       },
-      
+
       formatScheduleDate(isoString) {
         if (!isoString) return 'Bilinmiyor';
         try {
@@ -1350,9 +1348,9 @@
           const tomorrow = new Date(today);
           tomorrow.setDate(tomorrow.getDate() + 1);
           const targetDay = new Date(date.getFullYear(), date.getMonth(), date.getDate());
-          
+
           const timeStr = date.toLocaleTimeString('tr-TR', { hour: '2-digit', minute: '2-digit' });
-          
+
           if (targetDay.getTime() === today.getTime()) {
             return `Bugün ${timeStr}`;
           } else if (targetDay.getTime() === tomorrow.getTime()) {
@@ -1365,10 +1363,10 @@
           return isoString;
         }
       },
-      
+
       getScheduledPublishStatus(video, platform) {
         if (!video) return 'future';
-        
+
         // Platform durumunu kontrol et
         const ps = video.platform_status?.[platform];
         if (ps) {
@@ -1377,13 +1375,13 @@
             return 'published';
           }
         }
-        
+
         // Schedule type kontrolü
         const schedule = this.selectedQueue?.schedule || {};
         if (schedule.type === 'now') {
           return 'now';
         }
-        
+
         // Tarih hesapla
         const dateStr = this.getScheduledPublishDate(video, platform);
         if (dateStr.includes('Bugün')) return 'today';
@@ -1519,10 +1517,10 @@
         }).length;
       },
 
-      // Platformdaki hatalı video sayısı  
+      // Platformdaki hatalı video sayısı
       getPlatformFailedCount(platform) {
         if (!this.selectedQueue?.videos) return 0;
-        return this.selectedQueue.videos.filter(v => 
+        return this.selectedQueue.videos.filter(v =>
           this.getPlatformStatus(v, platform) === 'failed'
         ).length;
       },
@@ -1567,7 +1565,7 @@
         // 15 saniyede bir canlı güncelleme
         setInterval(() => { if (this.selectedQueue) this.loadQueues(); }, 15000);
       },
-      
+
       async loadYoutubeChannels() {
         try {
           const r = await fetch('/api/youtube_channels.php?action=list');
@@ -1619,7 +1617,7 @@
           }
         }
       },
-      
+
       toggleSidebarCollapse() {
         this.sidebarCollapsed = !this.sidebarCollapsed;
         localStorage.setItem('sidebarCollapsed', this.sidebarCollapsed ? '1' : '0');
@@ -1658,7 +1656,7 @@
               </svg>
               <p class="text-gray-500 dark:text-gray-400 text-lg mb-2">Henüz kuyruk oluşturulmamış.</p>
               <p class="text-gray-400 dark:text-gray-500 text-sm mb-4">Videolarınızı organize etmek için bir kuyruk oluşturun.</p>
-              <button 
+              <button
                 @click="openCreateModal()"
                 class="inline-flex items-center gap-2 mt-3 px-5 py-2.5 bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg font-semibold transition"
               >
@@ -1675,7 +1673,7 @@
               <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 mb-4">
                 <div class="flex items-center gap-1 p-2 overflow-x-auto">
                   <template x-for="queue in queues" :key="queue.id">
-                    <button 
+                    <button
                       @click="selectQueueTab(queue)"
                       class="px-4 py-2 rounded-lg text-sm font-medium transition whitespace-nowrap flex items-center gap-2"
                       :class="activeTab === queue.id ? 'bg-indigo-600 text-white shadow-sm' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700'"
@@ -1684,11 +1682,11 @@
                         <span class="text-sm" x-text="p === 'youtube' ? '📺' : p === 'tiktok' ? '🎵' : p === 'instagram' ? '📸' : '📘'"></span>
                       </template>
                       <span x-text="queue.name"></span>
-                      <span class="px-1.5 py-0.5 text-xs rounded-full" 
+                      <span class="px-1.5 py-0.5 text-xs rounded-full"
                             :class="activeTab === queue.id ? 'bg-white/20' : 'bg-gray-200 dark:bg-slate-600'"
                             x-text="(queue.videos?.length || 0)"></span>
                       <!-- Durum göstergesi -->
-                      <span 
+                      <span
                         :title="queue.is_active ? 'Kuyruk çalışıyor' : 'Kuyruk durduruldu'"
                         class="text-lg"
                         x-text="queue.is_active ? '🟢' : '🔴'"
@@ -1697,17 +1695,17 @@
                   </template>
                 </div>
               </div>
-              
+
               <!-- Main Content Grid: 3 columns (5-4-3) -->
               <div class="grid grid-cols-1 lg:grid-cols-12 gap-4" x-show="selectedQueue">
-                
+
                 <!-- Left: Videos List (5 cols) -->
                 <div class="lg:col-span-4">
                   <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden">
                     <div class="p-3 border-b border-gray-100 dark:border-slate-700">
                       <div class="flex items-center justify-between">
                         <div class="flex items-center gap-2">
-                          <button 
+                          <button
                             @click="openQueueSettingsModal()"
                             class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-indigo-600 dark:text-indigo-400 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 rounded-lg transition"
                           >
@@ -1715,7 +1713,7 @@
                             Kuyruğu Düzenle
                           </button>
                           <!-- Pause/Resume Button -->
-                          <button 
+                          <button
                             @click="selectedQueue?.is_active ? pauseQueue(selectedQueue) : resumeQueue(selectedQueue)"
                             class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium rounded-lg transition"
                             :class="selectedQueue?.is_active ? 'text-yellow-600 dark:text-yellow-400 hover:bg-yellow-50 dark:hover:bg-yellow-900/30' : 'text-green-600 dark:text-green-400 hover:bg-green-50 dark:hover:bg-green-900/30'"
@@ -1725,7 +1723,7 @@
                             <span x-text="selectedQueue?.is_active ? 'Durdur' : 'Çalıştır'"></span>
                           </button>
                           <!-- Reset & Resume Button -->
-                          <button 
+                          <button
                             @click="resetAndResumeQueue(selectedQueue)"
                             class="flex items-center gap-2 px-3 py-1.5 text-sm font-medium text-orange-600 dark:text-orange-400 hover:bg-orange-50 dark:hover:bg-orange-900/30 rounded-lg transition"
                             title="Duplicate temizle, sıra düzelt, durumları resetle"
@@ -1741,15 +1739,15 @@
                         </select>
                       </div>
                     </div>
-                    
+
                     <div class="max-h-[500px] overflow-y-auto" id="videoSortList">
                       <div x-show="filteredVideos.length === 0" class="p-6 text-center">
                         <p class="text-gray-400 dark:text-gray-500 text-sm">Video yok</p>
                         <a href="videos.php" class="text-indigo-600 text-xs hover:underline mt-2 inline-block">Ekle →</a>
                       </div>
-                      
+
                       <template x-for="(video, idx) in filteredVideos" :key="idx">
-                        <div 
+                        <div
                           @click="selectVideo(video)"
                           class="px-3 py-2.5 cursor-pointer transition-all border-b border-gray-100 dark:border-slate-700/60 last:border-0"
                           :class="[
@@ -1761,7 +1759,7 @@
                           :data-job-id="video.job_id"
                         >
                           <div class="flex items-start gap-2.5">
-                            
+
                             <!-- Drag handle -->
                             <div class="drag-handle cursor-grab text-gray-300 dark:text-slate-600 hover:text-gray-400 mt-2">
                               <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path d="M7 2a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm6-12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm0 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4z"/></svg>
@@ -1814,14 +1812,14 @@
                                 <span x-show="isProducing(video)" class="text-[9px] badge-live text-blue-500">●</span>
                                 <span class="platform-badge" :class="jobPhaseClass(getJobPhase(video))" x-text="jobPhaseLabel(getJobPhase(video))"></span>
                               </div>
-                              
+
                               <!-- 📅 SCHEDULED TIME (YENİ UNIFIED QUEUE) -->
                               <template x-if="video.scheduled_time">
                                 <div class="inline-flex mt-1.5 text-[10px]">
                                   <div class="inline-flex items-center gap-1 px-1.5 py-0.5 rounded bg-blue-50 dark:bg-blue-900/20 text-blue-700 dark:text-blue-300">
                                     <span>📅</span>
                                     <span x-text="formatScheduleDate(video.scheduled_time)"></span>
-                                  </div>                                                
+                                  </div>
                                 </div>
                               </template>
 
@@ -1849,7 +1847,7 @@
                     </div>
                   </div>
                 </div>
-                
+
                 <!-- Center: Video Preview + Metadata (4 cols) -->
                 <div class="lg:col-span-4">
                   <template x-if="!selectedVideo">
@@ -1859,7 +1857,7 @@
                       <p class="text-gray-400 dark:text-gray-500 text-sm">Sol listeden bir video seçin</p>
                     </div>
                   </template>
-                  
+
                   <template x-if="selectedVideo">
                     <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 overflow-hidden">
                       <!-- Platform Tabs -->
@@ -1870,7 +1868,7 @@
                       </div>
                       <div class="flex gap-2 p-3 border-b border-gray-100 dark:border-slate-700 overflow-x-auto">
                         <template x-for="(status, platform) in selectedVideo?.platform_status || {}" :key="'tab-' + platform">
-                          <button 
+                          <button
                             @click="previewPlatform = platform"
                             class="px-3 py-1.5 rounded-lg text-xs font-medium transition flex items-center gap-1.5"
                             :class="previewPlatform === platform ? 'bg-indigo-600 text-white' : 'bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 hover:bg-gray-200 dark:hover:bg-slate-600'"
@@ -1880,7 +1878,7 @@
                           </button>
                         </template>
                       </div>
-                      
+
                       <!-- Planlanan Paylaşım Tarihi/Saati -->
                       <div class="px-4 py-2 bg-gradient-to-r from-indigo-50 to-purple-50 dark:from-slate-800 dark:to-slate-700 border-b border-gray-100 dark:border-slate-600">
                         <div class="flex items-center justify-between">
@@ -1926,7 +1924,7 @@
                           </p>
                         </template>
                       </div>
-                      
+
                       <!-- Preview Grid: Video + Metadata -->
                       <div class="grid grid-cols-1 md:grid-cols-2 gap-4 p-4">
                         <!-- Left: Video Player with Platform Overlay -->
@@ -1936,9 +1934,9 @@
                               <!-- Video Player -->
                               <template x-if="selectedVideo?.videoUrl">
                                 <div class="absolute inset-0">
-                                  <video 
+                                  <video
                                     x-ref="videoPlayer"
-                                    :src="selectedVideo.videoUrl" 
+                                    :src="selectedVideo.videoUrl"
                                     :poster="selectedVideo.thumbnailUrl"
                                     class="absolute inset-0 w-full h-full object-cover cursor-pointer"
                                     muted
@@ -1949,8 +1947,8 @@
                                     @pause="playing = false"
                                   ></video>
                                   <!-- Play Button Overlay -->
-                                  <div 
-                                    x-show="!playing" 
+                                  <div
+                                    x-show="!playing"
                                     @click="playing = true; $refs.videoPlayer.play()"
                                     class="absolute inset-0 flex items-center justify-center bg-black/30 cursor-pointer transition"
                                   >
@@ -1968,7 +1966,7 @@
                                   <svg class="w-12 h-12 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M5 18h8a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"/></svg>
                                 </div>
                               </template>
-                              
+
                               <!-- TikTok Overlay -->
                               <div x-show="previewPlatform === 'tiktok'" class="absolute inset-0 pointer-events-none">
                                 <div class="absolute right-1 bottom-12 flex flex-col items-center gap-2">
@@ -1981,7 +1979,7 @@
                                   <p class="text-white/90 text-[8px] line-clamp-1" x-text="selectedVideo?.title"></p>
                                 </div>
                               </div>
-                              
+
                               <!-- YouTube Overlay -->
                               <div x-show="previewPlatform === 'youtube'" class="absolute inset-0 pointer-events-none">
                                 <div class="absolute top-1 left-1 bg-black/50 px-2 py-0.5 rounded">
@@ -1999,7 +1997,7 @@
                                   <p class="text-white/90 text-[8px] line-clamp-1" x-text="selectedVideo?.title"></p>
                                 </div>
                               </div>
-                              
+
                               <!-- Instagram Overlay -->
                               <div x-show="previewPlatform === 'instagram'" class="absolute inset-0 pointer-events-none">
                                 <div class="absolute top-1 left-1 bg-gradient-to-r from-purple-500 to-pink-500 px-2 py-0.5 rounded">
@@ -2015,7 +2013,7 @@
                                   <p class="text-white/90 text-[8px] line-clamp-1" x-text="selectedVideo?.title"></p>
                                 </div>
                               </div>
-                              
+
                               <!-- Facebook Overlay -->
                               <div x-show="previewPlatform === 'facebook'" class="absolute inset-0 pointer-events-none">
                                 <div class="absolute top-1 left-1 flex items-center gap-1 bg-black/50 px-2 py-0.5 rounded">
@@ -2029,7 +2027,7 @@
                             </div>
                           </div>
                         </div>
-                        
+
                         <!-- Right: Metadata -->
                         <div class="space-y-3">
                           <div class="flex items-center justify-between">
@@ -2040,7 +2038,7 @@
                               <button @click="startEditMetadata()" class="text-xs text-indigo-600 hover:underline">Düzenle</button>
                             </template>
                           </div>
-                          
+
                           <template x-if="!editingMetadata">
                             <div class="space-y-3">
                               <div>
@@ -2053,7 +2051,7 @@
                               </div>
                               <div>
                                 <label class="block text-xs font-medium text-gray-500 dark:text-gray-400 mb-1">Durum</label>
-                                <span 
+                                <span
                                   class="text-xs px-2 py-1 rounded-full"
                                   :class="{
                                     'bg-green-100 dark:bg-green-900/30 text-green-700': getPlatformStatus(selectedVideo, previewPlatform) === 'success',
@@ -2072,7 +2070,7 @@
                               </template>
                             </div>
                           </template>
-                          
+
                           <template x-if="editingMetadata">
                             <div class="space-y-3">
                               <div>
@@ -2093,7 +2091,7 @@
                               </div>
                             </div>
                           </template>
-                          
+
                           <!-- Actions -->
                           <div class="pt-3 border-t border-gray-100 dark:border-slate-700 flex gap-2">
                             <button @click="openMoveModal()" class="flex-1 px-3 py-2 text-xs bg-gray-100 dark:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gray-200 dark:hover:bg-slate-600 transition">
@@ -2108,7 +2106,7 @@
                     </div>
                   </template>
                 </div>
-                
+
                 <!-- Right: Queue Stats Widget (3 cols) -->
                 <div class="lg:col-span-4">
                   <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 sticky top-4">
@@ -2120,7 +2118,7 @@
                         🔄 Yenile
                       </button>
                     </div>
-                    
+
                     <div class="p-4 space-y-4">
                       <!-- Loading -->
                       <template x-if="loadingStats">
@@ -2129,20 +2127,20 @@
                           <p class="text-xs text-gray-400 mt-2">Yükleniyor...</p>
                         </div>
                       </template>
-                      
+
                       <!-- Stats Content -->
                       <template x-if="!loadingStats && queueStats">
                         <div class="space-y-4">
                           <!-- Queue Status -->
                           <div class="flex items-center justify-between p-3 bg-gray-50 dark:bg-slate-700/50 rounded-lg">
                             <span class="text-sm text-gray-600 dark:text-gray-300">Durum</span>
-                            <span class="flex items-center gap-1.5 text-sm font-medium" 
+                            <span class="flex items-center gap-1.5 text-sm font-medium"
                                   :class="queueStats.blocked_reason ? 'text-red-600 dark:text-red-400' : (queueStats.is_active && isSocialSchedulerRunning() ? 'text-green-600 dark:text-green-400' : 'text-yellow-500')">
                               <span class="w-2 h-2 rounded-full animate-pulse" :class="queueStats.blocked_reason ? 'bg-red-500' : (queueStats.is_active && isSocialSchedulerRunning() ? 'bg-green-500' : 'bg-yellow-500')"></span>
                               <span x-text="queueStats.blocked_reason ? '⛔ Engellendi' : (queueStats.is_active && isSocialSchedulerRunning() ? 'Çalışıyor' : '⏸️ Durduruldu')"></span>
                             </span>
                           </div>
-                          
+
                           <!-- Error Alert -->
                           <template x-if="queueStats.blocked_reason">
                             <div class="p-3 bg-red-50 dark:bg-red-900/30 border border-red-200 dark:border-red-800 rounded-lg">
@@ -2153,7 +2151,7 @@
                                   <p class="text-xs text-red-600 dark:text-red-300 break-words" x-html="queueStats.blocked_reason.replace(/<a[^>]*>|<\/a>/g, '')"></p>
                                 </div>
                               </div>
-                              <button 
+                              <button
                                 @click="resetAndResumeQueue(selectedQueue)"
                                 class="mt-2 w-full py-1.5 text-xs font-medium text-white bg-red-600 hover:bg-red-700 rounded-lg transition flex items-center justify-center gap-1"
                               >
@@ -2161,7 +2159,7 @@
                               </button>
                             </div>
                           </template>
-                          
+
                           <!-- Quota Error Warning -->
                           <template x-if="queueStats.scheduler_errors?.quota_blocked && !queueStats.blocked_reason">
                             <div class="p-3 bg-amber-50 dark:bg-amber-900/30 border border-amber-200 dark:border-amber-800 rounded-lg">
@@ -2182,29 +2180,29 @@
                               </div>
                             </div>
                           </template>
-                          
+
                           <!-- Current Item -->
                           <template x-if="queueStats.current_item">
                             <div class="p-3 border border-gray-200 dark:border-slate-600 rounded-lg">
                               <p class="text-xs text-gray-500 dark:text-gray-400 mb-2">📍 Sıradaki Video</p>
                               <div class="flex items-center gap-2">
                                 <span class="w-6 h-6 flex items-center justify-center text-xs font-bold rounded-full"
-                                      :class="queueStats.current_item.status === 'failed' ? 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-400' : 
-                                              queueStats.current_item.status === 'processing' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-400' : 
+                                      :class="queueStats.current_item.status === 'failed' ? 'bg-red-100 text-red-700 dark:bg-red-900/50 dark:text-red-400' :
+                                              queueStats.current_item.status === 'processing' ? 'bg-blue-100 text-blue-700 dark:bg-blue-900/50 dark:text-blue-400' :
                                               'bg-yellow-100 text-yellow-700 dark:bg-yellow-900/50 dark:text-yellow-400'"
                                       x-text="queueStats.current_item.position"></span>
                                 <div class="flex-1 min-w-0">
                                   <p class="text-sm font-medium text-gray-800 dark:text-white truncate" x-text="queueStats.current_item.title"></p>
-                                  <p class="text-xs" 
-                                     :class="queueStats.current_item.status === 'failed' ? 'text-red-500' : 
+                                  <p class="text-xs"
+                                     :class="queueStats.current_item.status === 'failed' ? 'text-red-500' :
                                              queueStats.current_item.status === 'processing' ? 'text-blue-500' : 'text-yellow-500'"
-                                     x-text="queueStats.current_item.status === 'failed' ? '❌ Başarısız' : 
+                                     x-text="queueStats.current_item.status === 'failed' ? '❌ Başarısız' :
                                              queueStats.current_item.status === 'processing' ? '🔄 Yükleniyor...' : '⏳ Bekliyor'"></p>
                                 </div>
                               </div>
                             </div>
                           </template>
-                          
+
                           <!-- Production Status -->
                           <template x-if="queueStats.production_status && isProductionSchedulerRunning()">
                             <div class="p-3 bg-purple-50 dark:bg-purple-900/20 border border-purple-200 dark:border-purple-800 rounded-lg">
@@ -2220,7 +2218,7 @@
                               </div>
                             </div>
                           </template>
-                          
+
                           <!-- Platform Stats -->
                           <template x-for="platform in Object.keys(queueStats.platforms || {})" :key="platform">
                             <div class="border border-gray-100 dark:border-slate-600 rounded-lg p-3">
@@ -2248,7 +2246,7 @@
                               </div>
                             </div>
                           </template>
-                          
+
                           <!-- Totals -->
                           <div class="pt-3 border-t border-gray-100 dark:border-slate-600">
                             <div class="grid grid-cols-2 gap-2 text-sm">
@@ -2264,7 +2262,7 @@
                           </div>
                         </div>
                       </template>
-                      
+
                       <!-- No Stats -->
                       <template x-if="!loadingStats && !queueStats">
                         <div class="text-center py-4 text-gray-400 dark:text-gray-500 text-sm">
@@ -2274,9 +2272,9 @@
                     </div>
                   </div>
                 </div>
-                
+
               </div>
-              
+
               <!-- No Queue Selected -->
               <div x-show="!selectedQueue" class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-12 text-center">
                 <svg class="w-16 h-16 mx-auto mb-4 text-gray-300 dark:text-slate-600" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"/></svg>
@@ -2296,7 +2294,7 @@
   <template x-if="createModal || editModal">
     <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" @click.self="closeModals()">
       <div class="bg-white dark:bg-slate-800 rounded-xl shadow-xl w-full max-w-lg overflow-hidden max-h-[95vh] flex flex-col">
-        
+
         <!-- Minimal Header -->
         <div class="flex items-center justify-between px-5 py-3.5 border-b border-gray-200 dark:border-slate-700">
           <div class="flex items-center gap-2">
@@ -2307,10 +2305,10 @@
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         </div>
-        
+
         <!-- Content - Scrollable -->
         <div class="flex-1 overflow-y-auto px-5 py-4 space-y-4">
-          
+
           <!-- CREATE MODE: Simple form (name + platforms only) -->
           <template x-if="createModal">
             <div class="space-y-4">
@@ -2320,31 +2318,31 @@
                   <span>📝</span>
                   <span>Kuyruk Adı</span>
                 </label>
-                <input 
-                  type="text" 
+                <input
+                  type="text"
                   x-model="form.name"
                   placeholder="Örn: YouTube Prime Time"
                   class="w-full px-3 py-2.5 text-sm border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
                 >
               </div>
-              
+
               <!-- Platform Selection -->
               <div>
                 <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-3">
                   <span>🌐</span>
                   <span>Platform Seçimi</span>
                 </label>
-                
+
                 <div class="grid grid-cols-2 gap-2">
                   <label class="flex items-center gap-2 p-3 border-2 rounded-lg cursor-pointer transition"
                     :class="form.platforms.includes('youtube') ? 'border-red-500 bg-red-50/50 dark:bg-red-900/20' : 'border-gray-200 dark:border-slate-600'">
-                    <input type="checkbox" value="youtube" 
+                    <input type="checkbox" value="youtube"
                       :checked="form.platforms.includes('youtube')"
                       @change="$event.target.checked ? form.platforms.push('youtube') : form.platforms = form.platforms.filter(p => p !== 'youtube')"
                       class="w-4 h-4 text-red-600 rounded">
                     <span>📺 YouTube</span>
                   </label>
-                  
+
                   <label class="flex items-center gap-2 p-3 border-2 rounded-lg cursor-pointer transition"
                     :class="form.platforms.includes('instagram') ? 'border-pink-500 bg-pink-50/50 dark:bg-pink-900/20' : 'border-gray-200 dark:border-slate-600'">
                     <input type="checkbox" value="instagram"
@@ -2364,7 +2362,7 @@
                   </label>
                 </div>
               </div>
-              
+
               <!-- Info Box -->
               <div class="mt-4 p-3 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg">
                 <div class="flex gap-2">
@@ -2377,31 +2375,31 @@
               </div>
             </div>
           </template>
-          
+
           <!-- EDIT MODE: Full form (all settings) -->
           <template x-if="editModal">
             <div class="space-y-3">
-              <!-- Queue Name & Video Settings -->
+              <!-- Kuyruk yalnızca sosyal medya paylaşım ayarlarını yönetir -->
           <div class="space-y-3">
             <div>
               <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 <span>📝</span>
                 <span>Kuyruk Adı</span>
               </label>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 x-model="form.name"
                 placeholder="Örn: YouTube Prime Time"
                 class="w-full px-3 py-2.5 text-sm border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
               >
             </div>
-            
-            <div>
+
+            <div x-show="false">
               <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 <span>🎬</span>
                 <span>Video Boyutu</span>
               </label>
-              <select 
+              <select
                 x-model="form.dimensionPreset"
                 class="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-indigo-500"
               >
@@ -2411,7 +2409,7 @@
               </select>
             </div>
 
-            <div>
+            <div x-show="false">
               <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 <span>🖼️</span>
                 <span>Görsel Tema</span>
@@ -2434,14 +2432,14 @@
               <span>🌐</span>
               <span>Platform Seçimi</span>
             </label>
-            
+
             <div class="grid grid-cols-2 gap-2">
               <label class="flex items-center gap-2 p-2.5 border-2 rounded-lg cursor-pointer transition text-sm"
                 :class="form.platformSettings.youtube.enabled ? 'border-red-500 bg-red-50/50 dark:bg-red-900/20' : 'border-gray-200 dark:border-slate-600'">
                 <input type="checkbox" x-model="form.platformSettings.youtube.enabled" class="w-4 h-4 text-red-600 rounded">
                 <span>📺 YouTube</span>
               </label>
-              
+
               <label class="flex items-center gap-2 p-2.5 border-2 rounded-lg cursor-pointer transition text-sm"
                 :class="form.platformSettings.instagram.enabled ? 'border-pink-500 bg-pink-50/50 dark:bg-pink-900/20' : 'border-gray-200 dark:border-slate-600'">
                 <input type="checkbox" x-model="form.platformSettings.instagram.enabled" class="w-4 h-4 text-pink-600 rounded">
@@ -2466,7 +2464,7 @@
             <!-- Hedef Kanal -->
             <div>
               <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5 block">🔗 Hedef Kanal <span class="text-red-500">*</span></label>
-              <select x-model="form.platformSettings.youtube.channelId" 
+              <select x-model="form.platformSettings.youtube.channelId"
                       x-effect="$el.innerHTML = '<option value=\'\' disabled>-- Kanal Seçin --</option>' + youtubeChannels.map(ch => `<option value='${ch.id}' ${ch.id === form.platformSettings.youtube.channelId ? 'selected' : ''}>${ch.channel_title}</option>`).join('')"
                       class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg" required>
                 <option value="" disabled>-- Kanal Seçin --</option>
@@ -2490,7 +2488,7 @@
                   <!-- Start Time -->
                   <div>
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">📅 İlk Paylaşım Saati</label>
-                    <input 
+                    <input
                       type="time"
                       x-model="form.platformSettings.youtube.startTime"
                       class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg"
@@ -2498,12 +2496,12 @@
                     />
                     <p class="text-[10px] text-gray-500 dark:text-gray-400 mt-0.5">Boş = hemen başlar</p>
                   </div>
-                  
+
                   <!-- Interval Minutes -->
                   <div>
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">⏱️ Aralık (Dakika)</label>
                     <div class="grid grid-cols-2 gap-1.5">
-                      <input 
+                      <input
                         type="number"
                         x-model="form.platformSettings.youtube.intervalMinutes"
                         min="1"
@@ -2525,12 +2523,12 @@
                       = <span x-text="(form.platformSettings.youtube.intervalMinutes/60).toFixed(1)"></span> saat
                     </p>
                   </div>
-                  
+
                   <!-- Daily Limit -->
                   <div>
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">📊 Günlük Limit</label>
                     <div class="grid grid-cols-2 gap-1.5">
-                      <input 
+                      <input
                         type="number"
                         x-model="form.platformSettings.youtube.dailyLimit"
                         min="0"
@@ -2562,12 +2560,12 @@
                   <div class="flex flex-wrap gap-1.5">
                     <template x-for="(time, idx) in form.platformSettings.youtube.specificTimes" :key="idx">
                       <div class="flex items-center gap-1 bg-white dark:bg-slate-800 rounded px-2 py-1 border border-gray-200 dark:border-slate-600">
-                        <input 
-                          type="time" 
+                        <input
+                          type="time"
                           x-model="form.platformSettings.youtube.specificTimes[idx]"
                           class="bg-transparent border-none text-xs w-16 focus:outline-none dark:text-white"
                         >
-                        <button 
+                        <button
                           @click="form.platformSettings.youtube.specificTimes.splice(idx, 1)"
                           class="text-gray-400 hover:text-red-500"
                           x-show="form.platformSettings.youtube.specificTimes.length > 1"
@@ -2576,7 +2574,7 @@
                         </button>
                       </div>
                     </template>
-                    <button 
+                    <button
                       @click="form.platformSettings.youtube.specificTimes.push('12:00')"
                       class="px-2 py-1 text-xs font-medium text-red-600 hover:bg-red-50 dark:hover:bg-red-900/30 rounded transition"
                     >
@@ -2603,14 +2601,14 @@
 
         <!-- Footer Actions -->
         <div class="flex items-center justify-end gap-2 px-5 py-3.5 border-t border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-900/50">
-          <button 
-            @click="closeModals()" 
+          <button
+            @click="closeModals()"
             class="px-4 py-2 text-sm font-medium text-gray-700 dark:text-gray-300 bg-white dark:bg-slate-800 hover:bg-gray-100 dark:hover:bg-slate-700 border border-gray-200 dark:border-slate-600 rounded-lg transition"
           >
             İptal
           </button>
-          <button 
-            @click="createModal ? createQueue() : updateQueue()" 
+          <button
+            @click="createModal ? createQueue() : updateQueue()"
             :disabled="submitting"
             class="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed"
           >
@@ -2636,7 +2634,7 @@
             </button>
           </div>
         </div>
-        
+
         <div class="p-6">
           <template x-if="!selectedQueue">
             <div class="text-center py-8">
@@ -2647,14 +2645,14 @@
               <p class="mt-3 text-gray-500 dark:text-gray-400">Yükleniyor...</p>
             </div>
           </template>
-          
+
           <template x-if="selectedQueue">
             <div>
               <!-- Queue Info -->
               <div class="mb-6 p-4 bg-gray-50 dark:bg-slate-700 rounded-xl">
                 <div class="flex flex-wrap gap-2 mb-3">
                   <template x-for="platform in selectedQueue.platforms" :key="platform">
-                    <span 
+                    <span
                       class="px-2.5 py-1 rounded-full text-xs font-medium"
                       :class="{
                         'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-400': platform === 'youtube',
@@ -2669,17 +2667,17 @@
                 </div>
                 <p class="text-sm text-gray-600 dark:text-gray-400" x-text="getScheduleText(selectedQueue)"></p>
               </div>
-              
+
               <!-- Videos List -->
               <h4 class="font-semibold text-gray-800 dark:text-gray-200 mb-3">Kuyruktaki Videolar (<span x-text="selectedQueue.videos?.length || 0"></span>)</h4>
-              
+
               <template x-if="!selectedQueue.videos || selectedQueue.videos.length === 0">
                 <div class="text-center py-8 bg-gray-50 dark:bg-slate-700 rounded-xl">
                   <p class="text-gray-500 dark:text-gray-400">Bu kuyrukta henüz video yok.</p>
                   <a href="videos.php" class="inline-block mt-3 text-indigo-600 dark:text-indigo-400 hover:underline">Videolar sayfasından ekleyin →</a>
                 </div>
               </template>
-              
+
               <template x-if="selectedQueue.videos && selectedQueue.videos.length > 0">
                 <div class="space-y-3">
                   <template x-for="(video, idx) in selectedQueue.videos" :key="video.job_id">
@@ -2689,7 +2687,7 @@
                         <p class="font-medium text-gray-800 dark:text-gray-200 truncate" x-text="video.title || 'Video'"></p>
                         <div class="flex flex-wrap gap-1.5 mt-1">
                           <template x-for="(status, platform) in video.platform_status" :key="platform">
-                            <span 
+                            <span
                               class="px-1.5 py-0.5 rounded text-xs font-medium"
                               :class="{
                                 'bg-green-100 text-green-700 dark:bg-green-900/30 dark:text-green-400': getPlatformStatus(video, platform) === 'success',
@@ -2704,7 +2702,7 @@
                           </template>
                         </div>
                       </div>
-                      <button 
+                      <button
                         @click="removeFromQueue(video.job_id)"
                         class="p-2 text-gray-400 hover:text-red-600 hover:bg-red-50 dark:hover:bg-red-900/30 rounded-lg transition"
                         title="Kuyruktan Çıkar"
@@ -2740,7 +2738,7 @@
           </p>
           <div class="space-y-2 max-h-60 overflow-y-auto">
             <template x-for="queue in queues.filter(q => q.id !== selectedQueue?.id)" :key="queue.id">
-              <button 
+              <button
                 @click="moveVideoToQueue(queue.id)"
                 class="w-full p-4 text-left rounded-xl border-2 border-gray-200 dark:border-slate-600 hover:border-indigo-500 hover:bg-indigo-50 dark:hover:bg-indigo-900/30 transition"
               >
@@ -2758,8 +2756,8 @@
               </button>
             </template>
           </div>
-          <button 
-            @click="moveModal = false" 
+          <button
+            @click="moveModal = false"
             class="w-full mt-4 px-4 py-2.5 bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 text-gray-700 dark:text-gray-300 rounded-lg font-medium transition"
           >
             İptal
@@ -2773,7 +2771,7 @@
   <template x-if="queueSettingsModal">
     <div class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm p-4" @click.self="closeModals()">
       <div class="bg-white dark:bg-slate-800 rounded-xl shadow-xl w-full max-w-lg overflow-hidden max-h-[95vh] flex flex-col">
-        
+
         <!-- Minimal Header -->
         <div class="flex items-center justify-between px-5 py-3.5 border-b border-gray-200 dark:border-slate-700">
           <div class="flex items-center gap-2">
@@ -2784,31 +2782,31 @@
             <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg>
           </button>
         </div>
-        
+
         <!-- Content - Scrollable -->
         <div class="flex-1 overflow-y-auto px-5 py-4 space-y-4">
-          
-          <!-- Queue Name & Video Settings -->
+
+          <!-- Kuyruk yalnızca sosyal medya paylaşım ayarlarını yönetir -->
           <div class="space-y-3">
             <div>
               <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 <span>📝</span>
                 <span>Kuyruk Adı</span>
               </label>
-              <input 
-                type="text" 
+              <input
+                type="text"
                 x-model="form.name"
                 placeholder="Örn: Haber Kuyruğu"
                 class="w-full px-3 py-2.5 text-sm border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent transition"
               >
             </div>
-            
-            <div>
+
+            <div x-show="false">
               <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 <span>🎬</span>
                 <span>Video Boyutu</span>
               </label>
-              <select 
+              <select
                 x-model="form.dimensionPreset"
                 class="w-full px-3 py-2 text-sm border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg focus:ring-2 focus:ring-indigo-500"
               >
@@ -2818,7 +2816,7 @@
               </select>
             </div>
 
-            <div>
+            <div x-show="false">
               <label class="flex items-center gap-1.5 text-xs font-semibold text-gray-600 dark:text-gray-400 mb-2">
                 <span>🖼️</span>
                 <span>Görsel Tema</span>
@@ -2841,15 +2839,15 @@
               <span>🌐</span>
               <span>Platform Ayarları</span>
             </label>
-            
+
             <!-- Platform Tab Buttons -->
             <div class="flex gap-1 mb-4 overflow-x-auto pb-1">
-              <button 
+              <button
                 type="button"
                 @click="activePlatformTab = 'youtube'"
                 class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition whitespace-nowrap"
-                :class="activePlatformTab === 'youtube' 
-                  ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 ring-2 ring-red-500' 
+                :class="activePlatformTab === 'youtube'
+                  ? 'bg-red-100 dark:bg-red-900/30 text-red-700 dark:text-red-300 ring-2 ring-red-500'
                   : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-600'"
               >
                 <span>📺</span>
@@ -2857,12 +2855,12 @@
                 <span x-show="!form.platformSettings.youtube.enabled" class="text-[10px] opacity-60">●</span>
                 <span x-show="getPlatformFailedCount('youtube') > 0" class="ml-1 px-1.5 py-0.5 text-[10px] bg-red-500 text-white rounded-full" x-text="getPlatformFailedCount('youtube')"></span>
               </button>
-              <button 
+              <button
                 type="button"
                 @click="activePlatformTab = 'instagram'"
                 class="flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold transition whitespace-nowrap"
-                :class="activePlatformTab === 'instagram' 
-                  ? 'bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 ring-2 ring-pink-500' 
+                :class="activePlatformTab === 'instagram'
+                  ? 'bg-pink-100 dark:bg-pink-900/30 text-pink-700 dark:text-pink-300 ring-2 ring-pink-500'
                   : 'bg-gray-100 dark:bg-slate-700 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-slate-600'"
               >
                 <span>📸</span>
@@ -2901,7 +2899,7 @@
                   <!-- Hedef Kanal -->
                   <div>
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1.5 block">🔗 Hedef Kanal <span class="text-red-500">*</span></label>
-                    <select x-model="form.platformSettings.youtube.channelId" 
+                    <select x-model="form.platformSettings.youtube.channelId"
                             x-effect="$el.innerHTML = '<option value=\'\' disabled>-- Kanal Seçin --</option>' + youtubeChannels.map(ch => `<option value='${ch.id}' ${ch.id === form.platformSettings.youtube.channelId ? 'selected' : ''}>${ch.channel_title}</option>`).join('')"
                             class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg" required>
                       <option value="" disabled>-- Kanal Seçin --</option>
@@ -2917,13 +2915,13 @@
                       <option value="specific">Belirli Saatler</option>
                     </select>
                   </div>
-                  
+
                   <template x-if="form.platformSettings.youtube.scheduleType === 'interval'">
                     <div class="space-y-2">
                       <!-- Start Time -->
                       <div>
                         <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">📅 İlk Paylaşım Saati</label>
-                        <input 
+                        <input
                           type="time"
                           x-model="form.platformSettings.youtube.startTime"
                           class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg"
@@ -2931,12 +2929,12 @@
                         />
                         <p class="text-[10px] text-gray-500 dark:text-gray-400 mt-0.5">Boş = hemen başlar</p>
                       </div>
-                      
+
                       <!-- Interval Minutes -->
                       <div>
                         <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">⏱️ Aralık (Dakika)</label>
                         <div class="grid grid-cols-2 gap-1.5">
-                          <input 
+                          <input
                             type="number"
                             x-model="form.platformSettings.youtube.intervalMinutes"
                             min="1"
@@ -2958,12 +2956,12 @@
                           = <span x-text="(form.platformSettings.youtube.intervalMinutes/60).toFixed(1)"></span> saat
                         </p>
                       </div>
-                      
+
                       <!-- Daily Limit -->
                       <div>
                         <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">📊 Günlük Limit</label>
                         <div class="grid grid-cols-2 gap-1.5">
-                          <input 
+                          <input
                             type="number"
                             x-model="form.platformSettings.youtube.dailyLimit"
                             min="0"
@@ -3003,7 +3001,7 @@
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">📂 Playlist ID (Opsiyonel)</label>
                     <input type="text" x-model="form.platformSettings.youtube.playlistId" placeholder="PLxxxxxx" class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg">
                   </div>
-                  
+
                   <!-- Platform Stats -->
                   <div class="pt-2 border-t border-red-200 dark:border-red-900/50">
                     <div class="flex items-center gap-3 text-xs">
@@ -3012,7 +3010,7 @@
                       <span class="text-red-600 dark:text-red-400" x-show="getPlatformFailedCount('youtube') > 0">✕ <span x-text="getPlatformFailedCount('youtube')"></span> hata</span>
                     </div>
                   </div>
-                  
+
                   <!-- Error List -->
                   <template x-if="getPlatformFailedCount('youtube') > 0">
                     <div class="mt-2 p-2 bg-red-100 dark:bg-red-900/30 rounded-lg">
@@ -3077,17 +3075,17 @@
                       <option value="specific">Belirli Saatler</option>
                     </select>
                   </div>
-                  
+
                   <div>
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">#️⃣ Hashtags</label>
                     <input type="text" x-model="form.platformSettings.instagram.hashtags" placeholder="#reels,#haber" class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg">
                   </div>
-                  
+
                   <div>
                     <label class="text-xs font-medium text-gray-600 dark:text-gray-400 mb-1 block">✏️ Caption Şablonu</label>
                     <textarea x-model="form.platformSettings.instagram.captionTemplate" rows="2" placeholder="{title}\n\n{description}" class="w-full px-2.5 py-1.5 text-xs border border-gray-200 dark:border-slate-600 dark:bg-slate-900 dark:text-white rounded-lg font-mono"></textarea>
                   </div>
-                  
+
                   <!-- Platform Stats -->
                   <div class="pt-2 border-t border-pink-200 dark:border-pink-900/50">
                     <div class="flex items-center gap-3 text-xs">
@@ -3096,7 +3094,7 @@
                       <span class="text-red-600 dark:text-red-400" x-show="getPlatformFailedCount('instagram') > 0">✕ <span x-text="getPlatformFailedCount('instagram')"></span> video hata</span>
                     </div>
                   </div>
-                  
+
                   <!-- Error List -->
                   <template x-if="getPlatformFailedCount('instagram') > 0">
                     <div class="mt-2 p-2 bg-red-100 dark:bg-red-900/30 rounded-lg">
@@ -3194,13 +3192,13 @@
             </div>
 
           </div>
-          
+
         </div>
-        
+
         <!-- Footer Actions - Sticky -->
         <div class="flex items-center gap-2 px-5 py-3 border-t border-gray-200 dark:border-slate-700 bg-gray-50 dark:bg-slate-900">
-          <button 
-            @click="deleteQueue(selectedQueue)" 
+          <button
+            @click="deleteQueue(selectedQueue)"
             class="px-3 py-2 text-sm font-medium bg-white dark:bg-slate-800 border border-red-200 dark:border-red-900/50 hover:bg-red-50 dark:hover:bg-red-900/20 text-red-600 dark:text-red-400 rounded-lg transition flex items-center gap-1.5"
             title="Kuyruğu Sil"
           >
@@ -3208,14 +3206,14 @@
             <span class="hidden sm:inline">Sil</span>
           </button>
           <div class="flex-1"></div>
-          <button 
-            @click="closeModals()" 
+          <button
+            @click="closeModals()"
             class="px-4 py-2 text-sm font-medium bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-600 hover:bg-gray-100 dark:hover:bg-slate-700 text-gray-700 dark:text-gray-300 rounded-lg transition"
           >
             İptal
           </button>
-          <button 
-            @click="saveQueueSettings()" 
+          <button
+            @click="saveQueueSettings()"
             :disabled="submitting"
             class="px-4 py-2 text-sm font-semibold bg-indigo-600 hover:bg-indigo-700 text-white rounded-lg transition disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-1.5"
           >
@@ -3224,7 +3222,7 @@
             <span x-text="submitting ? 'Kaydediliyor...' : 'Kaydet'"></span>
           </button>
         </div>
-        
+
       </div>
     </div>
   </template>

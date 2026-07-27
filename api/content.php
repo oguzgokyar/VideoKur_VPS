@@ -1,7 +1,7 @@
 <?php
 /**
  * Content API
- * 
+ *
  * İçerik havuzu CRUD operasyonları
  */
 
@@ -23,25 +23,26 @@ $CONFIG_FILE = __DIR__ . '/../data/config.json';
 $SCRIPTS_FILE = __DIR__ . '/../data/scripts.json';
 $BASE_DIR = dirname(__DIR__);
 require_once __DIR__ . '/music_helpers.php';
+require_once __DIR__ . '/script_profile_helpers.php';
 
 // Helper functions
 function loadContentPool() {
     global $CONTENT_POOL_FILE;
-    
+
     if (!file_exists($CONTENT_POOL_FILE)) {
         return ['content' => [], 'metadata' => []];
     }
-    
+
     $json = file_get_contents($CONTENT_POOL_FILE);
     return json_decode($json, true) ?: ['content' => [], 'metadata' => []];
 }
 
 function saveContentPool($data) {
     global $CONTENT_POOL_FILE;
-    
+
     $data['metadata']['last_updated'] = gmdate('Y-m-d\TH:i:s\Z');
     $data['metadata']['total_items'] = count($data['content'] ?? []);
-    
+
     file_put_contents($CONTENT_POOL_FILE, json_encode($data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
 }
 
@@ -52,9 +53,9 @@ function generateContentId($url) {
 // Kuyruk bilgilerini yükle
 function loadQueue($queue_id) {
     global $QUEUES_FILE;
-    
+
     if (!file_exists($QUEUES_FILE)) return null;
-    
+
     $data = json_decode(file_get_contents($QUEUES_FILE), true);
     foreach ($data['queues'] ?? [] as $queue) {
         if ($queue['id'] === $queue_id) {
@@ -67,7 +68,7 @@ function loadQueue($queue_id) {
 // Config'den varsayılan altyazı stilini al
 function getDefaultSubtitleStyle() {
     global $CONFIG_FILE;
-    
+
     $default = [
         'FontName' => 'Arial',
         'FontSize' => 24,
@@ -79,30 +80,30 @@ function getDefaultSubtitleStyle() {
         'Bold' => 1,
         'preset' => 'config'
     ];
-    
+
     if (file_exists($CONFIG_FILE)) {
         $config = json_decode(file_get_contents($CONFIG_FILE), true);
         if ($config && isset($config['subtitleStyle'])) {
             return array_merge($default, $config['subtitleStyle'], ['preset' => 'config']);
         }
     }
-    
+
     return $default;
 }
 
 // Kuyruktan video ayarlarını çöz
 function resolveVideoSettingsFromQueue($queue) {
     global $CONFIG_FILE;
-    
+
     $settings = $queue['video_settings'] ?? null;
-    
+
     // Varsayılan değerler
     $videoWidth = 1080;
     $videoHeight = 1920;
     $subtitleStyle = null;
     $visualThemeId = 'default';
     $visualThemePrompt = null;
-    
+
     if ($settings) {
         $videoWidth = $settings['videoWidth'] ?? 1080;
         $videoHeight = $settings['videoHeight'] ?? 1920;
@@ -114,9 +115,9 @@ function resolveVideoSettingsFromQueue($queue) {
         if ($visualThemePrompt === '') {
             $visualThemePrompt = null;
         }
-        
+
         $subtitleMode = $settings['subtitleMode'] ?? 'config';
-        
+
         if ($subtitleMode === 'config') {
             $subtitleStyle = getDefaultSubtitleStyle();
         } elseif ($subtitleMode === 'preset') {
@@ -136,12 +137,12 @@ function resolveVideoSettingsFromQueue($queue) {
             $subtitleStyle['preset'] = 'custom';
         }
     }
-    
+
     // Fallback to config
     if (!$subtitleStyle) {
         $subtitleStyle = getDefaultSubtitleStyle();
     }
-    
+
     return [
         'videoWidth' => $videoWidth,
         'videoHeight' => $videoHeight,
@@ -152,19 +153,8 @@ function resolveVideoSettingsFromQueue($queue) {
 }
 
 function findScriptById($scriptId) {
-    global $SCRIPTS_FILE;
-    if (!file_exists($SCRIPTS_FILE)) {
-        return null;
-    }
-
-    $data = json_decode(file_get_contents($SCRIPTS_FILE), true);
-    $scripts = $data['scripts'] ?? [];
-    foreach ($scripts as $script) {
-        if (($script['id'] ?? '') === $scriptId) {
-            return $script;
-        }
-    }
-    return null;
+    global $BASE_DIR;
+    return vp_find_script($BASE_DIR, $scriptId);
 }
 
 function loadQueuesData() {
@@ -302,12 +292,12 @@ function removeJobFromQueuesAndClearJobStatus($jobId) {
 
 // GET: İçerik listesi
 if ($_SERVER['REQUEST_METHOD'] === 'GET') {
-    
+
     if (isset($_GET['list'])) {
         // Tüm içerikleri listele
         $pool = loadContentPool();
         $content_list = $pool['content'] ?? [];
-        
+
         // Filtrele (status)
         if (isset($_GET['status'])) {
             $status = $_GET['status'];
@@ -316,12 +306,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
             });
             $content_list = array_values($content_list); // Re-index
         }
-        
+
         // Sırala (tarihe göre - en yeni en üstte)
         usort($content_list, function($a, $b) {
             return strtotime($b['discovered_at'] ?? '') - strtotime($a['discovered_at'] ?? '');
         });
-        
+
         echo json_encode([
             'success' => true,
             'content' => $content_list,
@@ -329,13 +319,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         ]);
         exit;
     }
-    
+
     if (isset($_GET['id'])) {
         // Tek içerik detayı
         $id = $_GET['id'];
         $pool = loadContentPool();
         $content_list = $pool['content'] ?? [];
-        
+
         $content = null;
         foreach ($content_list as $c) {
             if ($c['id'] === $id) {
@@ -343,7 +333,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
                 break;
             }
         }
-        
+
         if ($content) {
             echo json_encode(['success' => true, 'content' => $content]);
         } else {
@@ -352,11 +342,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         }
         exit;
     }
-    
+
     // Varsayılan: stats
     $pool = loadContentPool();
     $content_list = $pool['content'] ?? [];
-    
+
     $stats = [
         'total' => count($content_list),
         'pending' => 0,
@@ -364,14 +354,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         'completed' => 0,
         'failed' => 0
     ];
-    
+
     foreach ($content_list as $c) {
         $status = $c['status'] ?? 'pending';
         if (isset($stats[$status])) {
             $stats[$status]++;
         }
     }
-    
+
     echo json_encode(['success' => true, 'stats' => $stats]);
     exit;
 }
@@ -380,7 +370,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $input = json_decode(file_get_contents('php://input'), true);
     $action = $input['action'] ?? '';
-    
+
     // Havuzu temizle
     if ($action === 'clear_all') {
         $pool = [
@@ -393,32 +383,32 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             ]
         ];
         saveContentPool($pool);
-        
+
         echo json_encode(['success' => true, 'message' => 'İçerik havuzu temizlendi']);
         exit;
     }
-    
+
     // Manuel URL ekleme
     if ($action === 'add') {
         $url = $input['url'] ?? '';
         $title = $input['title'] ?? '';
-        
+
         if (empty($url)) {
             http_response_code(400);
             echo json_encode(['success' => false, 'error' => 'URL gerekli']);
             exit;
         }
-        
+
         // URL validation
         if (!filter_var($url, FILTER_VALIDATE_URL)) {
             http_response_code(400);
             echo json_encode(['success' => false, 'error' => 'Geçersiz URL formatı']);
             exit;
         }
-        
+
         $pool = loadContentPool();
         $content_list = $pool['content'] ?? [];
-        
+
         // Duplicate kontrolü
         foreach ($content_list as $c) {
             if ($c['url'] === $url) {
@@ -427,7 +417,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 exit;
             }
         }
-        
+
         // Yeni içerik oluştur
         $content_id = generateContentId($url);
         $new_content = [
@@ -446,30 +436,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'description' => ''
             ]
         ];
-        
+
         $pool['content'][] = $new_content;
         saveContentPool($pool);
-        
+
         echo json_encode(['success' => true, 'content' => $new_content]);
         exit;
     }
-    
+
     // Batch processing
     if ($action === 'process') {
         $content_ids = $input['content_ids'] ?? [];
-        
+
         if (empty($content_ids)) {
             http_response_code(400);
             echo json_encode(['success' => false, 'error' => 'Content ID listesi gerekli']);
             exit;
         }
-        
+
         // Python batch processor'ı çağır
         $ids_str = implode(' ', $content_ids);
         $cmd = "start /B cmd /c python python/content/batch_processor.py $ids_str";
-        
+
         exec($cmd, $output, $return_code);
-        
+
         echo json_encode([
             'success' => true,
             'message' => count($content_ids) . ' içerik pipeline\'a gönderildi',
@@ -477,16 +467,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         exit;
     }
-    
+
     // İçerikten Job oluştur (kuyruğa eklemek için)
     if ($action === 'create_job') {
         $content_id = $input['content_id'] ?? '';
         $queue_id = $input['queue_id'] ?? '';
         $scriptId = trim((string)($input['scriptId'] ?? ''));
         $contentType = trim((string)($input['contentType'] ?? ''));
-        $musicMode = normalizeMusicMode($input['music_mode'] ?? 'off');
-        $bgmVolumeDb = (float)($input['bgm_volume_db'] ?? -22.0);
-        
+
+
         if (empty($content_id)) {
             http_response_code(400);
             echo json_encode(['success' => false, 'error' => 'Content ID gerekli']);
@@ -506,54 +495,37 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             exit;
         }
 
-        if ($contentType === '') {
-            $contentType = trim((string)($selectedScript['contentType'] ?? 'genel'));
-        }
-        $contentType = strtolower($contentType);
-        $scriptCategoryId = resolveScriptCategory($selectedScript, $contentType);
-        $selectedMusic = null;
-        if ($musicMode === 'auto') {
-            $selectedMusic = selectMusicTrackForCategory($BASE_DIR, $scriptCategoryId);
-        }
-        
+        $contentType = strtolower(trim((string)($selectedScript['contentType'] ?? 'genel')));
+        $scriptCategoryId = $selectedScript['categoryId'] ?? $contentType;
+        [$scriptVideoWidth, $scriptVideoHeight] = vp_video_dimensions($selectedScript['videoType'] ?? 'short');
+        $selectedMusic = selectMusicTrackForScript($BASE_DIR, $selectedScript);
+        $musicMode = $selectedScript['music']['mode'] ?? 'off';
+        $scriptSubtitleStyle = !empty($selectedScript['subtitles']['enabled']) ? ($selectedScript['subtitles']['style'] ?? null) : null;
+
         // İçeriği bul
         $pool = loadContentPool();
         $content_list = $pool['content'] ?? [];
         $content = null;
-        
+
         foreach ($content_list as &$c) {
             if ($c['id'] === $content_id) {
                 $content = &$c;
                 break;
             }
         }
-        
+
         if (!$content) {
             http_response_code(404);
             echo json_encode(['success' => false, 'error' => 'İçerik bulunamadı']);
             exit;
         }
-        
-        // Kuyruk bilgilerini al ve video ayarlarını çöz
-        $queue = null;
-        $videoSettings = [
-            'videoWidth' => 1080,
-            'videoHeight' => 1920,
-            'subtitleStyle' => getDefaultSubtitleStyle(),
-            'visualThemeId' => 'default',
-            'visualThemePrompt' => null
-        ];
-        
-        if (!empty($queue_id)) {
-            $queue = loadQueue($queue_id);
-            if ($queue) {
-                $videoSettings = resolveVideoSettingsFromQueue($queue);
-            }
-        }
-        
-        // Job ID: uniqid formatı (eski sistemle uyumlu)
+
+        // Kuyruk artık yalnızca paylaşım ayarlarını taşır; üretim profili scriptten gelir.
+        $queue = !empty($queue_id) ? loadQueue($queue_id) : null;
+
+        // Job ID
         $job_id = uniqid('job_', true);
-        
+
         // URL'den basit başlık oluştur (content'te yoksa)
         $title = $content['title'] ?? '';
         if (empty($title)) {
@@ -563,7 +535,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $title = preg_replace('/[^a-zA-Z0-9\s-]/', ' ', urldecode($title));
             $title = ucfirst(trim($title)) ?: 'Yeni Video';
         }
-        
+
         // Eski job formatıyla tam uyumlu job verisi
         $job_data = [
             'id' => $job_id,
@@ -571,18 +543,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             'template' => 'short_haber',
             'scriptId' => $scriptId,
             'scriptName' => $selectedScript['name'] ?? '',
+            'scriptProfile' => $selectedScript,
             'contentType' => $contentType,
-            'videoWidth' => $videoSettings['videoWidth'],
-            'videoHeight' => $videoSettings['videoHeight'],
-            'subtitleStyle' => $videoSettings['subtitleStyle'],
-            'visual_theme_id' => $videoSettings['visualThemeId'] ?? 'default',
-            'visual_theme_prompt' => $videoSettings['visualThemePrompt'] ?? null,
+            'videoWidth' => $scriptVideoWidth,
+            'videoHeight' => $scriptVideoHeight,
+            'subtitleStyle' => $scriptSubtitleStyle,
+            'visual_theme_id' => 'default',
+            'visual_theme_prompt' => null,
             'music_mode' => $musicMode,
             'bgm_category_id' => $scriptCategoryId,
             'bgm_track_id' => $selectedMusic['id'] ?? null,
             'bgm_track_name' => $selectedMusic['name'] ?? null,
             'bgm_file' => $selectedMusic['file'] ?? null,
-            'bgm_volume_db' => $selectedMusic ? (float)($selectedMusic['volumeDb'] ?? $bgmVolumeDb) : $bgmVolumeDb,
+            'bgm_volume_db' => $selectedMusic ? (float)($selectedMusic['volumeDb'] ?? -22.0) : (float)($selectedScript['music']['volumeDb'] ?? -22.0),
             'status' => 'pending',
             'created_at' => date('Y-m-d H:i:s'),
             'previewUrl' => '',
@@ -598,36 +571,36 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'added_at' => date('c')
             ] : null
         ];
-        
+
         // Düz dosya formatında kaydet (klasör değil)
         file_put_contents($JOBS_DIR . '/' . $job_id . '.json', json_encode($job_data, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
-        
+
         // Output klasörü oluştur
         $outputDir = __DIR__ . '/../output/' . $job_id;
         if (!is_dir($outputDir)) {
             mkdir($outputDir, 0777, true);
         }
-        
+
         // Manuel sistem: Pipeline'ı direkt başlat
         $pythonCmd = 'python';
         $pythonScript = __DIR__ . '/../python/pipeline.py';
         $configFile = __DIR__ . '/../data/config.json';
         $url = $content['url'];
         $template = 'short_haber';
-        
+
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             $cmd = "start /B $pythonCmd \"$pythonScript\" \"$job_id\" \"$url\" \"$template\" \"$configFile\" > \"$outputDir/log.txt\" 2>&1";
         } else {
             $cmd = "$pythonCmd \"$pythonScript\" \"$job_id\" \"$url\" \"$template\" \"$configFile\" > \"$outputDir/log.txt\" 2>&1 &";
         }
-        
+
         pclose(popen($cmd, 'r'));
-        
+
         // İçerik durumunu güncelle
         $content['status'] = 'processing';
         $content['processed_job_id'] = $job_id;
         saveContentPool($pool);
-        
+
         echo json_encode([
             'success' => true,
             'job_id' => $job_id,
@@ -635,7 +608,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         ]);
         exit;
     }
-    
+
     http_response_code(400);
     echo json_encode(['success' => false, 'error' => 'Geçersiz action']);
     exit;
@@ -645,19 +618,19 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
     $input = json_decode(file_get_contents('php://input'), true);
     $id = $input['id'] ?? $_GET['id'] ?? '';
-    
+
     if (empty($id)) {
         http_response_code(400);
         echo json_encode(['success' => false, 'error' => 'Content ID gerekli']);
         exit;
     }
-    
+
     $pool = loadContentPool();
     $content_list = $pool['content'] ?? [];
-    
+
     $found = false;
     $new_list = [];
-    
+
     foreach ($content_list as $c) {
         if ($c['id'] === $id) {
             $found = true;
@@ -666,7 +639,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'DELETE') {
             $new_list[] = $c;
         }
     }
-    
+
     if ($found) {
         $deletedItem = null;
         foreach ($content_list as $c) {

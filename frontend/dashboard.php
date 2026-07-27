@@ -79,7 +79,7 @@
       <?php include __DIR__ . '/components/_sidebar.php'; ?>
       <main class="flex-1 overflow-y-auto">
         <div class="max-w-7xl mx-auto px-5 py-7 md:px-8 md:py-9">
-          <section class="mb-10 max-w-4xl">
+          <section class="mb-10">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400 mb-2">Hızlı başlangıç</p>
             <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-5">Yeni bir video oluştur</h1>
             <form @submit.prevent="startProject()" class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-3 shadow-sm">

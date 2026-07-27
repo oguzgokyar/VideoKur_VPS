@@ -130,20 +130,31 @@ def run_regenerate(job_id: str, section: str, config_file: str, extra: dict = No
     pexels_key   = config.get('pexelsKey', '')
     pollinations_key = config.get('pollinationsKey', '')  # Pollinations API key
     fal_key      = config.get('falKey', '')  # Fal.ai API key
-    tts_provider = config.get('ttsProvider', 'elevenlabs')
-    gemini_model = config.get('geminiModel', 'gemini-3.6-flash')
-    pollinations_model = config.get('pollinationsModel', 'flux')
 
     job_file = os.path.join(jobs_dir, f"{job_id}.json")
     with open(job_file, 'r', encoding='utf-8') as f:
         job = json.load(f)
+
+    profile = job.get('scriptProfile') or {}
+    prompt_settings = profile.get('prompt') or {}
+    visual_settings = profile.get('visual') or {}
+    voice_settings = profile.get('voiceover') or {}
+    subtitle_settings = profile.get('subtitles') or {}
+    tts_provider = (voice_settings.get('provider') or '').strip()
+    tts_model = (voice_settings.get('model') or '').strip()
+    tts_voice_id = (voice_settings.get('voiceId') or '').strip()
+    tts_fallback_provider = (voice_settings.get('fallbackProvider') or '').strip()
+    tts_fallback_voice_id = (voice_settings.get('fallbackVoiceId') or '').strip()
+    gemini_model = (prompt_settings.get('model') or '').strip()
+    image_service = (visual_settings.get('provider') or '').strip()
+    pollinations_model = (visual_settings.get('model') or '').strip()
 
     # Job'dan video ebatlarını al
     video_width = job.get('videoWidth', 1080)
     video_height = job.get('videoHeight', 1920)
     fal_width    = video_width
     fal_height   = video_height
-    fal_steps    = config.get('falSteps', 4)
+    fal_steps    = int((visual_settings.get('options') or {}).get('steps', 4))
 
     prev_status = job.get('status', 'done')
 
@@ -158,8 +169,9 @@ def run_regenerate(job_id: str, section: str, config_file: str, extra: dict = No
 
     try:
         _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, output_dir, images_dir, audio_dir,
-                     gemini_keys, eleven_key, hf_key, pexels_key, pollinations_key, fal_key, 
-                     tts_provider, gemini_model, pollinations_model, fal_width, fal_height, fal_steps,
+                     gemini_keys, eleven_key, hf_key, pexels_key, pollinations_key, fal_key,
+                     tts_provider, tts_model, tts_voice_id, tts_fallback_provider, tts_fallback_voice_id,
+                     gemini_model, image_service, pollinations_model, fal_width, fal_height, fal_steps,
                      restore_done, fail)
     except Exception as e:
         import traceback
@@ -169,7 +181,8 @@ def run_regenerate(job_id: str, section: str, config_file: str, extra: dict = No
 
 def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, output_dir, images_dir, audio_dir,
                  gemini_keys, eleven_key, hf_key, pexels_key, pollinations_key, fal_key,
-                 tts_provider, gemini_model, pollinations_model, fal_width, fal_height, fal_steps,
+                 tts_provider, tts_model, tts_voice_id, tts_fallback_provider, tts_fallback_voice_id,
+                 gemini_model, image_service, pollinations_model, fal_width, fal_height, fal_steps,
                  restore_done, fail):
     """Bölüm bazlı yeniden üretim mantığı."""
 
@@ -227,9 +240,8 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             with open(news_file, 'r', encoding='utf-8') as f:
                 news = json.load(f)
         scenes = script.get('scenes', [])
-        image_service = extra.get('image_service', config.get('imageService', 'auto'))
         update_job(jobs_dir, job_id, {'status': 'imaging'})
-        
+
         # Hook görseli üret (AI tarafından üretilen prompt'u kullan)
         if script.get('hook'):
             hook_prompt = script.get('hook_image_prompt', f"Eye-catching video thumbnail, attention grabbing intro visual, viral content style, breaking news cover, dramatic lighting, {news.get('title', 'news')[:50]}")
@@ -239,17 +251,17 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
                                                pollinations_model, fal_width, fal_height, fal_steps)
             script['hook_used_service'] = hook_used
             print(f"  Hook görseli: {'OK' if os.path.exists(hook_img_path) else 'FAIL'} ({hook_used})")
-        
+
         # Sahne görselleri üret
         for i, scene in enumerate(scenes):
             prompt = scene.get('image_prompt', 'news background')
             img_path = os.path.join(images_dir, f"scene_{i+1}.png")
-            used = _generate_with_service(image_service, prompt, img_path, 
+            used = _generate_with_service(image_service, prompt, img_path,
                                           hf_key, pexels_key, pollinations_key, fal_key,
                                           pollinations_model, fal_width, fal_height, fal_steps)
             scenes[i]['used_service'] = used
             print(f"  Sahne {i+1}: {'OK' if os.path.exists(img_path) else 'FAIL'} ({used})")
-        
+
         # Outro görseli üret (AI tarafından üretilen prompt'u kullan)
         if script.get('outro'):
             outro_prompt = script.get('outro_image_prompt', "Video outro closing scene, call to action visual, subscribe and comment icons, social media engagement, like and follow buttons, channel subscribe reminder, clean modern design")
@@ -259,7 +271,7 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
                                                 pollinations_model, fal_width, fal_height, fal_steps)
             script['outro_used_service'] = outro_used
             print(f"  Outro görseli: {'OK' if os.path.exists(outro_img_path) else 'FAIL'} ({outro_used})")
-        
+
         # Save service info back to script.json
         script['scenes'] = scenes
         with open(script_file, 'w', encoding='utf-8') as f:
@@ -272,22 +284,21 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
         scene_index = int(extra.get('scene_index', 1))  # 1-based (sadece scene için)
         script_file = os.path.join(output_dir, 'script.json')
         news_file = os.path.join(output_dir, 'news.json')
-        image_service = extra.get('image_service', config.get('imageService', 'auto'))
         prompt = extra.get('prompt', '')
         versions_file = os.path.join(output_dir, 'image_versions.json')
-        
+
         news = {}
         if os.path.exists(news_file):
             with open(news_file, 'r', encoding='utf-8') as f:
                 news = json.load(f)
-        
+
         script = {}
         if os.path.exists(script_file):
             with open(script_file, 'r', encoding='utf-8') as f:
                 script = json.load(f)
-        
+
         update_job(jobs_dir, job_id, {'status': 'imaging'})
-        
+
         if scene_type == 'hook':
             if not prompt:
                 prompt = script.get('hook_image_prompt', f"Eye-catching video thumbnail, attention grabbing intro visual, viral content style, breaking news cover, dramatic lighting, {news.get('title', 'news')[:50]}")
@@ -301,7 +312,7 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             script['hook_used_service'] = used
             _save_versions_after_gen(versions_file, ver_key, img_path)
             print(f"  Hook: {'OK' if os.path.exists(img_path) else 'FAIL'} ({used})")
-            
+
         elif scene_type == 'outro':
             if not prompt:
                 prompt = script.get('outro_image_prompt', "Video outro closing scene, call to action visual, subscribe and comment icons, social media engagement, like and follow buttons, channel subscribe reminder, clean modern design")
@@ -315,7 +326,7 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             script['outro_used_service'] = used
             _save_versions_after_gen(versions_file, ver_key, img_path)
             print(f"  Outro: {'OK' if os.path.exists(img_path) else 'FAIL'} ({used})")
-            
+
         elif scene_type == 'thumbnail':
             if not prompt:
                 prompt = script.get('thumbnail_image_prompt', f"Professional YouTube thumbnail, dramatic lighting, bold colors, eye-catching, news media style, {news.get('title', 'breaking news')[:50]}, space for text overlay")
@@ -329,7 +340,7 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             script['thumbnail_used_service'] = used
             _save_versions_after_gen(versions_file, ver_key, img_path)
             print(f"  Thumbnail: {'OK' if os.path.exists(img_path) else 'FAIL'} ({used})")
-            
+
         else:  # scene
             if not prompt:
                 scenes = script.get('scenes', [])
@@ -340,7 +351,7 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
             ver_key = f'scene_{scene_index}'
             backup = _backup_image(img_path)
             _update_versions_json(versions_file, ver_key, backup, img_path)
-            used = _generate_with_service(image_service, prompt, img_path, 
+            used = _generate_with_service(image_service, prompt, img_path,
                                           hf_key, pexels_key, pollinations_key, fal_key,
                                           pollinations_model, fal_width, fal_height, fal_steps)
             # Save used service to script.json
@@ -350,7 +361,7 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
                 script['scenes'] = scenes
             _save_versions_after_gen(versions_file, ver_key, img_path)
             print(f"  Sahne {scene_index}: {'OK' if os.path.exists(img_path) else 'FAIL'} ({used})")
-        
+
         # Script'i kaydet
         with open(script_file, 'w', encoding='utf-8') as f:
             json.dump(script, f, ensure_ascii=False, indent=2)
@@ -398,7 +409,9 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
         actual_durations = []
         for idx, seg in enumerate(segments):
             seg_audio = os.path.join(audio_dir, f"seg_{idx:02d}.mp3")
-            tts_ok = generate_tts(seg['text'], seg_audio, tts_provider, eleven_key)
+            tts_ok = generate_tts(seg['text'], seg_audio, tts_provider, eleven_key,
+                                  voice_id=tts_voice_id, model_id=tts_model,
+                                  fallback_provider=tts_fallback_provider, fallback_voice_id=tts_fallback_voice_id)
             if tts_ok:
                 dur = get_audio_duration(seg_audio)
                 actual_durations.append(dur)
@@ -496,36 +509,10 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
         if os.path.exists(temp_path):
             os.remove(temp_path)
 
-        # Altyazı stili: extra'dan al, yoksa Ayarlar > Altyazı (config), yoksa classic preset
-        subtitle_style = extra.get('subtitle_style')  # dict or preset name
-        if isinstance(subtitle_style, str):
-            subtitle_style = SUBTITLE_PRESETS.get(subtitle_style, SUBTITLE_PRESETS['classic'])
-        elif subtitle_style is None:
-            # 1. Try to load from config.json
-            config_file_path = os.path.join(os.path.dirname(os.path.dirname(__file__)), 'data', 'config.json')
-            if os.path.exists(config_file_path):
-                try:
-                    with open(config_file_path, 'r', encoding='utf-8') as cf:
-                        config_data = json.load(cf)
-                        config_subtitle = config_data.get('subtitleStyle')
-                        if config_subtitle:
-                            print("  [Altyazı] Config'den yüklendi (Ayarlar varsayılanı)")
-                            subtitle_style = config_subtitle
-                except Exception as e:
-                    print(f"  [Altyazı] Config okuma hatası: {e}")
-
-            # 2. Config yoksa eski job stilini son çare olarak kullan
-            if subtitle_style is None:
-                saved_style = job_data.get('subtitleStyle')
-                if isinstance(saved_style, str):
-                    subtitle_style = SUBTITLE_PRESETS.get(saved_style, SUBTITLE_PRESETS['classic'])
-                elif isinstance(saved_style, dict):
-                    subtitle_style = saved_style
-
-            # 3. Fallback to classic
-            if subtitle_style is None:
-                print("  [Altyazı] Fallback: classic preset")
-                subtitle_style = SUBTITLE_PRESETS['classic']
+        # Yeniden üretimde de seçilen script snapshot'ındaki altyazı profili kullanılır.
+        subtitle_style = (job_data.get('scriptProfile') or {}).get('subtitles', {}).get('style')
+        if subtitle_style is None:
+            subtitle_style = SUBTITLE_PRESETS['classic']
 
         # Stili job'a kaydet
         if extra.get('subtitle_style'):
@@ -535,16 +522,16 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
         job_temp_dir = setup_job_temp_dir(job_id)
         original_temp = os.environ.get('TEMP', '')
         original_tmp = os.environ.get('TMP', '')
-        
+
         lock = VideoCompositorLock()
         video_ok = False
-        
+
         try:
             os.environ['TEMP'] = job_temp_dir
             os.environ['TMP'] = job_temp_dir
-            
+
             lock.acquire(job_id, blocking=True)
-            
+
             video_ok = compose_video(video_scenes, images_dir, audio_path, srt_path, video_path,
                                      subtitle_style=subtitle_style,
                                      width=video_width, height=video_height,
@@ -578,16 +565,16 @@ def _run_section(section, job_id, job, prev_status, extra, config, jobs_dir, out
         print(f"Bilinmeyen bölüm: {section}")
 
 
-def _generate_with_service(service: str, prompt: str, img_path: str, 
+def _generate_with_service(service: str, prompt: str, img_path: str,
                            hf_key: str, pexels_key: str, pollinations_key: str, fal_key: str,
-                           pollinations_model: str = 'flux', 
+                           pollinations_model: str = 'flux',
                            fal_width: int = 768, fal_height: int = 768, fal_steps: int = 4) -> str:
     """Belirtilen servisle görsel üretir. Kullanılan servis adını döndürür."""
     from image_gen import generate_image_pollinations, generate_image_huggingface, generate_image_pexels, generate_image_fal
     import os as _os
 
     def _poll():
-        return generate_image_pollinations(prompt, img_path, pollinations_model, 
+        return generate_image_pollinations(prompt, img_path, pollinations_model,
                                            width=fal_width, height=fal_height,
                                            api_key=pollinations_key)
 

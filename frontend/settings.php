@@ -103,13 +103,9 @@ $active_page = 'settings';
         { id:'genel', label:'Genel', icon:'⚙️' },
         { id:'scheduler', label:'Zamanlayıcı', icon:'⏰' },
         { id:'bakim', label:'Bakım', icon:'🧹' },
-        { id:'script', label:'Script', icon:'📝' },
-        { id:'gorsel', label:'Görsel', icon:'🖼️' },
-        { id:'ses', label:'Ses', icon:'🔊' },
-        { id:'altyazi', label:'Altyazı', icon:'💬' },
-        { id:'video', label:'Video', icon:'🎬' }
+        { id:'system', label:'Sistem', icon:'🖥️' }
       ],
-      
+
       // API Modal state
       apiModal: null,
       apiModalNewKey: '',
@@ -118,7 +114,7 @@ $active_page = 'settings';
       apiKeyTestStatuses: {
         gemini: {}, eleven: {}, fal: {}, pollinations: {}, huggingface: {}, pexels: {}
       },
-      
+
       // Service metadata
       serviceInfo: {
         gemini: { name: 'Gemini', icon: '🤖', color: 'blue', multi: true, placeholder: 'AIza...', url: 'https://aistudio.google.com/apikey' },
@@ -128,7 +124,7 @@ $active_page = 'settings';
         huggingface: { name: 'HuggingFace', icon: '🤗', color: 'yellow', multi: false, placeholder: 'hf_...', url: 'https://huggingface.co/settings/tokens' },
         pexels: { name: 'Pexels', icon: '📷', color: 'cyan', multi: false, placeholder: '...', url: 'https://www.pexels.com/api/new/' }
       },
-      
+
       // API Modal methods
       openApiModal(service) {
         this.apiModal = service;
@@ -152,14 +148,14 @@ $active_page = 'settings';
       addKeyToService(service) {
         const key = this.apiModalNewKey.trim();
         if (!key) return;
-        
+
         if (service === 'gemini') { this.geminiKeys.push(key); this.geminiKey = this.geminiKeys[0] || ''; }
         else if (service === 'eleven') this.elevenKeys.push(key);
         else if (service === 'fal') this.falKeys.push(key);
         else if (service === 'pollinations') this.pollinationsKeys.push(key);
         else if (service === 'huggingface') this.hfKey = key;
         else if (service === 'pexels') this.pexelsKey = key;
-        
+
         this.apiModalNewKey = '';
         this.clearKeyTestStatus(service, key);
         this.saveConfig();
@@ -168,14 +164,14 @@ $active_page = 'settings';
         if (!confirm('Bu anahtarı silmek istediğinizden emin misiniz?')) return;
         const keys = this.getServiceKeys(service);
         const removedKey = keys[idx] || '';
-        
+
         if (service === 'gemini') { this.geminiKeys.splice(idx, 1); this.geminiKey = this.geminiKeys[0] || ''; }
         else if (service === 'eleven') this.elevenKeys.splice(idx, 1);
         else if (service === 'fal') this.falKeys.splice(idx, 1);
         else if (service === 'pollinations') this.pollinationsKeys.splice(idx, 1);
         else if (service === 'huggingface') this.hfKey = '';
         else if (service === 'pexels') this.pexelsKey = '';
-        
+
         this.clearKeyTestStatus(service, removedKey);
         this.saveConfig();
       },
@@ -238,12 +234,12 @@ $active_page = 'settings';
       async testServiceKey(service, key) {
         this.apiModalTestLoading = true;
         this.apiModalTestResult = null;
-        
+
         const providerMap = {
           gemini: 'gemini', eleven: 'elevenlabs', fal: 'fal',
           pollinations: 'pollinations', huggingface: 'huggingface', pexels: 'pexels'
         };
-        
+
         try {
           const r = await fetch('/api/check.php', {
             method: 'POST',
@@ -262,7 +258,7 @@ $active_page = 'settings';
         }
         this.apiModalTestLoading = false;
       },
-      
+
       // Scheduler state
       schedulerStatus: {
         production: { running: false, pid: null, started_at: null },
@@ -291,7 +287,7 @@ $active_page = 'settings';
       systemUpdateMessage: '',
       systemUpdateError: '',
       systemUpdatePollTimer: null,
-      
+
       // Scheduler methods
       async loadSchedulerStatus() {
         try {
@@ -304,25 +300,25 @@ $active_page = 'settings';
           console.error('Scheduler durumu yüklenemedi:', e);
         }
       },
-      
+
       async loadSchedulerLogs() {
         try {
           const r = await fetch('/api/scheduler_control.php?action=logs&lines=50');
-          
+
           // Check if response is ok and has content
           if (!r.ok) {
             console.warn('Logs API failed:', r.status);
             this.schedulerLogs = [];
             return;
           }
-          
+
           const text = await r.text();
           if (!text.trim()) {
             console.warn('Empty response from logs API');
             this.schedulerLogs = [];
             return;
           }
-          
+
           const d = JSON.parse(text);
           if (d.success) {
             this.schedulerLogs = d.logs || [];
@@ -335,7 +331,7 @@ $active_page = 'settings';
           this.schedulerLogs = [];
         }
       },
-      
+
       async loadFailedJobs() {
         try {
           const response = await fetch('/api/jobs.php?list=1');
@@ -365,7 +361,7 @@ $active_page = 'settings';
         this.schedulerLoading = true;
         const isRunning = this.schedulerStatus[type]?.running;
         const action = isRunning ? 'stop' : 'start';
-        
+
         try {
           const r = await fetch('/api/scheduler_control.php', {
             method: 'POST',
@@ -373,7 +369,7 @@ $active_page = 'settings';
             body: JSON.stringify({ action, type })
           });
           const d = await r.json();
-          
+
           if (d.success) {
             await this.loadSchedulerStatus();
             await this.loadSchedulerLogs();
@@ -385,12 +381,12 @@ $active_page = 'settings';
         }
         this.schedulerLoading = false;
       },
-      
+
       async restartScheduler(type) {
         if (!confirm(`${type === 'production' ? 'Üretim' : 'Paylaşım'} zamanlayıcısını yeniden başlatmak istediğinize emin misiniz?\n\nYeni kod değişiklikleri uygulanacak.`)) {
           return;
         }
-        
+
         this.schedulerLoading = true;
         try {
           const r = await fetch('/api/scheduler_control.php', {
@@ -411,7 +407,7 @@ $active_page = 'settings';
         }
         this.schedulerLoading = false;
       },
-      
+
       async clearSchedulerLogs() {
         try {
           await fetch('/api/scheduler_control.php', {
@@ -548,14 +544,14 @@ $active_page = 'settings';
           this.falWidth = d.falWidth || 768;
           this.falHeight = d.falHeight || 768;
           this.falSteps = d.falSteps || 4;
-          
+
           // Multi-key arrays: backward compatibility
           this.geminiKeys = [...new Set((d.geminiKeys || (d.geminiKey ? [d.geminiKey] : [])).filter(Boolean))];
           this.geminiKey = this.geminiKeys[0] || '';
           this.elevenKeys = d.elevenKeys || (d.elevenKey ? [d.elevenKey] : []);
           this.falKeys = d.falKeys || (d.falKey ? [d.falKey] : []);
           this.pollinationsKeys = d.pollinationsKeys || (d.pollinationsKey ? [d.pollinationsKey] : []);
-          
+
           if (d.subtitleStyle) {
             this.subtitleStyle = Object.assign({}, this.subtitleStyle, d.subtitleStyle);
           }
@@ -580,11 +576,6 @@ $active_page = 'settings';
             };
           }
         }).catch(() => {});
-        
-        // Scheduler durumu yükle
-        this.loadSchedulerStatus();
-        this.loadSchedulerLogs();
-        this.loadSystemUpdate(false);
       },
       saveConfig() {
         this.saveMsg = ''; this.saveError = false;
@@ -595,13 +586,6 @@ $active_page = 'settings';
             geminiKey: this.geminiKeys[0] || '', elevenKey: this.elevenKey, hfKey: this.hfKey, pexelsKey: this.pexelsKey,
             falKey: this.falKey, pollinationsKey: this.pollinationsKey,
             geminiKeys: this.geminiKeys, elevenKeys: this.elevenKeys, falKeys: this.falKeys, pollinationsKeys: this.pollinationsKeys,
-            ttsProvider: this.ttsProvider, geminiModel: this.geminiModel,
-            imageService: this.imageService, pollinationsModel: this.pollinationsModel,
-            pollinationsTextModel: this.pollinationsTextModel, scriptProvider: this.scriptProvider,
-            falWidth: this.falWidth, falHeight: this.falHeight, falSteps: this.falSteps,
-            subtitleStyle: this.subtitleStyle,
-            toolsEnabled: this.toolsEnabled,
-            servicesEnabled: this.servicesEnabled
           })
         })
         .then(r => r.json())
@@ -671,7 +655,7 @@ $active_page = 'settings';
           <!-- Tab Navigation -->
           <div class="flex gap-1 border-b border-gray-200 mb-6 overflow-x-auto">
             <template x-for="tab in tabs" :key="tab.id">
-              <button @click="activeTab = tab.id"
+              <button @click="activeTab = tab.id; if (tab.id === 'scheduler') { loadSchedulerStatus(); loadSchedulerLogs(); loadFailedJobs(); } if (tab.id === 'system') { loadSystemUpdate(false); }"
                 class="flex items-center gap-1.5 px-4 py-2.5 text-sm transition whitespace-nowrap border-b-2"
                 :class="activeTab === tab.id ? 'border-blue-500 text-blue-600 font-semibold' : 'border-transparent text-gray-500 hover:text-gray-700'">
                 <span x-text="tab.icon"></span>
@@ -692,7 +676,7 @@ $active_page = 'settings';
 
                 <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
                   <!-- Gemini Card -->
-                  <button type="button" @click="openApiModal('gemini')" 
+                  <button type="button" @click="openApiModal('gemini')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-blue-50 to-indigo-50 hover:from-blue-100 hover:to-indigo-100 border border-blue-200 rounded-xl transition cursor-pointer group">
                     <span class="text-2xl mb-2">🤖</span>
                     <span class="font-semibold text-gray-800 text-sm">Gemini</span>
@@ -700,7 +684,7 @@ $active_page = 'settings';
                   </button>
 
                   <!-- ElevenLabs Card -->
-                  <button type="button" @click="openApiModal('eleven')" 
+                  <button type="button" @click="openApiModal('eleven')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-purple-50 to-pink-50 hover:from-purple-100 hover:to-pink-100 border border-purple-200 rounded-xl transition cursor-pointer group">
                     <span class="text-2xl mb-2">🔊</span>
                     <span class="font-semibold text-gray-800 text-sm">ElevenLabs</span>
@@ -708,7 +692,7 @@ $active_page = 'settings';
                   </button>
 
                   <!-- Fal.ai Card -->
-                  <button type="button" @click="openApiModal('fal')" 
+                  <button type="button" @click="openApiModal('fal')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-amber-50 to-orange-50 hover:from-amber-100 hover:to-orange-100 border border-amber-200 rounded-xl transition cursor-pointer group">
                     <span class="text-2xl mb-2">⚡</span>
                     <span class="font-semibold text-gray-800 text-sm">Fal.ai</span>
@@ -716,7 +700,7 @@ $active_page = 'settings';
                   </button>
 
                   <!-- Pollinations Card -->
-                  <button type="button" @click="openApiModal('pollinations')" 
+                  <button type="button" @click="openApiModal('pollinations')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-green-50 to-emerald-50 hover:from-green-100 hover:to-emerald-100 border border-green-200 rounded-xl transition cursor-pointer group">
                     <span class="text-2xl mb-2">🌸</span>
                     <span class="font-semibold text-gray-800 text-sm">Pollinations</span>
@@ -724,7 +708,7 @@ $active_page = 'settings';
                   </button>
 
                   <!-- HuggingFace Card (tek key) -->
-                  <button type="button" @click="openApiModal('huggingface')" 
+                  <button type="button" @click="openApiModal('huggingface')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-yellow-50 to-lime-50 hover:from-yellow-100 hover:to-lime-100 border border-yellow-200 rounded-xl transition cursor-pointer group">
                     <span class="text-2xl mb-2">🤗</span>
                     <span class="font-semibold text-gray-800 text-sm">HuggingFace</span>
@@ -732,7 +716,7 @@ $active_page = 'settings';
                   </button>
 
                   <!-- Pexels Card (tek key) -->
-                  <button type="button" @click="openApiModal('pexels')" 
+                  <button type="button" @click="openApiModal('pexels')"
                     class="flex flex-col items-center p-4 bg-gradient-to-br from-cyan-50 to-sky-50 hover:from-cyan-100 hover:to-sky-100 border border-cyan-200 rounded-xl transition cursor-pointer group">
                     <span class="text-2xl mb-2">📷</span>
                     <span class="font-semibold text-gray-800 text-sm">Pexels</span>
@@ -741,6 +725,10 @@ $active_page = 'settings';
                 </div>
               </div>
 
+            </div>
+
+            <!-- ═══════════ TAB: SİSTEM ═══════════ -->
+            <div x-show="activeTab === 'system'" x-transition>
               <!-- Sistem Araçları -->
               <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4">🖥️ Sistem Araçları</h2>
@@ -832,7 +820,7 @@ $active_page = 'settings';
 
             <!-- ═══════════ TAB: SCHEDULER ═══════════ -->
             <div x-show="activeTab === 'scheduler'" x-transition>
-              
+
               <!-- Production Scheduler -->
               <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 mb-6">
                 <div class="flex items-center justify-between mb-4">
@@ -849,19 +837,19 @@ $active_page = 'settings';
                         <span>🔴 Durduruldu</span>
                       </template>
                     </span>
-                    <button 
+                    <button
                       @click="toggleScheduler('production')"
                       :disabled="schedulerLoading"
                       class="px-4 py-2 rounded-lg font-medium transition"
-                      :class="schedulerStatus.production?.running 
-                        ? 'bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400' 
+                      :class="schedulerStatus.production?.running
+                        ? 'bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400'
                         : 'bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900/30 dark:text-green-400'"
                     >
                       <span x-text="schedulerStatus.production?.running ? '⏹️ Durdur' : '▶️ Başlat'"></span>
                     </button>
                   </div>
                 </div>
-                
+
                 <template x-if="schedulerStatus.production?.started_at">
                   <p class="text-xs text-gray-500 dark:text-gray-400">
                     Başlangıç: <span x-text="new Date(schedulerStatus.production.started_at).toLocaleString('tr-TR')"></span>
@@ -871,7 +859,7 @@ $active_page = 'settings';
                   </p>
                 </template>
               </div>
-              
+
               <!-- Social Scheduler -->
               <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 mb-6">
                 <div class="flex items-center justify-between mb-4">
@@ -888,19 +876,19 @@ $active_page = 'settings';
                         <span>🔴 Durduruldu</span>
                       </template>
                     </span>
-                    <button 
+                    <button
                       @click="toggleScheduler('social')"
                       :disabled="schedulerLoading"
                       class="px-4 py-2 rounded-lg font-medium transition"
-                      :class="schedulerStatus.social?.running 
-                        ? 'bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400' 
+                      :class="schedulerStatus.social?.running
+                        ? 'bg-red-100 text-red-700 hover:bg-red-200 dark:bg-red-900/30 dark:text-red-400'
                         : 'bg-green-100 text-green-700 hover:bg-green-200 dark:bg-green-900/30 dark:text-green-400'"
                     >
                       <span x-text="schedulerStatus.social?.running ? '⏹️ Durdur' : '▶️ Başlat'"></span>
                     </button>
                   </div>
                 </div>
-                
+
                 <template x-if="schedulerStatus.social?.started_at">
                   <p class="text-xs text-gray-500 dark:text-gray-400">
                     Başlangıç: <span x-text="new Date(schedulerStatus.social.started_at).toLocaleString('tr-TR')"></span>
@@ -910,23 +898,23 @@ $active_page = 'settings';
                   </p>
                 </template>
               </div>
-              
+
               <!-- Logs -->
               <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 mb-6">
                 <div class="flex items-center justify-between mb-4">
                   <h2 class="text-lg font-semibold text-gray-800 dark:text-white">📋 Scheduler Logları</h2>
                   <div class="flex gap-2">
-                    <button 
+                    <button
                       @click="loadSchedulerLogs()"
                       class="px-3 py-1.5 text-sm bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 rounded-lg transition"
                     >🔄 Yenile</button>
-                    <button 
+                    <button
                       @click="clearSchedulerLogs()"
                       class="px-3 py-1.5 text-sm bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 rounded-lg transition"
                     >🗑️ Temizle</button>
                   </div>
                 </div>
-                
+
                 <div class="bg-gray-900 rounded-lg p-4 max-h-80 overflow-y-auto font-mono text-xs text-green-400">
                   <template x-if="schedulerLogs.length === 0">
                     <p class="text-gray-500">Log kaydı yok</p>
@@ -936,23 +924,23 @@ $active_page = 'settings';
                   </template>
                 </div>
               </div>
-              
+
               <!-- Job Logs Viewer -->
               <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6">
                 <div class="flex items-center justify-between mb-4">
                   <h2 class="text-lg font-semibold text-gray-800 dark:text-white">🔍 İş Logları</h2>
-                  <button 
+                  <button
                     @click="loadFailedJobs()"
                     class="px-3 py-1.5 text-sm bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600 rounded-lg transition"
                   >🔄 Yenile</button>
                 </div>
-                
+
                 <div class="mb-4">
                   <label class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                     Hatalı veya Duraklatılmış İşleri Görüntüle:
                   </label>
-                  <select 
-                    @change="loadJobLogs($event.target.value)" 
+                  <select
+                    @change="loadJobLogs($event.target.value)"
                     class="w-full px-3 py-2 border border-gray-300 dark:border-slate-600 rounded-lg bg-white dark:bg-slate-700 text-gray-800 dark:text-white focus:ring-2 focus:ring-blue-500"
                   >
                     <option value="">-- İş Seçin --</option>
@@ -960,21 +948,21 @@ $active_page = 'settings';
                       <option :value="job.id" x-text="`${job.id} - ${job.title || 'Video'} (${job.status})`"></option>
                     </template>
                   </select>
-                  
+
                   <template x-if="failedJobs.length === 0">
                     <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
                       ✅ Hiç hatalı veya duraklatılmış iş yok
                     </p>
                   </template>
                 </div>
-                
+
                 <div x-show="selectedJobId" class="bg-gray-900 rounded-lg p-4 h-64 overflow-y-auto font-mono text-xs">
                   <template x-if="jobLogs.length === 0">
                     <p class="text-gray-500 text-center py-8">Log yükleniyor...</p>
                   </template>
                   <template x-for="(log, idx) in jobLogs" :key="idx">
-                    <div 
-                      class="mb-1" 
+                    <div
+                      class="mb-1"
                       :class="{
                         'text-green-400': log.includes('✅') || log.includes('[SUCCESS]'),
                         'text-red-400': log.includes('❌') || log.includes('[ERROR]'),
@@ -987,7 +975,7 @@ $active_page = 'settings';
                     </div>
                   </template>
                 </div>
-                
+
                 <div x-show="selectedJobId" class="mt-3 flex items-center justify-between">
                   <div class="flex items-center gap-4 text-xs text-gray-500">
                     <span class="text-green-400">✅ Success</span>
@@ -995,15 +983,15 @@ $active_page = 'settings';
                     <span class="text-yellow-400">⚠️ Warning</span>
                     <span class="text-blue-400">ℹ️ Info</span>
                   </div>
-                  <a 
-                    x-show="selectedJobId" 
-                    :href="'view_log.php?id=' + selectedJobId" 
+                  <a
+                    x-show="selectedJobId"
+                    :href="'view_log.php?id=' + selectedJobId"
                     target="_blank"
                     class="text-sm text-blue-600 dark:text-blue-400 hover:underline"
                   >📄 Tam Sayfa Görünümü →</a>
                 </div>
               </div>
-              
+
             </div>
 
             <!-- ═══════════ TAB: BAKIM ═══════════ -->
@@ -1376,7 +1364,7 @@ $active_page = 'settings';
 
             <!-- ═══════════ TAB: ALTYAZI ═══════════ -->
             <div x-show="activeTab === 'altyazi'" x-transition>
-              
+
               <div class="bg-white rounded-xl shadow-sm border border-gray-100 p-6 mb-6">
                 <h2 class="text-lg font-semibold text-gray-800 mb-4">💬 Altyazı Stili</h2>
                 <p class="text-sm text-gray-600 mb-6">Varsayılan altyazı stilini özelleştirin. Bu ayarlar tüm yeni videolar için kullanılacaktır.</p>
@@ -1658,16 +1646,16 @@ $active_page = 'settings';
           <div class="border-t border-gray-200 dark:border-slate-700 pt-4">
             <label class="text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2 block">Yeni Anahtar Ekle</label>
             <div class="flex gap-2">
-              <input 
-                type="password" 
-                x-model="apiModalNewKey" 
+              <input
+                type="password"
+                x-model="apiModalNewKey"
                 :placeholder="serviceInfo[apiModal]?.placeholder"
                 class="flex-1 border border-gray-300 dark:border-slate-600 dark:bg-slate-700 rounded-lg px-4 py-2.5 text-sm focus:ring-2 focus:ring-blue-500 outline-none"
                 @keydown.enter="addKeyToService(apiModal)"
               >
-              <button 
-                type="button" 
-                @click="addKeyToService(apiModal)" 
+              <button
+                type="button"
+                @click="addKeyToService(apiModal)"
                 :disabled="!apiModalNewKey.trim()"
                 class="px-4 py-2.5 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-300 text-white rounded-lg text-sm font-semibold transition"
               >
@@ -1691,4 +1679,3 @@ $active_page = 'settings';
   </template>
 </body>
 </html>
-

@@ -38,20 +38,6 @@ $active_page = $active_page ?? 'videos';
       <div x-show="sidebarCollapsedState" class="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">Ana Sayfa</div>
     </a>
     <a
-      href="create.php"
-      class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'create' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
-      :class="sidebarCollapsedState ? 'justify-center' : ''"
-      :title="sidebarCollapsedState ? 'Yeni Video' : ''"
-    >
-      <svg class="w-5 h-5 flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"/></svg>
-      <span x-show="!sidebarCollapsedState" class="whitespace-nowrap">Yeni Video</span>
-      <!-- Tooltip for collapsed state -->
-      <div x-show="sidebarCollapsedState" class="absolute left-full ml-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 pointer-events-none transition-opacity whitespace-nowrap">
-        Yeni Video
-      </div>
-    </a>
-
-    <a
       href="content.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'content' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
       :class="sidebarCollapsedState ? 'justify-center' : ''"
