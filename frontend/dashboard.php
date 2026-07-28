@@ -22,6 +22,8 @@
         jobs:[], loading:true, autoRefresh:null, videoPopup:null,
         sourceMode:'url', sourceValue:'', category:'haber', submitting:false,
         formError:'', createdJobId:'', configSubtitle:null,
+        confirmOpen:false, confirmationError:'', pendingRequest:null,
+        schedulerChecked:false, schedulerRunning:null, schedulerDetail:'',
         get videos() {
           return this.jobs.filter(job => ['done','completed'].includes(String(job?.status || '').toLowerCase()) && job?.previewUrl);
         },
@@ -45,27 +47,80 @@
           try { const response=await fetch('/api/config.php'); const data=await response.json(); this.configSubtitle=data.subtitleStyle || null; }
           catch (error) { this.configSubtitle=null; }
         },
-        async startProject() {
+        async loadSchedulerStatus() {
+          try {
+            const response=await fetch('/api/scheduler_control.php?action=status');
+            const data=await response.json();
+            if (!response.ok || !data.success) throw new Error(data.error || 'Scheduler durumu alınamadı.');
+            this.schedulerRunning=!!data.status?.production?.running;
+            this.schedulerDetail=data.status?.production?.detail || '';
+          } catch (error) {
+            this.schedulerRunning=null;
+            this.schedulerDetail=error.message || 'Scheduler durumu doğrulanamadı.';
+          } finally { this.schedulerChecked=true; }
+        },
+        buildRequest(value) {
+          return {
+            url:this.sourceMode === 'url' ? value : '', source_mode:this.sourceMode, prompt_text:this.sourceMode === 'prompt' ? value : '',
+            template:'short_haber', scriptId:scripts[this.category], contentType:this.category, videoWidth:1080, videoHeight:1920,
+            subtitleStyle:this.configSubtitle, visual_theme_id:'default', visual_theme_prompt:'', music_mode:'off', bgm_volume_db:-22
+          };
+        },
+        requestProjectConfirmation() {
           const value=this.sourceValue.trim(); this.formError=''; this.createdJobId='';
           if (!value) { this.formError=this.sourceMode === 'url' ? 'Bir haber bağlantısı girin.' : 'Video fikrinizi yazın.'; return; }
           if (this.sourceMode === 'url' && !/^https?:\/\//i.test(value)) { this.formError='Geçerli bir http veya https bağlantısı girin.'; return; }
           if (this.sourceMode === 'prompt' && value.length < 20) { this.formError='Video fikri en az 20 karakter olmalı.'; return; }
+          this.pendingRequest=this.buildRequest(value);
+          this.confirmationError='';
+          this.confirmOpen=true;
+          this.loadSchedulerStatus();
+        },
+        cancelConfirmation() {
+          if (this.submitting) return;
+          this.confirmOpen=false;
+          this.pendingRequest=null;
+          this.confirmationError='';
+        },
+        async confirmAndStartProject() {
+          if (this.submitting || !this.pendingRequest) return;
+          if (this.schedulerChecked && this.schedulerRunning === false) {
+            this.confirmationError='Üretim zamanlayıcısı çalışmıyor. Ayarlar sayfasından başlatıp tekrar deneyin.';
+            return;
+          }
           this.submitting=true;
+          this.confirmationError='';
           try {
-            const response=await fetch('/api/jobs.php', { method:'POST', headers:{'Content-Type':'application/json'}, body:JSON.stringify({
-              url:this.sourceMode === 'url' ? value : '', source_mode:this.sourceMode, prompt_text:this.sourceMode === 'prompt' ? value : '',
-              template:'short_haber', scriptId:scripts[this.category], contentType:this.category, videoWidth:1080, videoHeight:1920,
-              subtitleStyle:this.configSubtitle, visual_theme_id:'default', visual_theme_prompt:'', music_mode:'off', bgm_volume_db:-22
-            }) });
+            const confirmationResponse=await fetch('/api/jobs.php', {
+              method:'POST', headers:{'Content-Type':'application/json'},
+              body:JSON.stringify({...this.pendingRequest, action:'request_production_confirmation'})
+            });
+            const confirmationData=await confirmationResponse.json();
+            if (!confirmationResponse.ok || !confirmationData.success) throw new Error(confirmationData.error || 'Üretim onayı oluşturulamadı.');
+            const response=await fetch('/api/jobs.php', {
+              method:'POST', headers:{'Content-Type':'application/json'},
+              body:JSON.stringify({...this.pendingRequest, confirmation_token:confirmationData.confirmation_token})
+            });
             const data=await response.json();
             if (!response.ok || data.error) throw new Error(data.error || 'Proje başlatılamadı.');
-            this.createdJobId=data.jobId; this.sourceValue=''; await this.loadJobs();
-          } catch (error) { this.formError=error.message || 'Proje başlatılamadı.'; }
+            this.createdJobId=data.jobId;
+            this.sourceValue='';
+            this.confirmOpen=false;
+            this.pendingRequest=null;
+            await this.loadJobs();
+          } catch (error) { this.confirmationError=error.message || 'Proje başlatılamadı.'; }
           finally { this.submitting=false; }
+        },
+        statusLabel(job) {
+          const status=String(job?.status || 'pending').toLowerCase();
+          if (['done','completed'].includes(status)) return 'Hazır';
+          if (status === 'failed') return 'Hata';
+          if (['pending','queued','waiting'].includes(status)) return 'Kuyrukta';
+          return 'Üretiliyor';
         },
         openVideo(job) { this.videoPopup=job; },
         closeVideo() { this.videoPopup=null; },
-        init() { this.loadDefaults(); this.loadJobs(); this.autoRefresh=setInterval(() => this.loadJobs(), 5000); },
+        init() { this.loadDefaults(); this.loadJobs(); this.loadSchedulerStatus(); this.autoRefresh=setInterval(() => this.loadJobs(), 5000); },
         destroy() { clearInterval(this.autoRefresh); }
       };
     }
@@ -82,7 +137,7 @@
           <section class="mb-10">
             <p class="text-xs font-semibold uppercase tracking-[0.16em] text-blue-600 dark:text-blue-400 mb-2">Hızlı başlangıç</p>
             <h1 class="text-2xl md:text-3xl font-bold tracking-tight text-gray-900 dark:text-white mb-5">Yeni bir video oluştur</h1>
-            <form @submit.prevent="startProject()" class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-3 shadow-sm">
+            <form @submit.prevent="requestProjectConfirmation()" class="bg-white dark:bg-slate-800 border border-gray-200 dark:border-slate-700 rounded-2xl p-3 shadow-sm">
               <div class="flex flex-wrap items-center gap-2 mb-3">
                 <div class="inline-flex rounded-lg bg-gray-100 dark:bg-slate-900 p-1">
                   <button type="button" @click="sourceMode='url'; formError=''" class="px-3 py-1.5 rounded-md text-sm font-medium transition" :class="sourceMode==='url' ? 'bg-white dark:bg-slate-700 text-gray-900 dark:text-white shadow-sm' : 'text-gray-500 dark:text-gray-400'">URL</button>
@@ -93,9 +148,9 @@
                 </select>
               </div>
               <div class="flex flex-col sm:flex-row gap-2">
-                <input x-show="sourceMode==='url'" x-model="sourceValue" type="url" placeholder="Haber bağlantısını yapıştırın" aria-label="Haber bağlantısı" class="flex-1 min-w-0 px-4 py-3 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
-                <textarea x-show="sourceMode==='prompt'" x-cloak x-model="sourceValue" rows="1" placeholder="Nasıl bir video oluşturmak istediğinizi yazın" aria-label="Video fikri" class="flex-1 min-w-0 px-4 py-3 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
-                <button type="submit" :disabled="submitting" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-xl font-semibold transition whitespace-nowrap">
+                <input x-show="sourceMode==='url'" :disabled="sourceMode!=='url'" x-model="sourceValue" type="url" placeholder="Haber bağlantısını yapıştırın" aria-label="Haber bağlantısı" class="flex-1 min-w-0 px-4 py-3 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent">
+                <textarea x-show="sourceMode==='prompt'" x-cloak :disabled="sourceMode!=='prompt'" x-model="sourceValue" rows="1" placeholder="Nasıl bir video oluşturmak istediğinizi yazın" aria-label="Video fikri" class="flex-1 min-w-0 px-4 py-3 bg-gray-50 dark:bg-slate-900 border border-gray-200 dark:border-slate-700 rounded-xl text-gray-900 dark:text-white placeholder-gray-400 outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"></textarea>
+                <button type="submit" :disabled="submitting || confirmOpen" class="inline-flex items-center justify-center gap-2 px-5 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-blue-400 text-white rounded-xl font-semibold transition whitespace-nowrap">
                   <svg x-show="submitting" class="w-4 h-4 spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.37 0 0 5.37 0 12h4z"></path></svg>
                   <span x-text="submitting ? 'Başlatılıyor' : 'Projeyi Başlat'"></span>
                 </button>
@@ -105,6 +160,23 @@
                 <span>Proje üretim kuyruğuna eklendi.</span><a :href="'project.php?id=' + encodeURIComponent(createdJobId)" class="font-semibold hover:underline">Projeyi aç →</a>
               </div>
             </form>
+            <div class="mt-3 flex items-center gap-2 text-xs" :class="schedulerRunning === false ? 'text-red-600 dark:text-red-400' : schedulerRunning === true ? 'text-green-600 dark:text-green-400' : 'text-gray-400'">
+              <span class="inline-block w-2 h-2 rounded-full" :class="schedulerRunning === false ? 'bg-red-500' : schedulerRunning === true ? 'bg-green-500' : 'bg-gray-400'"></span>
+              <span x-text="!schedulerChecked ? 'Üretim zamanlayıcısı kontrol ediliyor' : schedulerRunning === true ? 'Üretim zamanlayıcısı aktif' : schedulerRunning === false ? 'Üretim zamanlayıcısı çalışmıyor' : 'Üretim zamanlayıcısı doğrulanamadı'"></span>
+            </div>
+          </section>
+          <section x-show="jobs.some(job => !['done','completed'].includes(String(job?.status || '').toLowerCase()))" x-cloak class="mb-10">
+            <div class="flex items-end justify-between gap-4 mb-4">
+              <div><p class="text-xs font-semibold uppercase tracking-[0.16em] text-gray-400 dark:text-gray-500 mb-1">Canlı durum</p><h2 class="text-xl font-bold text-gray-900 dark:text-white">Devam eden üretimler</h2></div>
+            </div>
+            <div class="grid gap-3 md:grid-cols-2">
+              <template x-for="job in jobs.filter(item => !['done','completed'].includes(String(item?.status || '').toLowerCase())).slice(0,4)" :key="job.id">
+                <a :href="'project.php?id=' + encodeURIComponent(job.id)" class="flex items-center justify-between gap-4 rounded-xl border border-gray-200 dark:border-slate-700 bg-white dark:bg-slate-800 px-4 py-3 hover:border-blue-300 dark:hover:border-blue-700 transition">
+                  <div class="min-w-0"><p class="font-medium text-gray-900 dark:text-white truncate" x-text="job.title || 'Yeni video'"></p><p class="text-xs text-gray-400 mt-1" x-text="formatDate(job.created_at)"></p></div>
+                  <span class="shrink-0 rounded-full px-2.5 py-1 text-xs font-semibold" :class="String(job.status).toLowerCase()==='failed' ? 'bg-red-100 text-red-700 dark:bg-red-900/30 dark:text-red-300' : 'bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300'" x-text="statusLabel(job)"></span>
+                </a>
+              </template>
+            </div>
           </section>
           <section>
             <div class="flex items-end justify-between gap-4 mb-5">
@@ -117,7 +189,7 @@
               <template x-for="job in videos" :key="job.id">
                 <button type="button" @click="openVideo(job)" class="group text-left rounded-2xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 dark:focus:ring-offset-slate-900" :aria-label="(job.title || 'Video') + ' videosunu izle'">
                   <div class="video-cover relative overflow-hidden rounded-2xl bg-gray-200 dark:bg-slate-800 shadow-sm">
-                    <img :src="posterUrl(job)" :alt="job.title || 'Video kapağı'" loading="lazy" class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.025]">
+                    <video :src="job.previewUrl" :poster="posterUrl(job)" preload="metadata" muted playsinline class="w-full h-full object-cover transition duration-300 group-hover:scale-[1.025]"></video>
                     <div class="absolute inset-0 bg-gradient-to-t from-black/55 via-transparent to-transparent"></div>
                     <div class="absolute inset-0 flex items-center justify-center"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-white/95 text-gray-900 shadow-lg transition duration-200 group-hover:scale-110"><svg class="w-5 h-5 ml-0.5" fill="currentColor" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span></div>
                     <span class="absolute left-3 right-3 bottom-3 text-sm font-semibold leading-snug text-white line-clamp-2" x-text="job.title || 'İsimsiz video'"></span>
@@ -134,6 +206,29 @@
     <div class="relative w-full" :class="videoPopup && Number(videoPopup.videoWidth || 1080) > Number(videoPopup.videoHeight || 1920) ? 'max-w-5xl' : 'max-w-md'">
       <button type="button" @click="closeVideo()" aria-label="Video oynatıcıyı kapat" class="absolute -top-11 right-0 flex items-center justify-center w-9 h-9 rounded-full bg-white/10 hover:bg-white/20 text-white transition"><svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/></svg></button>
       <template x-if="videoPopup"><video :src="videoPopup.previewUrl" :poster="posterUrl(videoPopup)" controls autoplay playsinline class="w-full max-h-[84vh] rounded-2xl bg-black shadow-2xl"></video></template>
+    </div>
+  </div>
+  <div x-show="confirmOpen" x-cloak x-transition.opacity class="fixed inset-0 z-[60] flex items-center justify-center bg-black/70 p-4" @click.self="cancelConfirmation()">
+    <div class="w-full max-w-lg rounded-2xl bg-white dark:bg-slate-800 shadow-2xl border border-gray-200 dark:border-slate-700 p-6">
+      <div class="flex items-start gap-4">
+        <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-amber-100 text-amber-700 dark:bg-amber-900/30 dark:text-amber-300 font-bold">!</span>
+        <div><h2 class="text-xl font-bold text-gray-900 dark:text-white">Üretimi başlatmayı onaylayın</h2><p class="mt-1 text-sm text-gray-500 dark:text-gray-400">Onaydan sonra proje kuyruğa eklenecek. Bu onay yalnızca bir kez kullanılabilir.</p></div>
+      </div>
+      <div class="mt-5 rounded-xl bg-gray-50 dark:bg-slate-900 p-4 text-sm">
+        <div class="flex justify-between gap-4"><span class="text-gray-500 dark:text-gray-400">Kaynak</span><strong class="text-gray-900 dark:text-white" x-text="pendingRequest?.source_mode === 'prompt' ? 'Prompt' : 'URL'"></strong></div>
+        <div class="mt-3 flex justify-between gap-4"><span class="text-gray-500 dark:text-gray-400">Kategori</span><strong class="text-gray-900 dark:text-white capitalize" x-text="category"></strong></div>
+        <p class="mt-3 max-h-28 overflow-y-auto break-words rounded-lg bg-white dark:bg-slate-800 p-3 text-gray-700 dark:text-gray-300" x-text="pendingRequest?.source_mode === 'prompt' ? pendingRequest?.prompt_text : pendingRequest?.url"></p>
+      </div>
+      <p x-show="schedulerChecked && schedulerRunning === false" class="mt-4 text-sm text-red-600 dark:text-red-400">Üretim zamanlayıcısı çalışmıyor. Ayarlar sayfasından başlatıp tekrar deneyin.</p>
+      <p x-show="schedulerChecked && schedulerRunning === null" class="mt-4 text-sm text-amber-600 dark:text-amber-400">Zamanlayıcı durumu doğrulanamadı. Onay verirseniz iş yine sıraya alınacak.</p>
+      <p x-show="confirmationError" class="mt-4 text-sm text-red-600 dark:text-red-400" x-text="confirmationError"></p>
+      <div class="mt-6 flex flex-col-reverse sm:flex-row sm:justify-end gap-2">
+        <button type="button" @click="cancelConfirmation()" :disabled="submitting" class="px-4 py-2.5 rounded-xl border border-gray-300 dark:border-slate-600 text-gray-700 dark:text-gray-200 font-semibold disabled:opacity-50">Vazgeç</button>
+        <button type="button" @click="confirmAndStartProject()" :disabled="submitting || (schedulerChecked && schedulerRunning === false)" class="inline-flex items-center justify-center gap-2 px-5 py-2.5 rounded-xl bg-blue-600 hover:bg-blue-700 text-white font-semibold disabled:bg-blue-400 disabled:cursor-not-allowed">
+          <svg x-show="submitting" class="w-4 h-4 spin" fill="none" viewBox="0 0 24 24"><circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.37 0 0 5.37 0 12h4z"></path></svg>
+          <span x-text="submitting ? 'Başlatılıyor' : 'Üretimi Onayla'"></span>
+        </button>
+      </div>
     </div>
   </div>
 </body>

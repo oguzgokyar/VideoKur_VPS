@@ -15,12 +15,86 @@ $scriptsFile = $dataDir . '/scripts.json';
 $queuesFile = $dataDir . '/queues.json';
 $socialQueueFile = $dataDir . '/social_queue.json';
 $contentPoolFile = $dataDir . '/content_pool.json';
+$confirmationStoreFile = $dataDir . '/.locks/production_confirmations.json';
 $pythonCmd = 'python';
 require_once __DIR__ . '/music_helpers.php';
 require_once __DIR__ . '/script_profile_helpers.php';
 
 if (!is_dir($jobsDir)) { mkdir($jobsDir, 0777, true); }
 if (!is_dir($outputDir)) { mkdir($outputDir, 0777, true); }
+if (!is_dir(dirname($confirmationStoreFile))) { mkdir(dirname($confirmationStoreFile), 0777, true); }
+
+function productionConfirmationFingerprint($input) {
+    $sourceMode = strtolower(trim((string)($input['source_mode'] ?? 'url')));
+    $sourceValue = $sourceMode === 'prompt'
+        ? trim((string)($input['prompt_text'] ?? ''))
+        : trim((string)($input['url'] ?? ''));
+    return hash('sha256', json_encode([
+        'source_mode' => $sourceMode,
+        'source_value' => $sourceValue,
+        'script_id' => trim((string)($input['scriptId'] ?? '')),
+        'content_type' => trim((string)($input['contentType'] ?? ''))
+    ], JSON_UNESCAPED_UNICODE | JSON_UNESCAPED_SLASHES));
+}
+
+function withProductionConfirmationStore($callback) {
+    global $confirmationStoreFile;
+    $handle = fopen($confirmationStoreFile, 'c+');
+    if ($handle === false || !flock($handle, LOCK_EX)) {
+        if (is_resource($handle)) { fclose($handle); }
+        throw new RuntimeException('Üretim onay güvenliği başlatılamadı');
+    }
+    try {
+        rewind($handle);
+        $raw = stream_get_contents($handle);
+        $store = $raw ? json_decode($raw, true) : [];
+        if (!is_array($store)) { $store = []; }
+        $now = time();
+        foreach ($store as $token => $entry) {
+            if (!is_array($entry) || (int)($entry['expires_at'] ?? 0) < $now) { unset($store[$token]); }
+        }
+        $result = $callback($store, $now);
+        rewind($handle);
+        ftruncate($handle, 0);
+        fwrite($handle, json_encode($store, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+        fflush($handle);
+        return $result;
+    } finally {
+        flock($handle, LOCK_UN);
+        fclose($handle);
+    }
+}
+
+function issueProductionConfirmation($input) {
+    $token = bin2hex(random_bytes(24));
+    $fingerprint = productionConfirmationFingerprint($input);
+    return withProductionConfirmationStore(function (&$store, $now) use ($token, $fingerprint) {
+        $store[$token] = ['fingerprint' => $fingerprint, 'created_at' => $now, 'expires_at' => $now + 120];
+        return $token;
+    });
+}
+
+function consumeProductionConfirmation($token, $input) {
+    if (!is_string($token) || !preg_match('/^[a-f0-9]{48}$/', $token)) { return false; }
+    $fingerprint = productionConfirmationFingerprint($input);
+    return withProductionConfirmationStore(function (&$store, $now) use ($token, $fingerprint) {
+        $entry = $store[$token] ?? null;
+        if (!is_array($entry) || (int)($entry['expires_at'] ?? 0) < $now
+            || !hash_equals((string)($entry['fingerprint'] ?? ''), $fingerprint)) { return false; }
+        unset($store[$token]);
+        return true;
+    });
+}
+
+function productionSchedulerRunningState() {
+    $supervisor = '/usr/bin/supervisorctl';
+    if (!is_executable($supervisor)) { return null; }
+    $output = [];
+    $code = 0;
+    exec($supervisor . ' status production-scheduler 2>&1', $output, $code);
+    if ($code !== 0) { return false; }
+    return preg_match('/\bRUNNING\b/', implode(' ', $output)) === 1;
+}
 
 function deleteDirectoryRecursive($dir) {
     if (!is_dir($dir)) {
@@ -556,6 +630,45 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         exit;
     }
 
+    if ($action === 'request_production_confirmation') {
+        $schedulerRunning = productionSchedulerRunningState();
+        if ($schedulerRunning === false) {
+            http_response_code(409);
+            echo json_encode(['success' => false, 'error' => 'Üretim zamanlayıcısı çalışmıyor']);
+            exit;
+        }
+        $sourceMode = strtolower(trim((string)($input['source_mode'] ?? 'url')));
+        $sourceValue = $sourceMode === 'prompt'
+            ? trim((string)($input['prompt_text'] ?? ''))
+            : trim((string)($input['url'] ?? ''));
+        if (!in_array($sourceMode, ['url', 'prompt'], true) || $sourceValue === '') {
+            http_response_code(400);
+            echo json_encode(['success' => false, 'error' => 'Onaylanacak üretim kaynağı geçersiz']);
+            exit;
+        }
+        try {
+            $confirmationToken = issueProductionConfirmation($input);
+            echo json_encode(['success' => true, 'confirmation_token' => $confirmationToken, 'expires_in' => 120]);
+        } catch (Throwable $error) {
+            http_response_code(503);
+            echo json_encode(['success' => false, 'error' => $error->getMessage()]);
+        }
+        exit;
+    }
+
+    try {
+        $confirmationValid = consumeProductionConfirmation($input['confirmation_token'] ?? '', $input);
+    } catch (Throwable $error) {
+        http_response_code(503);
+        echo json_encode(['success' => false, 'error' => $error->getMessage()]);
+        exit;
+    }
+    if (!$confirmationValid) {
+        http_response_code(409);
+        echo json_encode(['success' => false, 'error' => 'Üretim için geçerli ve kullanılmamış bir kullanıcı onayı gerekli']);
+        exit;
+    }
+
     $url = trim((string)($input['url'] ?? ''));
     $template = $input['template'] ?? 'short_haber';
     $scriptId = trim((string)($input['scriptId'] ?? ''));
@@ -570,7 +683,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     if ($sourceMode === 'url') {
         if (empty($url)) {
+            http_response_code(400);
             echo json_encode(['error' => 'URL gerekli']);
+            exit;
+        }
+        $urlScheme = strtolower((string)parse_url($url, PHP_URL_SCHEME));
+        if (!filter_var($url, FILTER_VALIDATE_URL) || !in_array($urlScheme, ['http', 'https'], true)) {
+            http_response_code(400);
+            echo json_encode(['error' => 'Geçerli bir http veya https URL gerekli']);
             exit;
         }
     } else {
@@ -793,6 +913,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
         foreach (glob("$jobsDir/*.json") as $file) {
             $job = json_decode(file_get_contents($file), true);
             if ($job && isset($job['id'])) {
+                $finalVideoFile = "$outputDir/{$job['id']}/final_video.mp4";
+                if (is_file($finalVideoFile)) {
+                    $job['previewUrl'] = "/output/{$job['id']}/final_video.mp4";
+                    if (!in_array(strtolower((string)($job['status'] ?? '')), ['done', 'completed'], true)) { $job['status'] = 'done'; }
+                }
                 // news.json'dan gerçek başlığı almaya çalış
                 $newsFile = "$outputDir/{$job['id']}/news.json";
                 if (file_exists($newsFile)) {
@@ -822,6 +947,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
     }
 
     $job = json_decode(file_get_contents($jobFile), true);
+    $finalVideoFile = "$outputDir/$jobId/final_video.mp4";
+    if (is_file($finalVideoFile)) {
+        $job['previewUrl'] = "/output/$jobId/final_video.mp4";
+        if (!in_array(strtolower((string)($job['status'] ?? '')), ['done', 'completed'], true)) { $job['status'] = 'done'; }
+    }
 
     // news.json'dan gerçek başlığı al
     $newsFile = "$outputDir/$jobId/news.json";
