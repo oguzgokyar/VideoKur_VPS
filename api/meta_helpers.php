@@ -92,8 +92,40 @@ function meta_permissions() {
     ];
 }
 
+function meta_configured_application_base_url() {
+    $configPath = __DIR__ . '/../data/config.json';
+    $config = meta_read_json($configPath, []);
+    // youtubeBaseUrl is retained as the storage key for backward compatibility.
+    return rtrim(trim((string)($config['youtubeBaseUrl'] ?? '')), '/');
+}
+
+function meta_application_base_url() {
+    $configuredBaseUrl = meta_configured_application_base_url();
+    $environmentBaseUrl = trim((string)(getenv('APP_BASE_URL') ?: ''));
+    return rtrim($configuredBaseUrl !== '' ? $configuredBaseUrl : $environmentBaseUrl, '/');
+}
+
+function meta_resolve_redirect_uri($app = []) {
+    $configuredBaseUrl = meta_configured_application_base_url();
+    if ($configuredBaseUrl !== '') {
+        return $configuredBaseUrl . '/api/meta_oauth.php';
+    }
+
+    $appRedirectUri = trim((string)($app['redirect_uri'] ?? ''));
+    return $appRedirectUri !== '' ? $appRedirectUri : meta_default_redirect_uri();
+}
+
 function meta_default_redirect_uri() {
-    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on') ? 'https' : 'http';
+    $baseUrl = meta_application_base_url();
+    if ($baseUrl !== '') {
+        return $baseUrl . '/api/meta_oauth.php';
+    }
+
+    $forwardedProtocol = strtolower((string)($_SERVER['HTTP_X_FORWARDED_PROTO'] ?? ''));
+    $protocol = (
+        (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on')
+        || $forwardedProtocol === 'https'
+    ) ? 'https' : 'http';
     $host = $_SERVER['HTTP_HOST'] ?? 'localhost:8000';
     return $protocol . '://' . $host . '/api/meta_oauth.php';
 }
@@ -156,7 +188,7 @@ function meta_load_apps($dataDir) {
                 'label' => 'Legacy Meta App',
                 'app_id' => (string)$legacy['app_id'],
                 'app_secret' => (string)$legacy['app_secret'],
-                'redirect_uri' => $legacy['redirect_uri'] ?? meta_default_redirect_uri(),
+                'redirect_uri' => meta_resolve_redirect_uri($legacy),
                 'created_at' => meta_now_iso(),
                 'updated_at' => meta_now_iso()
             ];
@@ -201,7 +233,7 @@ function meta_sanitize_app($app) {
         'label' => $app['label'] ?? '',
         'app_id' => $app['app_id'] ?? '',
         'app_id_masked' => meta_mask_text($app['app_id'] ?? ''),
-        'redirect_uri' => $app['redirect_uri'] ?? meta_default_redirect_uri(),
+        'redirect_uri' => meta_resolve_redirect_uri($app),
         'created_at' => $app['created_at'] ?? null,
         'updated_at' => $app['updated_at'] ?? null
     ];
@@ -366,7 +398,7 @@ function meta_exchange_code_for_token($app, $code) {
     $response = meta_http_request(meta_token_url(), 'GET', [
         'client_id' => $app['app_id'],
         'client_secret' => $app['app_secret'],
-        'redirect_uri' => $app['redirect_uri'] ?? meta_default_redirect_uri(),
+        'redirect_uri' => meta_resolve_redirect_uri($app),
         'code' => $code
     ]);
 
@@ -664,7 +696,7 @@ function meta_write_legacy_compat($dataDir, $activeApp, $activeConnection, $acco
         meta_write_json(meta_legacy_config_file($dataDir), [
             'app_id' => $activeApp['app_id'],
             'app_secret' => $activeApp['app_secret'],
-            'redirect_uri' => $activeApp['redirect_uri'] ?? meta_default_redirect_uri()
+            'redirect_uri' => meta_resolve_redirect_uri($activeApp)
         ]);
     }
 

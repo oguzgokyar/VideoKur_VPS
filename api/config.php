@@ -145,11 +145,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $pollinationsModel = trim((string)($input['pollinationsModel'] ?? 'flux'));
     $youtubeBaseUrl = rtrim(trim((string)($input['youtubeBaseUrl'] ?? ($existing['youtubeBaseUrl'] ?? ''))), '/');
     if ($youtubeBaseUrl !== '' && !filter_var($youtubeBaseUrl, FILTER_VALIDATE_URL)) {
-        echo json_encode(['success' => false, 'error' => 'YouTube OAuth uygulama adresi geçerli bir URL olmalıdır.']);
+        echo json_encode(['success' => false, 'error' => "Uygulama URL'si geçerli bir adres olmalıdır."]);
         exit;
     }
     if ($youtubeBaseUrl !== '' && !in_array(strtolower((string)parse_url($youtubeBaseUrl, PHP_URL_SCHEME)), ['http', 'https'], true)) {
-        echo json_encode(['success' => false, 'error' => 'YouTube OAuth uygulama adresi http veya https ile başlamalıdır.']);
+        echo json_encode(['success' => false, 'error' => "Uygulama URL'si http veya https ile başlamalıdır."]);
         exit;
     }
     if ($pollinationsModel === '' || !preg_match('/^[A-Za-z0-9._:-]{1,120}$/', $pollinationsModel)) {

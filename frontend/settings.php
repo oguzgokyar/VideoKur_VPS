@@ -747,14 +747,14 @@ $active_page = 'settings';
 
             <!-- ═══════════ TAB: SİSTEM ═══════════ -->
             <div x-show="activeTab === 'system'" x-transition>
-              <!-- YouTube OAuth -->
+              <!-- Uygulama URL'si ve OAuth dönüş adresleri -->
               <div class="bg-white dark:bg-slate-800 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-6 mb-6">
-                <h2 class="text-lg font-semibold text-gray-800 dark:text-white">🔐 YouTube OAuth</h2>
+                <h2 class="text-lg font-semibold text-gray-800 dark:text-white">🌐 Uygulama URL'si</h2>
                 <p class="text-xs text-gray-500 dark:text-gray-400 mt-1 mb-4">
-                  Google login dönüş adresinin temel URL'si. Local için <span class="font-mono">http://localhost:8000</span>,
-                  VPS için <span class="font-mono">https://alanadiniz.com</span> kullanın.
+                  OAuth dönüş adreslerinin temel URL'si. Lokal için <span class="font-mono">http://localhost:8000</span>,
+                  VPS için <span class="font-mono">https://subdomain.alanadiniz.com</span> kullanın.
                 </p>
-                <label for="youtube-base-url" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Uygulama adresi</label>
+                <label for="youtube-base-url" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Uygulama URL'si</label>
                 <div class="flex flex-col sm:flex-row gap-3">
                   <input id="youtube-base-url" type="url" x-model.trim="youtubeBaseUrl"
                     placeholder="http://localhost:8000"
@@ -766,7 +766,11 @@ $active_page = 'settings';
                 </div>
                 <p class="text-xs text-gray-500 dark:text-gray-400 mt-3">
                   Google Cloud Authorized redirect URI:
-                  <span class="font-mono" x-text="(youtubeBaseUrl || 'http://localhost:8000').replace(/\/+$/, '') + '/api/youtube_oauth.php'"></span>
+                  <span class="font-mono break-all" x-text="(youtubeBaseUrl || window.location.origin).replace(/\/+$/, '') + '/api/youtube_oauth.php'"></span>
+                </p>
+                <p class="text-xs text-gray-500 dark:text-gray-400 mt-2">
+                  Meta OAuth Redirect URI:
+                  <span class="font-mono break-all" x-text="(youtubeBaseUrl || window.location.origin).replace(/\/+$/, '') + '/api/meta_oauth.php'"></span>
                 </p>
                 <div x-show="saveMsg" class="mt-3 p-3 rounded-lg text-sm"
                   :class="saveError ? 'bg-red-50 text-red-700 border border-red-200' : 'bg-green-50 text-green-700 border border-green-200'"

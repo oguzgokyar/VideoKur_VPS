@@ -233,7 +233,7 @@ meta_store_oauth_state($dataDir, $nonce, [
 $state = meta_oauth_build_state($appRef, $nonce);
 $params = [
     'client_id' => $app['app_id'],
-    'redirect_uri' => $app['redirect_uri'] ?? meta_default_redirect_uri(),
+    'redirect_uri' => meta_resolve_redirect_uri($app),
     'scope' => implode(',', meta_permissions()),
     'response_type' => 'code',
     'state' => $state
