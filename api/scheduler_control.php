@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /** Scheduler control for the shared Docker/Supervisor runtime. */
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: *');

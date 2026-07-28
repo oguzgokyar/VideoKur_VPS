@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /**
  * Job Log Viewer
  * Görüntüler: output/{job_id}/job.log

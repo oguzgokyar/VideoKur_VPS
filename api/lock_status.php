@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /**
  * Video Compositor Lock Status API
  * Returns current lock status for monitoring

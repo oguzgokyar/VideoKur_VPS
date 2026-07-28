@@ -6,7 +6,7 @@ $active_page = $active_page ?? 'videos';
 <aside
   x-data="{ sidebarCollapsedState: localStorage.getItem('sidebarCollapsed') === '1' }"
   :class="sidebarOpen ? 'translate-x-0' : '-translate-x-full md:translate-x-0'"
-  class="fixed md:static inset-y-0 left-0 z-30 bg-white dark:bg-slate-800 border-r border-gray-200 dark:border-slate-700 transform transition-all duration-300 ease-in-out pt-16 md:pt-0 overflow-hidden"
+  class="fixed md:static inset-y-0 left-0 z-30 flex flex-col bg-white dark:bg-slate-800 border-r border-gray-200 dark:border-slate-700 transform transition-all duration-300 ease-in-out pt-16 md:pt-0 overflow-hidden"
   :style="sidebarCollapsedState ? 'width: 4rem' : 'width: 15rem'"
 >
   <!-- Toggle Button (Desktop Only) -->
@@ -26,7 +26,7 @@ $active_page = $active_page ?? 'videos';
     </svg>
   </button>
 
-  <nav class="flex flex-col p-3 gap-1">
+  <nav class="flex-1 overflow-y-auto flex flex-col p-3 gap-1">
     <a
       href="dashboard.php"
       class="flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all group <?= $active_page === 'home' ? 'bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 font-semibold' : 'text-gray-600 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-slate-700' ?>"
@@ -171,4 +171,26 @@ $active_page = $active_page ?? 'videos';
     </div>
     <?php endif; ?>
   </nav>
+  <div class="sidebar-user-card shrink-0 border-t border-gray-200 dark:border-slate-700 bg-gray-50/80 dark:bg-slate-900/60 p-3">
+    <?php $sidebar_user = function_exists('videokur_current_user') ? videokur_current_user() : null; ?>
+    <?php if ($sidebar_user): ?>
+    <div class="flex items-center gap-3" :class="sidebarCollapsedState ? 'justify-center' : ''">
+      <div class="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gradient-to-br from-blue-600 to-indigo-600 text-sm font-bold text-white shadow-sm">
+        <?= htmlspecialchars(strtoupper(substr((string)($sidebar_user['username'] ?? 'U'), 0, 1)), ENT_QUOTES, 'UTF-8') ?>
+      </div>
+      <div x-show="!sidebarCollapsedState" x-cloak class="min-w-0 flex-1">
+        <p class="truncate text-sm font-semibold text-gray-800 dark:text-white"><?= htmlspecialchars((string)($sidebar_user['username'] ?? 'Kullanıcı'), ENT_QUOTES, 'UTF-8') ?></p>
+        <p class="text-[11px] text-gray-500 dark:text-gray-400">Yönetici</p>
+      </div>
+      <div x-show="sidebarCollapsedState" x-cloak class="absolute left-full ml-2 rounded bg-gray-900 px-2 py-1 text-xs text-white shadow-lg">Kullanıcı: <?= htmlspecialchars((string)($sidebar_user['username'] ?? 'Kullanıcı'), ENT_QUOTES, 'UTF-8') ?></div>
+    </div>
+    <form method="post" action="/logout.php" class="mt-3" :class="sidebarCollapsedState ? 'flex justify-center' : ''">
+      <input type="hidden" name="csrf_token" value="<?= htmlspecialchars(videokur_csrf_token(), ENT_QUOTES, 'UTF-8') ?>">
+      <button type="submit" class="flex w-full items-center justify-center gap-2 rounded-lg border border-gray-200 bg-white px-3 py-2 text-sm font-semibold text-gray-600 transition hover:border-red-200 hover:bg-red-50 hover:text-red-600 dark:border-slate-700 dark:bg-slate-800 dark:text-gray-300 dark:hover:border-red-900 dark:hover:bg-red-950/40 dark:hover:text-red-300" :class="sidebarCollapsedState ? 'w-10 px-0' : ''" title="Güvenli çıkış">
+        <svg class="h-4 w-4 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6A2.25 2.25 0 005.25 5.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 15l3-3m0 0l-3-3m3 3H3"/></svg>
+        <span x-show="!sidebarCollapsedState" x-cloak>Güvenli çıkış</span>
+      </button>
+    </form>
+    <?php endif; ?>
+  </div>
 </aside>

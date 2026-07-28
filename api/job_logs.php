@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /**
  * Job Logs API
  * Returns job-specific log content

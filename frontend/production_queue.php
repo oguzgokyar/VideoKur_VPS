@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 $pageTitle = "Production Queue";
 include __DIR__ . '/components/header.php';
 ?>

@@ -1,4 +1,5 @@
-<?php $page_title = 'Meta Hesapları - Facebook & Instagram'; $active_page = 'accounts_meta'; ?>
+<?php
+require_once dirname(__DIR__) . '/includes/auth.php'; $page_title = 'Meta Hesapları - Facebook & Instagram'; $active_page = 'accounts_meta'; ?>
 <!DOCTYPE html>
 <html lang="tr" x-data="{ darkMode: localStorage.getItem('darkMode') === '1' }" :class="{ 'dark': darkMode }">
 <head>

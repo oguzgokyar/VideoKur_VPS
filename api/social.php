@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /**
  * Social Media API Endpoint
  * Handles multi-platform social media operations

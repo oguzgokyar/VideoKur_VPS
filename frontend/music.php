@@ -1,4 +1,5 @@
-<?php $page_title = 'Müzik Yönetimi - YouTube Shorts Otomasyon'; $active_page = 'music'; ?>
+<?php
+require_once dirname(__DIR__) . '/includes/auth.php'; $page_title = 'Müzik Yönetimi - YouTube Shorts Otomasyon'; $active_page = 'music'; ?>
 <!DOCTYPE html>
 <html lang="tr">
 <head>

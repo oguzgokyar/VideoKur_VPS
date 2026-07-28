@@ -1,4 +1,5 @@
-<?php $page_title='Script Yönetimi - VideoKur'; $active_page='scripts'; ?>
+<?php
+require_once dirname(__DIR__) . '/includes/auth.php'; $page_title='Script Yönetimi - VideoKur'; $active_page='scripts'; ?>
 <!DOCTYPE html><html lang="tr" x-data="{darkMode:localStorage.getItem('darkMode')==='1'}" :class="{'dark':darkMode}"><head>
 <?php include __DIR__.'/components/_head.php'; ?>
 <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.0/dist/cdn.min.js" defer></script>

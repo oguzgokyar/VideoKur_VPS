@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /**
  * Legacy Social Accounts API Endpoint
  * TikTok account management only (Instagram moved to Meta Accounts V2)

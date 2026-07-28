@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 $page_title = 'Notlar - YouTube Shorts Otomasyon';
 $active_page = 'notes';
 ?>

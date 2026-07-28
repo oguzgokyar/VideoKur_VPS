@@ -1,4 +1,5 @@
 <?php
+require_once dirname(__DIR__) . '/includes/auth.php';
 /**
  * YouTube Channels API - Unified Multi-Channel Management
  * 

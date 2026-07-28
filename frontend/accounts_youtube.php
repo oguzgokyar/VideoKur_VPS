@@ -1,4 +1,5 @@
-<?php $page_title = 'YouTube Hesapları - Çoklu Kanal Yönetimi'; $active_page = 'accounts_youtube'; ?>
+<?php
+require_once dirname(__DIR__) . '/includes/auth.php'; $page_title = 'YouTube Hesapları - Çoklu Kanal Yönetimi'; $active_page = 'accounts_youtube'; ?>
 <!DOCTYPE html>
 <html lang="tr" x-data="{ darkMode: localStorage.getItem('darkMode') === '1' }" :class="{ 'dark': darkMode }">
 <head>

@@ -1,4 +1,5 @@
-<?php $page_title = 'Ana Sayfa - Video Otomasyon'; $active_page = 'home'; ?>
+<?php
+require_once dirname(__DIR__) . '/includes/auth.php'; $page_title = 'Ana Sayfa - Video Otomasyon'; $active_page = 'home'; ?>
 <!DOCTYPE html>
 <html lang="tr" x-data="{ darkMode: localStorage.getItem('darkMode') === '1' }" :class="{ 'dark': darkMode }">
 <head>
